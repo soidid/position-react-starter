@@ -2,11 +2,10 @@ import React from "react";
 import { RouteHandler } from "react-router";
 
 import AppBar from "components/AppBar/AppBar.jsx";
+import Profile from "components/Profile/Profile.jsx";
+import "./PersonPage.css";
 
-
-import styles from "./Application.css";
-
-export default class Application extends React.Component {
+export default class PersonPage extends React.Component {
 	static getProps(stores, params) {
 		var transition = stores.Router.getItem("transition");
 		return {
@@ -15,15 +14,13 @@ export default class Application extends React.Component {
 	}
 	render() {
 		var { loading } = this.props;
-		return <div className={styles.this + (loading ? " " + styles.loading : "")}>
-			<div className={styles.loadingElement}>loading...</div>
-			<AppBar />
-			
-			<RouteHandler />
-		</div>;
+		return (
+		<div className="PersonPage">
+			<Profile />
+		</div>);
 	}
 }
 
-Application.contextTypes = {
+PersonPage.contextTypes = {
 	stores: React.PropTypes.object
 };

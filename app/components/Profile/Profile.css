@@ -1,0 +1,30 @@
+.Profile {
+	margin-top: 50px;
+}
+.Profile-intro {
+    margin: 5px 20px;
+    vertical-align: top;
+    padding: 20px 0 0 0 ;
+   
+    text-align: left;
+    
+    padding: 10px;
+    color: rgb(50,50,50); 
+}
+.Profile-introTitle {
+    font-weight: 800;
+    font-size: 20px;
+}
+.Profile-factCards {
+    text-align: center;
+}
+.Profile-button {
+    padding: 16px;
+    margin: 30px;
+    cursor: pointer;
+    border: 1px solid;
+    display: inline-block;
+}
+.Profile-button:hover {
+    color: #6FB4B1;
+}

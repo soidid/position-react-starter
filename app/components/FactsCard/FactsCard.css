@@ -1,0 +1,97 @@
+.FactsCard {
+	width: 100%;
+	margin: 10px;
+	line-height: 1.6;	
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+    
+}
+@media screen and (min-width: 600px){
+	.FactsCard {
+		width: 45%;
+	}
+}
+@media screen and (min-width: 900px){
+	.FactsCard {
+		width: 30%;
+	}
+}
+
+.FactsCard-content {
+	border: 2px solid rgb(53,55,54);
+	background: white;
+	min-height: 340px;
+	box-shadow: 4px 4px 0 0 rgba(0,0,0,0.12);
+	padding: 30px 0 60px 0;
+}
+.FactsCard-mainTitle {
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.FactsCard-listItem {
+	margin: 10px;
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px dotted gray;
+	display: block;
+	text-align: left;
+
+}
+.FactsCard-listItem:hover {
+	background: rgb(240,240,240);
+}
+
+.FactsCard-opinion {
+	font-weight: 800;
+	display: inline-block;
+	margin: 0 2px;
+}
+.FactsCard-opinion.is-for {
+	color: #3EA869;
+}
+.FactsCard-opinion.is-against {
+	color: #C62F20;
+}
+.FactsCard-opinion.is-unclear {
+	background: gray;
+}
+
+.FactsCard-opinionCount {
+	background: rgb(200,200,200);
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	color: white;
+	display: inline-block;
+	font-size: 14px;
+	vertical-align: top;
+	margin: 0 4px;
+	text-align: center;
+}
+.FactsCard-actions {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	padding-top: 10px;
+}
+.FactsCard-button, .FactsCard-button:visited {
+	display: inline-block;
+	text-decoration: none;
+	padding: 2px 20px;
+	color: rgb(53,55,54);
+	width: 40%;
+	margin: 5px;
+	cursor: pointer;
+	font-weight: 800;
+	
+}
+.FactsCard-button:hover {
+	color: #4298B5;
+}
+.FactsCard-buttonMeta {
+	font-size: 14px;
+}
