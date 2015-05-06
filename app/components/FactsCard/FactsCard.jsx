@@ -25,7 +25,8 @@ export default class MainMenu extends React.Component {
         var countItem = (listTop3) ? "" : <div className="FactsCard-opinionCount">{item.opinionCount}</div>;
         return (
           <a className="FactsCard-listItem"
-               href="person/same-sex-marraige">
+             href="person/same-sex-marraige"
+             key={key}>
               <div className={opinionClasses}>{item.opinion}</div>
               {item.title}
               {countItem}

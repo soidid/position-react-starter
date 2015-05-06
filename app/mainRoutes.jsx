@@ -11,6 +11,7 @@ import NotFoundPage from "route-handlers/NotFoundPage";
 //
 import PersonPage from "route-handlers/PersonPage";
 import PersonIssuePage from "route-handlers/PersonIssuePage";
+import PersonListPage from "route-handlers/PersonListPage";
 /* eslint-enable */
 
 // polyfill
@@ -21,8 +22,9 @@ if(!Object.assign)
 module.exports = (
 	<Route name="app" path="/" handler={Application}>
 		<Route name="some-page" path="/some-page" handler={SomePage} />
-		<Route name="todolist" path="list/:list" handler={TodoListPage} />
+		
 		<Route name="home" path="/home" handler={HomePage} />
+		<Route name="personList" path="/list/person" handler={PersonListPage} />
 		<Route name="person" path="/person" handler={PersonPage} />
 		<Route name="personIssue" path="/person/:issue" handler={PersonIssuePage} />
 		

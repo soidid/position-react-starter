@@ -1,0 +1,77 @@
+.PersonListPage {
+	text-align: center;
+	padding-top: 50px;
+	width: 100%;
+	position: relative;
+}
+@media screen and (min-width: 1000px){
+	.PersonListPage {
+		width: 1000px;
+		margin: 0 auto;
+	}
+}
+.PersonListPage-legislatorItem, .PersonListPage-legislatorItem:visited {
+   	vertical-align: top;
+   	
+   	color: rgb(53,55,54);
+   	text-decoration: none;
+}
+
+@media screen and (min-width: 600px){
+   .PersonListPage-legislatorItem {
+   	   display: inline-block;
+   	   width: 45%;
+   	   
+   }
+}
+@media screen and (min-width: 1000px){
+   .PersonListPage-legislatorItem {
+   	   display: inline-block;
+   	   width: 33%;
+   	   
+   }
+}
+.PersonListPage-legislatorItem:hover .PersonListPage-avatar {
+	border: 4px solid rgb(53,55,54);
+}
+.PersonListPage-avatar {
+  line-height: 1.4;
+  margin: 4px;
+  border: 4px solid white;
+  background: white;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0px 0 rgba(0,0,0,0.08);
+
+}
+.PersonListPage-flex {
+	display: flex;
+}
+.PersonListPage-flexLeft {
+	flex: 0 0 60px;
+}
+.PersonListPage-flexMain {
+	flex: 1;
+	text-align: left;
+	margin-left: 10px;
+}
+.PersonListPage-name {
+	font-weight: 800;
+}
+.PersonListPage-description {
+	font-size: 14px;
+}
+.PersonListPage-descriptionLight {
+	font-size: 14px;
+	color: rgb(180,180,180);
+	height: 80px;
+}
+
+.PersonListPage-mainIssues {
+	text-align: left;
+	padding: 4px;
+	font-size: 14px;
+	border-top: 1px solid rgb(220,220,220);
+	color: rgb(153,155,154);
+}
+

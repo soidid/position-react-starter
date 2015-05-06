@@ -3,18 +3,37 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	text-align: center;
-	min-height: 40px;
+	height: 40px;
 	font-weight: 800;
 	z-index: 100;
 	background: #6FB4B1;
-	padding: 10px;
+	
 }
-.AppBar-home, .AppBar-home:visited {
-	position: absolute;
-	left: 10px;
-	top: 8px;
+.AppBar-logo {
+	display: inline-block;
+	height: 20px;
+}
+.AppBar-logoItem {
 	color: white;
 	font-weight: 400;
 	text-decoration: none;
+	margin: 0 10px;
+	padding: 10px;
+	vertical-align: top;
+	height: 40px;
+	display: inline-block;
+	
+} 
+.AppBar-item, .AppBar-item:visited {
+	display: inline-block;
+	color: white;
+	font-weight: 400;
+	text-decoration: none;
+	margin: 0 10px;
+	padding: 12px 10px;
+	vertical-align: top;
+	height: 40px;
+}
+.AppBar-logoItem:hover, .AppBar-item:hover {
+	border-bottom: 5px solid #a8d2d0;
 }
