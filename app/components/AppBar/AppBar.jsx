@@ -12,7 +12,11 @@ export default class AppBar extends React.Component {
            href="/">HOME
         </a>
         <a className="AppBar-item"
-           href="/list/person">找立委</a>
+           href="/person-list">找立委
+        </a>
+        <a className="AppBar-item"
+           href="/issue-list">找議題
+        </a>
       </div>);
   }
 }

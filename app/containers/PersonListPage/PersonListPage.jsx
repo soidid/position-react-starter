@@ -194,13 +194,15 @@ export default class PersonListPage extends React.Component {
 		})
 		var bindInputChange = this._onInputChange.bind(this, null);
         var bindSetInput = this._onSetInput.bind(this);
-
+        var examples = ['吳育昇','蔡正元','國民黨'];
 		return (
 		<div className="PersonListPage">
            
             <Input handleInputChange={bindInputChange}
                	   handleSetInput={bindSetInput}
-                   currentTerm={currentTerm}/>
+                   currentTerm={currentTerm}
+                   examples={examples}
+                   placeholder={"搜尋立委姓名或選區"}/>
 		    {lyItems}
 		</div>);
 	}

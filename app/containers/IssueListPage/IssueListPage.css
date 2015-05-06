@@ -1,0 +1,48 @@
+.IssueListPage {
+	text-align: center;
+	padding-top: 50px;
+	width: 100%;
+	position: relative;
+}
+@media screen and (min-width: 1000px){
+	.IssueListPage {
+		width: 1000px;
+		margin: 0 auto;
+	}
+}
+.IssueListPage-issue, .IssueListPage-issue:visited {
+    color: rgb(53,55,54);
+    text-decoration: none;
+    display: block;
+    background: white;
+    padding: 10px;
+    margin: 3px;
+    position: relative;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.12);
+   
+}
+.IssueListPage-issue:hover {
+	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.22);
+}
+@media screen and (min-width: 600px){
+   .IssueListPage-issue {
+   	   display: inline-block;
+   	   width: 45%;
+   	   
+   }
+}
+@media screen and (min-width: 1000px){
+   .IssueListPage-issue {
+   	   display: inline-block;
+   	   width: 30%;
+   	   
+   }
+}
+.IssueListPage-issueTitle {
+    font-size: 20px;
+    font-weight: 800;
+}
+.IssueListPage-issueImg {
+	height: 150px;
+    overflow: hidden;
+}
