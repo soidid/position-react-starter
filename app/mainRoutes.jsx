@@ -10,6 +10,7 @@ import HomePage     from "route-handlers/HomePage";
 import NotFoundPage from "route-handlers/NotFoundPage";
 //
 import PersonPage from "route-handlers/PersonPage";
+import PersonIssuePage from "route-handlers/PersonIssuePage";
 /* eslint-enable */
 
 // polyfill
@@ -23,6 +24,7 @@ module.exports = (
 		<Route name="todolist" path="list/:list" handler={TodoListPage} />
 		<Route name="home" path="/home" handler={HomePage} />
 		<Route name="person" path="/person" handler={PersonPage} />
+		<Route name="personIssue" path="/person/:issue" handler={PersonIssuePage} />
 		
 		<DefaultRoute handler={HomePage} />
 		<NotFoundRoute handler={NotFoundPage} />

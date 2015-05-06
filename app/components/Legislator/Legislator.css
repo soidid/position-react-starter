@@ -11,3 +11,10 @@
 	margin-top: 10px;
 	text-align: center;
 }
+.Legislator, .Legislator:visited {
+	text-decoration: none;
+	color: rgb(53,55,54);
+}
+.Legislator:hover {
+	color: #6FB4B1;
+}

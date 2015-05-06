@@ -1,7 +1,6 @@
 import React from "react";
 import { RouteHandler } from "react-router";
 
-import AppBar from "components/AppBar/AppBar.jsx";
 import Profile from "components/Profile/Profile.jsx";
 import "./PersonPage.css";
 

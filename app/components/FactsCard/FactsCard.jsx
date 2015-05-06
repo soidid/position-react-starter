@@ -24,11 +24,12 @@ export default class MainMenu extends React.Component {
         
         var countItem = (listTop3) ? "" : <div className="FactsCard-opinionCount">{item.opinionCount}</div>;
         return (
-          <div className="FactsCard-listItem">
+          <a className="FactsCard-listItem"
+               href="person/same-sex-marraige">
               <div className={opinionClasses}>{item.opinion}</div>
               {item.title}
               {countItem}
-          </div>
+          </a>
 
         )
     });
@@ -47,7 +48,7 @@ export default class MainMenu extends React.Component {
                     <span className="FactsCard-buttonMeta">{data.vote}</span>
                 </a>
                 <a className="FactsCard-button"
-                   href="index.html#records">
+                   href="#">
                    <Icon icon={"eye"} />
                    <span className="FactsCard-buttonMeta">2312</span>
                 </a>
