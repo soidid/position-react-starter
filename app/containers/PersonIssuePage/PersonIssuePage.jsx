@@ -17,9 +17,10 @@ export default class PersonIssuePage extends React.Component {
 	}
 	render() {
 		var { loading } = this.props;
+		// <div className="PersonIssuePage-back"><Link to="person"><Icon icon={"chevron-left"}/>所有立場</Link></div>
 		return (
 		<div className="PersonIssuePage">
-		    <div className="PersonIssuePage-back"><Link to="person"><Icon icon={"chevron-left"}/>所有立場</Link></div>
+		    
 			<Legislator data="尤美女" />
 			<Records />
 		</div>);

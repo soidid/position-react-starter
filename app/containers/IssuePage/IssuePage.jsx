@@ -187,7 +187,7 @@ export default class IssuePage extends React.Component {
             return (
               <div className="IssuePage-item"
                  href="/issue">
-                  <Link to="issue">
+                  <Link to="issueVote" params={{issue:"same-sex-marriage"}}>
                   <div className="IssuePage-itemTitle">{item.title}</div>
                   <div className="IssuePage-itemDescription">{item.des}</div>
 

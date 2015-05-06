@@ -15,6 +15,7 @@ import PersonListPage from "route-handlers/PersonListPage";
 
 import IssueListPage from "route-handlers/IssueListPage";
 import IssuePage from "route-handlers/IssuePage";
+import IssueVotePage from "route-handlers/IssueVotePage";
 /* eslint-enable */
 
 // polyfill
@@ -33,6 +34,7 @@ module.exports = (
 		
 		<Route name="issueList" path="/issue-list" handler={IssueListPage} />
 		<Route name="issue" path="/issue" handler={IssuePage} />
+		<Route name="issueVote" path="/issue/:issue" handler={IssueVotePage} />
 
 		<DefaultRoute handler={HomePage} />
 		<NotFoundRoute handler={NotFoundPage} />
