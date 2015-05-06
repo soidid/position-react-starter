@@ -2,6 +2,8 @@ import React from "react/addons";
 import { Link } from "react-router";
 import './FactsCard.css';
 
+import Icon from '../Icon/Icon.jsx';
+
 export default class MainMenu extends React.Component {
   
   render () {
@@ -41,13 +43,13 @@ export default class MainMenu extends React.Component {
               <div className="FactsCard-actions">
                 
                 <a className="FactsCard-button">
-                    {data.vote} 人<br/>
-                    <span className="FactsCard-buttonMeta">覺得重要</span>
+                    <Icon icon={"star"} />
+                    <span className="FactsCard-buttonMeta">{data.vote}</span>
                 </a>
                 <a className="FactsCard-button"
                    href="index.html#records">
-                   2312 人<br/>
-                   查看過
+                   <Icon icon={"eye"} />
+                   <span className="FactsCard-buttonMeta">2312</span>
                 </a>
               </div>
           </div>

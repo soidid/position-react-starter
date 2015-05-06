@@ -32,7 +32,7 @@
 }
 
 .FactsCard-listItem {
-	margin: 10px;
+	margin: 0px 10px;
 	cursor: pointer;
 	padding: 10px;
 	border-bottom: 1px dotted gray;
@@ -81,17 +81,22 @@
 .FactsCard-button, .FactsCard-button:visited {
 	display: inline-block;
 	text-decoration: none;
-	padding: 2px 20px;
-	color: rgb(53,55,54);
+	
+	color: rgb(220,220,220);
 	width: 40%;
 	margin: 5px;
 	cursor: pointer;
 	font-weight: 800;
 	
 }
-.FactsCard-button:hover {
-	color: #4298B5;
+.FactsCard-button:hover, .FactsCard-buttonMeta:hover, .FactsCard-button:hover .FactsCard-buttonMeta {
+	color: #FFD041;
 }
 .FactsCard-buttonMeta {
 	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 3px;
+	margin-left: 4px;
+	
 }
