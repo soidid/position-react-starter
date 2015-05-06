@@ -12,6 +12,7 @@
 }
 .PersonListPage-legislatorItem, .PersonListPage-legislatorItem:visited {
    	vertical-align: top;
+    margin: 5px;
    	
 }
 .PersonListPage-legislatorItem a, .PersonListPage-legislatorItem a:visited {

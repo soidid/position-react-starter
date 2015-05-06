@@ -1,11 +1,13 @@
 .Input {
 	margin: 100px auto;
 	position: relative;
+	width: 100%;
+  	padding: 10px;
 }
 .Input-textInput {
 	border: 1px solid rgb(220,220,220);
 	height: 55px;
-    margin: 5px;
+    
     padding: 4px 10px;
     font-size: 16px;
 	width: 100%;
