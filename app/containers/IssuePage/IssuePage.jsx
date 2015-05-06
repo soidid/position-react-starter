@@ -3,6 +3,7 @@ import { RouteHandler } from "react-router";
 import { Link } from "react-router";
 
 import LegislatorAvatar from "components/LegislatorAvatar/LegislatorAvatar.jsx";
+import Icon from "components/Icon/Icon.jsx";
 
 
 import "./IssuePage.css";
@@ -198,6 +199,17 @@ export default class IssuePage extends React.Component {
                       <div className="IssuePage-opinion is-none" style={styleNone}></div>
                   </div>
                   <div className="IssuePage-itemPositionDes">立法院表態：13%同意，8%反對，5%不明確，74%未表態（長條圖 or 圓餅圖）</div>
+
+                  <div className="IssuePage-actions">
+                      <div className="IssuePage-button">
+                        <Icon icon={"star"} />
+                        <span className="IssuePage-buttonMeta">{423-key*12}</span>
+                      </div>
+                      <div className="IssuePage-button">
+                         <Icon icon={"eye"} />
+                         <span className="IssuePage-FactsCard-buttonMeta">2312</span>
+                      </div>
+                  </div>
                   </Link>
               </div>
             )

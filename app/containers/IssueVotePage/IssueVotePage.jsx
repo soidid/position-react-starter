@@ -20,7 +20,6 @@ export default class IssueVotePage extends React.Component {
     
 		return (
       <div className="IssueVotePage">
-          
           <OverviewWall data={lyData.data}/>
       </div>
     )
