@@ -740,7 +740,7 @@ export default class Records extends React.Component {
           </select> 
 
           <div className="Records-description">
-              在過去四年中，尤美女有 <span className="Records-voteNumbers">{entriesCount.all}</span> 筆相關的立場表達事件：<br/>
+              <div className="Records-descriptionIntro">在過去四年中，尤美女有 <span className="Records-voteNumbers">{entriesCount.all}</span> 筆相關的立場表達事件：</div>
               <span className="Records-voteNumbers is-for">{entriesCount.for}</span>  筆贊成； 
               <span className="Records-voteNumbers is-against">{entriesCount.against}</span> 筆反對；
               <span className="Records-voteNumbers is-unclear">{entriesCount.unclear}</span> 筆立場不明確。

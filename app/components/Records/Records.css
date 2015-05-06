@@ -39,7 +39,20 @@
 
 .Records-description {
 	margin-bottom: 30px;
-	line-height: 2;
+	line-height: 1.6;
+	text-align: left;
+}
+.Records-descriptionIntro {
+	display: inline;
+}
+@media screen and (min-width: 500px){
+	.Records-description {
+		text-align: center;
+		line-height: 2;
+	}
+	.Records-descriptionIntro {
+		display: block;
+	}
 }
 .Records-year {
 	text-align: left;
@@ -88,9 +101,14 @@
 .Records-voteNumbers {
     font-size: 14px;
     font-weight: 800;
-    min-width: 30px;
+    min-width: 24px;
     text-align: center;
 	display: inline-block;
+}
+@media screen and (min-width: 500px){
+	.Records-voteNumbers {
+		min-width: 30px;
+	}
 }
 .Records-yearToggle {
 	text-align: right;
