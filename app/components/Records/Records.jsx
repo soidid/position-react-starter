@@ -526,7 +526,7 @@ export default class Records extends React.Component {
                 <div className="Records-entry"
                      key={key}>
                     <div className="Records-entryTitle">
-                      <LegislatorAvatar data={item.name}/>
+                      <LegislatorAvatar data={item.name} name={true}/>
                       <div className={opinionClasses}>{item.opinion}</div>
                     </div>
                     <div className="Records-quote">
@@ -689,7 +689,7 @@ export default class Records extends React.Component {
             <div className="Records-entry"
                  key={key}>
                 <div className="Records-entryTitle">
-                  <LegislatorAvatar data={item.name}/>
+                  <LegislatorAvatar data={item.name} name={true}/>
                   <div className={opinionClasses}>{item.opinion}</div>
                 </div>
                 <div className="Records-quote">

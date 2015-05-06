@@ -127,7 +127,7 @@
 	color: rgb(53,55,54);
 }
 .Records-entryTitle {
-    padding: 4px 10px 4px 10px;
+    padding: 8px 10px 4px 10px;
     font-weight: 800;
     font-size: 18px;
     
@@ -137,7 +137,7 @@
 	font-weight: 800;
 	display: inline-block;
 	vertical-align: top;
-	padding-top: 8px;
+	padding-top: 16px;
 	margin-left: 3px;
 }
 .Records-opinion.is-for {

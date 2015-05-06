@@ -171,7 +171,7 @@ export default class Profile extends React.Component {
     
     return (
       <div className="Profile">
-          <Legislator data="尤美女" />
+          <Legislator data="尤美女"/>
           <div className="Profile-intro">
               
           </div>

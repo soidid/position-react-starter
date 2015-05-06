@@ -180,18 +180,24 @@ export default class IssuePage extends React.Component {
           	"des": "餿水油風暴中，衛生人員赴工廠稽察時常碰壁，甚至受到業者威脅。\n提案改由中央政府配置「食品警察隊」，協助食品衛生稽查人員，排除稽查及取締違法之組礙。"
           }];
         var subItem = sub.map((item,key)=>{
-            
+            var styleFor = {"width":"13%"};
+            var styleAgainst = {"width":"8%"};
+            var styleUnclear = {"width":"5%"};
+            var styleNone = {"width":"74%"};
             return (
               <div className="IssuePage-item"
                  href="/issue">
                   <Link to="issue">
                   <div className="IssuePage-itemTitle">{item.title}</div>
                   <div className="IssuePage-itemDescription">{item.des}</div>
+
                   <div className="IssuePage-itemPosition">
-                      <span>43%</span> 同意
-                      <span>21%</span> 反對
-                      <span>46%</span> 未表態
+                      <div className="IssuePage-opinion is-for" style={styleFor}></div>
+                      <div className="IssuePage-opinion is-against" style={styleAgainst}></div>
+                      <div className="IssuePage-opinion is-unclear" style={styleUnclear}></div>
+                      <div className="IssuePage-opinion is-none" style={styleNone}></div>
                   </div>
+                  <div className="IssuePage-itemPositionDes">立法院表態：13%同意，8%反對，5%不明確，74%未表態（長條圖 or 圓餅圖）</div>
                   </Link>
               </div>
             )

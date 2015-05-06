@@ -74,13 +74,36 @@
 .IssuePage-itemDescription {
 	color: rgb(100,100,100);
 	text-align: left;
-	line-height: 1.6;
-	height: 100px;
+	line-height: 1.4;
+	height: 90px;
 	overflow: hidden;
+
+}
+.IssuePage-itemPositionDes {
+	margin-top: 3px;
+	color: rgb(100,100,100);
+	text-align: left;
+	line-height: 1.2;
+	font-size: 12px;
 }
 .IssuePage-itemPosition {
-	background: gray;
 	margin-top: 10px;
+}
+.IssuePage-opinion {
+	display: inline-block;
+	height: 20px;
+}
+.IssuePage-opinion.is-for {
+	background: #3EA869;
+}
+.IssuePage-opinion.is-against {
+	background: #C62F20;
+}
+.IssuePage-opinion.is-unclear {
+	background: gray;
+}
+.IssuePage-opinion.is-none {
+	background: rgb(220,220,220);
 }
 
 
