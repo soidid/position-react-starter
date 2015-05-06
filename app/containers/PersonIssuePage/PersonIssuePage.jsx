@@ -1,5 +1,6 @@
 import React from "react";
 import { RouteHandler } from "react-router";
+import { Link } from "react-router";
 
 import Legislator from 'components/Legislator/Legislator.jsx';
 import Records from 'components/Records/Records.jsx';
@@ -18,8 +19,7 @@ export default class PersonIssuePage extends React.Component {
 		var { loading } = this.props;
 		return (
 		<div className="PersonIssuePage">
-		    <a className="PersonIssuePage-back"
-		       href="/person"><Icon icon={"chevron-left"}/>back</a>
+		    <div className="PersonIssuePage-back"><Link to="person"><Icon icon={"chevron-left"}/>所有立場</Link></div>
 			<Legislator data="尤美女" />
 			<Records />
 		</div>);

@@ -1,5 +1,6 @@
 import React from "react";
 import { RouteHandler } from "react-router";
+import { Link } from "react-router";
 
 import Input from 'components/Input/Input.jsx';
 
@@ -82,14 +83,14 @@ export default class IssueListPage extends React.Component {
 	    
 	    var imgURL = require("./images/"+(k+1)+".png");
         return (
-            <a className="IssueListPage-issue"
-               href="/issue"
+            <div className="IssueListPage-issue"
                key={k}>
+               <Link to="issue">
                <img className="IssueListPage-issueImg"
                     src={imgURL} />
                <div className="IssueListPage-issueTitle">{i.name}</div>
-
-            </a>
+               </Link>
+            </div>
         )
         });
 

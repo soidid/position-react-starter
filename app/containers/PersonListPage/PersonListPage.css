@@ -12,8 +12,11 @@
 }
 .PersonListPage-legislatorItem, .PersonListPage-legislatorItem:visited {
    	vertical-align: top;
-   	color: rgb(53,55,54);
-   	text-decoration: none;
+   	
+}
+.PersonListPage-legislatorItem a, .PersonListPage-legislatorItem a:visited {
+    color: rgb(53,55,54);
+    text-decoration: none;
 }
 
 @media screen and (min-width: 600px){

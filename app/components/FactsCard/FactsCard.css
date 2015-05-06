@@ -38,9 +38,10 @@
 	border-bottom: 1px dotted gray;
 	display: block;
 	text-align: left;
+}
+.FactsCard-listItem a, .FactsCard-listItem a:visited {
 	color: rgb(53,55,54);
 	text-decoration: none;
-
 }
 .FactsCard-listItem:hover {
 	background: rgb(240,240,240);

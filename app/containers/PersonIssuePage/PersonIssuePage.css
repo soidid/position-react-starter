@@ -12,13 +12,17 @@
 }
 .PersonIssuePage-back, .PersonIssuePage-back:visited {
 	position: absolute;
-	text-decoration: none;
+	
 	left: 20px;
-	color: rgb(53,55,54);
+	
 	cursor: pointer;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
 	vertical-align: top;
 	padding: 2px;
+}
+.PersonIssuePage-back a, .PersonIssuePage-back a:visited {
+	color: rgb(53,55,54);
+	text-decoration: none;
 }
 .PersonIssuePage-back:hover {
 	color: #6FB4B1;

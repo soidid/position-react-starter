@@ -735,8 +735,8 @@ export default class Records extends React.Component {
           
           <select className="Records-title">
               <option>儘速修法將同性婚姻合法化</option>
-              <option>每週 40 工時</option>
-              <option>分廠分照  </option>
+              <option>其他婚姻平權的子議題A</option>
+              <option>其他婚姻平權的子議題B</option>
           </select> 
 
           <div className="Records-description">

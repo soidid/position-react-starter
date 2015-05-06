@@ -1,0 +1,86 @@
+.IssuePage {
+	text-align: center;
+	padding-top: 50px;
+	width: 100%;
+}
+@media screen and (min-width: 1000px){
+	.IssuePage {
+		width: 1000px;
+		margin: 0 auto;
+	}
+}
+.IssuePage-pageTitle {
+	font-size: 30px;
+	font-weight: 800;
+	margin: 20px;
+}
+.IssuePage-title {
+	font-size: 20px;
+	font-weight: 800;
+	margin: 20px;
+	text-align: left;
+}
+.IssuePage-description {
+	background: rgb(220,220,220);
+	text-align: left;
+	margin: 10px;
+	padding: 20px;
+}
+.IssuePage-items {
+	text-align: left;
+	padding: 5px;
+}
+.IssuePage-item, .IssuePage-item:visited {
+	display: inline-block;
+	background: white;
+	
+	width: 100%;
+	vertical-align: top;
+	margin: 4px;
+	min-height: 200px;
+	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
+	padding: 20px;
+	border: 4px solid white;
+}
+.IssuePage-item a, .IssuePage-item a:visited {
+	color: rgb(53,55,54);
+	text-decoration: none;
+}
+.IssuePage-item:hover {
+	border-color: rgb(53,55,54);
+}
+@media screen and (min-width: 600px){
+    .IssuePage-item {
+   	   display: inline-block;
+   	   width: 45%;
+   	   
+    }
+}
+@media screen and (min-width: 1000px){
+    .IssuePage-item {
+   	   display: inline-block;
+   	   width: 32%;
+    }
+}
+.IssuePage-itemTitle {
+	font-weight: 800;
+	font-size: 20px;
+	padding-bottom: 10px;
+	text-align: left;
+	line-height: 1.4;
+	height: 60px;
+	overflow: hidden;
+}
+.IssuePage-itemDescription {
+	color: rgb(100,100,100);
+	text-align: left;
+	line-height: 1.6;
+	height: 100px;
+	overflow: hidden;
+}
+.IssuePage-itemPosition {
+	background: gray;
+	margin-top: 10px;
+}
+
+

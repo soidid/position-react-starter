@@ -8,15 +8,12 @@ export default class AppBar extends React.Component {
   	var logoURL = require("./images/AppBar-logo.png");
     return (
       <div className="AppBar">
-        <a className="AppBar-item"
-           href="/">HOME
-        </a>
-        <a className="AppBar-item"
-           href="/person-list">找立委
-        </a>
-        <a className="AppBar-item"
-           href="/issue-list">找議題
-        </a>
+        <div className="AppBar-item"><Link to="app">HOME</Link>
+        </div>
+        <div className="AppBar-item"><Link to="personList">找立委</Link>
+        </div>
+        <div className="AppBar-item"><Link to="issueList">找議題</Link>
+        </div>
       </div>);
   }
 }

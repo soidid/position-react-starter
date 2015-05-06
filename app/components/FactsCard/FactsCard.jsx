@@ -24,13 +24,14 @@ export default class MainMenu extends React.Component {
         
         var countItem = (listTop3) ? "" : <div className="FactsCard-opinionCount">{item.opinionCount}</div>;
         return (
-          <a className="FactsCard-listItem"
-             href="person/same-sex-marraige"
-             key={key}>
+          <div className="FactsCard-listItem"
+               key={key}>
+             <Link to="personIssue" params={{issue: "same-sex-marraige"}}>
               <div className={opinionClasses}>{item.opinion}</div>
               {item.title}
               {countItem}
-          </a>
+              </Link>
+          </div>
 
         )
     });
