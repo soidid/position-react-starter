@@ -7,6 +7,35 @@
 	text-decoration: none;
 	color: rgb(53,55,54);
 }
+.OverviewWallAvatar-hoverInfo {
+	display: none;
+}
+.OverviewWallAvatar:hover .OverviewWallAvatar-hoverInfo {
+	display: block;
+	background: rgba(0,0,0,0.9);
+	color: white;
+	position: absolute;
+	top: -42px;
+	left: -8px;
+	text-align: left;
+	font-size: 12px;
+	width: 70px;
+	padding: 4px;
+	line-height: 1.4;
+	z-index: 20;
+	border-radius: 4px;
+}
+.OverviewWallAvatar:hover .OverviewWallAvatar-hoverInfo:after {
+	content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0; height: 0;
+    border-top: 8px solid #000000;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
 .OverviewWallAvatar-opinionCount {
 	position: absolute;
     top: -2px;
@@ -19,7 +48,6 @@
     padding: 3px 4px;
     border-radius: 4px;
 }
-
 .OverviewWallAvatar-avatar {
 	display: inline-block;
 	background: white;

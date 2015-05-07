@@ -9,16 +9,19 @@ export default class OverviewWallAvatar extends React.Component {
       var {data} = this.props;
       var partyClass = "OverviewWallAvatar-avatar is-"+data.party_eng;
      
-      var positionCouunt = (data.positionCount === 0 || !data.positionCount) ? "":
-      <div className="OverviewWallAvatar-opinionCount">{data.positionCount}</div>;
+      var positionCount = data.positionCount || 0;
+      var positionCountItem = (positionCount === 0) ? "":
+      <div className="OverviewWallAvatar-opinionCount">{positionCount}</div>;
 
       return (
           <div className="OverviewWallAvatar">
               <Link to="personIssue" params={{issue:"same-sex-marriage"}}>
-                  {positionCouunt}
+                  <div className="OverviewWallAvatar-hoverInfo">有 {positionCount} 個表態紀錄</div>
+                  {positionCountItem}
                   <div className={partyClass}>
                       <LegislatorAvatar data={data.name} plain={true} name={true}/>
                   </div>
+
               </Link>
           </div>
 
