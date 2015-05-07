@@ -214,7 +214,7 @@ export default class IssuePage extends React.Component {
             )
         });
 
-    var coverImgURL = require("./images/IssuePage-cover.jpg");
+   
 		return (
 		<div className="IssuePage">
 			

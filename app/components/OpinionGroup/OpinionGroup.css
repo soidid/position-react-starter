@@ -1,0 +1,15 @@
+.OpinionGroup {
+	margin: 10px;
+	padding: 10px;
+	background: rgb(220,220,220);
+	text-align: left;
+}
+.OpinionGroup-title {
+	font-size: 20px;
+	font-weight: 800;
+	margin-bottom: 20px;
+
+}
+.OpinionGroup-members {
+	text-align: left;
+}
