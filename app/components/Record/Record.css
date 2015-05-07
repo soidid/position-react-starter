@@ -11,7 +11,7 @@
 	text-decoration: none;
 	color: rgb(53,55,54);
 }
-.Record-entryTitle {
+.Record-title {
     padding: 8px 10px 4px 10px;
     font-weight: 800;
     font-size: 18px;
@@ -79,7 +79,7 @@
 	color: gray;
 	font-size: 14px;
 	display: inline-block;
-
+	position: relative;
 }
 .Record-star, .Record-more {
 	cursor: pointer;
@@ -92,16 +92,14 @@
 .Record-more, .Record-more:visited {
     color: rgb(220,220,220);
 	text-decoration: none;
-	position: relative;
-	
 }
 .Record-more:hover {
     color: #038543;
 }
 .Record-moreTooltip {
 	position: absolute;
-	top: 15px;
-	left: 0;
+	top: 35px;
+	left: 20px;
 	z-index: 10;
 	background: gray;
 }

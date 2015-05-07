@@ -479,7 +479,7 @@ export default class RecordList extends React.Component {
           }
       ]
 
-    var year_entries = data.map((year, year_index)=>{
+    var orderByYearItems = data.map((year, year_index)=>{
         entriesCount.yearAll = 0;
         var entries = year.entries
         .filter((item)=>{
@@ -514,9 +514,9 @@ export default class RecordList extends React.Component {
             }
          
             return (
-                <Record data={item}
-                        key={key} />
-                    
+                <div key={key}>
+                  <Record data={item}/>
+                </div>
             )
         });
         
@@ -550,9 +550,9 @@ export default class RecordList extends React.Component {
     });
 
 
-    /////////////////////////////////////////////////////////
-    /* 依照票數排序 */
-    ////////////////////////////////////////////////////////
+    // /////////////////////////////////////////////////////////
+    // /* 依照票數排序 */
+    // ////////////////////////////////////////////////////////
 
     
     var orderByVote = 
@@ -637,14 +637,15 @@ export default class RecordList extends React.Component {
         }
     ];
 
-    var RecordList = orderByVote.map((item,key)=>{
+    var orderByVoteItems = orderByVote.map((item,key)=>{
         return (
-            <Record data={item}
-                    key={key} />
+            <div key={key}>
+              <Record data={item}/>
+            </div>
         )
     })
 
-    var content = (currentTab === 'vote') ? {RecordList} : {year_entries};
+    var content = (currentTab === 'vote') ? orderByVoteItems : orderByYearItems;
     var tabs = [{title:"依票數",id:"vote"},{title:"時間軸",id:"timeline"}];
     var tabsItem = tabs.map((item,key)=>{
         var tabClass = "RecordList-tab";
@@ -654,9 +655,11 @@ export default class RecordList extends React.Component {
         var boundClick = this._onSetTab.bind(this, item.id);
         return (
           <div className={tabClass}
-               onClick={boundClick}>{item.title}</div>
+               onClick={boundClick}
+               key={key}>{item.title}</div>
         )
     });
+    
     
     return (
         <div className="RecordList">
@@ -673,12 +676,14 @@ export default class RecordList extends React.Component {
               <span className="RecordList-voteNumbers is-against">{entriesCount.against}</span> 筆反對；
               <span className="RecordList-voteNumbers is-unclear">{entriesCount.unclear}</span> 筆立場不明確。
           </div>
-          
+
           {tabsItem}
           {content}
           
         </div>
     );
+
+   
 
   }
 }
