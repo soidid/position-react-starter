@@ -35,31 +35,6 @@
 	background: gray;
 }
 
-.Record-voteNumbers {
-    font-size: 14px;
-    font-weight: 800;
-    min-width: 24px;
-    text-align: center;
-	display: inline-block;
-}
-.Record-voteNumbers.is-for {
-	background: #3EA869;
-	color: white;
-	border-radius: 50%;
-	
-}
-.Record-voteNumbers.is-against {
-	background: #C62F20;
-	color: white;
-	border-radius: 50%;
-	
-}
-.Record-voteNumbers.is-unclear {
-	background: gray;
-	color: white;
-	border-radius: 50%;
-	
-}
 .Record-quote {
 	font-family: Georgia;
     margin: 4px 5px;
@@ -74,16 +49,20 @@
     margin-right: 0.25em;
     vertical-align: -0.4em;
 }
+.Reocrd-readFull {
+	font-size: 16px;
+	color: #6FB4B1;
+}
 .Record-info {
 	padding: 10px 20px;
 	color: gray;
 	font-size: 14px;
 }
 .Record-action {
-	border-top: 1px dotted rgb(220,220,220);
+	//border-top: 1px dotted rgb(220,220,220);
 }
 .Record-actionItem {
-	padding: 10px 20px;
+	padding: 14px 20px;
 	color: gray;
 	font-size: 14px;
 	display: inline-block;
@@ -141,7 +120,7 @@
 
 }
 .Record-tooltipItem {
-	padding: 4px 10px;
+	padding: 8px 10px;
 }
 .Record-tooltipItem:hover{
     background: #6FB4B1;
