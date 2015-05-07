@@ -187,15 +187,15 @@ export default class IssuePage extends React.Component {
             var styleNone = {"width":"4%"};
             return (
             
-                  <Link to="issueVote" 
-                        params={{issue:"same-sex-marriage"}}
-                        className="IssuePage-item">
+            <Link to="issueVote" 
+                  params={{issue:"same-sex-marriage"}}
+                  className="IssuePage-item">
                   <div className="IssuePage-itemTitle">{item.title}</div>
                   <div className="IssuePage-itemDescription">{item.des}</div>
                   
                   <div className="IssuePage-itemPosition">
-                      <div className="IssuePage-itemPositionTopText">立院多數意見</div>
-                      <div className="IssuePage-itemPositionCount">43%</div>
+                      <div className="IssuePage-itemPositionTopText">立法院多數意見</div>
+                      <div className="IssuePage-itemPositionCount">{Math.round(Math.random() * 50 + 10)+'%'}</div>
                       <div className="IssuePage-itemPositionBottomText">同意</div>
                   </div>
 
@@ -209,7 +209,7 @@ export default class IssuePage extends React.Component {
                          <span className="IssuePage-FactsCard-buttonMeta">2312</span>
                       </div>
                   </div>
-                  </Link>
+            </Link>
               
             )
         });

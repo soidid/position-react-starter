@@ -106,31 +106,32 @@
 
 .IssuePage-itemPosition {
 	margin-top: 10px;
+	padding-left: 10px;
     position: relative;
+    border-left:4px solid #6FB4B1;
 }
 .IssuePage-itemPositionTopText {
 	text-align: left;
     font-size: 12px;
     margin-bottom: 8px;
-    background: #6FB4B1;
     border-radius: 2px;
     padding: 4px;
-    color: white;
+    
 }
 .IssuePage-itemPositionCount {
 	font-size: 26px;
 	font-weight: 800;
+	margin-left: 4px;
 	color: rgb(180,180,180);
 	display: inline-block;
 }
 .IssuePage-itemPositionBottomText {
 	color: rgb(100,100,100);
-	text-align: left;
-	font-size: 12px;
-	display: inline-block;
-	margin-left: 4px;
-	vertical-align: top;
-	padding-top: 6px;
+    text-align: left;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
 }
 
 /*
@@ -153,10 +154,10 @@
 .IssuePage-actions {
 	position: absolute;
 	left: 0;
-	bottom: 10px;
+	bottom: 12px;
 	width: 100%;
 	padding-top: 10px;
-	border-top: 1px solid rgb(230,230,230);
+	//border-top: 1px solid rgb(230,230,230);
 
 }
 .IssuePage-button {
