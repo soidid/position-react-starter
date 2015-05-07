@@ -97,13 +97,31 @@
 .RecordList-yearSum:hover {
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
-/* x 次支持 */
+
 .RecordList-voteNumbers {
     font-size: 14px;
     font-weight: 800;
     min-width: 24px;
     text-align: center;
 	display: inline-block;
+}
+.RecordList-voteNumbers.is-for {
+	background: #3EA869;
+	color: white;
+	border-radius: 50%;
+	
+}
+.RecordList-voteNumbers.is-against {
+	background: #C62F20;
+	color: white;
+	border-radius: 50%;
+	
+}
+.RecordList-voteNumbers.is-unclear {
+	background: gray;
+	color: white;
+	border-radius: 50%;
+	
 }
 @media screen and (min-width: 500px){
 	.RecordList-voteNumbers {

@@ -34,6 +34,14 @@
 .Record-opinion.is-unclear {
 	background: gray;
 }
+
+.Record-voteNumbers {
+    font-size: 14px;
+    font-weight: 800;
+    min-width: 24px;
+    text-align: center;
+	display: inline-block;
+}
 .Record-voteNumbers.is-for {
 	background: #3EA869;
 	color: white;
@@ -96,10 +104,46 @@
 .Record-more:hover {
     color: #038543;
 }
-.Record-moreTooltip {
+.Record-tooltip {
 	position: absolute;
-	top: 35px;
-	left: 20px;
+	top: 32px;
+	left: 8px;
 	z-index: 10;
-	background: gray;
+	width: 140px;
+	border-radius: 2px;
+	background: white;
+	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.08), -1px -1px 2px 1px rgba(0,0,0,0.08);
+	padding: 10px 0;
+}
+
+.Record-tooltip:before {
+	content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    margin-left: -8px;
+    width: 0; height: 0;
+    border-bottom: 9px solid rgb(220,220,220);
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+
+}
+.Record-tooltip:after {
+	content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 21px;
+    margin-left: -8px;
+    width: 0; height: 0;
+    border-bottom: 8px solid white;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+
+}
+.Record-tooltipItem {
+	padding: 4px 10px;
+}
+.Record-tooltipItem:hover{
+    background: #6FB4B1;
+    color: white;
 }

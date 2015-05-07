@@ -15,7 +15,7 @@ export default class Record extends React.Component {
   }
 
   _onToggleShowFull(){
-    
+
       this.setState({ 
           showFull: !this.state.showFull
       });
@@ -36,7 +36,12 @@ export default class Record extends React.Component {
    
     var bindToggleShowFull = this._onToggleShowFull.bind(this, null);
     
-    var tooltip = (showFull) ? <div className="Record-moreTooltip">tooltip</div> : ""; 
+    var tooltip = (showFull) ? 
+        <div className="Record-tooltip">
+            <div className="Record-tooltipItem">複製連結</div>
+            <div className="Record-tooltipItem">看立法院完整紀錄</div>
+            <div className="Record-tooltipItem">檢舉</div>
+        </div> : ""; 
     
     return (
         <div className="Record">
