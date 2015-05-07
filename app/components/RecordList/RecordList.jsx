@@ -4,9 +4,10 @@ import { Link } from "react-router";
 import Legislator from "../Legislator/Legislator.jsx";
 import LegislatorAvatar from "../LegislatorAvatar/LegislatorAvatar.jsx";
 import Icon from "../Icon/Icon.jsx";
+import Record from "../Record/Record.jsx";
 
-import "./Records.css";
-export default class Records extends React.Component {
+import "./RecordList.css";
+export default class RecordList extends React.Component {
   constructor(props) { super(props)
       this.state = { 
         shouldYearExpand:{},
@@ -488,8 +489,7 @@ export default class Records extends React.Component {
             }
             //console.log(item.name+": "+shouldReturn);
             if(shouldReturn){
-              return item;
-
+                return item;
             }
                 
           }
@@ -512,72 +512,34 @@ export default class Records extends React.Component {
                   break;
 
             }
-            
-           
-            var link = item.link;
-            var opinionClasses = classSet({
-              "Records-opinion": true,
-              "is-for": item.opinion === '贊成',
-              "is-against": item.opinion === '反對',
-              "is-unclear": item.opinion === '不明確'
-            });
-            
+         
             return (
-                <div className="Records-entry"
-                     key={key}>
-                    <div className="Records-entryTitle">
-                      <LegislatorAvatar data={item.name} name={true}/>
-                      <div className={opinionClasses}>{item.opinion}</div>
-                    </div>
-                    <div className="Records-quote">
-                       {item.quote}
-                    </div>
-                    <div className="Records-info">
-                        －{item.type}，{item.date}
-                    </div>
-                    <div className="Records-action">
-                      <div className="Records-actionItem">
-                        <span className="Records-star"><Icon icon={"star"}/> {item.trustVote}</span>  
-                      </div>
-                      <div className="Records-actionItem">
-                        <span className="Records-more"><Icon icon={"share"}/> 124</span>
-                      </div>
-                      <div className="Records-actionItem">
-                        <span className="Records-more"><Icon icon={"ellipsis-h"}/></span>
-                      </div>
-                      
-                    </div>
+                <Record data={item}
+                        key={key} />
                     
-                </div>
             )
         });
         
         var boundToggleYear = this._onTogggleYearData.bind(this, year.year);
-
-
-        
-        var voteEntries = (shouldYearExpand[year.year]===true)? 
-        <div>
-          {entries}
-        </div> : "";
+        var voteEntries = (shouldYearExpand[year.year]===true)? <div>{entries}</div> : "";
         var toggleText = (shouldYearExpand[year.year]===true)? "折疊" : "展開";
-        if(entriesCount.yearAll === 0)
-          toggleText = "";
         
-       return (
-
-            <div className="Records-year"
+        if(entriesCount.yearAll === 0)
+            toggleText = "";
+        
+        return (
+            <div className="RecordList-year"
                  key={year_index}>
-                <div className="Records-yearHeader"
+                <div className="RecordList-yearHeader"
                      onClick={boundToggleYear}>
-                   <div className="Records-yearUnit"></div>
-                   <div className="Records-yearTitle">{year.year}</div>
-                   <div className="Records-yearSum">
-                        <span className="Records-voteNumbers">{entriesCount.yearAll}</span> 個相關表態
-                        <div className="Records-yearToggle">{toggleText}</div>
-                   </div>
+                    <div className="RecordList-yearUnit"></div>
+                    <div className="RecordList-yearTitle">{year.year}</div>
+                    <div className="RecordList-yearSum">
+                        <span className="RecordList-voteNumbers">{entriesCount.yearAll}</span> 個相關表態
+                        <div className="RecordList-yearToggle">{toggleText}</div>
+                    </div>
                 </div>
-                <div className="Records-yearEntries">
+                <div className="RecordList-yearEntries">
                     {voteEntries}
                 </div>
             </div>
@@ -675,84 +637,49 @@ export default class Records extends React.Component {
         }
     ];
 
-
-    var records = orderByVote.map((item,key)=>{
-        var link = item.link;
-        var opinionClasses = classSet({
-          "Records-opinion": true,
-          "is-for": item.opinion === '贊成',
-          "is-against": item.opinion === '反對',
-          "is-unclear": item.opinion === '不明確'
-        });
-        
+    var RecordList = orderByVote.map((item,key)=>{
         return (
-            <div className="Records-entry"
-                 key={key}>
-                <div className="Records-entryTitle">
-                  <LegislatorAvatar data={item.name} name={true}/>
-                  <div className={opinionClasses}>{item.opinion}</div>
-                </div>
-                <div className="Records-quote">
-                   {item.quote}
-                </div>
-                <div className="Records-info">
-                    －{item.type}，{item.date}
-                </div>
-                <div className="Records-action">
-                  <div className="Records-actionItem">
-                    <span className="Records-star"><Icon icon={"star"}/> {item.trustVote}</span>  
-                  </div>
-                  <div className="Records-actionItem">
-                    <span className="Records-more"><Icon icon={"share"}/> 124</span>
-                  </div>
-                  <div className="Records-actionItem">
-                    <span className="Records-more"><Icon icon={"ellipsis-h"}/></span>
-                  </div>
-                  
-                  
-                </div>
-                
-            </div>
+            <Record data={item}
+                    key={key} />
         )
     })
 
-    var content = (currentTab === 'vote') ? {records} : {year_entries};
+    var content = (currentTab === 'vote') ? {RecordList} : {year_entries};
     var tabs = [{title:"依票數",id:"vote"},{title:"時間軸",id:"timeline"}];
     var tabsItem = tabs.map((item,key)=>{
-      var tabClass = "Records-tab";
-      if(currentTab===item.id){
-        tabClass += " is-active"
-      }
-      var boundClick = this._onSetTab.bind(this, item.id);
-      return (
-        <div className={tabClass}
-             onClick={boundClick}>{item.title}</div>
-      )
+        var tabClass = "RecordList-tab";
+        if(currentTab===item.id){
+          tabClass += " is-active"
+        }
+        var boundClick = this._onSetTab.bind(this, item.id);
+        return (
+          <div className={tabClass}
+               onClick={boundClick}>{item.title}</div>
+        )
     });
     
     return (
-        <div className="Records">
+        <div className="RecordList">
           
-          <select className="Records-title">
+          <select className="RecordList-title">
               <option>儘速修法將同性婚姻合法化</option>
               <option>其他婚姻平權的子議題A</option>
               <option>其他婚姻平權的子議題B</option>
           </select> 
 
-          <div className="Records-description">
-              <div className="Records-descriptionIntro">在過去四年中，尤美女有 <span className="Records-voteNumbers">{entriesCount.all}</span> 筆相關的立場表達事件：</div>
-              <span className="Records-voteNumbers is-for">{entriesCount.for}</span>  筆贊成； 
-              <span className="Records-voteNumbers is-against">{entriesCount.against}</span> 筆反對；
-              <span className="Records-voteNumbers is-unclear">{entriesCount.unclear}</span> 筆立場不明確。
+          <div className="RecordList-description">
+              <div className="RecordList-descriptionIntro">在過去四年中，尤美女有 <span className="RecordList-voteNumbers">{entriesCount.all}</span> 筆相關的立場表達事件：</div>
+              <span className="RecordList-voteNumbers is-for">{entriesCount.for}</span>  筆贊成； 
+              <span className="RecordList-voteNumbers is-against">{entriesCount.against}</span> 筆反對；
+              <span className="RecordList-voteNumbers is-unclear">{entriesCount.unclear}</span> 筆立場不明確。
           </div>
+          
           {tabsItem}
           {content}
           
         </div>
     );
 
-
-    
   }
 }
 

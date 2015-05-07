@@ -3,7 +3,7 @@ import { RouteHandler } from "react-router";
 import { Link } from "react-router";
 
 import Legislator from 'components/Legislator/Legislator.jsx';
-import Records from 'components/Records/Records.jsx';
+import RecordList from 'components/RecordList/RecordList.jsx';
 import Icon from 'components/Icon/Icon.jsx';
 
 import "./PersonIssuePage.css";
@@ -22,7 +22,7 @@ export default class PersonIssuePage extends React.Component {
 		<div className="PersonIssuePage">
 		    
 			<Legislator data="尤美女" />
-			<Records />
+			<RecordList />
 		</div>);
 	}
 }

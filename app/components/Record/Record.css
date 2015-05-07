@@ -1,0 +1,107 @@
+.Record {
+	display: inline-block;
+	border: 1px solid rgb(220,220,220);
+	width: 100%;
+	vertical-align: top;
+	margin: 4px;
+	cursor: pointer;
+	text-align: left;
+	background: white;
+
+	text-decoration: none;
+	color: rgb(53,55,54);
+}
+.Record-entryTitle {
+    padding: 8px 10px 4px 10px;
+    font-weight: 800;
+    font-size: 18px;
+    
+}
+.Record-opinion {
+	//color: white;
+	font-weight: 800;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 16px;
+	margin-left: 3px;
+}
+.Record-opinion.is-for {
+	color: #3EA869;
+}
+.Record-opinion.is-against {
+	color: #C62F20;
+}
+.Record-opinion.is-unclear {
+	background: gray;
+}
+.Record-voteNumbers.is-for {
+	background: #3EA869;
+	color: white;
+	border-radius: 50%;
+	
+}
+.Record-voteNumbers.is-against {
+	background: #C62F20;
+	color: white;
+	border-radius: 50%;
+	
+}
+.Record-voteNumbers.is-unclear {
+	background: gray;
+	color: white;
+	border-radius: 50%;
+	
+}
+.Record-quote {
+	font-family: Georgia;
+    margin: 4px 5px;
+    padding: 4px 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+.Record-quote:before {
+	color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+.Record-info {
+	padding: 10px 20px;
+	color: gray;
+	font-size: 14px;
+}
+.Record-action {
+	border-top: 1px dotted rgb(220,220,220);
+}
+.Record-actionItem {
+	padding: 10px 20px;
+	color: gray;
+	font-size: 14px;
+	display: inline-block;
+
+}
+.Record-star, .Record-more {
+	cursor: pointer;
+	font-weight: 800;
+	color: rgb(220,220,220);
+}
+.Record-star:hover {
+    color: #ffcc33;
+}
+.Record-more, .Record-more:visited {
+    color: rgb(220,220,220);
+	text-decoration: none;
+	position: relative;
+	
+}
+.Record-more:hover {
+    color: #038543;
+}
+.Record-moreTooltip {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	z-index: 10;
+	background: gray;
+}
