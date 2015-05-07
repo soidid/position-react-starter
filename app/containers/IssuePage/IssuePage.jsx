@@ -181,24 +181,23 @@ export default class IssuePage extends React.Component {
           	"des": "餿水油風暴中，衛生人員赴工廠稽察時常碰壁，甚至受到業者威脅。\n提案改由中央政府配置「食品警察隊」，協助食品衛生稽查人員，排除稽查及取締違法之組礙。"
           }];
         var subItem = sub.map((item,key)=>{
-            var styleFor = {"width":"13%"};
-            var styleAgainst = {"width":"8%"};
-            var styleUnclear = {"width":"5%"};
-            var styleNone = {"width":"74%"};
+            var styleFor = {"width":"43%"};
+            var styleAgainst = {"width":"38%"};
+            var styleUnclear = {"width":"15%"};
+            var styleNone = {"width":"4%"};
             return (
-              <div className="IssuePage-item"
-                 href="/issue">
-                  <Link to="issueVote" params={{issue:"same-sex-marriage"}}>
+            
+                  <Link to="issueVote" 
+                        params={{issue:"same-sex-marriage"}}
+                        className="IssuePage-item">
                   <div className="IssuePage-itemTitle">{item.title}</div>
                   <div className="IssuePage-itemDescription">{item.des}</div>
-
+                  
                   <div className="IssuePage-itemPosition">
-                      <div className="IssuePage-opinion is-for" style={styleFor}></div>
-                      <div className="IssuePage-opinion is-against" style={styleAgainst}></div>
-                      <div className="IssuePage-opinion is-unclear" style={styleUnclear}></div>
-                      <div className="IssuePage-opinion is-none" style={styleNone}></div>
+                      <div className="IssuePage-itemPositionTopText">立院多數意見</div>
+                      <div className="IssuePage-itemPositionCount">43%</div>
+                      <div className="IssuePage-itemPositionBottomText">同意</div>
                   </div>
-                  <div className="IssuePage-itemPositionDes">立法院表態：13%同意，8%反對，5%不明確，74%未表態（長條圖 or 圓餅圖）</div>
 
                   <div className="IssuePage-actions">
                       <div className="IssuePage-button">
@@ -211,22 +210,31 @@ export default class IssuePage extends React.Component {
                       </div>
                   </div>
                   </Link>
-              </div>
+              
             )
         });
 
-
+    var coverImgURL = require("./images/IssuePage-cover.jpg");
 		return (
 		<div className="IssuePage">
-			<div className="IssuePage-pageTitle">食品安全</div>
-			<div className="IssuePage-title">最相關的立委</div>
-                {lyItems}
-            	{showMoreButton}
-            <div className="IssuePage-title">立法院表態牆</div>
-            <div className="IssuePage-description">在食品安全這個議題下，立法院共有 5 個相關的議題表態。</div>
-            <div className="IssuePage-items">
-           		{subItem}
-            </div>
+			
+        <div className="IssuePage-intro">
+            <div className="IssuePage-introTitle">食品安全</div>
+            <div className="IssuePage-introDescription">為因應食安危機，《食品安全衛生管理法》於 2014 年 10 月展開修法，經9次黨團協商辯論，終於在 2014 年 11 月 18 日完成三讀。在委員會初審通過，朝野達成共識的四個修法項目皆順利三讀通過，而進入朝野協商的五大爭議，通過兩項，一項部分通過，另外兩項最後並未通過。</div>
+        </div>
+
+        <div className="IssuePage-sectionTitle">立法院表態牆</div>
+        <div className="IssuePage-sectionDescription">在食品安全這個議題中，立法院共有五個相關的子議題。快來看看各政黨的立場吧！</div>
+
+        
+        <div className="IssuePage-items">
+        	{subItem}
+        </div>
+        <div className="IssuePage-sectionTitle">最關心食品安全的立委</div>
+        <div className="IssuePage-sectionDescription">關心有正有負，請詳閱立場表態說明書後再投票。</div>
+
+          {lyItems}
+          {showMoreButton}
 		</div>);
 
 	}
