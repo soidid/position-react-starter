@@ -1,0 +1,56 @@
+.OverviewWallAvatar {
+	display: inline-block;
+	position: relative;
+	color: rgb(53,55,54);
+}
+.OverviewWallAvatar a,.OverviewWallAvatar a:visited {
+	text-decoration: none;
+	color: rgb(53,55,54);
+}
+.OverviewWallAvatar-opinionCount {
+	position: absolute;
+    top: -2px;
+    left: 1px;
+    background: #F24337;
+    /*#E21721;*/
+    z-index: 10;
+    color: white;
+    font-size: 10px;
+    padding: 3px 4px;
+    border-radius: 4px;
+}
+
+.OverviewWallAvatar-avatar {
+	display: inline-block;
+	background: white;
+	margin: 4px;
+	font-size: 12px;
+	position: relative;
+}
+.OverviewWallAvatar-avatar:hover {
+	box-shadow: 0px -2px 0 4px rgba(0,0,0,0.12)	
+}
+.OverviewWallAvatar-avatar.is-KMT {
+  	border: 1px solid #3288bd;
+  	border-bottom:4px solid #3288bd;
+}
+.OverviewWallAvatar-avatar.is-DPP {
+  	border: 1px solid #7fbc41;
+  	border-bottom:4px solid #7fbc41;
+}
+.OverviewWallAvatar-avatar.is-PFP {
+  	border: 1px solid orange;
+  	border-bottom:4px solid orange;
+}
+.OverviewWallAvatar-avatar.is-TSU {
+  	border: 1px solid #b35806;
+  	border-bottom:4px solid #b35806;
+}
+.OverviewWallAvatar-avatar.is-NP {
+  	border: 1px solid gray;
+  	border-bottom:4px solid gray;
+}
+.OverviewWallAvatar-avatar.is-NPU {
+  	border: 1px solid rgba(194,15,81,0.9);
+  	border-bottom:4px solid rgba(194,15,81,0.9);
+}

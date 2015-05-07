@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import "./OverviewWall.css";
 import LegislatorAvatar from "../LegislatorAvatar/LegislatorAvatar.jsx";
+import OverviewWallAvatar from "../OverviewWallAvatar/OverviewWallAvatar.jsx";
 
 export default class OverviewWall extends React.Component {
   render() {
@@ -40,86 +41,33 @@ export default class OverviewWall extends React.Component {
 
   
     // 贊成
-    var legiItemsFor = forLegislators
-
-    .map((item, key)=>{
-
-        var partyClass = "OverviewWall-avatar is-"+item.party_eng;
-       
+    var legiItemsFor = forLegislators.map((item, key)=>{
         return (
-          <div className="OverviewWall-item"
-             key={key}>
-             <Link to="personIssue" params={{issue:"same-sex-marriage"}}>
-                <div className="OverviewWall-opinionCount">{item.positionCount}</div>
-                <div className={partyClass}
-                     key={key}>
-                     <LegislatorAvatar data={item.name} plain={true} name={true}/>
-                </div>
-             </Link>
-          </div>
+          <OverviewWallAvatar data={item} key={key}/>
         )
     });
 
     // 反對
-    var legiItemsAgainst = againstLegislators
-    .map((item, key)=>{
-
-        var partyClass = "OverviewWall-avatar is-"+item.party_eng;
-        
+    var legiItemsAgainst = againstLegislators.map((item, key)=>{
         return (
-          <div className="OverviewWall-item"
-               key={key}>
-             <Link to="personIssue" params={{issue:"same-sex-marriage"}}>
-                <div className="OverviewWall-opinionCount">{item.positionCount}</div>
-                <div className={partyClass}
-                     key={key}>
-                     <LegislatorAvatar data={item.name} plain={true} name={true}/>
-                </div>
-             </Link>
-          
-          </div>
+          <OverviewWallAvatar data={item} key={key}/>
         )
     });
 
     // 不明確
-    var legiItemsUnclear = unclearLegislators
-    .map((item, key)=>{
-
-        var partyClass = "OverviewWall-avatar is-"+item.party_eng;
-        
+    var legiItemsUnclear = unclearLegislators.map((item, key)=>{
         return (
-          <div className="OverviewWall-item"
-               key={key}>
-               <Link to="personIssue" params={{issue:"same-sex-marriage"}}>
-                  <div className="OverviewWall-opinionCount">{item.positionCount}</div>
-                  <div className={partyClass}
-                       key={key}>
-                       <LegislatorAvatar data={item.name} plain={true} name={true}/>
-                  </div>
-               </Link>
-          </div>
+          <OverviewWallAvatar data={item} key={key}/>
         )
     });
 
      // 未表態
     var legiItemsNone = noneLegislators
     .map((item, key)=>{
-
-        var partyClass = "OverviewWall-avatar is-"+item.party_eng;
         return (
-          <div className="OverviewWall-item">
-
-          <div className={partyClass}
-               key={key}>
-               <LegislatorAvatar data={item.name} plain={true}  name={true}/>
-          </div>
-          
-          </div>
+          <OverviewWallAvatar data={item} key={key}/>
         )
     });
-
-
-
    
     // <div className="OverviewWall-title">立法院是否支持「婚姻平權於本會期立法通過」？</div>
     // <div className="OverviewWall-description">根據立法院過去四年的立場表態事件：<br/>

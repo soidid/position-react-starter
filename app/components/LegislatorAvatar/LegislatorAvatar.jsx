@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 import "./LegislatorAvatar.css"
 
-export default class LegislatorAvata extends React.Component {
+export default class LegislatorAvatar extends React.Component {
   render () {
     var {data, plain, party, name} = this.props;
     var imgURL;
