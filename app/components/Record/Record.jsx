@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Legislator from "../Legislator/Legislator.jsx";
 import LegislatorAvatar from "../LegislatorAvatar/LegislatorAvatar.jsx";
 import Icon from "../Icon/Icon.jsx";
+import UserAvatar from "../UserAvatar/UserAvatar.jsx";
 
 import "./Record.css";
 export default class Record extends React.Component {
@@ -49,7 +50,7 @@ export default class Record extends React.Component {
     var tooltip = (showTooltip) ? 
         <div className="Record-tooltip">
             <div className="Record-tooltipItem">複製連結</div>
-            <div className="Record-tooltipItem">看立法院完整紀錄</div>
+            <div className="Record-tooltipItem">看立法院原始紀錄</div>
             <div className="Record-tooltipItem">檢舉</div>
         </div> : ""; 
     
@@ -59,6 +60,12 @@ export default class Record extends React.Component {
 
     var readMoreSpan = (!showFull && data.quote.length > 140) ?
     <span className="Reocrd-readFull"> ...閱讀全部</span>:"";
+
+    var editByItem = (showFull) ? 
+    <div className="Reocrd-editBy">
+      <UserAvatar />
+      由 Eddie Hung 編輯
+    </div>:"";
 
     return (
         <div className="Record">
@@ -74,7 +81,7 @@ export default class Record extends React.Component {
             <div className="Record-info">
                 －{data.type}，{data.date}
             </div>
-           
+            {editByItem}
             <div className="Record-action">
                 <div className="Record-actionItem">
                     <span className="Record-star"><Icon icon={"star"}/> {data.trustVote}</span>  

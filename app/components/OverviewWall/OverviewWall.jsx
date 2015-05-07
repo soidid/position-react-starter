@@ -80,42 +80,36 @@ export default class OverviewWall extends React.Component {
     var imgURL = require("./images/OverviewWall-pieChart.png");
     return (
       <div>
-      <img className="OverviewWall-pieChart" src={imgURL} />
-          
-      <div className="OverviewWall-title">
-          <select className="Records-title">
-             <option>婚姻平權</option>
-             <option>勞工</option>
-             <option>核能</option>
-          </select>  
-          <select className="Records-title">
-              <option>儘速修法將同性婚姻合法化</option>
-              <option>每週 40 工時 </option>
-              <option>分廠分照 </option>
-          </select> 
-      </div>
-      <div className="OverviewWall">
-        
-        <div className="OverviewWall-group">
-            <div className="OverviewWall-groupTitle">支持</div>
-            {legiItemsFor}
-        </div>
-        <div className="OverviewWall-group">
-            <div className="OverviewWall-groupTitle">反對</div>
-            {legiItemsAgainst}
-        </div>
-         <div className="OverviewWall-group">
-            <div className="OverviewWall-groupTitle">不明確</div>
-            {legiItemsUnclear}
-        </div>
-      </div>
+          <div className="OverviewWall-title">婚姻平權</div>
+          <img className="OverviewWall-pieChart" src={imgURL} />
 
-      <div className="OverviewWall">
-        <div className="OverviewWall-group">
-            <div className="OverviewWall-groupTitle">未表態</div>
-            {legiItemsNone}
-        </div>
-      </div>
+          <select className="OverviewWall-select">
+              <option>儘速修法將同性婚姻合法化</option>
+              <option>婚姻平權子議題 a </option>
+              <option>婚姻平權子議題 b </option>
+          </select> 
+     
+          <div className="OverviewWall">
+              <div className="OverviewWall-group">
+                <div className="OverviewWall-groupTitle">支持</div>
+                {legiItemsFor}
+              </div>
+              <div className="OverviewWall-group">
+                  <div className="OverviewWall-groupTitle">反對</div>
+                  {legiItemsAgainst}
+              </div>
+              <div className="OverviewWall-group">
+                  <div className="OverviewWall-groupTitle">不明確</div>
+                  {legiItemsUnclear}
+               </div>
+          </div>
+
+          <div className="OverviewWall">
+              <div className="OverviewWall-group">
+                  <div className="OverviewWall-groupTitle">未表態</div>
+                  {legiItemsNone}
+              </div>
+          </div>
       </div>
     );
   }
