@@ -15,7 +15,7 @@ export default class IssueListPage extends React.Component {
 	}
 	constructor(props) { super(props)
       this.state = { currentTerm: "" }
-    }
+  }
 
 	_onInputChange(i,event){
       /*
@@ -101,12 +101,14 @@ export default class IssueListPage extends React.Component {
 
 		return (
 		<div className="IssueListPage">
-		    <Input handleInputChange={bindInputChange}
-               	   handleSetInput={bindSetInput}
-                   currentTerm={currentTerm}
-                   examples={examples}
-                   placeholder={"搜尋議題"}/>
-		    {issueListItem}
+        <div className="IssueListPage-content">
+		        <Input handleInputChange={bindInputChange}
+                   	   handleSetInput={bindSetInput}
+                       currentTerm={currentTerm}
+                       examples={examples}
+                       placeholder={"搜尋議題"}/>
+		        {issueListItem}
+        </div>
 		</div>);
 	}
 }

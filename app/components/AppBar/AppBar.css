@@ -1,4 +1,4 @@
-.AppBar {
+.AppBar-topbar {
 	background: white;
 	position: fixed;
 	top: 0;
@@ -10,34 +10,35 @@
 	box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
 	
 }
-.AppBar-logo {
-	display: inline-block;
-	height: 20px;
+.AppBar-sidebar {
+    background: white;
+    height: 100vh;
+    width: 240px;
+    position: absolute;
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
+    z-index: 50;
+    padding-top: 40px;
 }
-.AppBar-logoItem {
-	color: white;
-	font-weight: 400;
+.AppBar-sidebarItem, .AppBar-sidebarItem:visited {
+	display: block;
+	color: rgb(53,55,54);
 	text-decoration: none;
-	margin: 0 10px;
-	padding: 10px;
-	vertical-align: top;
-	height: 40px;
-	display: inline-block;
-	
-} 
+	padding: 20px;
+}
+.AppBar-sidebarItem:hover {
+	background: rgb(230,230,230);
+}
+
 .AppBar-item, .AppBar-item:visited {
 	display: inline-block;
-	
 	font-weight: 400;
-	
 	margin: 0 10px;
 	padding: 12px 10px;
 	vertical-align: top;
 	height: 40px;
-}
-.AppBar-item a, .AppBar-item a:visited {
 	color: white;
 	text-decoration: none;
+	cursor: pointer;
 }
 .AppBar-logoItem:hover, .AppBar-item:hover {
 	border-bottom: 5px solid #a8d2d0;

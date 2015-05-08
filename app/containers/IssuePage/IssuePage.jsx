@@ -217,25 +217,27 @@ export default class IssuePage extends React.Component {
    
 		return (
 		<div className="IssuePage">
-			
-        <div className="IssuePage-intro">
-            <div className="IssuePage-introTitle">食品安全</div>
-            <div className="IssuePage-introDescription">為因應食安危機，《食品安全衛生管理法》於 2014 年 10 月展開修法，經9次黨團協商辯論，終於在 2014 年 11 月 18 日完成三讀。在委員會初審通過，朝野達成共識的四個修法項目皆順利三讀通過，而進入朝野協商的五大爭議，通過兩項，一項部分通過，另外兩項最後並未通過。</div>
+			  <div className="IssuePage-content">
+            <div className="IssuePage-intro">
+                <div className="IssuePage-introTitle">食品安全</div>
+                <div className="IssuePage-introDescription">為因應食安危機，《食品安全衛生管理法》於 2014 年 10 月展開修法，經9次黨團協商辯論，終於在 2014 年 11 月 18 日完成三讀。在委員會初審通過，朝野達成共識的四個修法項目皆順利三讀通過，而進入朝野協商的五大爭議，通過兩項，一項部分通過，另外兩項最後並未通過。</div>
+            </div>
+    
+            <div className="IssuePage-sectionTitle">立法院表態牆</div>
+            <div className="IssuePage-sectionDescription">在食品安全這個議題中，立法院共有五個相關的子議題。快來看看各政黨的立場吧！</div>
+    
+            
+            <div className="IssuePage-items">
+            	{subItem}
+            </div>
+            <div className="IssuePage-sectionTitle">最關心食品安全的立委</div>
+            <div className="IssuePage-sectionDescription">關心有正有負，請詳閱立場表態說明書後再投票。</div>
+    
+              {lyItems}
+              {showMoreButton}
         </div>
-
-        <div className="IssuePage-sectionTitle">立法院表態牆</div>
-        <div className="IssuePage-sectionDescription">在食品安全這個議題中，立法院共有五個相關的子議題。快來看看各政黨的立場吧！</div>
-
-        
-        <div className="IssuePage-items">
-        	{subItem}
-        </div>
-        <div className="IssuePage-sectionTitle">最關心食品安全的立委</div>
-        <div className="IssuePage-sectionDescription">關心有正有負，請詳閱立場表態說明書後再投票。</div>
-
-          {lyItems}
-          {showMoreButton}
-		</div>);
+		</div>
+    );
 
 	}
 }

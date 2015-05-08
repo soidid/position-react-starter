@@ -3,9 +3,11 @@
 	padding-top: 50px;
 	width: 100%;
 	position: relative;
+  height: 100vh;
+  overflow: scroll;
 }
 @media screen and (min-width: 1000px){
-	.IssueListPage {
+	.IssueListPage-content {
 		width: 1000px;
 		margin: 0 auto;
 	}
