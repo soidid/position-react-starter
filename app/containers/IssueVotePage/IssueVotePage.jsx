@@ -27,13 +27,14 @@ export default class IssueVotePage extends React.Component {
               <div className="IssueVotePage-title">法人除罪化</div>
               <div className="IssueVotePage-description">食安問題人心惶惶，但最後裁罰的結果，往往和不法業者的巨額獲利比例懸殊。究竟要如何才能罰得到？</div>
               <div className="IssueVotePage-sectionTitle">立法院意見</div>
-              <img className="IssueVotePage-pieChart"
-                   src={pieChartURL}/>
-    
-              <OpinionGroup data={forData} />
-              <OpinionGroup data={againstData} />
-              <OpinionGroup data={unclearData} />
-              <OpinionGroup data={noneData} />
+              <div className="IssueVotePage-pieChart">這裡是一個立法院整體的 pie chart </div>
+              <div className="IssueVotePage-voteGroup">
+                  <OpinionGroup data={forData} />
+                  <OpinionGroup data={againstData} />
+                  <OpinionGroup data={unclearData} />
+                  <OpinionGroup data={noneData} />
+              </div>
+              
               
           </div>
         );

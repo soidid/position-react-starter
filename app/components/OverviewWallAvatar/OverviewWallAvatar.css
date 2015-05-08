@@ -1,11 +1,18 @@
-.OverviewWallAvatar {
+.OverviewWallAvatar, .OverviewWallAvatar:visited {
 	display: inline-block;
 	position: relative;
 	color: rgb(53,55,54);
+  text-decoration: none;
 }
-.OverviewWallAvatar a,.OverviewWallAvatar a:visited {
-	text-decoration: none;
-	color: rgb(53,55,54);
+.OverviewWallAvatar-avatar {
+  display: inline-block;
+  background: white;
+  margin: 4px;
+  font-size: 12px;
+  position: relative;
+}
+.OverviewWallAvatar-avatar:hover {
+  //box-shadow: 0px -2px 0 4px rgba(0,0,0,0.12) 
 }
 .OverviewWallAvatar-hoverInfo {
 	display: none;
@@ -16,7 +23,7 @@
 	color: white;
 	position: absolute;
 	top: -42px;
-	left: -8px;
+	left: -4px;
 	text-align: left;
 	font-size: 12px;
 	width: 70px;
@@ -27,37 +34,29 @@
 }
 .OverviewWallAvatar:hover .OverviewWallAvatar-hoverInfo:after {
 	content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -8px;
-    width: 0; height: 0;
-    border-top: 8px solid #000000;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -4px;
+  width: 0; height: 0;
+  border-top: 8px solid #000000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
 }
 .OverviewWallAvatar-opinionCount {
-	position: absolute;
-    top: -2px;
-    left: 1px;
-    background: #F24337;
-    /*#E21721;*/
-    z-index: 10;
-    color: white;
-    font-size: 10px;
-    padding: 3px 4px;
-    border-radius: 4px;
+	/*position: absolute;
+  top: -2px;
+  left: 1px;
+  background: #ccc;
+  z-index: 10;
+  color: white;
+  font-size: 10px;
+  padding: 3px 4px;
+  border-radius: 4px;*/
+  display: inline-block;
+  padding-right: 3px;
 }
-.OverviewWallAvatar-avatar {
-	display: inline-block;
-	background: white;
-	margin: 4px;
-	font-size: 12px;
-	position: relative;
-}
-.OverviewWallAvatar-avatar:hover {
-	box-shadow: 0px -2px 0 4px rgba(0,0,0,0.12)	
-}
+
 .OverviewWallAvatar-avatar.is-KMT {
   	border: 1px solid #3288bd;
   	border-bottom:4px solid #3288bd;

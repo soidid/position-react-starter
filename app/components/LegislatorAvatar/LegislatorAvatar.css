@@ -31,7 +31,6 @@
   
 }*/
 
-
 .LegislatorAvatar-avatarPlain {
     width: 40px;
     height: 40px;
@@ -39,12 +38,13 @@
     margin: 0 auto;
 }
 .LegislatorAvatar-name {
-	display: inline-block;
-	vertical-align: top;
-	padding-top: 16px;
-	margin-left: 5px;
+	  display: inline-block;
+	  vertical-align: top;
+	  padding-top: 16px;
+	  margin-left: 5px;
+    text-align: center;
 }
 .LegislatorAvatar-namePlain {
     margin-top: 2px;
-    
+    text-align: center;
 }

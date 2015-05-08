@@ -1,5 +1,6 @@
 module.exports = {
     "opinion" : "不明確",
+    "icon" : "question",
     "count" : 7,
     "percentage" : 27,
 	"legislators" : [

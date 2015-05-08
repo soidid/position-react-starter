@@ -1,15 +1,62 @@
 .OpinionGroup {
 	margin: 10px;
-	padding: 10px;
-	background: rgb(220,220,220);
 	text-align: left;
+	flex: 1;
+}
+.OpinionGroup-box {
+	cursor: pointer;
+	background: rgb(240,240,240);
+	box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.08);
+	position: relative;
+}
+.OpinionGroup-box:hover {
+	box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.12);
 }
 .OpinionGroup-title {
 	font-size: 20px;
 	font-weight: 800;
-	margin-bottom: 20px;
-
+	padding: 10px;
+	background: rgb(220,220,220);
+}
+.OpinionGroup-titleToggle {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.OpinionGroup-content {
+	padding: 10px;
+}
+.OpinionGroup-parties {
+	height: 100px;
+}
+.OpinionGroup-party {
+	margin-bottom: 14px;
+	font-size: 14px;
+	color: rgb(80,80,80);
+}
+.OpinionGroup-partyBar {
+	height: 10px;
+	margin: 4px 0;
+}
+.OpinionGroup-partyBar.is-KMT {
+  	background: #3288bd;
+}
+.OpinionGroup-partyBar.is-DPP {
+  	background: #7fbc41;
+}
+.OpinionGroup-partyBar.is-PFP {
+  	background: orange;
+}
+.OpinionGroup-partyBar.is-TSU {
+  	background: #b35806;
+}
+.OpinionGroup-partyBar.is-NP {
+  	background: gray;
+}
+.OpinionGroup-partyBar.is-NPU {
+  	background: rgba(194,15,81,0.9);
 }
 .OpinionGroup-members {
 	text-align: left;
+	
 }

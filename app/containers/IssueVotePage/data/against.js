@@ -1,5 +1,6 @@
 module.exports = {
     "opinion" : "反對",
+    "icon" : "times",
     "count" : 7,
     "percentage" : 27,
 	"legislators":[

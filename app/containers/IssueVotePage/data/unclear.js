@@ -1,5 +1,6 @@
 module.exports = {
     "opinion" : "不知所云",
+    "icon" : "frown-o",
     "count" : 1,
     "percentage" : 4,
 	"legislators" : [
