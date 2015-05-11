@@ -19,10 +19,14 @@ export default class SideBarItem extends React.Component {
     }
   }
 
-  _toggleShowSub(){
+  _toggleShowSub(i, event){
+    event.stopPropagation();
+    event.preventDefault();
     this.setState({
         "showSub" : !this.state.showSub
     });
+   
+
   }
 
   render() {
@@ -36,7 +40,7 @@ export default class SideBarItem extends React.Component {
       <div>
           <Link className="SideBar-subitem" to="issue">食品安全
               <div className="SideBar-icon"
-                   onClick={this._toggleShowSub.bind(this,null)}><Icon icon={iconText}/></div>
+                   onClick={this._toggleShowSub.bind(this,"")}><Icon icon={iconText}/></div>
           </Link>
           <div className={subIssues}>
               <Link className="SideBar-issue" to="issueVote" params={{issue : "food-safety"}}>法人除罪化</Link>

@@ -1,0 +1,26 @@
+.Tabs {
+	width: 100%;
+	background: rgb(220,220,220);//#6FB4B1;
+	
+}
+.Tabs.is-scrolling {
+	position: fixed;
+	top: 0;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.12);
+	z-index: 100;
+}
+.Tabs-item, .Tabs-item:visited {
+	padding: 15px 14px 11px 14px;
+	display: inline-block;
+	cursor: pointer;
+	color: rgb(53,55,54);
+	text-decoration: none;
+	border-bottom: 4px solid rgb(220,220,220);
+}
+.Tabs-item.is-active {
+	border-bottom: 4px solid;
+}
+.Tabs-item:hover {
+	background: rgb(240,240,240);
+	border-bottom: 4px solid rgb(240,240,240);
+}

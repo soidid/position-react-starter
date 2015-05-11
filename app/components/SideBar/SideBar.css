@@ -33,9 +33,12 @@
 }
 .SideBar-icon {
 	position: absolute;
-	right: 10px;
-	top: 9px;
+	right: -1px;
+	top: 0px;
+	padding: 10px;
 	display: inline-block;
+	background: rgb(53,55,54);
+	color: white;
 }
 .SideBar-issues {
 	background: white;

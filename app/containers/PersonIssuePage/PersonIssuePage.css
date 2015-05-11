@@ -1,29 +1,17 @@
 .PersonIssuePage {
 	text-align: center;
-	padding-top: 100px;
 	width: 100%;
 	position: relative;
 }
+
+.PersonIssuePage-person {
+	background: rgb(230,230,230);
+	padding: 30px 0;
+
+}
 @media screen and (min-width: 600px){
-	.PersonIssuePage {
+	.PersonIssuePage-records {
 		width: 600px;
 		margin: 0 auto;
 	}
-}
-.PersonIssuePage-back, .PersonIssuePage-back:visited {
-	position: absolute;
-	
-	left: 20px;
-	
-	cursor: pointer;
-	font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
-	vertical-align: top;
-	padding: 2px;
-}
-.PersonIssuePage-back a, .PersonIssuePage-back a:visited {
-	color: rgb(53,55,54);
-	text-decoration: none;
-}
-.PersonIssuePage-back:hover {
-	color: #6FB4B1;
 }

@@ -1,10 +1,14 @@
 .PersonPage {
 	text-align: center;
-	padding-top: 50px;
 	width: 100%;
 }
+
+.PersonPage-person {
+	background: rgb(230,230,230);
+	padding: 30px 0;
+}
 @media screen and (min-width: 1000px){
-	.PersonPage {
+	.PersonPage-content {
 		width: 1000px;
 		margin: 0 auto;
 	}

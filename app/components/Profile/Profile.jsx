@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router";
 
@@ -171,13 +170,7 @@ export default class Profile extends React.Component {
     
     return (
       <div className="Profile">
-          <Legislator data="尤美女"/>
-          <div className="Profile-intro">
-              
-          </div>
-            
             {content}
-          
             {showMoreButton}
       </div>
           

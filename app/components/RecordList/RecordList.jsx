@@ -664,17 +664,10 @@ export default class RecordList extends React.Component {
     return (
         <div className="RecordList">
           
-          <select className="RecordList-title">
-              <option>儘速修法將同性婚姻合法化</option>
-              <option>其他婚姻平權的子議題A</option>
-              <option>其他婚姻平權的子議題B</option>
-          </select> 
+          <div className="RecordList-title"><span className="RecordList-opinion is-for">贊成</span>儘速修法將同性婚姻合法化</div> 
 
           <div className="RecordList-description">
-              <div className="RecordList-descriptionIntro">在過去四年中，尤美女有 <span className="RecordList-voteNumbers">{entriesCount.all}</span> 筆相關的立場表達事件：</div>
-              <span className="RecordList-voteNumbers is-for">{entriesCount.for}</span>  筆贊成； 
-              <span className="RecordList-voteNumbers is-against">{entriesCount.against}</span> 筆反對；
-              <span className="RecordList-voteNumbers is-unclear">{entriesCount.unclear}</span> 筆立場不明確。
+              在過去四年中，尤美女有 {entriesCount.all} 筆相關的立場表達事件：{entriesCount.for} 筆贊成；{entriesCount.against} 筆反對；{entriesCount.unclear} 筆立場不明確。
           </div>
 
           {tabsItem}

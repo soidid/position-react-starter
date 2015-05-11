@@ -12,6 +12,7 @@ import NotFoundPage from "route-handlers/NotFoundPage";
 import PersonPage from "route-handlers/PersonPage";
 import PersonIssuePage from "route-handlers/PersonIssuePage";
 import PersonListPage from "route-handlers/PersonListPage";
+import Profile from "components/Profile/Profile.jsx";
 
 import IssueListPage from "route-handlers/IssueListPage";
 import IssuePage from "route-handlers/IssuePage";
@@ -25,12 +26,10 @@ if(!Object.assign)
 // export routes
 module.exports = (
 	<Route name="app" path="/" handler={Application}>
-		<Route name="some-page" path="/some-page" handler={SomePage} />
 		
-		<Route name="home" path="/home" handler={HomePage} />
 		<Route name="personList" path="/person-list" handler={PersonListPage} />
 		<Route name="person" path="/person" handler={PersonPage} />
-		<Route name="personIssue" path="/person/:issue" handler={PersonIssuePage} />
+		<Route name="personIssue" path="/person/:issue" handler={PersonPage} />
 		
 		<Route name="issueList" path="/issue-list" handler={IssueListPage} />
 		<Route name="issue" path="/issue" handler={IssuePage} />

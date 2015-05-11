@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import Legislator from 'components/Legislator/Legislator.jsx';
 import RecordList from 'components/RecordList/RecordList.jsx';
 import Icon from 'components/Icon/Icon.jsx';
-
+import Tabs from 'components/Tabs/Tabs.jsx';
 import "./PersonIssuePage.css";
 
 export default class PersonIssuePage extends React.Component {
@@ -20,9 +20,10 @@ export default class PersonIssuePage extends React.Component {
 		// <div className="PersonIssuePage-back"><Link to="person"><Icon icon={"chevron-left"}/>所有立場</Link></div>
 		return (
 		<div className="PersonIssuePage">
-		    
-			<Legislator data="尤美女" />
-			<RecordList />
+			
+			<div className="PersonIssuePage-records">
+				<RecordList />
+			</div>
 		</div>);
 	}
 }

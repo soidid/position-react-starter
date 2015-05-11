@@ -10,6 +10,10 @@
 	font-weight: 800;
 	margin-top: 10px;
 	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 40px;
+	margin-left: 10px;
 }
 .Legislator a, .Legislator a:visited {
 	text-decoration: none;

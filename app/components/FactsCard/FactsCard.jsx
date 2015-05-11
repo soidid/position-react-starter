@@ -1,19 +1,19 @@
 import React from "react/addons";
 import { Link } from "react-router";
 import './FactsCard.css';
-
 import Icon from '../Icon/Icon.jsx';
+import classNames from 'classnames';
 
 export default class MainMenu extends React.Component {
   
   render () {
     var {data, listTop3} = this.props;
     
-    var classSet = React.addons.classSet;
+    
     
    
     var factItems = data.facts.map((item,key)=>{
-        var opinionClasses = classSet({
+        var opinionClasses = classNames({
               "FactsCard-opinion": true,
               "is-for": item.opinion === '贊成',
               "is-against": item.opinion === '反對',
@@ -24,14 +24,13 @@ export default class MainMenu extends React.Component {
         
         var countItem = (listTop3) ? "" : <div className="FactsCard-opinionCount">{item.opinionCount}</div>;
         return (
-          <div className="FactsCard-listItem"
-               key={key}>
-             <Link to="personIssue" params={{issue: "same-sex-marraige"}}>
-              <div className={opinionClasses}>{item.opinion}</div>
-              {item.title}
-              {countItem}
-              </Link>
-          </div>
+          <Link to="personIssue" params={{issue: "same-sex-marraige"}}
+                className="FactsCard-listItem"
+                key={key}>
+                <div className={opinionClasses}>{item.opinion}</div>
+                {item.title}
+                {countItem}
+          </Link>
 
         )
     });
