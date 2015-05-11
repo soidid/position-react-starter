@@ -83,14 +83,15 @@ export default class IssueListPage extends React.Component {
 	    
 	    var imgURL = require("./images/"+(k+1)+".png");
         return (
-            <div className="IssueListPage-issue"
-               key={k}>
-               <Link to="issue">
+            <Link to="issue"
+                  className="IssueListPage-issue"
+                  key={k}>
+             
                <img className="IssueListPage-issueImg"
                     src={imgURL} />
                <div className="IssueListPage-issueTitle">{i.name}</div>
-               </Link>
-            </div>
+            </Link>
+           
         )
         });
 

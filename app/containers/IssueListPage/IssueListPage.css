@@ -17,15 +17,15 @@
     padding: 10px;
     margin: 5px;
     position: relative;
-    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.12);
-   
-}
-.IssueListPage-issue a, .IssueListPage-issue a:visited {
+    //box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.12);
     color: rgb(53,55,54);
     text-decoration: none;
+    border: 1px solid rgb(230,230,230);
+   
 }
 .IssueListPage-issue:hover {
-	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.22);
+	  //box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.22);
+    border-color: rgb(153,155,154);//#3F9F9B;
 }
 @media screen and (min-width: 600px){
    .IssueListPage-issue {

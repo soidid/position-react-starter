@@ -120,27 +120,28 @@ export default class IssuePage extends React.Component {
 			
             if(!showFull && key>2) return ;
 			return (
-				<div className="PersonListPage-legislatorItem"
+				<Link to="personIssue" params={{issue:"same-sex-marriage"}}
+             className="PersonListPage-legislatorItem"
 				     key={key}>
-				   <Link to="personIssue" params={{issue:"same-sex-marriage"}}>
+				
 				    <div className={partyClass}>
-                         <div className="PersonListPage-flex">
-                         <div className="PersonListPage-flexLeft">
-                        	 <LegislatorAvatar data={item.name} party={item.party_eng}/>
-                         </div>
-                         <div className="PersonListPage-flexMain">
-                         	<div className="PersonListPage-name">{item.name}</div>
-                         	<div className="PersonListPage-description">{item.party}</div>
-                         	<div className="PersonListPage-description">{constituency}</div>
-                         	<div className="PersonListPage-descriptionLight">{item.constituency_detail}</div>
-                         </div>
-                         </div>
-                         <div className="PersonListPage-mainIssues">
-                         	有 {119-key*14} 筆相關立場表態資料
-                         </div>
-                    </div>
-                    </Link>
+                <div className="PersonListPage-flex">
+                <div className="PersonListPage-flexLeft">
+                	 <LegislatorAvatar data={item.name} party={item.party_eng}/>
                 </div>
+                <div className="PersonListPage-flexMain">
+                	<div className="PersonListPage-name">{item.name}</div>
+                	<div className="PersonListPage-description">{item.party}</div>
+                	<div className="PersonListPage-description">{constituency}</div>
+                	<div className="PersonListPage-descriptionLight">{item.constituency_detail}</div>
+                </div>
+                </div>
+                <div className="PersonListPage-mainIssues">
+                	有 {119-key*14} 筆相關立場表態資料
+                </div>
+            </div>
+        </Link>
+               
                 
 				
 			)

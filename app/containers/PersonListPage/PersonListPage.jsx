@@ -169,9 +169,9 @@ export default class PersonListPage extends React.Component {
 			
 
 			return (
-				<div className="PersonListPage-legislatorItem"
-				   key={key}>
-                   <Link to="person">
+				<Link className="PersonListPage-legislatorItem"
+                      to="person"
+				      key={key}>
 				    <div className={partyClass}>
                          <div className="PersonListPage-flex">
                          <div className="PersonListPage-flexLeft">
@@ -188,8 +188,8 @@ export default class PersonListPage extends React.Component {
                          	關鍵議題：食品安全、核能
                          </div>
                     </div>
-                    </Link>
-                </div>
+                </Link>
+              
                 
 				
 			)
