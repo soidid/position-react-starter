@@ -16,6 +16,13 @@
 	margin: 20px 0;
 	padding: 20px;
 	background: rgb(250,250,250);
+	line-height: 1.4;
+	text-align: left;
+}
+@media screen and (min-width: 600px){
+	.RecordList-title  {
+		text-align: center;
+	}
 }
 .RecordList-opinion.is-for {
 	color: #3EA869;	
