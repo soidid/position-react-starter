@@ -7,6 +7,7 @@ export default class HomePage extends React.Component {
 	}
 	render() {
 		var avatarURL = require("./images/HomePage-avatar.png");
+		
 		return (
 			<div className="HomePage">
 			    <div className="HomePage-content">

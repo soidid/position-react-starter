@@ -7,7 +7,7 @@
 
 	background-color: #fff; 
 	background-image: 
-	linear-gradient(90deg, transparent 249px, #abced4 249px, #abced4 251px, transparent 251px),
+	linear-gradient(90deg, transparent 49px, #abced4 49px, #abced4 51px, transparent 51px),
 	linear-gradient(#eee .1em, transparent .1em);
 	background-size: 95% 1.2em;
     position: relative;
@@ -27,18 +27,25 @@
 .HomePage-btn, .HomePage-btn:visited {
 	display: inline-block;
 	padding: 10px 30px;
-	color: #3F9F9B;
-	border: 1px solid #3F9F9B;
+	color: rgb(120,176,186);//#3F9F9B;
+	border: 1px solid rgb(120,176,186);//#3F9F9B;
 	margin: 10px;
 	border-radius: 6px;
 	cursor: pointer;
 	font-size: 20px;
 	font-weight: 700;
 	text-decoration: none;
+
+	-webkit-transition: background 250ms ease;
+	-moz-transition: background 250ms ease;
+	-o-transition: background 250ms ease;
+	transition: background 250ms ease;
 }
 .HomePage-btn:hover {
 	color: white;
-	background: #3F9F9B;
+	background: rgb(120,176,186);//#3F9F9B;
+	
+
 }
 .HomePage-papers {
 	margin: 5px auto;
