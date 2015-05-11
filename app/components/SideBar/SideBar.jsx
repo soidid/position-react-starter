@@ -66,6 +66,7 @@ export default class SideBar extends React.Component {
     return (
       <div className="SideBar">
           <div className="SideBar-sidebarContainer">
+            <Link className="SideBar-item" to="home">首頁</Link>
             <Link className="SideBar-item" to="personList">找立委</Link>
             <Link className="SideBar-item" to="issueList">找議題</Link>
             <SideBarItem />

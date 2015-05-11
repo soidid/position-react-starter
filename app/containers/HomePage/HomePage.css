@@ -1,0 +1,56 @@
+.HomePage {
+	min-height: 100vh;
+	/*background-image: url('./images/HomePage-cover.jpg');
+	background-size: 100% auto;
+	background-position: 0 0;
+	background-repeat: no-repeat;*/
+
+	background-color: #fff; 
+	background-image: 
+	linear-gradient(90deg, transparent 249px, #abced4 249px, #abced4 251px, transparent 251px),
+	linear-gradient(#eee .1em, transparent .1em);
+	background-size: 95% 1.2em;
+    position: relative;
+}
+.HomePage-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.HomePage-avtar {
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+}
+.HomePage-btn, .HomePage-btn:visited {
+	display: inline-block;
+	padding: 10px 30px;
+	color: #3F9F9B;
+	border: 1px solid #3F9F9B;
+	margin: 10px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 700;
+	text-decoration: none;
+}
+.HomePage-btn:hover {
+	color: white;
+	background: #3F9F9B;
+}
+.HomePage-papers {
+	margin: 5px auto;
+	padding-top: 50px;
+}
+@media screen and (min-width: 800px){
+	.HomePage-papers {
+		width: 800px
+	}
+}
+.HomePage-paper {
+	background: white;
+	min-height: 200px;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.12);
+}

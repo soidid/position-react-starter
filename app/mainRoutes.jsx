@@ -26,6 +26,7 @@ if(!Object.assign)
 // export routes
 module.exports = (
 	<Route name="app" path="/" handler={Application}>
+		<Route name="home" path="/" handler={HomePage} />
 		
 		<Route name="personList" path="/person-list" handler={PersonListPage} />
 		<Route name="person" path="/person" handler={PersonPage} />
