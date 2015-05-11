@@ -23,3 +23,46 @@ body {
 .local[loadingElement] {
 	float: right;
 }
+.Application-sidebar {
+	width: 280px;
+	border-right: 1px solid rgb(220,220,220);
+}
+.Application-content {
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0px;
+    bottom: 0;
+    overflow-y: auto;
+    color: #000;
+    background: #fff;
+    -webkit-transition: left 250ms ease;
+    -moz-transition: left 250ms ease;
+    -o-transition: left 250ms ease;
+    transition: left 250ms ease;
+}
+.Application-content.with-sidebar {
+	left: 280px;
+}
+@media screen and (min-width: 400px){
+	.Application-content.with-sidebar {
+		left: 280px;
+		position: absolute;
+		width: 1000px;
+		
+	}
+}
+.Application-main {
+
+}
+.Application-main.with-sidebar {
+	display: none;
+}
+@media screen and (min-width: 400px){
+	.Application-main.with-sidebar {
+		display: block;
+	}
+}
+
+
+

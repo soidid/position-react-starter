@@ -1,0 +1,70 @@
+.SideBar {
+	height: 100vh;
+	background: #FAFAFA;
+	font-size: 14px;
+
+}
+.SideBar-sidebarContainer {
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+.SideBar-item, .SideBar-item:visited {
+	display: block;
+	color: rgb(53,55,54);
+	text-decoration: none;
+	padding: 15px;
+}
+.SideBar-item:hover {
+	color: #6FB4B1;;
+	//background: rgb(230,230,230);
+}
+.SideBar-subitem {
+	display: block;
+	color: rgb(53,55,54);
+	text-decoration: none;
+	padding: 15px;
+	padding-left: 30px;
+	position: relative;
+}
+.SideBar-subitem:hover {
+	color: #6FB4B1;
+	//background: rgb(230,230,230);
+}
+.SideBar-icon {
+	position: absolute;
+	right: 10px;
+	top: 9px;
+	display: inline-block;
+}
+.SideBar-issues {
+	background: white;
+	margin: 0 20px;
+	border-radius: 8px;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 250ms ease;
+    -moz-transition: height 250ms ease;
+    -o-transition: height 250ms ease;
+    transition: height 250ms ease;
+}
+.SideBar-issues.is-show {
+	height: auto;
+	overflow: auto;
+	border: 1px dotted rgb(220,220,220);
+	-webkit-transition: height 2250ms ease;
+    -moz-transition: height 2250ms ease;
+    -o-transition: height 2250ms ease;
+    transition: height 2250ms ease;
+}
+.SideBar-issue {
+	display: block;
+	color: rgb(53,55,54);
+	text-decoration: none;
+	padding: 15px;
+	padding-left: 15px;
+	
+}
+.SideBar-issue:hover {
+	color: #6FB4B1;
+}
