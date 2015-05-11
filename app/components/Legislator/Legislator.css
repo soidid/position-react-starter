@@ -17,8 +17,9 @@
 }
 .Legislator a, .Legislator a:visited {
 	text-decoration: none;
-	color: rgb(53,55,54);
+	color: white;
+	
 }
 .Legislator a:hover {
-	color: #6FB4B1;
+	color: rgb(10,10,10);
 }

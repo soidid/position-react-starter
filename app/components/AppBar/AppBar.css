@@ -4,6 +4,7 @@
 	font-weight: 800;
 	z-index: 100;
 	position: absolute;
+
 	//background: #6FB4B1;
 	//box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
 }
@@ -14,12 +15,12 @@
 	padding: 12px 10px;
 	vertical-align: top;
 	height: 40px;
-	//color: white;
-	color: rgb(150,150,150);
+	color: rgb(220,220,220);
+	
 	text-decoration: none;
 	cursor: pointer;
 }
-.AppBar-logoItem:hover, .AppBar-item:hover {
+.AppBar-item:hover {
 	/*background: rgba(0,0,0,0.1);
 	border-radius: 50%;*/
 	color: rgb(10,10,10);
