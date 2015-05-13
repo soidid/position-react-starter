@@ -1,0 +1,70 @@
+.CandidatesPage {
+  min-height: 100vh;
+}
+.CandidatesPage-compare {
+  padding: 50px 0 20px 0;
+  background-color: #b8d8d8;
+  color: #7a9e9f;
+}
+.CandidatesPage-title {
+  text-align: center;
+  padding: 20px;
+  font-size: 26px;
+  color: white;
+  //text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  font-weight: 800;
+}
+.CandidatesPage-outerWrapper {
+  overflow-x: hidden;
+  overflow-y: visible;
+  
+}
+
+.CandidatesPage-innerWrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+@media screen and (min-width: 600px){
+  .CandidatesPage-outerWrapper {
+      width: 315px;
+      margin: 0 auto;
+  }
+  .CandidatesPage-innerWrapper {
+      overflow-x: hidden;
+    
+  
+  }
+}
+.CandidatesPage-list {
+  overflow-y: hidden;
+  width: 1280px; /* item width * item count */
+  -webkit-padding-start: 5px;
+}
+.CandidatesPage-item {
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.12);
+  float: left;
+  list-style: none;
+  margin: 0 auto;
+  width: 300px;
+  height: 450px;
+  background: white;
+  margin: 5px;
+  border-radius: 8px;
+  text-align: center;
+}
+.CandidatesPage-otherCandidates {
+  min-height: 100px;
+  background: #FFFCF5;
+  text-align: center;
+  padding-top: 30px;
+}
+.CandidatesPage-btn {
+  background: #ED7239;
+  color: white;
+  border-radius: 80px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0px auto;
+}

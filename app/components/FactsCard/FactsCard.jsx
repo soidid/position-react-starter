@@ -4,13 +4,10 @@ import './FactsCard.css';
 import Icon from '../Icon/Icon.jsx';
 import classNames from 'classnames';
 
-export default class MainMenu extends React.Component {
+export default class FactsCard extends React.Component {
   
   render () {
     var {data, listTop3} = this.props;
-    
-    
-    
    
     var factItems = data.facts.map((item,key)=>{
         var opinionClasses = classNames({
