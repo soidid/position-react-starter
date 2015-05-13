@@ -1807,7 +1807,7 @@ module.exports =
 
 	var _componentsTabsTabsJsx2 = _interopRequireDefault(_componentsTabsTabsJsx);
 
-	__webpack_require__(/*! ./PersonIssuePage.css */ 84);
+	__webpack_require__(/*! ./PersonIssuePage.css */ 88);
 
 	var PersonIssuePage = (function (_React$Component) {
 		function PersonIssuePage() {
@@ -1887,7 +1887,7 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 84);
 
 	var _componentsLegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_componentsLegislatorAvatarLegislatorAvatarJsx);
 
@@ -1895,13 +1895,13 @@ module.exports =
 
 	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
 
-	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 86);
+	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 85);
 
 	var _componentsInputInputJsx2 = _interopRequireDefault(_componentsInputInputJsx);
 
-	__webpack_require__(/*! ./PersonListPage.css */ 87);
+	__webpack_require__(/*! ./PersonListPage.css */ 86);
 
-	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 88);
+	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 87);
 
 	var _lyInfoJs2 = _interopRequireDefault(_lyInfoJs);
 
@@ -2217,15 +2217,12 @@ module.exports =
 				});
 			}
 		}, {
-			key: "componentWillMount",
-			value: function componentWillMount() {
-				this.state = {
-					width: window.innerWidth
-				};
-			}
-		}, {
 			key: "componentDidMount",
 			value: function componentDidMount() {
+
+				this.setState({
+					width: window.innerWidth
+				});
 
 				window.addEventListener("resize", this._onResize.bind(this, null), false);
 			}
@@ -2381,7 +2378,7 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 86);
+	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 85);
 
 	var _componentsInputInputJsx2 = _interopRequireDefault(_componentsInputInputJsx);
 
@@ -2543,7 +2540,7 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 84);
 
 	var _componentsLegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_componentsLegislatorAvatarLegislatorAvatarJsx);
 
@@ -4442,7 +4439,7 @@ module.exports =
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
 	var React = __webpack_require__(/*! react */ 1);
-	var ContextWrapper = __webpack_require__(/*! ./ContextWrapper */ 110);
+	var ContextWrapper = __webpack_require__(/*! ./ContextWrapper */ 111);
 	var assign = __webpack_require__(/*! react/lib/Object.assign */ 104);
 	var PropTypes = __webpack_require__(/*! ../PropTypes */ 109);
 
@@ -4551,7 +4548,7 @@ module.exports =
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 110);
 	var History = __webpack_require__(/*! ../History */ 64);
 
 	var _listeners = [];
@@ -4670,7 +4667,7 @@ module.exports =
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 110);
 	var History = __webpack_require__(/*! ../History */ 64);
 
 	var _listeners = [];
@@ -4865,7 +4862,7 @@ module.exports =
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 110);
 	var History = __webpack_require__(/*! ../History */ 64);
 
 	/**
@@ -4962,7 +4959,7 @@ module.exports =
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 110);
 
 	/**
 	 * A scroll behavior that attempts to imitate the default behavior
@@ -5522,7 +5519,7 @@ module.exports =
 	var warning = __webpack_require__(/*! react/lib/warning */ 107);
 	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
 	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 106).canUseDOM;
-	var LocationActions = __webpack_require__(/*! ./actions/LocationActions */ 111);
+	var LocationActions = __webpack_require__(/*! ./actions/LocationActions */ 110);
 	var ImitateBrowserBehavior = __webpack_require__(/*! ./behaviors/ImitateBrowserBehavior */ 62);
 	var HashLocation = __webpack_require__(/*! ./locations/HashLocation */ 57);
 	var HistoryLocation = __webpack_require__(/*! ./locations/HistoryLocation */ 58);
@@ -6848,7 +6845,7 @@ module.exports =
 
 	var _LegislatorLegislatorJsx2 = _interopRequireDefault(_LegislatorLegislatorJsx);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 84);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
@@ -7538,15 +7535,6 @@ module.exports =
 
 /***/ },
 /* 84 */
-/*!************************************************************!*\
-  !*** ./app/containers/PersonIssuePage/PersonIssuePage.css ***!
-  \************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 85 */
 /*!**************************************************************!*\
   !*** ./app/components/LegislatorAvatar/LegislatorAvatar.jsx ***!
   \**************************************************************/
@@ -7646,7 +7634,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 86 */
+/* 85 */
 /*!****************************************!*\
   !*** ./app/components/Input/Input.jsx ***!
   \****************************************/
@@ -7746,7 +7734,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 87 */
+/* 86 */
 /*!**********************************************************!*\
   !*** ./app/containers/PersonListPage/PersonListPage.css ***!
   \**********************************************************/
@@ -7755,7 +7743,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 88 */
+/* 87 */
 /*!**************************************************!*\
   !*** ./app/containers/PersonListPage/ly-info.js ***!
   \**************************************************/
@@ -10025,6 +10013,15 @@ module.exports =
 	  }] };
 
 /***/ },
+/* 88 */
+/*!************************************************************!*\
+  !*** ./app/containers/PersonIssuePage/PersonIssuePage.css ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
 /* 89 */
 /*!****************************************************!*\
   !*** ./app/components/CompareCard/CompareCard.jsx ***!
@@ -10236,7 +10233,7 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./CompareTabs.css */ 258);
+	__webpack_require__(/*! ./CompareTabs.css */ 264);
 
 	var _classnames = __webpack_require__(/*! classnames */ 108);
 
@@ -10358,9 +10355,9 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./CompareMultiCard.css */ 259);
+	__webpack_require__(/*! ./CompareMultiCard.css */ 258);
 
-	var _CompareMultiCard = __webpack_require__(/*! ./CompareMultiCard */ 260);
+	var _CompareMultiCard = __webpack_require__(/*! ./CompareMultiCard */ 259);
 
 	var _CompareMultiCard2 = _interopRequireDefault(_CompareMultiCard);
 
@@ -10421,10 +10418,10 @@ module.exports =
 	    value: function render() {
 	      var issueTitle = this.props.issueTitle;
 
-	      var candidateAimg = __webpack_require__(/*! ./images/賴士葆.png */ 261);
-	      var candidateBimg = __webpack_require__(/*! ./images/苗博雅.png */ 262);
-	      var candidateCimg = __webpack_require__(/*! ./images/阮昭雄.png */ 263);
-	      var candidateDimg = __webpack_require__(/*! ./images/余宛如.png */ 264);
+	      var candidateAimg = __webpack_require__(/*! ./images/賴士葆.png */ 260);
+	      var candidateBimg = __webpack_require__(/*! ./images/苗博雅.png */ 261);
+	      var candidateCimg = __webpack_require__(/*! ./images/阮昭雄.png */ 262);
+	      var candidateDimg = __webpack_require__(/*! ./images/余宛如.png */ 263);
 
 	      var issueItems = _CompareMultiCard2["default"].issues.map(function (item, key) {
 	        var classes = _classnames2["default"]({
@@ -14952,6 +14949,39 @@ module.exports =
 
 /***/ },
 /* 110 */
+/*!*******************************************************!*\
+  !*** ./~/react-router/lib/actions/LocationActions.js ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Actions that modify the URL.
+	 */
+	'use strict';
+
+	var LocationActions = {
+
+	  /**
+	   * Indicates a new location is being pushed to the history stack.
+	   */
+	  PUSH: 'push',
+
+	  /**
+	   * Indicates the current location should be replaced.
+	   */
+	  REPLACE: 'replace',
+
+	  /**
+	   * Indicates the most recent entry should be removed from the history stack.
+	   */
+	  POP: 'pop'
+
+	};
+
+	module.exports = LocationActions;
+
+/***/ },
+/* 111 */
 /*!*********************************************************!*\
   !*** ./~/react-router/lib/components/ContextWrapper.js ***!
   \*********************************************************/
@@ -14995,39 +15025,6 @@ module.exports =
 	})(React.Component);
 
 	module.exports = ContextWrapper;
-
-/***/ },
-/* 111 */
-/*!*******************************************************!*\
-  !*** ./~/react-router/lib/actions/LocationActions.js ***!
-  \*******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Actions that modify the URL.
-	 */
-	'use strict';
-
-	var LocationActions = {
-
-	  /**
-	   * Indicates a new location is being pushed to the history stack.
-	   */
-	  PUSH: 'push',
-
-	  /**
-	   * Indicates the current location should be replaced.
-	   */
-	  REPLACE: 'replace',
-
-	  /**
-	   * Indicates the most recent entry should be removed from the history stack.
-	   */
-	  POP: 'pop'
-
-	};
-
-	module.exports = LocationActions;
 
 /***/ },
 /* 112 */
@@ -16712,7 +16709,7 @@ module.exports =
 
 	var _LegislatorLegislatorJsx2 = _interopRequireDefault(_LegislatorLegislatorJsx);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 84);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
@@ -17121,15 +17118,6 @@ module.exports =
 
 /***/ },
 /* 258 */
-/*!****************************************************!*\
-  !*** ./app/components/CompareTabs/CompareTabs.css ***!
-  \****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 259 */
 /*!**************************************************************!*\
   !*** ./app/components/CompareMultiCard/CompareMultiCard.css ***!
   \**************************************************************/
@@ -17138,7 +17126,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 260 */
+/* 259 */
 /*!*************************************************************!*\
   !*** ./app/components/CompareMultiCard/CompareMultiCard.js ***!
   \*************************************************************/
@@ -17180,7 +17168,7 @@ module.exports =
 	};
 
 /***/ },
-/* 261 */
+/* 260 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/賴士葆.png ***!
   \********************************************************/
@@ -17189,7 +17177,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
 
 /***/ },
-/* 262 */
+/* 261 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/苗博雅.png ***!
   \********************************************************/
@@ -17198,7 +17186,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ee8cfab9bf21dde03752cb3053c3eb12.png"
 
 /***/ },
-/* 263 */
+/* 262 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/阮昭雄.png ***!
   \********************************************************/
@@ -17207,13 +17195,22 @@ module.exports =
 	module.exports = __webpack_require__.p + "f9018778a5b58bdbee4971d2f1f86b25.png"
 
 /***/ },
-/* 264 */
+/* 263 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/余宛如.png ***!
   \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "b3f84ce153c46c9c1895595b5b190e70.png"
+
+/***/ },
+/* 264 */
+/*!****************************************************!*\
+  !*** ./app/components/CompareTabs/CompareTabs.css ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
 
 /***/ },
 /* 265 */
@@ -17242,7 +17239,7 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 84);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
