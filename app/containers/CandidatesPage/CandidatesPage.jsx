@@ -15,7 +15,6 @@ export default class CandidatesPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			width: window.innerWidth,
 			activeTab: "議題立場",
 			activeSubtab: "勞工"
 		}
@@ -37,6 +36,9 @@ export default class CandidatesPage extends React.Component {
 		});
 	}
 	componentDidMount () {
+		this.state = {
+			width: window.innerWidth
+		}
         window.addEventListener('resize', this._onResize.bind(this,null), false);
     }
     componentWillUnmount () {
