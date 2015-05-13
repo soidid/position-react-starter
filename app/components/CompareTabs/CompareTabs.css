@@ -1,0 +1,91 @@
+.CompareTabs {
+	width: 100%;
+	position: relative;
+	
+}
+.CompareTabs.is-scrolling {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+.CompareTabs-items {
+	padding: 0 40px;
+
+}
+@media screen and (min-width: 600px){
+	.CompareTabs-maxWidth {
+		width: 600px;
+		position: relative;
+		margin: 0 auto;
+	}
+}
+.CompareTabs.is-scrolling .CompareTabs-items{
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.12);
+}
+.CompareTabs-item {
+	padding: 15px 7px 15px 7px;
+	display: inline-block;
+	cursor: pointer;
+	color: black;
+	font-size: 16px;
+	position: relative;
+}
+@media screen and(min-width: 600px){
+	.CompareTabs-item {
+		padding: 15px 14px 15px 14px;
+	}
+}
+.CompareTabs-item.is-active {
+	background: #7A9E9F;
+	color: white;
+}
+.CompareTabs-item.is-active:after {
+	content: '';
+	position: absolute;
+	bottom: -9px;
+	left: calc(50% - 10px );
+	border-top: 10px solid #7A9E9F;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	z-index: 10;
+}
+.CompareTabs-item:hover {
+	//background: rgb(240,240,240);
+	background: #7A9E9F;
+	color: white;
+}
+
+.CompareTabs-subitems {
+	
+	overflow-y: hidden;
+	max-height:0px; /* approximate max height */
+
+	transition-property: max-height;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.CompareTabs-subitems.is-show {
+	
+	max-height: 100px;
+
+	transition-property: max-height;
+	transition-duration: 100ms;
+	transition-timing-function: ease-in;
+}
+.CompareTabs-subitem {
+	padding: 15px 7px 8px 7px;
+ 	display: inline-block;
+ 	border-bottom: 4px solid #F2F6F6;
+ 	cursor: pointer;
+}
+.CompareTabs-subitem:hover {
+	background: rgb(240,240,240);
+	border-bottom: 4px solid rgb(240,240,240);
+}
+.CompareTabs-subitem.is-active {
+	border-bottom: 4px solid #7A9E9F;
+}
+.CompareTabs-subitem.is-active:hover {
+	background: rgb(240,240,240);
+	border-bottom: 4px solid #7A9E9F;
+}
