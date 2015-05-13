@@ -35,10 +35,13 @@ export default class CandidatesPage extends React.Component {
 			width: window.innerWidth
 		});
 	}
-	componentDidMount () {
+	componentWillMount() {
 		this.state = {
 			width: window.innerWidth
 		}
+	}
+	componentDidMount () {
+		
         window.addEventListener('resize', this._onResize.bind(this,null), false);
     }
     componentWillUnmount () {
