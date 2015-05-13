@@ -133,12 +133,12 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
 	/* eslint-disable no-multi-spaces */
 	// Only import from `route-handlers/*`
 
-	var _routeHandlersApplication = __webpack_require__(/*! route-handlers/Application */ 9);
+	var _routeHandlersApplication = __webpack_require__(/*! route-handlers/Application */ 10);
 
 	var _routeHandlersApplication2 = _interopRequireDefault(_routeHandlersApplication);
 
@@ -146,49 +146,49 @@ module.exports =
 
 	var _routeHandlersSomePage2 = _interopRequireDefault(_routeHandlersSomePage);
 
-	var _routeHandlersTodoListPage = __webpack_require__(/*! route-handlers/TodoListPage */ 10);
+	var _routeHandlersTodoListPage = __webpack_require__(/*! route-handlers/TodoListPage */ 11);
 
 	var _routeHandlersTodoListPage2 = _interopRequireDefault(_routeHandlersTodoListPage);
 
-	var _routeHandlersHomePage = __webpack_require__(/*! route-handlers/HomePage */ 11);
+	var _routeHandlersHomePage = __webpack_require__(/*! route-handlers/HomePage */ 12);
 
 	var _routeHandlersHomePage2 = _interopRequireDefault(_routeHandlersHomePage);
 
-	var _routeHandlersNotFoundPage = __webpack_require__(/*! route-handlers/NotFoundPage */ 12);
+	var _routeHandlersNotFoundPage = __webpack_require__(/*! route-handlers/NotFoundPage */ 13);
 
 	var _routeHandlersNotFoundPage2 = _interopRequireDefault(_routeHandlersNotFoundPage);
 
 	//
 
-	var _routeHandlersPersonPage = __webpack_require__(/*! route-handlers/PersonPage */ 13);
+	var _routeHandlersPersonPage = __webpack_require__(/*! route-handlers/PersonPage */ 14);
 
 	var _routeHandlersPersonPage2 = _interopRequireDefault(_routeHandlersPersonPage);
 
-	var _routeHandlersPersonIssuePage = __webpack_require__(/*! route-handlers/PersonIssuePage */ 14);
+	var _routeHandlersPersonIssuePage = __webpack_require__(/*! route-handlers/PersonIssuePage */ 15);
 
 	var _routeHandlersPersonIssuePage2 = _interopRequireDefault(_routeHandlersPersonIssuePage);
 
-	var _routeHandlersPersonListPage = __webpack_require__(/*! route-handlers/PersonListPage */ 15);
+	var _routeHandlersPersonListPage = __webpack_require__(/*! route-handlers/PersonListPage */ 16);
 
 	var _routeHandlersPersonListPage2 = _interopRequireDefault(_routeHandlersPersonListPage);
 
-	var _componentsProfileProfileJsx = __webpack_require__(/*! components/Profile/Profile.jsx */ 20);
+	var _componentsProfileProfileJsx = __webpack_require__(/*! components/Profile/Profile.jsx */ 21);
 
 	var _componentsProfileProfileJsx2 = _interopRequireDefault(_componentsProfileProfileJsx);
 
-	var _routeHandlersCandidatesPage = __webpack_require__(/*! route-handlers/CandidatesPage */ 16);
+	var _routeHandlersCandidatesPage = __webpack_require__(/*! route-handlers/CandidatesPage */ 17);
 
 	var _routeHandlersCandidatesPage2 = _interopRequireDefault(_routeHandlersCandidatesPage);
 
-	var _routeHandlersIssueListPage = __webpack_require__(/*! route-handlers/IssueListPage */ 17);
+	var _routeHandlersIssueListPage = __webpack_require__(/*! route-handlers/IssueListPage */ 18);
 
 	var _routeHandlersIssueListPage2 = _interopRequireDefault(_routeHandlersIssueListPage);
 
-	var _routeHandlersIssuePage = __webpack_require__(/*! route-handlers/IssuePage */ 18);
+	var _routeHandlersIssuePage = __webpack_require__(/*! route-handlers/IssuePage */ 19);
 
 	var _routeHandlersIssuePage2 = _interopRequireDefault(_routeHandlersIssuePage);
 
-	var _routeHandlersIssueVotePage = __webpack_require__(/*! route-handlers/IssueVotePage */ 19);
+	var _routeHandlersIssueVotePage = __webpack_require__(/*! route-handlers/IssueVotePage */ 20);
 
 	var _routeHandlersIssueVotePage2 = _interopRequireDefault(_routeHandlersIssueVotePage);
 
@@ -296,7 +296,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
 	var _reactRouter2 = _interopRequireDefault(_reactRouter);
 
@@ -304,7 +304,7 @@ module.exports =
 
 	var _async2 = _interopRequireDefault(_async);
 
-	var _StoresWrapper = __webpack_require__(/*! ./StoresWrapper */ 21);
+	var _StoresWrapper = __webpack_require__(/*! ./StoresWrapper */ 9);
 
 	var _StoresWrapper2 = _interopRequireDefault(_StoresWrapper);
 
@@ -372,6 +372,60 @@ module.exports =
 
 /***/ },
 /* 9 */
+/*!**********************************!*\
+  !*** ./config/StoresWrapper.jsx ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var StoresWrapper = (function () {
+		function StoresWrapper() {
+			_classCallCheck(this, StoresWrapper);
+		}
+
+		_createClass(StoresWrapper, [{
+			key: "getChildContext",
+			value: function getChildContext() {
+				return {
+					stores: this.props.stores
+				};
+			}
+		}, {
+			key: "render",
+			value: function render() {
+				var Application = this.props.Component;
+				return _react2["default"].createElement(Application, null);
+			}
+		}]);
+
+		return StoresWrapper;
+	})();
+
+	exports["default"] = StoresWrapper;
+	;
+
+	StoresWrapper.childContextTypes = {
+		stores: _react2["default"].PropTypes.object
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 10 */
 /*!********************************************!*\
   !*** ./app/route-handlers/Application.jsx ***!
   \********************************************/
@@ -399,7 +453,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 10 */
+/* 11 */
 /*!*********************************************!*\
   !*** ./app/route-handlers/TodoListPage.jsx ***!
   \*********************************************/
@@ -415,7 +469,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersTodoListPageTodoListPageJsx = __webpack_require__(/*! containers/TodoListPage/TodoListPage.jsx */ 32);
+	var _containersTodoListPageTodoListPageJsx = __webpack_require__(/*! containers/TodoListPage/TodoListPage.jsx */ 33);
 
 	var _containersTodoListPageTodoListPageJsx2 = _interopRequireDefault(_containersTodoListPageTodoListPageJsx);
 
@@ -423,7 +477,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 11 */
+/* 12 */
 /*!*****************************************!*\
   !*** ./app/route-handlers/HomePage.jsx ***!
   \*****************************************/
@@ -439,7 +493,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersHomePageHomePageJsx = __webpack_require__(/*! containers/HomePage/HomePage.jsx */ 33);
+	var _containersHomePageHomePageJsx = __webpack_require__(/*! containers/HomePage/HomePage.jsx */ 32);
 
 	var _containersHomePageHomePageJsx2 = _interopRequireDefault(_containersHomePageHomePageJsx);
 
@@ -447,7 +501,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 12 */
+/* 13 */
 /*!*********************************************!*\
   !*** ./app/route-handlers/NotFoundPage.jsx ***!
   \*********************************************/
@@ -471,7 +525,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 13 */
+/* 14 */
 /*!*******************************************!*\
   !*** ./app/route-handlers/PersonPage.jsx ***!
   \*******************************************/
@@ -487,7 +541,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersPersonPagePersonPageJsx = __webpack_require__(/*! containers/PersonPage/PersonPage.jsx */ 36);
+	var _containersPersonPagePersonPageJsx = __webpack_require__(/*! containers/PersonPage/PersonPage.jsx */ 38);
 
 	var _containersPersonPagePersonPageJsx2 = _interopRequireDefault(_containersPersonPagePersonPageJsx);
 
@@ -495,7 +549,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 14 */
+/* 15 */
 /*!************************************************!*\
   !*** ./app/route-handlers/PersonIssuePage.jsx ***!
   \************************************************/
@@ -519,7 +573,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 15 */
+/* 16 */
 /*!***********************************************!*\
   !*** ./app/route-handlers/PersonListPage.jsx ***!
   \***********************************************/
@@ -535,7 +589,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersPersonListPagePersonListPageJsx = __webpack_require__(/*! containers/PersonListPage/PersonListPage.jsx */ 41);
+	var _containersPersonListPagePersonListPageJsx = __webpack_require__(/*! containers/PersonListPage/PersonListPage.jsx */ 36);
 
 	var _containersPersonListPagePersonListPageJsx2 = _interopRequireDefault(_containersPersonListPagePersonListPageJsx);
 
@@ -543,7 +597,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 16 */
+/* 17 */
 /*!***********************************************!*\
   !*** ./app/route-handlers/CandidatesPage.jsx ***!
   \***********************************************/
@@ -567,7 +621,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 17 */
+/* 18 */
 /*!**********************************************!*\
   !*** ./app/route-handlers/IssueListPage.jsx ***!
   \**********************************************/
@@ -583,7 +637,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersIssueListPageIssueListPageJsx = __webpack_require__(/*! containers/IssueListPage/IssueListPage.jsx */ 38);
+	var _containersIssueListPageIssueListPageJsx = __webpack_require__(/*! containers/IssueListPage/IssueListPage.jsx */ 39);
 
 	var _containersIssueListPageIssueListPageJsx2 = _interopRequireDefault(_containersIssueListPageIssueListPageJsx);
 
@@ -591,7 +645,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 18 */
+/* 19 */
 /*!******************************************!*\
   !*** ./app/route-handlers/IssuePage.jsx ***!
   \******************************************/
@@ -615,7 +669,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 19 */
+/* 20 */
 /*!**********************************************!*\
   !*** ./app/route-handlers/IssueVotePage.jsx ***!
   \**********************************************/
@@ -631,7 +685,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersIssueVotePageIssueVotePageJsx = __webpack_require__(/*! containers/IssueVotePage/IssueVotePage.jsx */ 39);
+	var _containersIssueVotePageIssueVotePageJsx = __webpack_require__(/*! containers/IssueVotePage/IssueVotePage.jsx */ 41);
 
 	var _containersIssueVotePageIssueVotePageJsx2 = _interopRequireDefault(_containersIssueVotePageIssueVotePageJsx);
 
@@ -639,7 +693,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 20 */
+/* 21 */
 /*!********************************************!*\
   !*** ./app/components/Profile/Profile.jsx ***!
   \********************************************/
@@ -667,7 +721,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
 	var _LegislatorLegislatorJsx = __webpack_require__(/*! ../Legislator/Legislator.jsx */ 29);
 
@@ -847,60 +901,6 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 21 */
-/*!**********************************!*\
-  !*** ./config/StoresWrapper.jsx ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var _react = __webpack_require__(/*! react */ 1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var StoresWrapper = (function () {
-		function StoresWrapper() {
-			_classCallCheck(this, StoresWrapper);
-		}
-
-		_createClass(StoresWrapper, [{
-			key: "getChildContext",
-			value: function getChildContext() {
-				return {
-					stores: this.props.stores
-				};
-			}
-		}, {
-			key: "render",
-			value: function render() {
-				var Application = this.props.Component;
-				return _react2["default"].createElement(Application, null);
-			}
-		}]);
-
-		return StoresWrapper;
-	})();
-
-	exports["default"] = StoresWrapper;
-	;
-
-	StoresWrapper.childContextTypes = {
-		stores: _react2["default"].PropTypes.object
-	};
-	module.exports = exports["default"];
-
-/***/ },
 /* 22 */
 /*!*************************************!*\
   !*** ./app/update-helpers/react.js ***!
@@ -1014,7 +1014,7 @@ module.exports =
 	var desc = {
 		loadComponent: function(callback) {}
 	};
-	var mixinReactProxy = __webpack_require__(/*! ./~/react-proxy-loader/mixinReactProxy.js */ 27);
+	var mixinReactProxy = __webpack_require__(/*! ./~/react-proxy-loader/mixinReactProxy.js */ 28);
 	mixinReactProxy(React, desc);
 	module.exports = React.createClass(desc);
 	module.exports.Mixin = desc;
@@ -1030,40 +1030,6 @@ module.exports =
 
 /***/ },
 /* 27 */
-/*!*************************************************!*\
-  !*** ./~/react-proxy-loader/mixinReactProxy.js ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function(React, desc) {
-		desc.displayName = "ReactProxy";
-		desc.render = function() {
-			var Component = this.state.component;
-			if(Component) {
-				return React.createElement(Component, this.props, this.props.children);
-			} else if(this.renderUnavailable) {
-				return this.renderUnavailable();
-			} else {
-				return null;
-			}
-		};
-		desc.getInitialState = function() {
-			return { component: this.loadComponent() };
-		};
-		desc.componentDidMount = function() {
-			if(!this.state.component) {
-				this.loadComponent(function(component) {
-					if(this.isMounted()) {
-						this.setState({ component: component });
-					}
-				}.bind(this));
-			}
-		};
-	};
-
-
-/***/ },
-/* 28 */
 /*!*************************************!*\
   !*** ./~/react-router/lib/index.js ***!
   \*************************************/
@@ -1102,6 +1068,40 @@ module.exports =
 	exports.run = __webpack_require__(/*! ./runRouter */ 70);
 
 /***/ },
+/* 28 */
+/*!*************************************************!*\
+  !*** ./~/react-proxy-loader/mixinReactProxy.js ***!
+  \*************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function(React, desc) {
+		desc.displayName = "ReactProxy";
+		desc.render = function() {
+			var Component = this.state.component;
+			if(Component) {
+				return React.createElement(Component, this.props, this.props.children);
+			} else if(this.renderUnavailable) {
+				return this.renderUnavailable();
+			} else {
+				return null;
+			}
+		};
+		desc.getInitialState = function() {
+			return { component: this.loadComponent() };
+		};
+		desc.componentDidMount = function() {
+			if(!this.state.component) {
+				this.loadComponent(function(component) {
+					if(this.isMounted()) {
+						this.setState({ component: component });
+					}
+				}.bind(this));
+			}
+		};
+	};
+
+
+/***/ },
 /* 29 */
 /*!**************************************************!*\
   !*** ./app/components/Legislator/Legislator.jsx ***!
@@ -1126,9 +1126,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./Legislator.css */ 73);
+	__webpack_require__(/*! ./Legislator.css */ 71);
 
 	var Legislator = (function (_React$Component) {
 	  function Legislator() {
@@ -1149,9 +1149,9 @@ module.exports =
 	      var imgURL;
 
 	      try {
-	        imgURL = __webpack_require__(/*! ./images/avatar */ 74)("./" + data + ".png");
+	        imgURL = __webpack_require__(/*! ./images/avatar */ 72)("./" + data + ".png");
 	      } catch (e) {
-	        imgURL = __webpack_require__(/*! ./images/default.jpg */ 107);
+	        imgURL = __webpack_require__(/*! ./images/default.jpg */ 120);
 	      }
 
 	      return _react2["default"].createElement(
@@ -1203,15 +1203,15 @@ module.exports =
 
 	var _reactAddons2 = _interopRequireDefault(_reactAddons);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./FactsCard.css */ 71);
+	__webpack_require__(/*! ./FactsCard.css */ 73);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	var _classnames = __webpack_require__(/*! classnames */ 102);
+	var _classnames = __webpack_require__(/*! classnames */ 108);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1344,7 +1344,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
 	var _componentsAppBarAppBarJsx = __webpack_require__(/*! components/AppBar/AppBar.jsx */ 77);
 
@@ -1354,7 +1354,7 @@ module.exports =
 
 	var _componentsSideBarSideBarJsx2 = _interopRequireDefault(_componentsSideBarSideBarJsx);
 
-	var _classnames = __webpack_require__(/*! classnames */ 102);
+	var _classnames = __webpack_require__(/*! classnames */ 108);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1436,6 +1436,95 @@ module.exports =
 
 /***/ },
 /* 32 */
+/*!**********************************************!*\
+  !*** ./app/containers/HomePage/HomePage.jsx ***!
+  \**********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+
+	__webpack_require__(/*! ./HomePage.css */ 84);
+
+	var HomePage = (function (_React$Component) {
+		function HomePage() {
+			_classCallCheck(this, HomePage);
+
+			if (_React$Component != null) {
+				_React$Component.apply(this, arguments);
+			}
+		}
+
+		_inherits(HomePage, _React$Component);
+
+		_createClass(HomePage, [{
+			key: "render",
+			value: function render() {
+				var avatarURL = __webpack_require__(/*! ./images/HomePage-avatar.png */ 121);
+
+				return _react2["default"].createElement(
+					"div",
+					{ className: "HomePage" },
+					_react2["default"].createElement(
+						"div",
+						{ className: "HomePage-content" },
+						_react2["default"].createElement("img", { src: avatarURL,
+							className: "HomePage-avtar" }),
+						_react2["default"].createElement(
+							"div",
+							null,
+							"嘿！讓我們一起試著努力看看。"
+						),
+						_react2["default"].createElement(
+							"h1",
+							null,
+							"立委選舉共筆"
+						),
+						_react2["default"].createElement(
+							_reactRouter.Link,
+							{ to: "personList", className: "HomePage-btn" },
+							"找立委"
+						),
+						_react2["default"].createElement(
+							_reactRouter.Link,
+							{ to: "issueList", className: "HomePage-btn" },
+							"找議題"
+						)
+					)
+				);
+			}
+		}], [{
+			key: "getProps",
+			value: function getProps() {
+				return {};
+			}
+		}]);
+
+		return HomePage;
+	})(_react2["default"].Component);
+
+	exports["default"] = HomePage;
+	module.exports = exports["default"];
+
+/***/ },
+/* 33 */
 /*!******************************************************!*\
   !*** ./app/containers/TodoListPage/TodoListPage.jsx ***!
   \******************************************************/
@@ -1503,95 +1592,6 @@ module.exports =
 	})(_react2["default"].Component);
 
 	exports["default"] = TodoListPage;
-	module.exports = exports["default"];
-
-/***/ },
-/* 33 */
-/*!**********************************************!*\
-  !*** ./app/containers/HomePage/HomePage.jsx ***!
-  \**********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(/*! react */ 1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
-
-	__webpack_require__(/*! ./HomePage.css */ 82);
-
-	var HomePage = (function (_React$Component) {
-		function HomePage() {
-			_classCallCheck(this, HomePage);
-
-			if (_React$Component != null) {
-				_React$Component.apply(this, arguments);
-			}
-		}
-
-		_inherits(HomePage, _React$Component);
-
-		_createClass(HomePage, [{
-			key: "render",
-			value: function render() {
-				var avatarURL = __webpack_require__(/*! ./images/HomePage-avatar.png */ 108);
-
-				return _react2["default"].createElement(
-					"div",
-					{ className: "HomePage" },
-					_react2["default"].createElement(
-						"div",
-						{ className: "HomePage-content" },
-						_react2["default"].createElement("img", { src: avatarURL,
-							className: "HomePage-avtar" }),
-						_react2["default"].createElement(
-							"div",
-							null,
-							"嘿！讓我們一起試著努力看看。"
-						),
-						_react2["default"].createElement(
-							"h1",
-							null,
-							"立委選舉共筆"
-						),
-						_react2["default"].createElement(
-							_reactRouter.Link,
-							{ to: "personList", className: "HomePage-btn" },
-							"找立委"
-						),
-						_react2["default"].createElement(
-							_reactRouter.Link,
-							{ to: "issueList", className: "HomePage-btn" },
-							"找議題"
-						)
-					)
-				);
-			}
-		}], [{
-			key: "getProps",
-			value: function getProps() {
-				return {};
-			}
-		}]);
-
-		return HomePage;
-	})(_react2["default"].Component);
-
-	exports["default"] = HomePage;
 	module.exports = exports["default"];
 
 /***/ },
@@ -1676,6 +1676,10 @@ module.exports =
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { desc = parent = getter = undefined; _again = false; var object = _x,
+	    property = _x2,
+	    receiver = _x3; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1686,29 +1690,80 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
 	var _componentsCompareCardCompareCardJsx = __webpack_require__(/*! components/CompareCard/CompareCard.jsx */ 80);
 
 	var _componentsCompareCardCompareCardJsx2 = _interopRequireDefault(_componentsCompareCardCompareCardJsx);
 
-	__webpack_require__(/*! ./CandidatesPage.css */ 81);
+	var _componentsCompareTabsCompareTabsJsx = __webpack_require__(/*! components/CompareTabs/CompareTabs.jsx */ 81);
+
+	var _componentsCompareTabsCompareTabsJsx2 = _interopRequireDefault(_componentsCompareTabsCompareTabsJsx);
+
+	var _componentsCompareMultiCardCompareMultiCardJsx = __webpack_require__(/*! components/CompareMultiCard/CompareMultiCard.jsx */ 82);
+
+	var _componentsCompareMultiCardCompareMultiCardJsx2 = _interopRequireDefault(_componentsCompareMultiCardCompareMultiCardJsx);
+
+	__webpack_require__(/*! ./CandidatesPage.css */ 83);
 
 	var CandidatesPage = (function (_React$Component) {
-		function CandidatesPage() {
+		function CandidatesPage(props) {
 			_classCallCheck(this, CandidatesPage);
 
-			if (_React$Component != null) {
-				_React$Component.apply(this, arguments);
-			}
+			_get(Object.getPrototypeOf(CandidatesPage.prototype), "constructor", this).call(this, props);
+			this.state = {
+				width: window.innerWidth,
+				activeTab: "議題立場",
+				activeSubtab: "勞工"
+			};
 		}
 
 		_inherits(CandidatesPage, _React$Component);
 
 		_createClass(CandidatesPage, [{
+			key: "_setActiveTab",
+			value: function _setActiveTab(value, event) {
+				this.setState({
+					activeTab: value
+				});
+			}
+		}, {
+			key: "_setActiveSubtab",
+			value: function _setActiveSubtab(value, event) {
+				this.setState({
+					activeSubtab: value
+				});
+			}
+		}, {
+			key: "_onResize",
+			value: function _onResize(event) {
+				this.setState({
+					width: window.innerWidth
+				});
+			}
+		}, {
+			key: "componentDidMount",
+			value: function componentDidMount() {
+				window.addEventListener("resize", this._onResize.bind(this, null), false);
+			}
+		}, {
+			key: "componentWillUnmount",
+			value: function componentWillUnmount() {
+				window.removeEventListener("resize", this._onResize.bind(this, null), false);
+			}
+		}, {
 			key: "render",
 			value: function render() {
-				return _react2["default"].createElement(
+				var _state = this.state;
+				var width = _state.width;
+				var activeTab = _state.activeTab;
+				var activeSubtab = _state.activeSubtab;
+
+				//*********
+				// to be refined
+				//
+				//
+				var mobile = _react2["default"].createElement(
 					"div",
 					{ className: "CandidatesPage" },
 					_react2["default"].createElement(
@@ -1717,7 +1772,7 @@ module.exports =
 						_react2["default"].createElement(
 							"div",
 							{ className: "CandidatesPage-title" },
-							"候選人立場比一比"
+							"2016 臺北市 - 中正區，文山區 立委候選人"
 						),
 						_react2["default"].createElement(
 							"div",
@@ -1762,6 +1817,34 @@ module.exports =
 						)
 					)
 				);
+
+				//////////
+				var title = activeTab;
+				if (activeTab === "議題立場") title = activeSubtab;
+				var web = _react2["default"].createElement(
+					"div",
+					{ className: "CandidatesPage" },
+					_react2["default"].createElement(
+						"div",
+						{ className: "CandidatesPage-compare" },
+						_react2["default"].createElement(
+							"div",
+							{ className: "CandidatesPage-title" },
+							"2016 臺北市 - 中正區，文山區 立委候選人"
+						),
+						_react2["default"].createElement(
+							"div",
+							{ className: "CandidatesPage-menu" },
+							_react2["default"].createElement(_componentsCompareTabsCompareTabsJsx2["default"], { activeTab: activeTab,
+								activeSubtab: activeSubtab,
+								setActiveTabHandler: this._setActiveTab.bind(this),
+								setActiveSubtabHandler: this._setActiveSubtab.bind(this) })
+						),
+						_react2["default"].createElement(_componentsCompareMultiCardCompareMultiCardJsx2["default"], { issueTitle: title })
+					)
+				);
+
+				return width > 600 ? web : mobile;
 			}
 		}], [{
 			key: "getProps",
@@ -1786,6 +1869,379 @@ module.exports =
 
 /***/ },
 /* 36 */
+/*!**********************************************************!*\
+  !*** ./app/containers/PersonListPage/PersonListPage.jsx ***!
+  \**********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { desc = parent = getter = undefined; _again = false; var object = _x,
+	    property = _x2,
+	    receiver = _x3; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+
+	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+
+	var _componentsLegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_componentsLegislatorAvatarLegislatorAvatarJsx);
+
+	var _componentsIconIconJsx = __webpack_require__(/*! components/Icon/Icon.jsx */ 74);
+
+	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
+
+	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 86);
+
+	var _componentsInputInputJsx2 = _interopRequireDefault(_componentsInputInputJsx);
+
+	__webpack_require__(/*! ./PersonListPage.css */ 87);
+
+	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 88);
+
+	var _lyInfoJs2 = _interopRequireDefault(_lyInfoJs);
+
+	var iso3166tw = {
+	    "CHA": "彰化縣",
+	    "CYI": "嘉義市",
+	    "CYQ": "嘉義縣",
+	    "HSQ": "新竹縣",
+	    "HSZ": "新竹市",
+	    "HUA": "花蓮縣",
+	    "ILA": "宜蘭縣",
+	    "KEE": "基隆市",
+	    "KHH": "高雄市",
+	    "KHQ": "高雄市",
+	    "MIA": "苗栗縣",
+	    "NAN": "南投縣",
+	    "PEN": "澎湖縣",
+	    "PIF": "屏東縣",
+	    "TAO": "桃園縣",
+	    "TNN": "台南市",
+	    "TNQ": "台南市",
+	    "TPE": "台北市",
+	    "TPQ": "新北市",
+	    "TTT": "台東縣",
+	    "TXG": "台中市",
+	    "TXQ": "台中市",
+	    "YUN": "雲林縣",
+	    "JME": "金門縣",
+	    "LJF": "連江縣"
+	};
+	function constituency_area_parser(constituency) {
+	    switch (constituency[0]) {
+
+	        case "proportional":
+	            return "全國不分區";
+	            break;
+	        case "aborigine":
+	            return "山地原住民";
+	            break;
+	        case "foreign":
+	            return "僑居國外國民";
+	            break;
+	        default:
+	            if (constituency[0] in iso3166tw) {
+	                result = iso3166tw[constituency[0]];
+	            } else {
+	                result = constituency[0] + "<br>" + constituency[1];
+	            }
+	            return result;
+	            break;
+
+	    }
+	}
+	function constituency_parser(constituency) {
+	    var result = "";
+	    switch (constituency[0]) {
+
+	        case "proportional":
+	            return "全國不分區";
+	            break;
+	        case "aborigine":
+	            return "山地原住民";
+	            break;
+	        case "foreign":
+	            return "僑居國外國民";
+	            break;
+	        default:
+	            if (constituency[0] in iso3166tw) {
+	                if (constituency[1] == 0) {
+	                    result = iso3166tw[constituency[0]];
+	                } else {
+	                    result = iso3166tw[constituency[0]] + "第" + constituency[1] + "選區";
+	                }
+	            } else {
+	                result = constituency[0] + "<br>" + constituency[1];
+	            }
+	            return result;
+	            break;
+
+	    }
+	}
+
+	var PersonListPage = (function (_React$Component) {
+	    function PersonListPage(props) {
+	        _classCallCheck(this, PersonListPage);
+
+	        _get(Object.getPrototypeOf(PersonListPage.prototype), "constructor", this).call(this, props);
+	        this.state = { currentTerm: "" };
+	    }
+
+	    _inherits(PersonListPage, _React$Component);
+
+	    _createClass(PersonListPage, [{
+	        key: "_onInputChange",
+	        value: function _onInputChange(i, event) {
+	            /*
+	              取得 input 的輸入值得方式有幾種
+	               第一種：透過 event.target 取得值
+	              event.target.value
+	               第二種：透過 refs 取得值
+	              this.refs.textInput.getDOMNode().value
+	              
+	              第三種：透過 id 或 class 取得，用 js 或 jQuery 的方式去抓
+	              例如 Jeremy 的範例是在 componet mount 之後，綁定
+	              componentDidMount: function(){
+	                this.$input = $('#todo-input');
+	              }
+	              
+	              */
+	            this.setState({
+	                currentTerm: event.target.value
+	            });
+	        }
+	    }, {
+	        key: "_onSetInput",
+	        value: function _onSetInput(value) {
+	            //console.log(value);
+	            this.setState({
+	                currentTerm: value
+	            });
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            var loading = this.props.loading;
+	            var currentTerm = this.state.currentTerm;
+
+	            var lyItems = _lyInfoJs2["default"].data.filter(function (item) {
+
+	                var shouldReturn = false;
+	                if (currentTerm !== "") {
+	                    if (item.constituency.indexOf(currentTerm) !== -1) {
+	                        shouldReturn = true;
+	                    }
+	                    if (item.constituency_detail) {
+	                        if (item.constituency_detail.indexOf(currentTerm) !== -1) shouldReturn = true;
+	                    }
+	                    if (item.name.indexOf(currentTerm) !== -1) {
+	                        shouldReturn = true;
+	                    }
+	                    if (item.party.indexOf(currentTerm) !== -1) {
+	                        shouldReturn = true;
+	                    }
+	                } else {
+	                    shouldReturn = true;
+	                }
+	                if (shouldReturn) return item;
+	            }).map(function (item, key) {
+	                var partyClass = "PersonListPage-avatar is-" + item.party_eng;
+
+	                var constituency = constituency_parser(item.constituency);
+
+	                return _react2["default"].createElement(
+	                    _reactRouter.Link,
+	                    { className: "PersonListPage-legislatorItem",
+	                        to: "person",
+	                        key: key },
+	                    _react2["default"].createElement(
+	                        "div",
+	                        { className: partyClass },
+	                        _react2["default"].createElement(
+	                            "div",
+	                            { className: "PersonListPage-flex" },
+	                            _react2["default"].createElement(
+	                                "div",
+	                                { className: "PersonListPage-flexLeft" },
+	                                _react2["default"].createElement(_componentsLegislatorAvatarLegislatorAvatarJsx2["default"], { data: item.name, party: item.party_eng })
+	                            ),
+	                            _react2["default"].createElement(
+	                                "div",
+	                                { className: "PersonListPage-flexMain" },
+	                                _react2["default"].createElement(
+	                                    "div",
+	                                    { className: "PersonListPage-name" },
+	                                    item.name
+	                                ),
+	                                _react2["default"].createElement(
+	                                    "div",
+	                                    { className: "PersonListPage-description" },
+	                                    item.party
+	                                ),
+	                                _react2["default"].createElement(
+	                                    "div",
+	                                    { className: "PersonListPage-description" },
+	                                    constituency
+	                                ),
+	                                _react2["default"].createElement(
+	                                    "div",
+	                                    { className: "PersonListPage-descriptionLight" },
+	                                    item.constituency_detail
+	                                )
+	                            )
+	                        ),
+	                        _react2["default"].createElement(
+	                            "div",
+	                            { className: "PersonListPage-mainIssues" },
+	                            "關鍵議題：食品安全、核能"
+	                        )
+	                    )
+	                );
+	            });
+	            var bindInputChange = this._onInputChange.bind(this, null);
+	            var bindSetInput = this._onSetInput.bind(this);
+	            var examples = ["吳育昇", "蔡正元", "國民黨"];
+	            return _react2["default"].createElement(
+	                "div",
+	                { className: "PersonListPage" },
+	                _react2["default"].createElement(_componentsInputInputJsx2["default"], { handleInputChange: bindInputChange,
+	                    handleSetInput: bindSetInput,
+	                    currentTerm: currentTerm,
+	                    examples: examples,
+	                    placeholder: "搜尋立委姓名或選區" }),
+	                lyItems
+	            );
+	        }
+	    }], [{
+	        key: "getProps",
+	        value: function getProps(stores, params) {
+	            var transition = stores.Router.getItem("transition");
+	            return {
+	                loading: !!transition
+	            };
+	        }
+	    }]);
+
+	    return PersonListPage;
+	})(_react2["default"].Component);
+
+	exports["default"] = PersonListPage;
+
+	PersonListPage.contextTypes = {
+	    stores: _react2["default"].PropTypes.object
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 37 */
+/*!************************************************************!*\
+  !*** ./app/containers/PersonIssuePage/PersonIssuePage.jsx ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+
+	var _componentsLegislatorLegislatorJsx = __webpack_require__(/*! components/Legislator/Legislator.jsx */ 29);
+
+	var _componentsLegislatorLegislatorJsx2 = _interopRequireDefault(_componentsLegislatorLegislatorJsx);
+
+	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 89);
+
+	var _componentsRecordListRecordListJsx2 = _interopRequireDefault(_componentsRecordListRecordListJsx);
+
+	var _componentsIconIconJsx = __webpack_require__(/*! components/Icon/Icon.jsx */ 74);
+
+	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
+
+	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 90);
+
+	var _componentsTabsTabsJsx2 = _interopRequireDefault(_componentsTabsTabsJsx);
+
+	__webpack_require__(/*! ./PersonIssuePage.css */ 91);
+
+	var PersonIssuePage = (function (_React$Component) {
+		function PersonIssuePage() {
+			_classCallCheck(this, PersonIssuePage);
+
+			if (_React$Component != null) {
+				_React$Component.apply(this, arguments);
+			}
+		}
+
+		_inherits(PersonIssuePage, _React$Component);
+
+		_createClass(PersonIssuePage, [{
+			key: "render",
+			value: function render() {
+				var loading = this.props.loading;
+
+				// <div className="PersonIssuePage-back"><Link to="person"><Icon icon={"chevron-left"}/>所有立場</Link></div>
+				return _react2["default"].createElement(
+					"div",
+					{ className: "PersonIssuePage" },
+					_react2["default"].createElement(
+						"div",
+						{ className: "PersonIssuePage-records" },
+						_react2["default"].createElement(_componentsRecordListRecordListJsx2["default"], null)
+					)
+				);
+			}
+		}], [{
+			key: "getProps",
+			value: function getProps(stores, params) {
+				var transition = stores.Router.getItem("transition");
+				return {
+					loading: !!transition
+				};
+			}
+		}]);
+
+		return PersonIssuePage;
+	})(_react2["default"].Component);
+
+	exports["default"] = PersonIssuePage;
+
+	PersonIssuePage.contextTypes = {
+		stores: _react2["default"].PropTypes.object
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 38 */
 /*!**************************************************!*\
   !*** ./app/containers/PersonPage/PersonPage.jsx ***!
   \**************************************************/
@@ -1809,9 +2265,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _componentsProfileProfileJsx = __webpack_require__(/*! components/Profile/Profile.jsx */ 20);
+	var _componentsProfileProfileJsx = __webpack_require__(/*! components/Profile/Profile.jsx */ 21);
 
 	var _componentsProfileProfileJsx2 = _interopRequireDefault(_componentsProfileProfileJsx);
 
@@ -1819,15 +2275,15 @@ module.exports =
 
 	var _componentsLegislatorLegislatorJsx2 = _interopRequireDefault(_componentsLegislatorLegislatorJsx);
 
-	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 83);
+	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 90);
 
 	var _componentsTabsTabsJsx2 = _interopRequireDefault(_componentsTabsTabsJsx);
 
-	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 84);
+	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 89);
 
 	var _componentsRecordListRecordListJsx2 = _interopRequireDefault(_componentsRecordListRecordListJsx);
 
-	__webpack_require__(/*! ./PersonPage.css */ 85);
+	__webpack_require__(/*! ./PersonPage.css */ 92);
 
 	var PersonPage = (function (_React$Component) {
 		function PersonPage() {
@@ -1888,99 +2344,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 37 */
-/*!************************************************************!*\
-  !*** ./app/containers/PersonIssuePage/PersonIssuePage.jsx ***!
-  \************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(/*! react */ 1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
-
-	var _componentsLegislatorLegislatorJsx = __webpack_require__(/*! components/Legislator/Legislator.jsx */ 29);
-
-	var _componentsLegislatorLegislatorJsx2 = _interopRequireDefault(_componentsLegislatorLegislatorJsx);
-
-	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 84);
-
-	var _componentsRecordListRecordListJsx2 = _interopRequireDefault(_componentsRecordListRecordListJsx);
-
-	var _componentsIconIconJsx = __webpack_require__(/*! components/Icon/Icon.jsx */ 72);
-
-	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
-
-	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 83);
-
-	var _componentsTabsTabsJsx2 = _interopRequireDefault(_componentsTabsTabsJsx);
-
-	__webpack_require__(/*! ./PersonIssuePage.css */ 86);
-
-	var PersonIssuePage = (function (_React$Component) {
-		function PersonIssuePage() {
-			_classCallCheck(this, PersonIssuePage);
-
-			if (_React$Component != null) {
-				_React$Component.apply(this, arguments);
-			}
-		}
-
-		_inherits(PersonIssuePage, _React$Component);
-
-		_createClass(PersonIssuePage, [{
-			key: "render",
-			value: function render() {
-				var loading = this.props.loading;
-
-				// <div className="PersonIssuePage-back"><Link to="person"><Icon icon={"chevron-left"}/>所有立場</Link></div>
-				return _react2["default"].createElement(
-					"div",
-					{ className: "PersonIssuePage" },
-					_react2["default"].createElement(
-						"div",
-						{ className: "PersonIssuePage-records" },
-						_react2["default"].createElement(_componentsRecordListRecordListJsx2["default"], null)
-					)
-				);
-			}
-		}], [{
-			key: "getProps",
-			value: function getProps(stores, params) {
-				var transition = stores.Router.getItem("transition");
-				return {
-					loading: !!transition
-				};
-			}
-		}]);
-
-		return PersonIssuePage;
-	})(_react2["default"].Component);
-
-	exports["default"] = PersonIssuePage;
-
-	PersonIssuePage.contextTypes = {
-		stores: _react2["default"].PropTypes.object
-	};
-	module.exports = exports["default"];
-
-/***/ },
-/* 38 */
+/* 39 */
 /*!********************************************************!*\
   !*** ./app/containers/IssueListPage/IssueListPage.jsx ***!
   \********************************************************/
@@ -2008,13 +2372,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 87);
+	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 86);
 
 	var _componentsInputInputJsx2 = _interopRequireDefault(_componentsInputInputJsx);
 
-	__webpack_require__(/*! ./IssueListPage.css */ 88);
+	__webpack_require__(/*! ./IssueListPage.css */ 93);
 
 	var IssueListPage = (function (_React$Component) {
 	  function IssueListPage(props) {
@@ -2084,7 +2448,7 @@ module.exports =
 	      }];
 	      var issueListItem = issueList.map(function (i, k) {
 
-	        var imgURL = __webpack_require__(/*! ./images */ 89)("./" + (k + 1) + ".png");
+	        var imgURL = __webpack_require__(/*! ./images */ 94)("./" + (k + 1) + ".png");
 	        return _react2["default"].createElement(
 	          _reactRouter.Link,
 	          { to: "issue",
@@ -2142,128 +2506,6 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 39 */
-/*!********************************************************!*\
-  !*** ./app/containers/IssueVotePage/IssueVotePage.jsx ***!
-  \********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(/*! react */ 1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
-
-	var _lyPositionJs = __webpack_require__(/*! ./ly-position.js */ 90);
-
-	var _lyPositionJs2 = _interopRequireDefault(_lyPositionJs);
-
-	var _componentsOpinionGroupOpinionGroupJsx = __webpack_require__(/*! components/OpinionGroup/OpinionGroup.jsx */ 91);
-
-	var _componentsOpinionGroupOpinionGroupJsx2 = _interopRequireDefault(_componentsOpinionGroupOpinionGroupJsx);
-
-	__webpack_require__(/*! ./IssueVotePage.css */ 92);
-
-	var _dataForJs = __webpack_require__(/*! ./data/for.js */ 93);
-
-	var _dataForJs2 = _interopRequireDefault(_dataForJs);
-
-	var _dataAgainstJs = __webpack_require__(/*! ./data/against.js */ 94);
-
-	var _dataAgainstJs2 = _interopRequireDefault(_dataAgainstJs);
-
-	var _dataUnclearJs = __webpack_require__(/*! ./data/unclear.js */ 95);
-
-	var _dataUnclearJs2 = _interopRequireDefault(_dataUnclearJs);
-
-	var _dataNoneJs = __webpack_require__(/*! ./data/none.js */ 96);
-
-	var _dataNoneJs2 = _interopRequireDefault(_dataNoneJs);
-
-	var IssueVotePage = (function (_React$Component) {
-	  function IssueVotePage() {
-	    _classCallCheck(this, IssueVotePage);
-
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
-	  }
-
-	  _inherits(IssueVotePage, _React$Component);
-
-	  _createClass(IssueVotePage, [{
-	    key: "render",
-	    value: function render() {
-
-	      var pieChartURL = __webpack_require__(/*! ./images/IssueVotePage-pieChart.jpg */ 109);
-	      return _react2["default"].createElement(
-	        "div",
-	        { className: "IssueVotePage" },
-	        _react2["default"].createElement(
-	          "div",
-	          { className: "IssueVotePage-title" },
-	          "法人除罪化"
-	        ),
-	        _react2["default"].createElement(
-	          "div",
-	          { className: "IssueVotePage-description" },
-	          "食安問題人心惶惶，但最後裁罰的結果，往往和不法業者的巨額獲利比例懸殊。究竟要如何才能罰得到？"
-	        ),
-	        _react2["default"].createElement(
-	          "div",
-	          { className: "IssueVotePage-sectionTitle" },
-	          "立法院意見"
-	        ),
-	        _react2["default"].createElement(
-	          "div",
-	          { className: "IssueVotePage-pieChart" },
-	          "這裡是一個立法院整體的 pie chart "
-	        ),
-	        _react2["default"].createElement(
-	          "div",
-	          { className: "IssueVotePage-voteGroup" },
-	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataForJs2["default"] }),
-	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataAgainstJs2["default"] }),
-	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataUnclearJs2["default"] }),
-	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataNoneJs2["default"] })
-	        )
-	      );
-	    }
-	  }], [{
-	    key: "getProps",
-	    value: function getProps(stores, params) {
-	      var transition = stores.Router.getItem("transition");
-	      return {
-	        loading: !!transition
-	      };
-	    }
-	  }]);
-
-	  return IssueVotePage;
-	})(_react2["default"].Component);
-
-	exports["default"] = IssueVotePage;
-
-	IssueVotePage.contextTypes = {
-	  stores: _react2["default"].PropTypes.object
-	};
-	module.exports = exports["default"];
-
-/***/ },
 /* 40 */
 /*!************************************************!*\
   !*** ./app/containers/IssuePage/IssuePage.jsx ***!
@@ -2292,19 +2534,19 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 97);
+	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 85);
 
 	var _componentsLegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_componentsLegislatorAvatarLegislatorAvatarJsx);
 
-	var _componentsIconIconJsx = __webpack_require__(/*! components/Icon/Icon.jsx */ 72);
+	var _componentsIconIconJsx = __webpack_require__(/*! components/Icon/Icon.jsx */ 74);
 
 	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
 
-	__webpack_require__(/*! ./IssuePage.css */ 98);
+	__webpack_require__(/*! ./IssuePage.css */ 102);
 
-	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 99);
+	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 103);
 
 	var _lyInfoJs2 = _interopRequireDefault(_lyInfoJs);
 
@@ -2636,22 +2878,18 @@ module.exports =
 
 /***/ },
 /* 41 */
-/*!**********************************************************!*\
-  !*** ./app/containers/PersonListPage/PersonListPage.jsx ***!
-  \**********************************************************/
+/*!********************************************************!*\
+  !*** ./app/containers/IssueVotePage/IssueVotePage.jsx ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { desc = parent = getter = undefined; _again = false; var object = _x,
-	    property = _x2,
-	    receiver = _x3; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -2663,255 +2901,100 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 97);
+	var _lyPositionJs = __webpack_require__(/*! ./ly-position.js */ 95);
 
-	var _componentsLegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_componentsLegislatorAvatarLegislatorAvatarJsx);
+	var _lyPositionJs2 = _interopRequireDefault(_lyPositionJs);
 
-	var _componentsIconIconJsx = __webpack_require__(/*! components/Icon/Icon.jsx */ 72);
+	var _componentsOpinionGroupOpinionGroupJsx = __webpack_require__(/*! components/OpinionGroup/OpinionGroup.jsx */ 96);
 
-	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
+	var _componentsOpinionGroupOpinionGroupJsx2 = _interopRequireDefault(_componentsOpinionGroupOpinionGroupJsx);
 
-	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 87);
+	__webpack_require__(/*! ./IssueVotePage.css */ 97);
 
-	var _componentsInputInputJsx2 = _interopRequireDefault(_componentsInputInputJsx);
+	var _dataForJs = __webpack_require__(/*! ./data/for.js */ 98);
 
-	__webpack_require__(/*! ./PersonListPage.css */ 100);
+	var _dataForJs2 = _interopRequireDefault(_dataForJs);
 
-	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 101);
+	var _dataAgainstJs = __webpack_require__(/*! ./data/against.js */ 99);
 
-	var _lyInfoJs2 = _interopRequireDefault(_lyInfoJs);
+	var _dataAgainstJs2 = _interopRequireDefault(_dataAgainstJs);
 
-	var iso3166tw = {
-	    "CHA": "彰化縣",
-	    "CYI": "嘉義市",
-	    "CYQ": "嘉義縣",
-	    "HSQ": "新竹縣",
-	    "HSZ": "新竹市",
-	    "HUA": "花蓮縣",
-	    "ILA": "宜蘭縣",
-	    "KEE": "基隆市",
-	    "KHH": "高雄市",
-	    "KHQ": "高雄市",
-	    "MIA": "苗栗縣",
-	    "NAN": "南投縣",
-	    "PEN": "澎湖縣",
-	    "PIF": "屏東縣",
-	    "TAO": "桃園縣",
-	    "TNN": "台南市",
-	    "TNQ": "台南市",
-	    "TPE": "台北市",
-	    "TPQ": "新北市",
-	    "TTT": "台東縣",
-	    "TXG": "台中市",
-	    "TXQ": "台中市",
-	    "YUN": "雲林縣",
-	    "JME": "金門縣",
-	    "LJF": "連江縣"
-	};
-	function constituency_area_parser(constituency) {
-	    switch (constituency[0]) {
+	var _dataUnclearJs = __webpack_require__(/*! ./data/unclear.js */ 100);
 
-	        case "proportional":
-	            return "全國不分區";
-	            break;
-	        case "aborigine":
-	            return "山地原住民";
-	            break;
-	        case "foreign":
-	            return "僑居國外國民";
-	            break;
-	        default:
-	            if (constituency[0] in iso3166tw) {
-	                result = iso3166tw[constituency[0]];
-	            } else {
-	                result = constituency[0] + "<br>" + constituency[1];
-	            }
-	            return result;
-	            break;
+	var _dataUnclearJs2 = _interopRequireDefault(_dataUnclearJs);
 
+	var _dataNoneJs = __webpack_require__(/*! ./data/none.js */ 101);
+
+	var _dataNoneJs2 = _interopRequireDefault(_dataNoneJs);
+
+	var IssueVotePage = (function (_React$Component) {
+	  function IssueVotePage() {
+	    _classCallCheck(this, IssueVotePage);
+
+	    if (_React$Component != null) {
+	      _React$Component.apply(this, arguments);
 	    }
-	}
-	function constituency_parser(constituency) {
-	    var result = "";
-	    switch (constituency[0]) {
+	  }
 
-	        case "proportional":
-	            return "全國不分區";
-	            break;
-	        case "aborigine":
-	            return "山地原住民";
-	            break;
-	        case "foreign":
-	            return "僑居國外國民";
-	            break;
-	        default:
-	            if (constituency[0] in iso3166tw) {
-	                if (constituency[1] == 0) {
-	                    result = iso3166tw[constituency[0]];
-	                } else {
-	                    result = iso3166tw[constituency[0]] + "第" + constituency[1] + "選區";
-	                }
-	            } else {
-	                result = constituency[0] + "<br>" + constituency[1];
-	            }
-	            return result;
-	            break;
+	  _inherits(IssueVotePage, _React$Component);
 
+	  _createClass(IssueVotePage, [{
+	    key: "render",
+	    value: function render() {
+
+	      var pieChartURL = __webpack_require__(/*! ./images/IssueVotePage-pieChart.jpg */ 122);
+	      return _react2["default"].createElement(
+	        "div",
+	        { className: "IssueVotePage" },
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "IssueVotePage-title" },
+	          "法人除罪化"
+	        ),
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "IssueVotePage-description" },
+	          "食安問題人心惶惶，但最後裁罰的結果，往往和不法業者的巨額獲利比例懸殊。究竟要如何才能罰得到？"
+	        ),
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "IssueVotePage-sectionTitle" },
+	          "立法院意見"
+	        ),
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "IssueVotePage-pieChart" },
+	          "這裡是一個立法院整體的 pie chart "
+	        ),
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "IssueVotePage-voteGroup" },
+	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataForJs2["default"] }),
+	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataAgainstJs2["default"] }),
+	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataUnclearJs2["default"] }),
+	          _react2["default"].createElement(_componentsOpinionGroupOpinionGroupJsx2["default"], { data: _dataNoneJs2["default"] })
+	        )
+	      );
 	    }
-	}
-
-	var PersonListPage = (function (_React$Component) {
-	    function PersonListPage(props) {
-	        _classCallCheck(this, PersonListPage);
-
-	        _get(Object.getPrototypeOf(PersonListPage.prototype), "constructor", this).call(this, props);
-	        this.state = { currentTerm: "" };
+	  }], [{
+	    key: "getProps",
+	    value: function getProps(stores, params) {
+	      var transition = stores.Router.getItem("transition");
+	      return {
+	        loading: !!transition
+	      };
 	    }
+	  }]);
 
-	    _inherits(PersonListPage, _React$Component);
-
-	    _createClass(PersonListPage, [{
-	        key: "_onInputChange",
-	        value: function _onInputChange(i, event) {
-	            /*
-	              取得 input 的輸入值得方式有幾種
-	               第一種：透過 event.target 取得值
-	              event.target.value
-	               第二種：透過 refs 取得值
-	              this.refs.textInput.getDOMNode().value
-	              
-	              第三種：透過 id 或 class 取得，用 js 或 jQuery 的方式去抓
-	              例如 Jeremy 的範例是在 componet mount 之後，綁定
-	              componentDidMount: function(){
-	                this.$input = $('#todo-input');
-	              }
-	              
-	              */
-	            this.setState({
-	                currentTerm: event.target.value
-	            });
-	        }
-	    }, {
-	        key: "_onSetInput",
-	        value: function _onSetInput(value) {
-	            //console.log(value);
-	            this.setState({
-	                currentTerm: value
-	            });
-	        }
-	    }, {
-	        key: "render",
-	        value: function render() {
-	            var loading = this.props.loading;
-	            var currentTerm = this.state.currentTerm;
-
-	            var lyItems = _lyInfoJs2["default"].data.filter(function (item) {
-
-	                var shouldReturn = false;
-	                if (currentTerm !== "") {
-	                    if (item.constituency.indexOf(currentTerm) !== -1) {
-	                        shouldReturn = true;
-	                    }
-	                    if (item.constituency_detail) {
-	                        if (item.constituency_detail.indexOf(currentTerm) !== -1) shouldReturn = true;
-	                    }
-	                    if (item.name.indexOf(currentTerm) !== -1) {
-	                        shouldReturn = true;
-	                    }
-	                    if (item.party.indexOf(currentTerm) !== -1) {
-	                        shouldReturn = true;
-	                    }
-	                } else {
-	                    shouldReturn = true;
-	                }
-	                if (shouldReturn) return item;
-	            }).map(function (item, key) {
-	                var partyClass = "PersonListPage-avatar is-" + item.party_eng;
-
-	                var constituency = constituency_parser(item.constituency);
-
-	                return _react2["default"].createElement(
-	                    _reactRouter.Link,
-	                    { className: "PersonListPage-legislatorItem",
-	                        to: "person",
-	                        key: key },
-	                    _react2["default"].createElement(
-	                        "div",
-	                        { className: partyClass },
-	                        _react2["default"].createElement(
-	                            "div",
-	                            { className: "PersonListPage-flex" },
-	                            _react2["default"].createElement(
-	                                "div",
-	                                { className: "PersonListPage-flexLeft" },
-	                                _react2["default"].createElement(_componentsLegislatorAvatarLegislatorAvatarJsx2["default"], { data: item.name, party: item.party_eng })
-	                            ),
-	                            _react2["default"].createElement(
-	                                "div",
-	                                { className: "PersonListPage-flexMain" },
-	                                _react2["default"].createElement(
-	                                    "div",
-	                                    { className: "PersonListPage-name" },
-	                                    item.name
-	                                ),
-	                                _react2["default"].createElement(
-	                                    "div",
-	                                    { className: "PersonListPage-description" },
-	                                    item.party
-	                                ),
-	                                _react2["default"].createElement(
-	                                    "div",
-	                                    { className: "PersonListPage-description" },
-	                                    constituency
-	                                ),
-	                                _react2["default"].createElement(
-	                                    "div",
-	                                    { className: "PersonListPage-descriptionLight" },
-	                                    item.constituency_detail
-	                                )
-	                            )
-	                        ),
-	                        _react2["default"].createElement(
-	                            "div",
-	                            { className: "PersonListPage-mainIssues" },
-	                            "關鍵議題：食品安全、核能"
-	                        )
-	                    )
-	                );
-	            });
-	            var bindInputChange = this._onInputChange.bind(this, null);
-	            var bindSetInput = this._onSetInput.bind(this);
-	            var examples = ["吳育昇", "蔡正元", "國民黨"];
-	            return _react2["default"].createElement(
-	                "div",
-	                { className: "PersonListPage" },
-	                _react2["default"].createElement(_componentsInputInputJsx2["default"], { handleInputChange: bindInputChange,
-	                    handleSetInput: bindSetInput,
-	                    currentTerm: currentTerm,
-	                    examples: examples,
-	                    placeholder: "搜尋立委姓名或選區" }),
-	                lyItems
-	            );
-	        }
-	    }], [{
-	        key: "getProps",
-	        value: function getProps(stores, params) {
-	            var transition = stores.Router.getItem("transition");
-	            return {
-	                loading: !!transition
-	            };
-	        }
-	    }]);
-
-	    return PersonListPage;
+	  return IssueVotePage;
 	})(_react2["default"].Component);
 
-	exports["default"] = PersonListPage;
+	exports["default"] = IssueVotePage;
 
-	PersonListPage.contextTypes = {
-	    stores: _react2["default"].PropTypes.object
+	IssueVotePage.contextTypes = {
+	  stores: _react2["default"].PropTypes.object
 	};
 	module.exports = exports["default"];
 
@@ -3945,7 +4028,7 @@ module.exports =
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var PropTypes = __webpack_require__(/*! ../PropTypes */ 231);
+	var PropTypes = __webpack_require__(/*! ../PropTypes */ 109);
 	var RouteHandler = __webpack_require__(/*! ./RouteHandler */ 56);
 	var Route = __webpack_require__(/*! ./Route */ 55);
 
@@ -4003,8 +4086,8 @@ module.exports =
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
 	var React = __webpack_require__(/*! react */ 1);
-	var assign = __webpack_require__(/*! react/lib/Object.assign */ 103);
-	var PropTypes = __webpack_require__(/*! ../PropTypes */ 231);
+	var assign = __webpack_require__(/*! react/lib/Object.assign */ 104);
+	var PropTypes = __webpack_require__(/*! ../PropTypes */ 109);
 
 	function isLeftClickEvent(event) {
 	  return event.button === 0;
@@ -4143,7 +4226,7 @@ module.exports =
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var PropTypes = __webpack_require__(/*! ../PropTypes */ 231);
+	var PropTypes = __webpack_require__(/*! ../PropTypes */ 109);
 	var RouteHandler = __webpack_require__(/*! ./RouteHandler */ 56);
 	var Route = __webpack_require__(/*! ./Route */ 55);
 
@@ -4199,7 +4282,7 @@ module.exports =
 
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-	var PropTypes = __webpack_require__(/*! ../PropTypes */ 231);
+	var PropTypes = __webpack_require__(/*! ../PropTypes */ 109);
 	var Route = __webpack_require__(/*! ./Route */ 55);
 
 	/**
@@ -4253,8 +4336,8 @@ module.exports =
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
 	var React = __webpack_require__(/*! react */ 1);
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var PropTypes = __webpack_require__(/*! ../PropTypes */ 231);
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var PropTypes = __webpack_require__(/*! ../PropTypes */ 109);
 	var RouteHandler = __webpack_require__(/*! ./RouteHandler */ 56);
 
 	/**
@@ -4352,9 +4435,9 @@ module.exports =
 	var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
 	var React = __webpack_require__(/*! react */ 1);
-	var ContextWrapper = __webpack_require__(/*! ./ContextWrapper */ 232);
-	var assign = __webpack_require__(/*! react/lib/Object.assign */ 103);
-	var PropTypes = __webpack_require__(/*! ../PropTypes */ 231);
+	var ContextWrapper = __webpack_require__(/*! ./ContextWrapper */ 110);
+	var assign = __webpack_require__(/*! react/lib/Object.assign */ 104);
+	var PropTypes = __webpack_require__(/*! ../PropTypes */ 109);
 
 	var REF_NAME = '__routeHandler__';
 
@@ -4461,7 +4544,7 @@ module.exports =
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 233);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
 	var History = __webpack_require__(/*! ../History */ 64);
 
 	var _listeners = [];
@@ -4580,7 +4663,7 @@ module.exports =
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 233);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
 	var History = __webpack_require__(/*! ../History */ 64);
 
 	var _listeners = [];
@@ -4717,7 +4800,7 @@ module.exports =
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
 
 	function throwCannotModify() {
 	  invariant(false, 'You cannot modify a static location');
@@ -4774,8 +4857,8 @@ module.exports =
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 233);
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
 	var History = __webpack_require__(/*! ../History */ 64);
 
 	/**
@@ -4872,7 +4955,7 @@ module.exports =
 
 	'use strict';
 
-	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 233);
+	var LocationActions = __webpack_require__(/*! ../actions/LocationActions */ 111);
 
 	/**
 	 * A scroll behavior that attempts to imitate the default behavior
@@ -4932,8 +5015,8 @@ module.exports =
 
 	'use strict';
 
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 105).canUseDOM;
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 106).canUseDOM;
 
 	var History = {
 
@@ -4970,7 +5053,7 @@ module.exports =
 
 	'use strict';
 
-	var PropTypes = __webpack_require__(/*! ./PropTypes */ 231);
+	var PropTypes = __webpack_require__(/*! ./PropTypes */ 109);
 
 	/**
 	 * A mixin for components that modify the URL.
@@ -5048,7 +5131,7 @@ module.exports =
 
 	'use strict';
 
-	var PropTypes = __webpack_require__(/*! ./PropTypes */ 231);
+	var PropTypes = __webpack_require__(/*! ./PropTypes */ 109);
 
 	/**
 	 * A mixin for components that need to know the path, routes, URL
@@ -5134,10 +5217,10 @@ module.exports =
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var assign = __webpack_require__(/*! react/lib/Object.assign */ 103);
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var warning = __webpack_require__(/*! react/lib/warning */ 106);
-	var PathUtils = __webpack_require__(/*! ./PathUtils */ 234);
+	var assign = __webpack_require__(/*! react/lib/Object.assign */ 104);
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var warning = __webpack_require__(/*! react/lib/warning */ 107);
+	var PathUtils = __webpack_require__(/*! ./PathUtils */ 112);
 
 	var _currentRoute;
 
@@ -5340,8 +5423,8 @@ module.exports =
 	'use strict';
 
 	var React = __webpack_require__(/*! react */ 1);
-	var assign = __webpack_require__(/*! react/lib/Object.assign */ 103);
-	var warning = __webpack_require__(/*! react/lib/warning */ 106);
+	var assign = __webpack_require__(/*! react/lib/Object.assign */ 104);
+	var warning = __webpack_require__(/*! react/lib/warning */ 107);
 	var DefaultRoute = __webpack_require__(/*! ./components/DefaultRoute */ 51);
 	var NotFoundRoute = __webpack_require__(/*! ./components/NotFoundRoute */ 53);
 	var Redirect = __webpack_require__(/*! ./components/Redirect */ 54);
@@ -5429,27 +5512,27 @@ module.exports =
 	'use strict';
 
 	var React = __webpack_require__(/*! react */ 1);
-	var warning = __webpack_require__(/*! react/lib/warning */ 106);
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 105).canUseDOM;
-	var LocationActions = __webpack_require__(/*! ./actions/LocationActions */ 233);
+	var warning = __webpack_require__(/*! react/lib/warning */ 107);
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 106).canUseDOM;
+	var LocationActions = __webpack_require__(/*! ./actions/LocationActions */ 111);
 	var ImitateBrowserBehavior = __webpack_require__(/*! ./behaviors/ImitateBrowserBehavior */ 62);
 	var HashLocation = __webpack_require__(/*! ./locations/HashLocation */ 57);
 	var HistoryLocation = __webpack_require__(/*! ./locations/HistoryLocation */ 58);
 	var RefreshLocation = __webpack_require__(/*! ./locations/RefreshLocation */ 59);
 	var StaticLocation = __webpack_require__(/*! ./locations/StaticLocation */ 60);
-	var ScrollHistory = __webpack_require__(/*! ./ScrollHistory */ 235);
+	var ScrollHistory = __webpack_require__(/*! ./ScrollHistory */ 113);
 	var createRoutesFromReactChildren = __webpack_require__(/*! ./createRoutesFromReactChildren */ 68);
-	var isReactChildren = __webpack_require__(/*! ./isReactChildren */ 236);
-	var Transition = __webpack_require__(/*! ./Transition */ 237);
-	var PropTypes = __webpack_require__(/*! ./PropTypes */ 231);
-	var Redirect = __webpack_require__(/*! ./Redirect */ 238);
+	var isReactChildren = __webpack_require__(/*! ./isReactChildren */ 114);
+	var Transition = __webpack_require__(/*! ./Transition */ 115);
+	var PropTypes = __webpack_require__(/*! ./PropTypes */ 109);
+	var Redirect = __webpack_require__(/*! ./Redirect */ 116);
 	var History = __webpack_require__(/*! ./History */ 64);
-	var Cancellation = __webpack_require__(/*! ./Cancellation */ 239);
-	var Match = __webpack_require__(/*! ./Match */ 240);
+	var Cancellation = __webpack_require__(/*! ./Cancellation */ 117);
+	var Match = __webpack_require__(/*! ./Match */ 118);
 	var Route = __webpack_require__(/*! ./Route */ 67);
-	var supportsHistory = __webpack_require__(/*! ./supportsHistory */ 241);
-	var PathUtils = __webpack_require__(/*! ./PathUtils */ 234);
+	var supportsHistory = __webpack_require__(/*! ./supportsHistory */ 119);
+	var PathUtils = __webpack_require__(/*! ./PathUtils */ 112);
 
 	/**
 	 * The default location for new routers.
@@ -6000,6 +6083,152 @@ module.exports =
 
 /***/ },
 /* 71 */
+/*!**************************************************!*\
+  !*** ./app/components/Legislator/Legislator.css ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 72 */
+/*!***************************************************************!*\
+  !*** ./app/components/Legislator/images/avatar ^\.\/.*\.png$ ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./丁守中.png": 123,
+		"./何欣純.png": 124,
+		"./劉建國.png": 125,
+		"./劉櫂豪.png": 126,
+		"./吳宜臻.png": 127,
+		"./吳秉叡.png": 128,
+		"./吳育仁.png": 129,
+		"./吳育昇.png": 130,
+		"./呂學樟.png": 131,
+		"./呂玉玲.png": 132,
+		"./周倪安.png": 133,
+		"./姚文智.png": 134,
+		"./孔文吉.png": 135,
+		"./孫大千.png": 136,
+		"./尤美女.png": 137,
+		"./廖國棟.png": 138,
+		"./廖正井.png": 139,
+		"./張嘉郡.png": 140,
+		"./張慶忠.png": 141,
+		"./徐少萍.png": 142,
+		"./徐欣瑩.png": 143,
+		"./徐耀昌.png": 144,
+		"./曾巨威.png": 145,
+		"./李俊俋.png": 146,
+		"./李慶華.png": 147,
+		"./李應元.png": 148,
+		"./李昆澤.png": 149,
+		"./李桐豪.png": 150,
+		"./李貴敏.png": 151,
+		"./李鴻鈞.png": 152,
+		"./林佳龍.png": 153,
+		"./林國正.png": 154,
+		"./林岱樺.png": 155,
+		"./林德福.png": 156,
+		"./林明溱.png": 157,
+		"./林淑芬.png": 158,
+		"./林滄敏.png": 159,
+		"./林郁方.png": 160,
+		"./林鴻池.png": 161,
+		"./柯建銘.png": 162,
+		"./楊應雄.png": 163,
+		"./楊曜.png": 164,
+		"./楊玉欣.png": 165,
+		"./楊瓊瓔.png": 166,
+		"./楊麗環.png": 167,
+		"./段宜康.png": 168,
+		"./江啟臣.png": 169,
+		"./江惠貞.png": 170,
+		"./洪秀柱.png": 171,
+		"./潘孟安.png": 172,
+		"./潘維剛.png": 173,
+		"./王廷升.png": 174,
+		"./王惠美.png": 175,
+		"./王育敏.png": 176,
+		"./王進士.png": 177,
+		"./王金平.png": 178,
+		"./田秋堇.png": 179,
+		"./盧嘉辰.png": 180,
+		"./盧秀燕.png": 181,
+		"./管碧玲.png": 182,
+		"./簡東明.png": 183,
+		"./紀國棟.png": 184,
+		"./羅明才.png": 185,
+		"./羅淑蕾.png": 186,
+		"./翁重鈞.png": 187,
+		"./葉宜津.png": 188,
+		"./葉津鈴.png": 189,
+		"./蔡其昌.png": 190,
+		"./蔡正元.png": 191,
+		"./蔡煌瑯.png": 192,
+		"./蔡錦隆.png": 193,
+		"./蔣乃辛.png": 194,
+		"./蕭美琴.png": 195,
+		"./薛凌.png": 196,
+		"./蘇清泉.png": 197,
+		"./蘇震清.png": 198,
+		"./許忠信.png": 199,
+		"./許智傑.png": 200,
+		"./許添財.png": 201,
+		"./詹凱臣.png": 202,
+		"./謝國樑.png": 203,
+		"./費鴻泰.png": 204,
+		"./賴士葆.png": 205,
+		"./賴振昌.png": 206,
+		"./趙天麟.png": 207,
+		"./邱志偉.png": 208,
+		"./邱文彥.png": 209,
+		"./邱議瑩.png": 210,
+		"./鄭天財.png": 211,
+		"./鄭汝芬.png": 212,
+		"./鄭麗君.png": 213,
+		"./陳亭妃.png": 214,
+		"./陳其邁.png": 215,
+		"./陳唐山.png": 216,
+		"./陳學聖.png": 217,
+		"./陳怡潔.png": 218,
+		"./陳明文.png": 219,
+		"./陳根德.png": 220,
+		"./陳歐珀.png": 221,
+		"./陳淑慧.png": 222,
+		"./陳碧涵.png": 223,
+		"./陳節如.png": 224,
+		"./陳超明.png": 225,
+		"./陳鎮湘.png": 226,
+		"./陳雪生.png": 227,
+		"./顏寬恒.png": 228,
+		"./馬文君.png": 229,
+		"./高志鵬.png": 230,
+		"./高金素梅.png": 231,
+		"./魏明谷.png": 232,
+		"./黃偉哲.png": 233,
+		"./黃志雄.png": 234,
+		"./黃文玲.png": 235,
+		"./黃昭順.png": 236
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 72;
+
+
+/***/ },
+/* 73 */
 /*!************************************************!*\
   !*** ./app/components/FactsCard/FactsCard.css ***!
   \************************************************/
@@ -6008,7 +6237,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 72 */
+/* 74 */
 /*!**************************************!*\
   !*** ./app/components/Icon/Icon.jsx ***!
   \**************************************/
@@ -6032,9 +6261,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./Icon.css */ 242);
+	__webpack_require__(/*! ./Icon.css */ 244);
 
 	var Icon = (function (_React$Component) {
 		function Icon() {
@@ -6066,152 +6295,6 @@ module.exports =
 
 	exports["default"] = Icon;
 	module.exports = exports["default"];
-
-/***/ },
-/* 73 */
-/*!**************************************************!*\
-  !*** ./app/components/Legislator/Legislator.css ***!
-  \**************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 74 */
-/*!***************************************************************!*\
-  !*** ./app/components/Legislator/images/avatar ^\.\/.*\.png$ ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./丁守中.png": 110,
-		"./何欣純.png": 111,
-		"./劉建國.png": 112,
-		"./劉櫂豪.png": 113,
-		"./吳宜臻.png": 114,
-		"./吳秉叡.png": 115,
-		"./吳育仁.png": 116,
-		"./吳育昇.png": 117,
-		"./呂學樟.png": 118,
-		"./呂玉玲.png": 119,
-		"./周倪安.png": 120,
-		"./姚文智.png": 121,
-		"./孔文吉.png": 122,
-		"./孫大千.png": 123,
-		"./尤美女.png": 124,
-		"./廖國棟.png": 125,
-		"./廖正井.png": 126,
-		"./張嘉郡.png": 127,
-		"./張慶忠.png": 128,
-		"./徐少萍.png": 129,
-		"./徐欣瑩.png": 130,
-		"./徐耀昌.png": 131,
-		"./曾巨威.png": 132,
-		"./李俊俋.png": 133,
-		"./李慶華.png": 134,
-		"./李應元.png": 135,
-		"./李昆澤.png": 136,
-		"./李桐豪.png": 137,
-		"./李貴敏.png": 138,
-		"./李鴻鈞.png": 139,
-		"./林佳龍.png": 140,
-		"./林國正.png": 141,
-		"./林岱樺.png": 142,
-		"./林德福.png": 143,
-		"./林明溱.png": 144,
-		"./林淑芬.png": 145,
-		"./林滄敏.png": 146,
-		"./林郁方.png": 147,
-		"./林鴻池.png": 148,
-		"./柯建銘.png": 149,
-		"./楊應雄.png": 150,
-		"./楊曜.png": 151,
-		"./楊玉欣.png": 152,
-		"./楊瓊瓔.png": 153,
-		"./楊麗環.png": 154,
-		"./段宜康.png": 155,
-		"./江啟臣.png": 156,
-		"./江惠貞.png": 157,
-		"./洪秀柱.png": 158,
-		"./潘孟安.png": 159,
-		"./潘維剛.png": 160,
-		"./王廷升.png": 161,
-		"./王惠美.png": 162,
-		"./王育敏.png": 163,
-		"./王進士.png": 164,
-		"./王金平.png": 165,
-		"./田秋堇.png": 166,
-		"./盧嘉辰.png": 167,
-		"./盧秀燕.png": 168,
-		"./管碧玲.png": 169,
-		"./簡東明.png": 170,
-		"./紀國棟.png": 171,
-		"./羅明才.png": 172,
-		"./羅淑蕾.png": 173,
-		"./翁重鈞.png": 174,
-		"./葉宜津.png": 175,
-		"./葉津鈴.png": 176,
-		"./蔡其昌.png": 177,
-		"./蔡正元.png": 178,
-		"./蔡煌瑯.png": 179,
-		"./蔡錦隆.png": 180,
-		"./蔣乃辛.png": 181,
-		"./蕭美琴.png": 182,
-		"./薛凌.png": 183,
-		"./蘇清泉.png": 184,
-		"./蘇震清.png": 185,
-		"./許忠信.png": 186,
-		"./許智傑.png": 187,
-		"./許添財.png": 188,
-		"./詹凱臣.png": 189,
-		"./謝國樑.png": 190,
-		"./費鴻泰.png": 191,
-		"./賴士葆.png": 192,
-		"./賴振昌.png": 193,
-		"./趙天麟.png": 194,
-		"./邱志偉.png": 195,
-		"./邱文彥.png": 196,
-		"./邱議瑩.png": 197,
-		"./鄭天財.png": 198,
-		"./鄭汝芬.png": 199,
-		"./鄭麗君.png": 200,
-		"./陳亭妃.png": 201,
-		"./陳其邁.png": 202,
-		"./陳唐山.png": 203,
-		"./陳學聖.png": 204,
-		"./陳怡潔.png": 205,
-		"./陳明文.png": 206,
-		"./陳根德.png": 207,
-		"./陳歐珀.png": 208,
-		"./陳淑慧.png": 209,
-		"./陳碧涵.png": 210,
-		"./陳節如.png": 211,
-		"./陳超明.png": 212,
-		"./陳鎮湘.png": 213,
-		"./陳雪生.png": 214,
-		"./顏寬恒.png": 215,
-		"./馬文君.png": 216,
-		"./高志鵬.png": 217,
-		"./高金素梅.png": 218,
-		"./魏明谷.png": 219,
-		"./黃偉哲.png": 220,
-		"./黃志雄.png": 221,
-		"./黃文玲.png": 222,
-		"./黃昭順.png": 223
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 74;
-
 
 /***/ },
 /* 75 */
@@ -6256,13 +6339,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	__webpack_require__(/*! ./AppBar.css */ 248);
+	__webpack_require__(/*! ./AppBar.css */ 246);
 
 	var AppBar = (function (_React$Component) {
 	  function AppBar() {
@@ -6336,17 +6419,17 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _classnames = __webpack_require__(/*! classnames */ 102);
+	var _classnames = __webpack_require__(/*! classnames */ 108);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	__webpack_require__(/*! ./SideBar.css */ 247);
+	__webpack_require__(/*! ./SideBar.css */ 245);
 
 	var SideBarItem = (function (_React$Component) {
 	  function SideBarItem(props) {
@@ -6467,6 +6550,11 @@ module.exports =
 	          ),
 	          _react2["default"].createElement(
 	            _reactRouter.Link,
+	            { className: "SideBar-item", to: "candidates" },
+	            "2016候選人"
+	          ),
+	          _react2["default"].createElement(
+	            _reactRouter.Link,
 	            { className: "SideBar-item", to: "personList" },
 	            "找立委"
 	          ),
@@ -6559,19 +6647,19 @@ module.exports =
 
 	var _reactAddons2 = _interopRequireDefault(_reactAddons);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./CompareCard.css */ 243);
+	__webpack_require__(/*! ./CompareCard.css */ 254);
 
-	var _CompareCard = __webpack_require__(/*! ./CompareCard */ 244);
+	var _CompareCard = __webpack_require__(/*! ./CompareCard */ 255);
 
 	var _CompareCard2 = _interopRequireDefault(_CompareCard);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	var _classnames = __webpack_require__(/*! classnames */ 102);
+	var _classnames = __webpack_require__(/*! classnames */ 108);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -6624,8 +6712,8 @@ module.exports =
 	    value: function render() {
 	      var issueTitle = this.props.issueTitle;
 
-	      var candidateAimg = __webpack_require__(/*! ./images/賴士葆.png */ 245);
-	      var candidateBimg = __webpack_require__(/*! ./images/苗博雅.png */ 246);
+	      var candidateAimg = __webpack_require__(/*! ./images/賴士葆.png */ 256);
+	      var candidateBimg = __webpack_require__(/*! ./images/苗博雅.png */ 257);
 
 	      var issueItems = _CompareCard2["default"].issues.map(function (item, key) {
 	        var classes = _classnames2["default"]({
@@ -6721,27 +6809,9 @@ module.exports =
 
 /***/ },
 /* 81 */
-/*!**********************************************************!*\
-  !*** ./app/containers/CandidatesPage/CandidatesPage.css ***!
-  \**********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 82 */
-/*!**********************************************!*\
-  !*** ./app/containers/HomePage/HomePage.css ***!
-  \**********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 83 */
-/*!**************************************!*\
-  !*** ./app/components/Tabs/Tabs.jsx ***!
-  \**************************************/
+/*!****************************************************!*\
+  !*** ./app/components/CompareTabs/CompareTabs.jsx ***!
+  \****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6751,10 +6821,6 @@ module.exports =
 	});
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { desc = parent = getter = undefined; _again = false; var object = _x,
-	    property = _x2,
-	    receiver = _x3; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -6766,154 +6832,2826 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./Tabs.css */ 249);
+	__webpack_require__(/*! ./CompareTabs.css */ 247);
 
-	var _classnames = __webpack_require__(/*! classnames */ 102);
+	var _classnames = __webpack_require__(/*! classnames */ 108);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	var Tabs = (function (_React$Component) {
-		function Tabs(props) {
-			_classCallCheck(this, Tabs);
+	var CompareTabs = (function (_React$Component) {
+		function CompareTabs() {
+			_classCallCheck(this, CompareTabs);
 
-			_get(Object.getPrototypeOf(Tabs.prototype), "constructor", this).call(this, props);
-			this.state = {
-				scrolling: false,
-				showSubitems: false
-			};
+			if (_React$Component != null) {
+				_React$Component.apply(this, arguments);
+			}
 		}
 
-		_inherits(Tabs, _React$Component);
+		_inherits(CompareTabs, _React$Component);
 
-		_createClass(Tabs, [{
-			key: "_onScroll",
-			value: function _onScroll() {
-				//console.log("scrolling: ");
-				//console.log(pageYOffset)
-				if (pageYOffset >= 230 && !this.state.scrolling) {
-					this.setState({
-						scrolling: true
-					});
-				}
-				if (pageYOffset < 230 && this.state.scrolling) {
-					this.setState({
-						scrolling: false
-					});
-				}
-			}
-		}, {
-			key: "_toggleSubitems",
-			value: function _toggleSubitems() {
-				this.setState({
-					showSubitems: !this.state.showSubitems
-				});
-			}
-		}, {
-			key: "componentDidMount",
-			value: function componentDidMount() {
-				window.addEventListener("scroll", this._onScroll.bind(this, null), false);
-			}
-		}, {
-			key: "componentWillUnmount",
-			value: function componentWillUnmount() {
-				window.removeEventListener("scroll", this._onScroll.bind(this, null), false);
-			}
-		}, {
+		_createClass(CompareTabs, [{
 			key: "render",
 			value: function render() {
-				var currentTab = this.props.currentTab;
-				var showSubitems = this.state.showSubitems;
+				var _this = this;
 
-				var tabClasses = _classnames2["default"]({
-					"Tabs": true,
-					"is-scrolling": this.state.scrolling
+				var _props = this.props;
+				var activeTab = _props.activeTab;
+				var activeSubtab = _props.activeSubtab;
+				var setActiveTabHandler = _props.setActiveTabHandler;
+				var setActiveSubtabHandler = _props.setActiveSubtabHandler;
+
+				var menu = ["個人簡歷", "推薦函", "議題立場", "野生政見"];
+				var submenu = ["勞工", "婚姻平權", "中國因素", "核能"];
+				var items = menu.map(function (value, index) {
+					var tabClasses = _classnames2["default"]({
+						"CompareTabs-item": true,
+						"is-active": value === activeTab
+					});
+					return _react2["default"].createElement(
+						"div",
+						{ className: tabClasses,
+							onClick: setActiveTabHandler.bind(_this, value),
+							key: index },
+						value
+					);
 				});
-
-				var totalClass = "Tabs-item";
-				var issueClass = "Tabs-item";
-				if (currentTab === "立場總覽") {
-					totalClass += " is-active";
-				} else {
-					issueClass += " is-active";
-				}
-
-				var subitemClasses = _classnames2["default"]({
-					"Tabs-subTabs": true,
-					"is-show": showSubitems && currentTab === "婚姻平權"
+				var subitems = submenu.map(function (value, index) {
+					var tabClasses = _classnames2["default"]({
+						"CompareTabs-subitem": true,
+						"is-active": value === activeSubtab
+					});
+					return _react2["default"].createElement(
+						"div",
+						{ className: tabClasses,
+							onClick: setActiveSubtabHandler.bind(_this, value),
+							key: index },
+						value
+					);
 				});
-
+				var subitemClassess = _classnames2["default"]({
+					"CompareTabs-subitems": true,
+					"is-show": activeTab === "議題立場"
+				});
 				return _react2["default"].createElement(
 					"div",
-					{ className: tabClasses },
+					{ className: "CompareTabs" },
 					_react2["default"].createElement(
 						"div",
-						{ className: "Tabs-items" },
+						{ className: "CompareTabs-items" },
 						_react2["default"].createElement(
 							"div",
-							{ className: "Tabs-maxWidth" },
-							_react2["default"].createElement(
-								_reactRouter.Link,
-								{ className: totalClass,
-									to: "person" },
-								"立場總覽"
-							),
-							_react2["default"].createElement(
-								"div",
-								{ className: "Tabs-item" },
-								"食品安全"
-							),
-							_react2["default"].createElement(
-								_reactRouter.Link,
-								{ className: issueClass,
-									to: "personIssue",
-									params: { issue: "same-sex-marriage" },
-									onClick: this._toggleSubitems.bind(this) },
-								"婚姻平權",
-								_react2["default"].createElement(
-									"div",
-									{ className: subitemClasses },
-									_react2["default"].createElement(
-										"div",
-										{ className: "Tabs-subItem" },
-										"婚姻平權子議題1"
-									),
-									_react2["default"].createElement(
-										"div",
-										{ className: "Tabs-subItem" },
-										"婚姻平權子議題2"
-									),
-									_react2["default"].createElement(
-										"div",
-										{ className: "Tabs-subItem" },
-										"婚姻平權子議題3"
-									)
-								)
-							),
-							_react2["default"].createElement(
-								"div",
-								{ className: "Tabs-scrollRight" },
-								_react2["default"].createElement(_IconIconJsx2["default"], { icon: "chevron-right" })
-							)
+							{ className: "CompareTabs-maxWidth" },
+							items
+						)
+					),
+					_react2["default"].createElement(
+						"div",
+						{ className: subitemClassess },
+						_react2["default"].createElement(
+							"div",
+							{ className: "CompareTabs-maxWidth" },
+							subitems
 						)
 					)
 				);
 			}
 		}]);
 
-		return Tabs;
+		return CompareTabs;
 	})(_react2["default"].Component);
 
-	exports["default"] = Tabs;
+	exports["default"] = CompareTabs;
 	module.exports = exports["default"];
 
 /***/ },
+/* 82 */
+/*!**************************************************************!*\
+  !*** ./app/components/CompareMultiCard/CompareMultiCard.jsx ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _reactAddons = __webpack_require__(/*! react/addons */ 50);
+
+	var _reactAddons2 = _interopRequireDefault(_reactAddons);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+
+	__webpack_require__(/*! ./CompareMultiCard.css */ 248);
+
+	var _CompareMultiCard = __webpack_require__(/*! ./CompareMultiCard */ 249);
+
+	var _CompareMultiCard2 = _interopRequireDefault(_CompareMultiCard);
+
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
+
+	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
+
+	var _classnames = __webpack_require__(/*! classnames */ 108);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function opinionToIcon(opinion) {
+	  //circle-o
+	  //times
+	  //frown-o, 不知所云,  unclear
+	  //question, 未表態, none
+
+	  switch (opinion) {
+	    case "for":
+	      return "circle-o";
+	    case "against":
+	      return "times";
+	    case "unclear":
+	      return "frown-o";
+	    case "none":
+	      return "question";
+	  }
+	  return "";
+	}
+	function opinionToText(opinion) {
+
+	  switch (opinion) {
+	    case "for":
+	      return "贊成";
+	    case "against":
+	      return "反對";
+	    case "unclear":
+	      return "不知所云";
+	    case "none":
+	      return "未表態";
+	  }
+	  return "";
+	}
+
+	var CompareMultiCard = (function (_React$Component) {
+	  function CompareMultiCard() {
+	    _classCallCheck(this, CompareMultiCard);
+
+	    if (_React$Component != null) {
+	      _React$Component.apply(this, arguments);
+	    }
+	  }
+
+	  _inherits(CompareMultiCard, _React$Component);
+
+	  _createClass(CompareMultiCard, [{
+	    key: "render",
+	    value: function render() {
+	      var issueTitle = this.props.issueTitle;
+
+	      var candidateAimg = __webpack_require__(/*! ./images/賴士葆.png */ 250);
+	      var candidateBimg = __webpack_require__(/*! ./images/苗博雅.png */ 251);
+	      var candidateCimg = __webpack_require__(/*! ./images/阮昭雄.png */ 252);
+	      var candidateDimg = __webpack_require__(/*! ./images/余宛如.png */ 253);
+
+	      var issueItems = _CompareMultiCard2["default"].issues.map(function (item, key) {
+	        var classes = _classnames2["default"]({
+	          "CompareMultiCard-flexGrids": true,
+	          "is-even": key % 2 === 0,
+	          "is-odd": key % 2 !== 0
+	        });
+	        return _reactAddons2["default"].createElement(
+	          "div",
+	          { className: classes,
+	            key: key },
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridTwo CompareMultiCard-issue" },
+	            item.title
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateA) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateA)
+	            )
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateB) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateB)
+	            )
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateC) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateC)
+	            )
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateD) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateD)
+	            )
+	          )
+	        );
+	      });
+
+	      return _reactAddons2["default"].createElement(
+	        "div",
+	        { className: "CompareMultiCard" },
+	        _reactAddons2["default"].createElement(
+	          "div",
+	          { className: "CompareMultiCard-flexGrids" },
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridTwo CompareMultiCard-title" },
+	            issueTitle
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateAimg }),
+	            _CompareMultiCard2["default"].candidateA
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateBimg }),
+	            _CompareMultiCard2["default"].candidateB
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateCimg }),
+	            _CompareMultiCard2["default"].candidateC
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateDimg }),
+	            _CompareMultiCard2["default"].candidateD
+	          )
+	        ),
+	        _reactAddons2["default"].createElement(
+	          "div",
+	          { className: "CompareMultiCard-issues" },
+	          issueItems
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CompareMultiCard;
+	})(_reactAddons2["default"].Component);
+
+	exports["default"] = CompareMultiCard;
+	module.exports = exports["default"];
+
+/***/ },
+/* 83 */
+/*!**********************************************************!*\
+  !*** ./app/containers/CandidatesPage/CandidatesPage.css ***!
+  \**********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
 /* 84 */
+/*!**********************************************!*\
+  !*** ./app/containers/HomePage/HomePage.css ***!
+  \**********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 85 */
+/*!**************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/LegislatorAvatar.jsx ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+
+	__webpack_require__(/*! ./LegislatorAvatar.css */ 258);
+
+	var LegislatorAvatar = (function (_React$Component) {
+	  function LegislatorAvatar() {
+	    _classCallCheck(this, LegislatorAvatar);
+
+	    if (_React$Component != null) {
+	      _React$Component.apply(this, arguments);
+	    }
+	  }
+
+	  _inherits(LegislatorAvatar, _React$Component);
+
+	  _createClass(LegislatorAvatar, [{
+	    key: "render",
+	    value: function render() {
+	      var _props = this.props;
+	      var data = _props.data;
+	      var plain = _props.plain;
+	      var party = _props.party;
+	      var name = _props.name;
+
+	      var imgURL;
+
+	      try {
+	        imgURL = __webpack_require__(/*! ./images/avatar */ 259)("./" + data + ".png");
+	      } catch (e) {
+	        imgURL = __webpack_require__(/*! ./images/default.jpg */ 260);
+	      }
+
+	      var name = name ? _react2["default"].createElement(
+	        "div",
+	        { className: "LegislatorAvatar-name" },
+	        data
+	      ) : "";
+
+	      var imgClass = "LegislatorAvatar-avatar";
+	      if (party) {
+	        imgClass += " is-" + party;
+	      }
+	      var result = _react2["default"].createElement(
+	        "div",
+	        { className: "LegislatorAvatar" },
+	        _react2["default"].createElement("img", { className: imgClass,
+	          src: imgURL }),
+	        name
+	      );
+
+	      if (plain) {
+	        var name = name ? _react2["default"].createElement(
+	          "div",
+	          { className: "LegislatorAvatar-namePlain" },
+	          data
+	        ) : "";
+	        result = _react2["default"].createElement(
+	          "div",
+	          { className: "LegislatorAvatar" },
+	          _react2["default"].createElement("img", { className: "LegislatorAvatar-avatarPlain",
+	            src: imgURL }),
+	          name
+	        );
+	      }
+
+	      return result;
+	    }
+	  }]);
+
+	  return LegislatorAvatar;
+	})(_react2["default"].Component);
+
+	exports["default"] = LegislatorAvatar;
+	module.exports = exports["default"];
+
+/***/ },
+/* 86 */
+/*!****************************************!*\
+  !*** ./app/components/Input/Input.jsx ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+
+	__webpack_require__(/*! ./Input.css */ 261);
+
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
+
+	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
+
+	var Input = (function (_React$Component) {
+	  function Input() {
+	    _classCallCheck(this, Input);
+
+	    if (_React$Component != null) {
+	      _React$Component.apply(this, arguments);
+	    }
+	  }
+
+	  _inherits(Input, _React$Component);
+
+	  _createClass(Input, [{
+	    key: "render",
+	    value: function render() {
+	      var _this = this;
+
+	      var _props = this.props;
+	      var handleInputChange = _props.handleInputChange;
+	      var handleSetInput = _props.handleSetInput;
+	      var currentTerm = _props.currentTerm;
+	      var examples = _props.examples;
+	      var placeholder = _props.placeholder;
+
+	      var exampleButtons = examples.map(function (item, key) {
+	        var boundClick = handleSetInput.bind(_this, item);
+
+	        return _react2["default"].createElement(
+	          "div",
+	          { className: "Input-keyword",
+	            onClick: boundClick,
+	            key: key },
+	          item
+	        );
+	      });
+
+	      var boundClearInput = handleSetInput.bind(this, "");
+	      var boundClearInputItem = currentTerm ? _react2["default"].createElement(
+	        "div",
+	        { className: "Input-clearInput",
+	          onClick: boundClearInput },
+	        "x"
+	      ) : "";
+
+	      return _react2["default"].createElement(
+	        "div",
+	        { className: "Input" },
+	        _react2["default"].createElement("input", { className: "Input-textInput",
+	          onChange: handleInputChange,
+	          placeholder: placeholder,
+	          value: currentTerm }),
+	        boundClearInputItem,
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "Input-hint" },
+	          "大家都在找：",
+	          exampleButtons
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Input;
+	})(_react2["default"].Component);
+
+	exports["default"] = Input;
+	module.exports = exports["default"];
+
+/***/ },
+/* 87 */
+/*!**********************************************************!*\
+  !*** ./app/containers/PersonListPage/PersonListPage.css ***!
+  \**********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 88 */
+/*!**************************************************!*\
+  !*** ./app/containers/PersonListPage/ly-info.js ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	module.exports = {
+	  "data": [{
+	    "name": "許忠信",
+	    "party": "台灣團結聯盟",
+	    "party_eng": "TSU",
+	    "caucus": "TSU",
+	    "constituency": ["proportional"]
+	  }, {
+	    "name": "丁守中",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPE", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6706",
+	        "address": "10051臺北市中正區濟南路1段3-1號0707室",
+	        "fax": "02-2358-6710"
+	      },
+	      "北投服務處": {
+	        "phone": "02-2828-7789",
+	        "address": "11262臺北市北投區承德路七段188巷2號1樓",
+	        "fax": "02-2828-6877"
+	      }
+	    },
+	    "constituency_detail": "北投區 士林區13里"
+	  }, {
+	    "name": "孔文吉",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["aborigine", "highland"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8246",
+	        "address": "10051臺北市中正區濟南路1段3-1號0203室",
+	        "fax": "02-2358-8250"
+	      }
+	    },
+	    "constituency_detail": "山地原住民"
+	  }, {
+	    "name": "尤美女",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8112",
+	        "address": "10051臺北市中正區濟南路1段3-1號0402室",
+	        "fax": "02-2358-8113"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "王廷升",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["HUA", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6688",
+	        "address": "10051臺北市中正區濟南路1段3-1號1103室",
+	        "fax": "02-2358-6690"
+	      },
+	      "花蓮市服務處": {
+	        "phone": "03-833-0729",
+	        "address": "970花蓮市中原路462號",
+	        "fax": "03-836-2156"
+	      }
+	    },
+	    "constituency_detail": "全縣"
+	  }, {
+	    "name": "王育敏",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8261",
+	        "address": "10051臺北市中正區青島東路1-3號7103室",
+	        "fax": "02-2358-8265"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "王金平",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6011~15",
+	        "address": "10051臺北市中正區中山南路1號",
+	        "fax": "02-2395-5317"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-607-5509",
+	        "address": "高雄市路竹區甲南村大仁路369巷7號",
+	        "fax": "07-607-5669"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "王進士",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["PIF", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6626",
+	        "address": "10051臺北市中正區濟南路1段3-1號0401室",
+	        "fax": "02-2358-6630"
+	      },
+	      "屏東服務處": {
+	        "phone": "08-723-2505",
+	        "address": "屏東市公園東路115號",
+	        "fax": "08-721-5191"
+	      },
+	      "萬丹服務處": {
+	        "phone": "08-776-3989",
+	        "address": "屏東縣萬丹鄉萬全村萬丹路一段412號",
+	        "fax": "08-776-3989"
+	      }
+	    },
+	    "constituency_detail": "屏東市 麟洛鄉 萬丹鄉"
+	  }, {
+	    "name": "王惠美",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["CHA", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6181",
+	        "address": "10051臺北市中正區濟南路1段3-1號0501室",
+	        "fax": "02-2358-6185"
+	      },
+	      "鹿港服務處": {
+	        "phone": "04-775-4168",
+	        "address": "彰化縣鹿港鎮永安里鹿東路55號",
+	        "fax": "04-777-9150"
+	      },
+	      "和美服務處": {
+	        "phone": "04-757-8568",
+	        "address": "彰化縣和美鎮德美路456號",
+	        "fax": "04-757-4822"
+	      }
+	    },
+	    "constituency_detail": "伸港鄉 線西鄉 和美鎮 鹿港鎮 福興鄉 秀水鄉"
+	  }, {
+	    "name": "田秋堇",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8316",
+	        "address": "10051臺北市中正區濟南路1段3-1號0806室",
+	        "fax": "02-2358-8320"
+	      },
+	      "立法委員田秋堇服務處": {
+	        "phone": "03-960-1321",
+	        "address": "羅東鎮中山路2段171號",
+	        "fax": "03-960-1592"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "江啟臣",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TXG", 8],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6726",
+	        "address": "10051臺北市中正區濟南路1段3-1號2102室",
+	        "fax": "02-2358-6730"
+	      },
+	      "豐原服務處": {
+	        "phone": "04-2515-9998",
+	        "address": "臺中市豐原區南村路20號",
+	        "fax": "04-2515-6798"
+	      },
+	      "東勢服務處": {
+	        "phone": "04-2577-3099",
+	        "address": "臺中市東勢區第五橫街32號",
+	        "fax": "04-2577-3167"
+	      }
+	    },
+	    "constituency_detail": "豐原區 石岡區 新社區 東勢區 和平區"
+	  }, {
+	    "name": "江惠貞",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 7],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6532",
+	        "address": "10051臺北市中正區濟南路1段3-1號0808室",
+	        "fax": "02-2358-6585"
+	      },
+	      "板橋服務處": {
+	        "phone": "02-2961-0599",
+	        "address": "新北市板橋區實踐路30號2樓",
+	        "fax": "02-2961-9899"
+	      }
+	    },
+	    "constituency_detail": "板橋區（縣民大道 湳仔溝以東）61里"
+	  }, {
+	    "name": "何欣純",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TXG", 7],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8388",
+	        "address": "10051臺北市中正區濟南路1段3-1號0301室",
+	        "fax": "02-2358-8390"
+	      },
+	      "大里服務處": {
+	        "phone": "04-2483-6527",
+	        "address": "臺中市大里區大里路63號",
+	        "fax": "04-2482-8743"
+	      },
+	      "太平服務處": {
+	        "phone": "04-2276-3111",
+	        "address": "台中市太平區新平路二段142號",
+	        "fax": "04-2276-3555"
+	      }
+	    },
+	    "constituency_detail": "太平區 大里區25里"
+	  }, {
+	    "name": "吳宜臻",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8580",
+	        "address": "10051臺北市中正區鎮江街2號5105室",
+	        "fax": "02-2358-8135"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "吳育仁",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6656",
+	        "address": "10051臺北市中正區濟南路1段3-1號0305室",
+	        "fax": "02-2358-6660"
+	      },
+	      "雲林服務處": {
+	        "phone": "05-537-5331",
+	        "address": "640雲林縣斗六市明德北路二段401號",
+	        "fax": "05-537-5351"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "吳育昇",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8011",
+	        "address": "10051臺北市中正區青島東路10號3502室",
+	        "fax": "02-2358-8015"
+	      },
+	      "泰山服務處": {
+	        "phone": "02-2296-0360",
+	        "address": "新北市泰山區明志路一段478號2樓",
+	        "fax": "02-2296-1607"
+	      },
+	      "淡水服務處": {
+	        "phone": "02-2625-5158",
+	        "address": "新北市淡水區中正東路55號2樓(淡水捷運站對面)",
+	        "fax": "02-2625-5159"
+	      },
+	      "林口服務處": {
+	        "phone": "02-2601-8588",
+	        "address": "新北市林口區中正路100號",
+	        "fax": "02-2601-8589"
+	      }
+	    },
+	    "constituency_detail": "石門區 三芝區 淡水區 八里區 林口區 泰山區"
+	  }, {
+	    "name": "吳秉叡",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6858",
+	        "address": "10051臺北市中正區濟南路1段3-1號0902室",
+	        "fax": "02-2358-6859"
+	      },
+	      "福營服務處": {
+	        "phone": "02-2208-3852",
+	        "address": "新北市新莊區後港一路130巷48號1樓",
+	        "fax": "02-2208-3853"
+	      },
+	      "大新莊服務處": {
+	        "phone": "02-2276-8287",
+	        "address": "新北市新莊區中原路327號1樓",
+	        "fax": "02-2277-5657"
+	      },
+	      "新北總聯絡處": {
+	        "phone": "02-8522-5786",
+	        "address": "新北市新莊區化成路路814巷1號",
+	        "fax": "02-8522-5726"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "呂玉玲",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TAO", 5],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6836",
+	        "address": "10051臺北市中正區濟南路1段3-1號0905室",
+	        "fax": "02-2358-6840"
+	      },
+	      "平鎮服務處": {
+	        "phone": "03-401-5616",
+	        "address": "桃園縣平鎮市復興街68號2樓之2",
+	        "fax": "03-401-0616"
+	      },
+	      "龍潭服務處": {
+	        "phone": "03-409-6688",
+	        "address": "桃園縣龍潭鄉東龍路124號",
+	        "fax": "03-480-6549"
+	      }
+	    },
+	    "constituency_detail": "平鎮市 龍潭鄉"
+	  }, {
+	    "name": "呂學樟",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["HSZ", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6258",
+	        "address": "10051臺北市中正區濟南路1段3-1號0407室",
+	        "fax": "02-2358-6260"
+	      },
+	      "新竹服務處": {
+	        "phone": "03-535-8181",
+	        "address": "新竹市民族路272號",
+	        "fax": "03-542-9399"
+	      }
+	    },
+	    "constituency_detail": "全市"
+	  }, {
+	    "name": "李昆澤",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["KHH", 6],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6086",
+	        "address": "10051臺北市中正區濟南路1段3-1號2106室",
+	        "fax": "02-2358-6090"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-386-8292",
+	        "address": "高雄市三民區大昌二路63號",
+	        "fax": "07-386-3277"
+	      }
+	    },
+	    "constituency_detail": "三民區45里"
+	  }, {
+	    "name": "李俊俋",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["CYI", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6541",
+	        "address": "10051臺北市中正區濟南路1段3-1號1001室",
+	        "fax": "02-2358-6545"
+	      },
+	      "嘉義服務處": {
+	        "phone": "05-271-9595",
+	        "address": "600嘉義市共和路239號",
+	        "fax": "05-277-9775"
+	      }
+	    },
+	    "constituency_detail": "全市"
+	  }, {
+	    "name": "李桐豪",
+	    "party": "親民黨",
+	    "party_eng": "PFP",
+	    "caucus": "PFP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8306",
+	        "address": "10051臺北市中正區濟南路1段3-1號2116室",
+	        "fax": "02-2358-8310"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "李貴敏",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6246",
+	        "address": "10051臺北市中正區鎮江街2號5302室",
+	        "fax": "02-2358-6380"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "李慶華",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 12],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6521",
+	        "address": "10051臺北市中正區濟南路1段3-1號2111室",
+	        "fax": "02-2358-6525"
+	      },
+	      "汐止服務處": {
+	        "phone": "02-2694-1301",
+	        "address": "新北市汐止區中興路95號4樓之3",
+	        "fax": "02-2694-1302"
+	      },
+	      "瑞芳服務處": {
+	        "phone": "02-2497-7809",
+	        "address": "新北市瑞芳區瑞芳街45號2樓",
+	        "fax": "02-2497-1969"
+	      }
+	    },
+	    "constituency_detail": "金山區 萬里區 汐止區 平溪區 瑞芳區 雙溪區 貢寮區"
+	  }, {
+	    "name": "李應元",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8156",
+	        "address": "10051臺北市中正區濟南路1段3-1號0701室",
+	        "fax": "02-2358-8165"
+	      },
+	      "斗六服務處": {
+	        "phone": "05-532-6355",
+	        "address": "雲林縣斗六市武昌路35號",
+	        "fax": "05-536-1451"
+	      },
+	      "虎尾服務處": {
+	        "phone": "05-636-5296",
+	        "address": "雲林縣虎尾鎮光復路505號",
+	        "fax": "05-636-5396"
+	      },
+	      "新莊服務處": {
+	        "phone": "02-2279-7241",
+	        "address": "新北市新莊區中華路二段105號2樓",
+	        "fax": "02-2995-5221"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "李鴻鈞",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 4],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6236",
+	        "address": "10051臺北市中正區濟南路1段3-1號1108室",
+	        "fax": "02-2358-6240"
+	      },
+	      "新莊服務處": {
+	        "phone": "02-2992-9199",
+	        "address": "新北市新莊區公園路36號",
+	        "fax": "02-2992-9818"
+	      }
+	    },
+	    "constituency_detail": "新莊區75里"
+	  }, {
+	    "name": "邱文彥",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8106",
+	        "address": "10051臺北市中正區鎮江街2號5108室",
+	        "fax": "02-2358-8110"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "邱志偉",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["KHH", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6561",
+	        "address": "10051臺北市中正區青島東路1-3號7303室",
+	        "fax": "02-2358-6565"
+	      },
+	      "岡山服務處": {
+	        "phone": "07-623-0655",
+	        "address": "高雄市岡山區華園路99號",
+	        "fax": "07-623-0671"
+	      },
+	      "茄萣服務處": {
+	        "phone": "07-690-1234",
+	        "address": "高雄市茄萣區信義路三段138號",
+	        "fax": "07-690-2598"
+	      },
+	      "橋頭區邱志偉立委與陳政聞議員聯合服務處": {
+	        "phone": "07-612-3058",
+	        "address": "高雄市橋頭區成功路237號",
+	        "fax": "07-611-4926"
+	      },
+	      "路竹區邱志偉立委與陳明澤議員聯合服務處": {
+	        "phone": "07-607-1999",
+	        "address": "高雄市路竹區國昌路73號",
+	        "fax": "07-607-6869"
+	      },
+	      "路竹區邱志偉立委與張文瑞議員聯合服務處": {
+	        "phone": "07-696-0525",
+	        "address": "高雄市路竹區國昌路82號",
+	        "fax": "07-691-8588"
+	      }
+	    },
+	    "constituency_detail": "茄萣區 湖內區 路竹區 永安區 岡山區 彌陀區 梓官區 橋頭區"
+	  }, {
+	    "name": "邱議瑩",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["KHH", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6516",
+	        "address": "10051臺北市中正區濟南路1段3-1號0801室",
+	        "fax": "02-2358-6520"
+	      },
+	      "美濃服務處": {
+	        "phone": "07-681-8755",
+	        "address": "843高雄市美濃區泰中路866號",
+	        "fax": "07-681-8677"
+	      }
+	    },
+	    "constituency_detail": "那瑪夏區 桃源區 甲仙區 內門區 杉林區 六龜區 阿蓮區 田寮區 旗山區 美濃區 茂林區 燕巢區 大社區 大樹區"
+	  }, {
+	    "name": "賴振昌",
+	    "party": "台灣團結聯盟",
+	    "party_eng": "TSU",
+	    "caucus": "TSU",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8558",
+	        "address": "10051臺北市中正區濟南路一段3-1號1008室",
+	        "fax": "02-2358-8560"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "黃國書",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TXG", 6],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8358",
+	        "address": "10051臺北市中正區濟南路1段3-1號0302室",
+	        "fax": "02-2358-8050"
+	      },
+	      "台中服務處": {
+	        "phone": "04-2262-0088",
+	        "address": "臺中市南區復興路二段30-22號",
+	        "fax": "04-2265-8822"
+	      }
+	    },
+	    "constituency_detail": "西區 中區 東區 南區"
+	  }, {
+	    "name": "林岱樺",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["KHH", 4],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8021",
+	        "address": "10051臺北市中正區濟南路1段3-1號0706室",
+	        "fax": "02-2358-8030"
+	      },
+	      "大竂服務處": {
+	        "phone": "07-781-8117",
+	        "address": "高雄市大竂區力行路61號",
+	        "fax": "07-781-8167"
+	      },
+	      "鳳山服務處": {
+	        "phone": "07-748-1033",
+	        "address": "高雄市鳳山區五權路160號",
+	        "fax": "07-741-9584"
+	      }
+	    },
+	    "constituency_detail": "仁武區 鳥松區 大寮區 林園區"
+	  }, {
+	    "name": "莊瑞雄",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["NAN", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6171",
+	        "address": "10051臺北市中正區濟南路1段3-1號0805室",
+	        "fax": "02-2358-6270"
+	      },
+	      "南投服務處": {
+	        "phone": "049-222-7688",
+	        "address": "南投市復興路75號之1",
+	        "fax": "049-224-2379"
+	      }
+	    },
+	    "constituency_detail": "南投市 名間鄉 集集鎮 竹山鎮 鹿谷鄉 水里鄉 信義鄉"
+	  }, {
+	    "name": "林郁方",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPE", 5],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6276",
+	        "address": "10051臺北市中正區濟南路1段3-1號0601室",
+	        "fax": "02-2358-6280"
+	      }
+	    },
+	    "constituency_detail": "萬華區 中正區21里"
+	  }, {
+	    "name": "林國正",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["KHH", 9],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6923",
+	        "address": "10051臺北市中正區濟南路1段3-1號2119室",
+	        "fax": "02-2358-6925"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-721-1213",
+	        "address": "高雄市前鎮區永豐路19之6號",
+	        "fax": "07-721-3055"
+	      }
+	    },
+	    "constituency_detail": "前鎮區51里 小港區"
+	  }, {
+	    "name": "林淑芬",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TPQ", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8186",
+	        "address": "10051臺北市中正區青島東路1-3號7301室",
+	        "fax": "02-2358-8190"
+	      },
+	      "蘆洲服務處": {
+	        "phone": "02-8285-6412",
+	        "address": "新北市蘆洲區長興路25號",
+	        "fax": "02-2281-7980"
+	      },
+	      "五股服務處": {
+	        "phone": "02-2291-2995",
+	        "address": "臺北縣五股鄉民義路一段37號",
+	        "fax": "02-2291-2355"
+	      }
+	    },
+	    "constituency_detail": "五股區 蘆洲區 三重區16里"
+	  }, {
+	    "name": "林滄敏",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["CHA", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8281",
+	        "address": "10051臺北市中正區鎮江街2號5102室",
+	        "fax": "02-2358-8285"
+	      },
+	      "彰化服務處": {
+	        "phone": "04-728-2282",
+	        "address": "彰化市成功里旭光西路90號",
+	        "fax": "04-723-9961"
+	      }
+	    },
+	    "constituency_detail": "彰化市 花壇鄉 芬園鄉"
+	  }, {
+	    "name": "林德福",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 9],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6995",
+	        "address": "10051臺北市中正區青島東路1-3號7202室",
+	        "fax": "02-2358-6999"
+	      },
+	      "永和服務處": {
+	        "phone": "02-2232-9899",
+	        "address": "新北市永和區永和路二段403號",
+	        "fax": "02-3233-4625"
+	      }
+	    },
+	    "constituency_detail": "永和區 中和區17里"
+	  }, {
+	    "name": "林鴻池",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 6],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6871",
+	        "address": "10051臺北市中正區濟南路1段3-1號0506室",
+	        "fax": "02-2358-6875"
+	      },
+	      "板橋服務處": {
+	        "phone": "02-2253-6788",
+	        "address": "新北市板橋區文化路一段120號6樓之1",
+	        "fax": "02-2253-7688"
+	      }
+	    },
+	    "constituency_detail": "板橋區（縣民大道 湳仔溝以西）65里"
+	  }, {
+	    "name": "姚文智",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TPE", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6758",
+	        "address": "10051臺北市中正區濟南路1段3-1號1102室",
+	        "fax": "02-2358-6040"
+	      }
+	    },
+	    "constituency_detail": "大同區 士林區38里"
+	  }, {
+	    "name": "柯建銘",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6106",
+	        "address": "10051臺北市中正區青島東路3號3樓",
+	        "fax": "02-2358-6110"
+	      },
+	      "新竹服務處": {
+	        "phone": "03-526-9880",
+	        "address": "新竹市四維路15號3樓",
+	        "fax": "03-523-2902"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "段宜康",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6196",
+	        "address": "10051臺北市中正區濟南路1段3-1號0308室",
+	        "fax": "02-2358-6200"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "洪秀柱",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6099",
+	        "address": "10051臺北市中正區濟南路1段3-1號12樓",
+	        "fax": "02-2358-6100"
+	      },
+	      "立法委員洪秀柱服務處": {
+	        "phone": "02-8923-7667",
+	        "address": "新北市永和區永和路一段65巷2號",
+	        "fax": "02-8923-7668"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "紀國棟",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6936",
+	        "address": "10051臺北市中正區濟南路1段3-1號0303",
+	        "fax": "02-2358-6940"
+	      },
+	      "大肚服務處": {
+	        "phone": "04-2691-2967",
+	        "address": "臺中市大肚區自強里遊園路二段278號",
+	        "fax": "04-2691-3967"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "孫大千",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TAO", 6],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6881",
+	        "address": "10051臺北市中正區濟南路1段3-1號2118室",
+	        "fax": "02-2358-6885"
+	      },
+	      "桃園服務處": {
+	        "phone": "03-375-5558",
+	        "address": "桃園縣八德市廣福路299號",
+	        "fax": "03-375-2000"
+	      }
+	    },
+	    "constituency_detail": "八德市 大溪鎮 復興鄉 中壢市12里"
+	  }, {
+	    "name": "徐少萍",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6231",
+	        "address": "10051臺北市中正區濟南路1段3-1號0607室",
+	        "fax": "02-2358-6235"
+	      },
+	      "基隆服務處": {
+	        "phone": "02-2427-7799",
+	        "address": "基隆市義一路87號9樓之2",
+	        "fax": "02-2428-0097"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "徐欣瑩",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["HSQ", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6351",
+	        "address": "10051臺北市中正區濟南路1段3-1號0306室",
+	        "fax": "02-2358-6355"
+	      },
+	      "竹北服務處": {
+	        "phone": "03-657-1621",
+	        "address": "新竹縣竹北市光明六路235號",
+	        "fax": "03-657-2133"
+	      }
+	    },
+	    "constituency_detail": "全縣"
+	  }, {
+	    "name": "許淑華",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["MIA", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6975",
+	        "address": "10051臺北市中正區濟南路1段3-1號2107室",
+	        "fax": "02-2358-6979"
+	      },
+	      "頭份服務處": {
+	        "phone": "037-666-369",
+	        "address": "苗栗縣頭份鎮忠孝里信東路206號",
+	        "fax": "037-674-319"
+	      },
+	      "苗栗服務處": {
+	        "phone": "037-374-000",
+	        "address": "苗栗市自治路517號",
+	        "fax": "037-320-216"
+	      },
+	      "公館服務處": {
+	        "phone": "037-223-566",
+	        "address": "苗栗縣公館鄉仁愛路二段168-1號",
+	        "fax": "037-239-233"
+	      }
+	    },
+	    "constituency_detail": "頭份鎮 三灣鄉 南庄鄉 苗栗市 頭屋鄉 獅潭鄉 公館鄉 大湖鄉 泰安鄉 卓蘭鎮"
+	  }, {
+	    "name": "翁重鈞",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["CYQ", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6781",
+	        "address": "10051臺北市中正區濟南路1段3-1號0906室",
+	        "fax": "02-2358-6785"
+	      },
+	      "嘉義義竹服務處": {
+	        "phone": "05-341-2029",
+	        "address": "嘉義縣義竹鄉仁里村407-4號",
+	        "fax": "05-341-7251"
+	      }
+	    },
+	    "constituency_detail": "六腳鄉 東石鄉 朴子市 太保市 布袋鎮 義竹鄉 鹿草鄉 水上鄉"
+	  }, {
+	    "name": "陳其邁",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8566",
+	        "address": "10051臺北市中正區濟南路1段3-1號1105室",
+	        "fax": "02-2358-8570"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-382-5189",
+	        "address": "高雄市三民區九如一路399號",
+	        "fax": "07-382-5177"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "陳明文",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["CYQ", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8101",
+	        "address": "10051臺北市中正區青島東路1-3號7105室",
+	        "fax": "02-2358-8105"
+	      },
+	      "嘉義服務處": {
+	        "phone": "05-225-5589",
+	        "address": "600嘉義市力行街72號",
+	        "fax": "05-225-1641"
+	      }
+	    },
+	    "constituency_detail": "溪口鄉 大林鎮 梅山鄉 新港鄉 民雄鄉 竹崎鄉 中埔鄉 番路鄉 大埔鄉 阿里山鄉"
+	  }, {
+	    "name": "陳亭妃",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TNN", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6761",
+	        "address": "10051臺北市中正區濟南路1段3-1號1101室",
+	        "fax": "02-2358-6755"
+	      },
+	      "北區服務處": {
+	        "phone": "06-280-3906",
+	        "address": "704臺南市北區海安路三段963號",
+	        "fax": "06-358-6489"
+	      },
+	      "安南區服務處": {
+	        "phone": "06-256-8012",
+	        "address": "709臺南市安南區安中路二段8號",
+	        "fax": "06-256-0701"
+	      }
+	    },
+	    "constituency_detail": "安南區 北區 中西區"
+	  }, {
+	    "name": "陳唐山",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TNN", 5],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8211",
+	        "address": "10051臺北市中正區鎮江街2號5305室",
+	        "fax": "02-2358-8215"
+	      },
+	      "台南服務處": {
+	        "phone": "06-201-8217",
+	        "address": "臺南市永康區永忠路88號",
+	        "fax": "06-201-8219"
+	      }
+	    },
+	    "constituency_detail": "永康區 仁德區 歸仁區 關廟區 龍崎區"
+	  }, {
+	    "name": "陳根德",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TAO", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6221",
+	        "address": "10051臺北市中正區鎮江街2號5303室",
+	        "fax": "02-2358-6225"
+	      },
+	      "桃園市服務處": {
+	        "phone": "(03)338-6656",
+	        "address": "桃園縣桃園市大有路80號",
+	        "fax": "(03)338-6599"
+	      },
+	      "龜山服務處": {
+	        "phone": "03-329-9255",
+	        "address": "桃園縣龜山鄉三民路70號",
+	        "fax": "03-329-9769"
+	      },
+	      "蘆竹服務處": {
+	        "phone": "03-312-1988",
+	        "address": "桃園縣蘆竹鄉新南路一段128號",
+	        "fax": "03-312-1875"
+	      }
+	    },
+	    "constituency_detail": "蘆竹鄉 龜山鄉 桃園市10里"
+	  }, {
+	    "name": "陳淑慧",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6931",
+	        "address": "10051臺北市中正區濟南路1段3-1號1006室",
+	        "fax": "02-2358-6935"
+	      },
+	      "台南服務處": {
+	        "phone": "06-268-5889",
+	        "address": "臺南市東區崇明14街53號",
+	        "fax": "06-269-2889"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "陳雪生",
+	    "party": "無黨籍",
+	    "party_eng": "NP",
+	    "caucus": null,
+	    "constituency": ["LJF", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6631",
+	        "address": "10051臺北市中正區濟南路1段3-1號2117室",
+	        "fax": "02-2358-6635"
+	      },
+	      "馬祖服務處": {
+	        "phone": "0836-25018",
+	        "address": "連江縣南竿鄉介壽村237號"
+	      }
+	    },
+	    "constituency_detail": "全縣"
+	  }, {
+	    "name": "陳超明",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["MIA", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6611",
+	        "address": "10051臺北市中正區濟南路1段3-1號1003室",
+	        "fax": "02-2358-6615"
+	      },
+	      "竹南服務處": {
+	        "phone": "037-468-448",
+	        "address": "350苗栗縣竹南鎮港墘里10鄰塭內46-1號",
+	        "fax": "037-478-508"
+	      }
+	    },
+	    "constituency_detail": "竹南鎮 造橋鄉 後龍鎮 西湖鄉 通霄鎮 銅鑼鄉 苑裡鎮 三義鄉"
+	  }, {
+	    "name": "陳節如",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6046",
+	        "address": "10051臺北市中正區濟南路1段3-1號2115室",
+	        "fax": "02-2358-6050"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "陳碧涵",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8181",
+	        "address": "10051臺北市中正區濟南路1段3-1號0603室",
+	        "fax": "02-2358-8185"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "陳歐珀",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["ILA", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6220",
+	        "address": "10051臺北市中正區濟南路1段3-1號0408室",
+	        "fax": "02-2358-6170"
+	      },
+	      "宜蘭服務處": {
+	        "phone": "03-936-6299",
+	        "address": "宜蘭市民族路593號",
+	        "fax": "03-936-6189"
+	      },
+	      "羅東服務處": {
+	        "phone": "03-957-2099",
+	        "address": "羅東鎮興東南路152號",
+	        "fax": "03-957-2788"
+	      }
+	    },
+	    "constituency_detail": "全縣"
+	  }, {
+	    "name": "陳學聖",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TAO", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6699",
+	        "address": "10051臺北市中正區濟南路1段3-1號0908室",
+	        "fax": "02-2358-6700"
+	      },
+	      "中壢服務處": {
+	        "address": "桃園縣中壢市中央西路二段281號4樓"
+	      }
+	    },
+	    "constituency_detail": "中壢市69里"
+	  }, {
+	    "name": "陳鎮湘",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8286",
+	        "address": "10051臺北市中正區青島東路1-3號7302室",
+	        "fax": "02-2358-8290"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "馬文君",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["NAN", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6816",
+	        "address": "10051臺北市中正區青島東路1-3號7203室",
+	        "fax": "02-2358-6820"
+	      },
+	      "埔里服務處": {
+	        "phone": "049-242-3248",
+	        "address": "南投縣埔里鎮西寧路36號",
+	        "fax": "049-290-1626"
+	      },
+	      "草屯服務處": {
+	        "phone": "049-235-5807",
+	        "address": "南投縣草屯鎮博愛路411號",
+	        "fax": "049-235-5023"
+	      }
+	    },
+	    "constituency_detail": "草屯鎮 國姓鄉 埔里鎮 仁愛鄉 中寮鄉 魚池鄉"
+	  }, {
+	    "name": "高志鵬",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TPQ", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6241",
+	        "address": "10051臺北市中正區濟南路1段3-1號0503室",
+	        "fax": "02-2358-6245"
+	      },
+	      "三重服務處": {
+	        "phone": "02-8988-1368",
+	        "address": "新北市三重區忠孝路一段153號",
+	        "fax": "02-8988-3076"
+	      }
+	    },
+	    "constituency_detail": "三重區103里"
+	  }, {
+	    "name": "高金素梅",
+	    "party": "無黨團結聯盟",
+	    "party_eng": "NPU",
+	    "caucus": null,
+	    "constituency": ["aborigine", "highland"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6051",
+	        "address": "10051臺北市中正區青島東路10號3507室",
+	        "fax": "02-2358-6055"
+	      },
+	      "南區服務處": {
+	        "phone": "08-799-5962",
+	        "address": "屏東縣瑪家鄉北葉村9鄰風景巷1-3號",
+	        "fax": "08-799-5963"
+	      }
+	    },
+	    "constituency_detail": "山地原住民"
+	  }, {
+	    "name": "張嘉郡",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["YUN", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6970",
+	        "address": "10051臺北市中正區濟南路1段3-1號0206室",
+	        "fax": "02-2358-6974"
+	      },
+	      "虎尾服務處": {
+	        "phone": "05-632-0629",
+	        "address": "雲林縣虎尾鎮平和里青埔2-23號",
+	        "fax": "05-633-3318"
+	      },
+	      "北港服務處": {
+	        "phone": "05-782-2088",
+	        "address": "雲林縣北港鎮公園路406號",
+	        "fax": "05-782-2848"
+	      }
+	    },
+	    "constituency_detail": "麥寮鄉 台西鄉 東勢鄉 褒忠鄉 土庫鎮 虎尾鎮 四湖鄉 元長鄉 口湖鄉 水林鄉 北港鎮"
+	  }, {
+	    "name": "張慶忠",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 8],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6896",
+	        "address": "10051臺北市中正區濟南路1段3-1號1002室",
+	        "fax": "02-2358-6900"
+	      },
+	      "中和服務處": {
+	        "phone": "02-8221-5879",
+	        "address": "新北市中和區建康路107號1樓",
+	        "fax": "02-8221-3690"
+	      }
+	    },
+	    "constituency_detail": "中和區76里"
+	  }, {
+	    "name": "陳怡潔",
+	    "party": "親民黨",
+	    "party_eng": "PFP",
+	    "caucus": "PFP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6798",
+	        "address": "10051臺北市中正區濟南路1段3-1號0507室",
+	        "fax": "02-2358-6800"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "周倪安",
+	    "party": "台灣團結聯盟",
+	    "party_eng": "TSU",
+	    "caucus": "TSU",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6868",
+	        "address": "10051臺北市中正區青島東路1號3203室",
+	        "fax": "02-2358-6870"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "許添財",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TNN", 4],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6909",
+	        "address": "10051臺北市中正區濟南路1段3-1號0903室",
+	        "fax": "02-2358-6920"
+	      },
+	      "台南服務處": {
+	        "phone": "06-298-3701",
+	        "address": "臺南市安平區永華路二段822號",
+	        "fax": "06-298-3163"
+	      },
+	      "灣裡聯絡處": {
+	        "phone": "06-296-3568",
+	        "address": "台南市南區明興路1331號 (林良文理事長)"
+	      }
+	    },
+	    "constituency_detail": "安平區 南區 東區"
+	  }, {
+	    "name": "許智傑",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["KHH", 8],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8151",
+	        "address": "10051臺北市中正區濟南路1段3-1號0703室",
+	        "fax": "02-2358-6625"
+	      },
+	      "鳳山服務處": {
+	        "phone": "07-768-2666;07-768-1899",
+	        "address": "830高雄市鳳山區保泰路96號",
+	        "fax": "07-768-9900"
+	      },
+	      "": {
+	        "phone": "07-768-1899"
+	      }
+	    },
+	    "constituency_detail": "鳳山區"
+	  }, {
+	    "name": "曾巨威",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6381",
+	        "address": "10051臺北市中正區濟南路1段3-1號0705室",
+	        "fax": "02-2358-6390"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "葉宜津",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TNN", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6291",
+	        "address": "10051臺北市中正區濟南路1段3-1號0403室",
+	        "fax": "02-2358-6295"
+	      },
+	      "新營服務處": {
+	        "phone": "06-657-2808",
+	        "address": "臺南市新營區民生路130號",
+	        "fax": "06-657-2818"
+	      },
+	      "安平服務處": {
+	        "phone": "06-295-0826",
+	        "address": "臺南市安平區健康路三段206號",
+	        "fax": "06-295-0829"
+	      }
+	    },
+	    "constituency_detail": "後壁區 白河區 北門區 學甲區 鹽水區 新營區 柳營區 東山區 將軍區 下營區 六甲區 官田區"
+	  }, {
+	    "name": "費鴻泰",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPE", 7],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6990",
+	        "address": "10051臺北市中正區濟南路1段3-1號0502室",
+	        "fax": "02-2358-6994"
+	      },
+	      "服務處": {
+	        "phone": "02-2729-1966",
+	        "address": "11050臺北市信義區莊敬路311號5樓",
+	        "fax": "02-2720-9492"
+	      }
+	    },
+	    "constituency_detail": "信義區 松山區13里"
+	  }, {
+	    "name": "葉津鈴",
+	    "party": "台灣團結聯盟",
+	    "party_eng": "TSU",
+	    "caucus": "TSU",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6876",
+	        "address": "10051臺北市中正區濟南路一段3-1號405室",
+	        "fax": "02-2358-6880"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-333-2333",
+	        "address": "高雄市前鎮區滇池街193號",
+	        "fax": "07-338-8957"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "黃志雄",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 5],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6391",
+	        "address": "10051臺北市中正區濟南路1段3-1號0606室",
+	        "fax": "02-2358-6395"
+	      },
+	      "樹林服務處": {
+	        "phone": "02-2680-0775",
+	        "address": "23852新北市樹林區中山路三段137號",
+	        "fax": "02-2680-5365"
+	      },
+	      "鶯歌服務處": {
+	        "phone": "02-8678-0909",
+	        "address": "新北市鶯歌區光明街52號",
+	        "fax": "02-8678-0707"
+	      },
+	      "新莊服務處": {
+	        "phone": "02-2204-2269",
+	        "address": "臺北縣新莊市龍安路485號",
+	        "fax": "02-2204-0486"
+	      }
+	    },
+	    "constituency_detail": "樹林區 鶯歌區 新莊區9里"
+	  }, {
+	    "name": "黃昭順",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["KHH", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6786",
+	        "address": "10051臺北市中正區濟南路1段3-1號1107室",
+	        "fax": "02-2358-6790"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-341-3361",
+	        "address": "813高雄市左營區新庄仔路425號",
+	        "fax": "07-341-2672"
+	      }
+	    },
+	    "constituency_detail": "楠梓區 左營區"
+	  }, {
+	    "name": "黃偉哲",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TNN", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8311",
+	        "address": "10051臺北市中正區鎮江街2號5106室",
+	        "fax": "02-2358-8315"
+	      },
+	      "佳里服務處": {
+	        "phone": "06-723-0100",
+	        "address": "臺南市佳里區進學路130號",
+	        "fax": "06-723-0023"
+	      },
+	      "麻豆服務處": {
+	        "phone": "06-571-7753",
+	        "address": "臺南市麻豆區南勢里62-2號",
+	        "fax": "06-571-0225"
+	      }
+	    },
+	    "constituency_detail": "七股區 佳里區 麻豆區 善化區 大內區 玉井區 楠西區 西港區 安定區 新市區 山上區 新化區 左鎮區 南化區"
+	  }, {
+	    "name": "楊玉欣",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6666",
+	        "address": "10051臺北市中正區濟南路1段3-1號0608室",
+	        "fax": "02-2358-6670"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "楊應雄",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["JME", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8268",
+	        "address": "10051臺北市中正區青島東路1-3號7102室",
+	        "fax": "02-2358-8270"
+	      },
+	      "金門服務處": {
+	        "phone": "082-312-058",
+	        "address": "金門縣金城鎮光前路97號",
+	        "fax": "082-326-175"
+	      }
+	    },
+	    "constituency_detail": "全縣"
+	  }, {
+	    "name": "楊曜",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["PEN", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6736",
+	        "address": "10051臺北市中正區濟南路1段3-1號0205室",
+	        "fax": "02-2358-6740"
+	      },
+	      "澎湖服務處": {
+	        "phone": "06-921-8678",
+	        "address": "澎湖縣馬公市新店路473號",
+	        "fax": "06-921-1317"
+	      }
+	    },
+	    "constituency_detail": "全縣"
+	  }, {
+	    "name": "楊瓊瓔",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TXG", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6206",
+	        "address": "10051臺北市中正區濟南路1段3-1號0907室",
+	        "fax": "02-2358-6210"
+	      },
+	      "潭子服務處": {
+	        "phone": "04-2536-2878",
+	        "address": "臺中市潭子區潭興路二段397號",
+	        "fax": "04-2536-2516"
+	      },
+	      "大雅服務處": {
+	        "phone": "04-2568-5512",
+	        "address": "428臺中市大雅區學府路405號",
+	        "fax": "04-2568-2112"
+	      }
+	    },
+	    "constituency_detail": "后里區 神岡區 大雅區 潭子區"
+	  }, {
+	    "name": "楊麗環",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TAO", 4],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6066",
+	        "address": "10051臺北市中正區濟南路1段3-1號0208室",
+	        "fax": "02-2358-6070"
+	      },
+	      "桃園服務處": {
+	        "phone": "03-346-5509",
+	        "address": "桃園縣桃園市同安街171號",
+	        "fax": "03-357-7640"
+	      }
+	    },
+	    "constituency_detail": "桃園市66里"
+	  }, {
+	    "name": "詹凱臣",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["foreign"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6536",
+	        "address": "10051臺北市中正區濟南路1段3-1號0802室",
+	        "fax": "02-2358-6540"
+	      }
+	    },
+	    "constituency_detail": "僑居國外國民"
+	  }, {
+	    "name": "廖正井",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TAO", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6316",
+	        "address": "10051臺北市中正區濟南路1段3-1號0605室",
+	        "fax": "02-2358-6320"
+	      },
+	      "大園服務處": {
+	        "phone": "03-385-1818",
+	        "address": "桃園縣大園鄉田心村華興路157號",
+	        "fax": "03-386-9656"
+	      },
+	      "楊梅服務處": {
+	        "phone": "03-488-2728",
+	        "address": "桃園縣楊梅市大模街10號3樓之2",
+	        "fax": "03-488-2758"
+	      },
+	      "新屋服務處": {
+	        "phone": "03-477-3556",
+	        "address": "桃園縣新屋鄉中山路112號",
+	        "fax": "03-477-3536"
+	      }
+	    },
+	    "constituency_detail": "大園鄉 觀音鄉 新屋鄉 楊梅市"
+	  }, {
+	    "name": "廖國棟",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["aborigine", "lowland"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8176",
+	        "address": "10051臺北市中正區濟南路1段3-1號0807室",
+	        "fax": "02-2358-8180"
+	      },
+	      "台東服務處": {
+	        "phone": "089-228-798",
+	        "address": "臺東市四維路3段72號",
+	        "fax": "089-228-600"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "管碧玲",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["KHH", 5],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8146",
+	        "address": "10051臺北市中正區濟南路1段3-1號0901室",
+	        "fax": "02-2358-8150"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-313-7816",
+	        "address": "高雄市三民區博愛一路183號",
+	        "fax": "07-313-5797"
+	      },
+	      "內惟服務處": {
+	        "phone": "07-533-0227",
+	        "address": "高雄市鼓山區九如四路1097號",
+	        "fax": "07-521-5237"
+	      }
+	    },
+	    "constituency_detail": "鼓山區 鹽埕區 旗津區 三民區42里"
+	  }, {
+	    "name": "蔡正元",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPE", 4],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8276",
+	        "address": "10051臺北市中正區鎮江街2號5301室",
+	        "fax": "02-2358-8280"
+	      },
+	      "內湖服務處": {
+	        "phone": "02-2790-5746",
+	        "address": "114臺北市內湖區成功路三段82號2樓",
+	        "fax": "02-2795-6289"
+	      }
+	    },
+	    "constituency_detail": "內湖區 南港區"
+	  }, {
+	    "name": "蔡其昌",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TXG", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6151",
+	        "address": "10051臺北市中正區鎮江街2號5103室",
+	        "fax": "02-2358-6155"
+	      },
+	      "清水服務處": {
+	        "phone": "04-2623-8581",
+	        "address": "臺中市清水區中華路448號",
+	        "fax": "04-2623-8583"
+	      },
+	      "大甲服務處": {
+	        "phone": "04-2688-7555",
+	        "address": "臺中市大甲區文武路274號",
+	        "fax": "04-2688-9123"
+	      }
+	    },
+	    "constituency_detail": "大甲區 大安區 外埔區 清水區 梧棲區"
+	  }, {
+	    "name": "蔡煌瑯",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8256",
+	        "address": "10051臺北市中正區濟南路1段3-1號2101室",
+	        "fax": "02-2358-8260"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "蔡錦隆",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TXG", 4],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6121",
+	        "address": "10051臺北市中正區濟南路1段3-1號0803室",
+	        "fax": "02-2358-6125"
+	      },
+	      "台中服務處": {
+	        "phone": "04-2708-2899",
+	        "address": "臺中市西屯區黎明路三段58號",
+	        "fax": "04-2708-2896"
+	      }
+	    },
+	    "constituency_detail": "西屯區 南屯區"
+	  }, {
+	    "name": "蔣乃辛",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPE", 6],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6901",
+	        "address": "10051臺北市中正區濟南路1段3-1號2112室",
+	        "fax": "02-2358-6905"
+	      }
+	    },
+	    "constituency_detail": "大安區"
+	  }, {
+	    "name": "趙天麟",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["KHH", 7],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6576",
+	        "address": "10051臺北市中正區濟南路1段3-1號0505室",
+	        "fax": "02-2358-6580"
+	      },
+	      "高雄服務處": {
+	        "phone": "07-333-6868",
+	        "address": "80251高雄市苓雅區民權一路53號",
+	        "fax": "07-333-6860"
+	      }
+	    },
+	    "constituency_detail": "前金區 新興區 苓雅區 前鎮區8里"
+	  }, {
+	    "name": "鄭天財",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["aborigine", "lowland"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6831",
+	        "address": "10051臺北市中正區濟南路1段3-1號0307室",
+	        "fax": "02-2358-6835"
+	      },
+	      "花蓮服務處": {
+	        "phone": "03-851-2306",
+	        "address": "973花蓮縣吉安鄉南昌村南昌北路59號",
+	        "fax": "03-851-3306"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "鄭汝芬",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["CHA", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6191",
+	        "address": "10051臺北市中正區濟南路1段3-1號1007室",
+	        "fax": "02-2358-6195"
+	      },
+	      "溪州服務處": {
+	        "phone": "04-889-4123",
+	        "address": "彰化縣溪洲鄉中山路三段270巷5號",
+	        "fax": "04-889-8399"
+	      },
+	      "二林服務處": {
+	        "phone": "04-895-5011",
+	        "address": "彰化縣二林鎮後厝里太平路一段88巷86號",
+	        "fax": "04-895-5012"
+	      },
+	      "溪湖服務處": {
+	        "phone": "04-882-2211",
+	        "address": "彰化縣溪湖鎮東環路320號",
+	        "fax": "04-861-3552"
+	      }
+	    },
+	    "constituency_detail": "芳苑鄉 二林鎮 埔鹽鄉 溪湖鎮 埔心鄉 大城鄉 竹塘鄉 埤頭鄉 北斗鎮 溪州鄉"
+	  }, {
+	    "name": "鄭麗君",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8329",
+	        "address": "10051臺北市中正區鎮江街2號5107室",
+	        "fax": "02-2358-8330"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "劉建國",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["YUN", 2],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8088",
+	        "address": "10051臺北市中正區濟南路1段3-1號0602室",
+	        "fax": "02-2358-8089"
+	      },
+	      "斗六服務處": {
+	        "phone": "05-534-2586",
+	        "address": "640雲林縣斗六市公明路3號",
+	        "fax": "05-532-2270"
+	      },
+	      "西螺服務處": {
+	        "phone": "05-587-3586",
+	        "address": "640雲林縣西螺鎮建興路365號之1"
+	      },
+	      "斗南服務處": {
+	        "phone": "05-595-1270",
+	        "address": "640雲林縣斗南鎮東光二街20號"
+	      }
+	    },
+	    "constituency_detail": "崙背鄉 二崙鄉 西螺鎮 莿桐鄉 林內鄉 斗六市 大埤鄉 斗南鎮 古坑鄉"
+	  }, {
+	    "name": "劉櫂豪",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["TTT", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6286",
+	        "address": "10051臺北市中正區濟南路1段3-1號2108室",
+	        "fax": "02-2358-6290"
+	      },
+	      "臺東服務處": {
+	        "phone": "089-310-979",
+	        "address": "臺東市傳廣路18號",
+	        "fax": "089-310-879"
+	      },
+	      "東海岸服務處": {
+	        "phone": "089-851-018",
+	        "address": "臺東縣成功鎮民權路30號",
+	        "fax": "089-851-018"
+	      },
+	      "南迴服務處": {
+	        "phone": "089-791-305",
+	        "address": "台東縣大武鄉尚武村4鄰32號",
+	        "fax": "089-790-398"
+	      }
+	    },
+	    "constituency_detail": "全縣"
+	  }, {
+	    "name": "徐志榮",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["PIF", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6655",
+	        "address": "10051臺北市中正區濟南路1段3-1號0702室",
+	        "fax": "02-2358-6651"
+	      },
+	      "東港服務處": {
+	        "phone": "08-832-8000",
+	        "address": "屏東縣東港鎮光復路一段57號",
+	        "fax": "08-831-1110"
+	      },
+	      "車城服務處": {
+	        "phone": "08-882-2888",
+	        "address": "屏東縣車城鄉福安村(路)6-4號",
+	        "fax": "08-882-3456"
+	      },
+	      "屏東服務處": {
+	        "phone": "08-733-6000",
+	        "address": "屏東市忠孝路161號",
+	        "fax": "08-766-7576"
+	      },
+	      "恆春服務處": {
+	        "phone": "08-888-0888",
+	        "address": "屏東縣恆春鎮省北路85號",
+	        "fax": "08-889-9322"
+	      }
+	    },
+	    "constituency_detail": "新園鄉 崁頂鄉 南州鄉 新埤鄉 來義鄉 東港鎮 林邊鄉 佳冬鄉 枋寮鄉 春日鄉 枋山鄉 獅子鄉 牡丹鄉 車城鄉 滿州鄉 恆春鎮 琉球鄉"
+	  }, {
+	    "name": "潘維剛",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6031",
+	        "address": "10051臺北市中正區濟南路1段3-1號0201室",
+	        "fax": "02-2358-6035"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "盧秀燕",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TXG", 5],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8121",
+	        "address": "10051臺北市中正區青島東路1-3號7101室",
+	        "fax": "02-2358-8125"
+	      },
+	      "台中服務處": {
+	        "phone": "04-2319-9770",
+	        "address": "臺中市北區博館路92號4樓",
+	        "fax": "04-2319-9760"
+	      }
+	    },
+	    "constituency_detail": "北屯區 北區"
+	  }, {
+	    "name": "盧嘉辰",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 10],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6911",
+	        "address": "10051臺北市中正區濟南路1段3-1號0202室",
+	        "fax": "02-2358-6915"
+	      },
+	      "土城服務處": {
+	        "phone": "02-2268-9268",
+	        "address": "新北市土城區中央路3段85-1號",
+	        "fax": "02-2268-9269"
+	      },
+	      "三峽服務處": {
+	        "phone": "02-2672-8399",
+	        "address": "新北市三峽區中正路一段108巷7弄17號",
+	        "fax": "02-2672-8599"
+	      }
+	    },
+	    "constituency_detail": "土城區 三峽區"
+	  }, {
+	    "name": "蕭美琴",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6176",
+	        "address": "10051臺北市中正區青島東路10號3503室",
+	        "fax": "02-2358-6180"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "薛凌",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6056",
+	        "address": "10051臺北市中正區濟南路1段3-1號0207室",
+	        "fax": "02-2358-6060"
+	      },
+	      "重慶服務處": {
+	        "phone": "02-2811-4556",
+	        "address": "臺北市重慶北路4段186號",
+	        "fax": "02-2813-3582"
+	      },
+	      "後港服務處": {
+	        "phone": "02-2883-9006",
+	        "address": "臺北市士林區華齡街88之2號",
+	        "fax": "02-2883-0263"
+	      },
+	      "北投服務處": {
+	        "phone": "02-2891-5265",
+	        "address": "臺北市北投區大同街221號",
+	        "fax": "02-2891-3096"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "賴士葆",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPE", 8],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8166",
+	        "address": "10051臺北市中正區青島東路1-3號7201室",
+	        "fax": "02-2358-8170"
+	      },
+	      "文山服務處": {
+	        "phone": "02-2935-5358",
+	        "address": "臺北市文山區景興路254號",
+	        "fax": "02-2930-0945"
+	      }
+	    },
+	    "constituency_detail": "文山區 中正區10里"
+	  }, {
+	    "name": "謝國樑",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["KEE", 0],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-8066",
+	        "address": "10051臺北市中正區鎮江街2號5101室",
+	        "fax": "02-2358-8070"
+	      },
+	      "基隆服務處": {
+	        "phone": "02-2427-8899",
+	        "address": "基隆市中正區愛三路37號6樓",
+	        "fax": "02-2421-3639"
+	      }
+	    },
+	    "constituency_detail": "全市"
+	  }, {
+	    "name": "陳素月",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["CHA", 4],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6691",
+	        "address": "10051臺北市中正區濟南路1段3-1號2109室",
+	        "fax": "02-2358-6695"
+	      },
+	      "員林服務處": {
+	        "phone": "04-832-8552",
+	        "address": "彰化縣員林鎮惠來里惠明街219號",
+	        "fax": "04-835-3414"
+	      },
+	      "社頭服務處": {
+	        "phone": "04-871-1433",
+	        "address": "彰化縣社頭鄉社頭村員集路二段370號",
+	        "fax": "04-873-6266"
+	      },
+	      "田中服務處": {
+	        "phone": "04-875-2170",
+	        "address": "彰化縣田中鎮西路里斗中路一段68巷4號",
+	        "fax": "04-876-1432"
+	      }
+	    },
+	    "constituency_detail": "大村鄉 員林鎮 永靖鄉 社頭鄉 田尾鄉 田中鎮 二水鄉"
+	  }, {
+	    "name": "簡東明",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["aborigine", "highland"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6681",
+	        "address": "10051臺北市中正區濟南路1段3-1號1005室",
+	        "fax": "02-2358-6685"
+	      },
+	      "屏東服務處": {
+	        "phone": "08-732-2728",
+	        "address": "90071屏東市廣東路1324號",
+	        "fax": "08-732-6442"
+	      }
+	    },
+	    "constituency_detail": "山地原住民"
+	  }, {
+	    "name": "顏寬恒",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TXG", 2],
+	    "contact": {
+	      " ": {},
+	      "": {}
+	    },
+	    "constituency_detail": "沙鹿鎮 龍井鄉 大肚鄉 烏日鄉 霧峰 大里市2里"
+	  }, {
+	    "name": "羅明才",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPQ", 11],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6546",
+	        "address": "10051臺北市中正區濟南路1段3-1號1106室",
+	        "fax": "02-2358-6780"
+	      },
+	      "新店服務處": {
+	        "phone": "02-2915-7788",
+	        "address": "新北市新店區中正路54巷8號1樓",
+	        "fax": "02-2911-1448"
+	      }
+	    },
+	    "constituency_detail": "新店區 深坑區 石碇區 坪林區 烏來區"
+	  }, {
+	    "name": "羅淑蕾",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["TPE", 3],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6156",
+	        "address": "10051臺北市中正區濟南路1段3-1號0406室",
+	        "fax": "02-2358-6160"
+	      },
+	      "松山服務處": {
+	        "phone": "02-2719-5580",
+	        "address": "臺北市松山區光復北路240號",
+	        "fax": "02-2718-6878"
+	      },
+	      "中山服務處": {
+	        "phone": "02-2563-8251",
+	        "address": "臺北市民權東路二段26號6樓之7",
+	        "fax": "02-2561-1035"
+	      }
+	    },
+	    "constituency_detail": "中山區 松山區20里"
+	  }, {
+	    "name": "蘇清泉",
+	    "party": "中國國民黨",
+	    "party_eng": "KMT",
+	    "caucus": "KMT",
+	    "constituency": ["proportional"],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6571",
+	        "address": "10051臺北市中正區青島東路10號3505室",
+	        "fax": "02-2358-6575"
+	      },
+	      "東港服務處": {
+	        "phone": "08-833-4517",
+	        "address": "屏東縣東港鎮東隆里東隆街6-2號",
+	        "fax": "08-832-9977"
+	      }
+	    },
+	    "constituency_detail": ""
+	  }, {
+	    "name": "蘇震清",
+	    "party": "民主進步黨",
+	    "party_eng": "DPP",
+	    "caucus": "DPP",
+	    "constituency": ["PIF", 1],
+	    "contact": {
+	      "國會研究室": {
+	        "phone": "02-2358-6636",
+	        "address": "10051臺北市中正區濟南路1段3-1號0708室",
+	        "fax": "02-2358-6640"
+	      },
+	      "屏東服務處": {
+	        "phone": "08-766-6636",
+	        "address": "屏東縣屏東市自由路586號",
+	        "fax": "08-766-6262"
+	      }
+	    },
+	    "constituency_detail": "里港鄉 高樹鄉 三地門鄉"
+	  }] };
+
+/***/ },
+/* 89 */
 /*!**************************************************!*\
   !*** ./app/components/RecordList/RecordList.jsx ***!
   \**************************************************/
@@ -6941,25 +9679,25 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
 	var _LegislatorLegislatorJsx = __webpack_require__(/*! ../Legislator/Legislator.jsx */ 29);
 
 	var _LegislatorLegislatorJsx2 = _interopRequireDefault(_LegislatorLegislatorJsx);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 97);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	var _RecordRecordJsx = __webpack_require__(/*! ../Record/Record.jsx */ 251);
+	var _RecordRecordJsx = __webpack_require__(/*! ../Record/Record.jsx */ 263);
 
 	var _RecordRecordJsx2 = _interopRequireDefault(_RecordRecordJsx);
 
-	__webpack_require__(/*! ./RecordList.css */ 252);
+	__webpack_require__(/*! ./RecordList.css */ 264);
 
 	var RecordList = (function (_React$Component) {
 	    function RecordList(props) {
@@ -7627,37 +10365,23 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 85 */
-/*!**************************************************!*\
-  !*** ./app/containers/PersonPage/PersonPage.css ***!
-  \**************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 86 */
-/*!************************************************************!*\
-  !*** ./app/containers/PersonIssuePage/PersonIssuePage.css ***!
-  \************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 87 */
-/*!****************************************!*\
-  !*** ./app/components/Input/Input.jsx ***!
-  \****************************************/
+/* 90 */
+/*!**************************************!*\
+  !*** ./app/components/Tabs/Tabs.jsx ***!
+  \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { desc = parent = getter = undefined; _again = false; var object = _x,
+	    property = _x2,
+	    receiver = _x3; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -7669,83 +10393,172 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./Input.css */ 250);
+	__webpack_require__(/*! ./Tabs.css */ 262);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _classnames = __webpack_require__(/*! classnames */ 108);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	var Input = (function (_React$Component) {
-	  function Input() {
-	    _classCallCheck(this, Input);
+	var Tabs = (function (_React$Component) {
+		function Tabs(props) {
+			_classCallCheck(this, Tabs);
 
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
-	  }
+			_get(Object.getPrototypeOf(Tabs.prototype), "constructor", this).call(this, props);
+			this.state = {
+				scrolling: false,
+				showSubitems: false
+			};
+		}
 
-	  _inherits(Input, _React$Component);
+		_inherits(Tabs, _React$Component);
 
-	  _createClass(Input, [{
-	    key: "render",
-	    value: function render() {
-	      var _this = this;
+		_createClass(Tabs, [{
+			key: "_onScroll",
+			value: function _onScroll() {
+				//console.log("scrolling: ");
+				//console.log(pageYOffset)
+				if (pageYOffset >= 230 && !this.state.scrolling) {
+					this.setState({
+						scrolling: true
+					});
+				}
+				if (pageYOffset < 230 && this.state.scrolling) {
+					this.setState({
+						scrolling: false
+					});
+				}
+			}
+		}, {
+			key: "_toggleSubitems",
+			value: function _toggleSubitems() {
+				this.setState({
+					showSubitems: !this.state.showSubitems
+				});
+			}
+		}, {
+			key: "componentDidMount",
+			value: function componentDidMount() {
+				window.addEventListener("scroll", this._onScroll.bind(this, null), false);
+			}
+		}, {
+			key: "componentWillUnmount",
+			value: function componentWillUnmount() {
+				window.removeEventListener("scroll", this._onScroll.bind(this, null), false);
+			}
+		}, {
+			key: "render",
+			value: function render() {
+				var currentTab = this.props.currentTab;
+				var showSubitems = this.state.showSubitems;
 
-	      var _props = this.props;
-	      var handleInputChange = _props.handleInputChange;
-	      var handleSetInput = _props.handleSetInput;
-	      var currentTerm = _props.currentTerm;
-	      var examples = _props.examples;
-	      var placeholder = _props.placeholder;
+				var tabClasses = _classnames2["default"]({
+					"Tabs": true,
+					"is-scrolling": this.state.scrolling
+				});
 
-	      var exampleButtons = examples.map(function (item, key) {
-	        var boundClick = handleSetInput.bind(_this, item);
+				var totalClass = "Tabs-item";
+				var issueClass = "Tabs-item";
+				if (currentTab === "立場總覽") {
+					totalClass += " is-active";
+				} else {
+					issueClass += " is-active";
+				}
 
-	        return _react2["default"].createElement(
-	          "div",
-	          { className: "Input-keyword",
-	            onClick: boundClick,
-	            key: key },
-	          item
-	        );
-	      });
+				var subitemClasses = _classnames2["default"]({
+					"Tabs-subTabs": true,
+					"is-show": showSubitems && currentTab === "婚姻平權"
+				});
 
-	      var boundClearInput = handleSetInput.bind(this, "");
-	      var boundClearInputItem = currentTerm ? _react2["default"].createElement(
-	        "div",
-	        { className: "Input-clearInput",
-	          onClick: boundClearInput },
-	        "x"
-	      ) : "";
+				return _react2["default"].createElement(
+					"div",
+					{ className: tabClasses },
+					_react2["default"].createElement(
+						"div",
+						{ className: "Tabs-items" },
+						_react2["default"].createElement(
+							"div",
+							{ className: "Tabs-maxWidth" },
+							_react2["default"].createElement(
+								_reactRouter.Link,
+								{ className: totalClass,
+									to: "person" },
+								"立場總覽"
+							),
+							_react2["default"].createElement(
+								"div",
+								{ className: "Tabs-item" },
+								"食品安全"
+							),
+							_react2["default"].createElement(
+								_reactRouter.Link,
+								{ className: issueClass,
+									to: "personIssue",
+									params: { issue: "same-sex-marriage" },
+									onClick: this._toggleSubitems.bind(this) },
+								"婚姻平權",
+								_react2["default"].createElement(
+									"div",
+									{ className: subitemClasses },
+									_react2["default"].createElement(
+										"div",
+										{ className: "Tabs-subItem" },
+										"婚姻平權子議題1"
+									),
+									_react2["default"].createElement(
+										"div",
+										{ className: "Tabs-subItem" },
+										"婚姻平權子議題2"
+									),
+									_react2["default"].createElement(
+										"div",
+										{ className: "Tabs-subItem" },
+										"婚姻平權子議題3"
+									)
+								)
+							),
+							_react2["default"].createElement(
+								"div",
+								{ className: "Tabs-scrollRight" },
+								_react2["default"].createElement(_IconIconJsx2["default"], { icon: "chevron-right" })
+							)
+						)
+					)
+				);
+			}
+		}]);
 
-	      return _react2["default"].createElement(
-	        "div",
-	        { className: "Input" },
-	        _react2["default"].createElement("input", { className: "Input-textInput",
-	          onChange: handleInputChange,
-	          placeholder: placeholder,
-	          value: currentTerm }),
-	        boundClearInputItem,
-	        _react2["default"].createElement(
-	          "div",
-	          { className: "Input-hint" },
-	          "大家都在找：",
-	          exampleButtons
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Input;
+		return Tabs;
 	})(_react2["default"].Component);
 
-	exports["default"] = Input;
+	exports["default"] = Tabs;
 	module.exports = exports["default"];
 
 /***/ },
-/* 88 */
+/* 91 */
+/*!************************************************************!*\
+  !*** ./app/containers/PersonIssuePage/PersonIssuePage.css ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 92 */
+/*!**************************************************!*\
+  !*** ./app/containers/PersonPage/PersonPage.css ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 93 */
 /*!********************************************************!*\
   !*** ./app/containers/IssueListPage/IssueListPage.css ***!
   \********************************************************/
@@ -7754,20 +10567,20 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 89 */
+/* 94 */
 /*!***********************************************************!*\
   !*** ./app/containers/IssueListPage/images ^\.\/.*\.png$ ***!
   \***********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./1.png": 224,
-		"./2.png": 225,
-		"./3.png": 226,
-		"./4.png": 227,
-		"./5.png": 228,
-		"./6.png": 229,
-		"./7.png": 230
+		"./1.png": 237,
+		"./2.png": 238,
+		"./3.png": 239,
+		"./4.png": 240,
+		"./5.png": 241,
+		"./6.png": 242,
+		"./7.png": 243
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -7780,11 +10593,11 @@ module.exports =
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 89;
+	webpackContext.id = 94;
 
 
 /***/ },
-/* 90 */
+/* 95 */
 /*!*****************************************************!*\
   !*** ./app/containers/IssueVotePage/ly-position.js ***!
   \*****************************************************/
@@ -10633,7 +13446,7 @@ module.exports =
 	    }] };
 
 /***/ },
-/* 91 */
+/* 96 */
 /*!******************************************************!*\
   !*** ./app/components/OpinionGroup/OpinionGroup.jsx ***!
   \******************************************************/
@@ -10661,17 +13474,17 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _OverviewWallAvatarOverviewWallAvatarJsx = __webpack_require__(/*! ../OverviewWallAvatar/OverviewWallAvatar.jsx */ 253);
+	var _OverviewWallAvatarOverviewWallAvatarJsx = __webpack_require__(/*! ../OverviewWallAvatar/OverviewWallAvatar.jsx */ 265);
 
 	var _OverviewWallAvatarOverviewWallAvatarJsx2 = _interopRequireDefault(_OverviewWallAvatarOverviewWallAvatarJsx);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	__webpack_require__(/*! ./OpinionGroup.css */ 254);
+	__webpack_require__(/*! ./OpinionGroup.css */ 266);
 
 	var OpinionGroupr = (function (_React$Component) {
 	    function OpinionGroupr(props) {
@@ -10790,7 +13603,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 92 */
+/* 97 */
 /*!********************************************************!*\
   !*** ./app/containers/IssueVotePage/IssueVotePage.css ***!
   \********************************************************/
@@ -10799,7 +13612,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 93 */
+/* 98 */
 /*!**************************************************!*\
   !*** ./app/containers/IssueVotePage/data/for.js ***!
   \**************************************************/
@@ -11361,7 +14174,7 @@ module.exports =
 	    }] };
 
 /***/ },
-/* 94 */
+/* 99 */
 /*!******************************************************!*\
   !*** ./app/containers/IssueVotePage/data/against.js ***!
   \******************************************************/
@@ -11642,7 +14455,7 @@ module.exports =
 	};
 
 /***/ },
-/* 95 */
+/* 100 */
 /*!******************************************************!*\
   !*** ./app/containers/IssueVotePage/data/unclear.js ***!
   \******************************************************/
@@ -11682,7 +14495,7 @@ module.exports =
 	};
 
 /***/ },
-/* 96 */
+/* 101 */
 /*!***************************************************!*\
   !*** ./app/containers/IssueVotePage/data/none.js ***!
   \***************************************************/
@@ -11826,107 +14639,7 @@ module.exports =
 	};
 
 /***/ },
-/* 97 */
-/*!**************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/LegislatorAvatar.jsx ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(/*! react */ 1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
-
-	__webpack_require__(/*! ./LegislatorAvatar.css */ 255);
-
-	var LegislatorAvatar = (function (_React$Component) {
-	  function LegislatorAvatar() {
-	    _classCallCheck(this, LegislatorAvatar);
-
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
-	  }
-
-	  _inherits(LegislatorAvatar, _React$Component);
-
-	  _createClass(LegislatorAvatar, [{
-	    key: "render",
-	    value: function render() {
-	      var _props = this.props;
-	      var data = _props.data;
-	      var plain = _props.plain;
-	      var party = _props.party;
-	      var name = _props.name;
-
-	      var imgURL;
-
-	      try {
-	        imgURL = __webpack_require__(/*! ./images/avatar */ 256)("./" + data + ".png");
-	      } catch (e) {
-	        imgURL = __webpack_require__(/*! ./images/default.jpg */ 257);
-	      }
-
-	      var name = name ? _react2["default"].createElement(
-	        "div",
-	        { className: "LegislatorAvatar-name" },
-	        data
-	      ) : "";
-
-	      var imgClass = "LegislatorAvatar-avatar";
-	      if (party) {
-	        imgClass += " is-" + party;
-	      }
-	      var result = _react2["default"].createElement(
-	        "div",
-	        { className: "LegislatorAvatar" },
-	        _react2["default"].createElement("img", { className: imgClass,
-	          src: imgURL }),
-	        name
-	      );
-
-	      if (plain) {
-	        var name = name ? _react2["default"].createElement(
-	          "div",
-	          { className: "LegislatorAvatar-namePlain" },
-	          data
-	        ) : "";
-	        result = _react2["default"].createElement(
-	          "div",
-	          { className: "LegislatorAvatar" },
-	          _react2["default"].createElement("img", { className: "LegislatorAvatar-avatarPlain",
-	            src: imgURL }),
-	          name
-	        );
-	      }
-
-	      return result;
-	    }
-	  }]);
-
-	  return LegislatorAvatar;
-	})(_react2["default"].Component);
-
-	exports["default"] = LegislatorAvatar;
-	module.exports = exports["default"];
-
-/***/ },
-/* 98 */
+/* 102 */
 /*!************************************************!*\
   !*** ./app/containers/IssuePage/IssuePage.css ***!
   \************************************************/
@@ -11935,7 +14648,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 99 */
+/* 103 */
 /*!*********************************************!*\
   !*** ./app/containers/IssuePage/ly-info.js ***!
   \*********************************************/
@@ -12100,2286 +14813,43 @@ module.exports =
 	  }] };
 
 /***/ },
-/* 100 */
-/*!**********************************************************!*\
-  !*** ./app/containers/PersonListPage/PersonListPage.css ***!
-  \**********************************************************/
+/* 104 */
+/*!******************************************!*\
+  !*** external "react/lib/Object.assign" ***!
+  \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = {};
+	module.exports = require("react/lib/Object.assign");
 
 /***/ },
-/* 101 */
-/*!**************************************************!*\
-  !*** ./app/containers/PersonListPage/ly-info.js ***!
-  \**************************************************/
+/* 105 */
+/*!**************************************!*\
+  !*** external "react/lib/invariant" ***!
+  \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	module.exports = {
-	  "data": [{
-	    "name": "許忠信",
-	    "party": "台灣團結聯盟",
-	    "party_eng": "TSU",
-	    "caucus": "TSU",
-	    "constituency": ["proportional"]
-	  }, {
-	    "name": "丁守中",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPE", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6706",
-	        "address": "10051臺北市中正區濟南路1段3-1號0707室",
-	        "fax": "02-2358-6710"
-	      },
-	      "北投服務處": {
-	        "phone": "02-2828-7789",
-	        "address": "11262臺北市北投區承德路七段188巷2號1樓",
-	        "fax": "02-2828-6877"
-	      }
-	    },
-	    "constituency_detail": "北投區 士林區13里"
-	  }, {
-	    "name": "孔文吉",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["aborigine", "highland"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8246",
-	        "address": "10051臺北市中正區濟南路1段3-1號0203室",
-	        "fax": "02-2358-8250"
-	      }
-	    },
-	    "constituency_detail": "山地原住民"
-	  }, {
-	    "name": "尤美女",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8112",
-	        "address": "10051臺北市中正區濟南路1段3-1號0402室",
-	        "fax": "02-2358-8113"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "王廷升",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["HUA", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6688",
-	        "address": "10051臺北市中正區濟南路1段3-1號1103室",
-	        "fax": "02-2358-6690"
-	      },
-	      "花蓮市服務處": {
-	        "phone": "03-833-0729",
-	        "address": "970花蓮市中原路462號",
-	        "fax": "03-836-2156"
-	      }
-	    },
-	    "constituency_detail": "全縣"
-	  }, {
-	    "name": "王育敏",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8261",
-	        "address": "10051臺北市中正區青島東路1-3號7103室",
-	        "fax": "02-2358-8265"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "王金平",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6011~15",
-	        "address": "10051臺北市中正區中山南路1號",
-	        "fax": "02-2395-5317"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-607-5509",
-	        "address": "高雄市路竹區甲南村大仁路369巷7號",
-	        "fax": "07-607-5669"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "王進士",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["PIF", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6626",
-	        "address": "10051臺北市中正區濟南路1段3-1號0401室",
-	        "fax": "02-2358-6630"
-	      },
-	      "屏東服務處": {
-	        "phone": "08-723-2505",
-	        "address": "屏東市公園東路115號",
-	        "fax": "08-721-5191"
-	      },
-	      "萬丹服務處": {
-	        "phone": "08-776-3989",
-	        "address": "屏東縣萬丹鄉萬全村萬丹路一段412號",
-	        "fax": "08-776-3989"
-	      }
-	    },
-	    "constituency_detail": "屏東市 麟洛鄉 萬丹鄉"
-	  }, {
-	    "name": "王惠美",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["CHA", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6181",
-	        "address": "10051臺北市中正區濟南路1段3-1號0501室",
-	        "fax": "02-2358-6185"
-	      },
-	      "鹿港服務處": {
-	        "phone": "04-775-4168",
-	        "address": "彰化縣鹿港鎮永安里鹿東路55號",
-	        "fax": "04-777-9150"
-	      },
-	      "和美服務處": {
-	        "phone": "04-757-8568",
-	        "address": "彰化縣和美鎮德美路456號",
-	        "fax": "04-757-4822"
-	      }
-	    },
-	    "constituency_detail": "伸港鄉 線西鄉 和美鎮 鹿港鎮 福興鄉 秀水鄉"
-	  }, {
-	    "name": "田秋堇",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8316",
-	        "address": "10051臺北市中正區濟南路1段3-1號0806室",
-	        "fax": "02-2358-8320"
-	      },
-	      "立法委員田秋堇服務處": {
-	        "phone": "03-960-1321",
-	        "address": "羅東鎮中山路2段171號",
-	        "fax": "03-960-1592"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "江啟臣",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TXG", 8],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6726",
-	        "address": "10051臺北市中正區濟南路1段3-1號2102室",
-	        "fax": "02-2358-6730"
-	      },
-	      "豐原服務處": {
-	        "phone": "04-2515-9998",
-	        "address": "臺中市豐原區南村路20號",
-	        "fax": "04-2515-6798"
-	      },
-	      "東勢服務處": {
-	        "phone": "04-2577-3099",
-	        "address": "臺中市東勢區第五橫街32號",
-	        "fax": "04-2577-3167"
-	      }
-	    },
-	    "constituency_detail": "豐原區 石岡區 新社區 東勢區 和平區"
-	  }, {
-	    "name": "江惠貞",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 7],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6532",
-	        "address": "10051臺北市中正區濟南路1段3-1號0808室",
-	        "fax": "02-2358-6585"
-	      },
-	      "板橋服務處": {
-	        "phone": "02-2961-0599",
-	        "address": "新北市板橋區實踐路30號2樓",
-	        "fax": "02-2961-9899"
-	      }
-	    },
-	    "constituency_detail": "板橋區（縣民大道 湳仔溝以東）61里"
-	  }, {
-	    "name": "何欣純",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TXG", 7],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8388",
-	        "address": "10051臺北市中正區濟南路1段3-1號0301室",
-	        "fax": "02-2358-8390"
-	      },
-	      "大里服務處": {
-	        "phone": "04-2483-6527",
-	        "address": "臺中市大里區大里路63號",
-	        "fax": "04-2482-8743"
-	      },
-	      "太平服務處": {
-	        "phone": "04-2276-3111",
-	        "address": "台中市太平區新平路二段142號",
-	        "fax": "04-2276-3555"
-	      }
-	    },
-	    "constituency_detail": "太平區 大里區25里"
-	  }, {
-	    "name": "吳宜臻",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8580",
-	        "address": "10051臺北市中正區鎮江街2號5105室",
-	        "fax": "02-2358-8135"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "吳育仁",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6656",
-	        "address": "10051臺北市中正區濟南路1段3-1號0305室",
-	        "fax": "02-2358-6660"
-	      },
-	      "雲林服務處": {
-	        "phone": "05-537-5331",
-	        "address": "640雲林縣斗六市明德北路二段401號",
-	        "fax": "05-537-5351"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "吳育昇",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8011",
-	        "address": "10051臺北市中正區青島東路10號3502室",
-	        "fax": "02-2358-8015"
-	      },
-	      "泰山服務處": {
-	        "phone": "02-2296-0360",
-	        "address": "新北市泰山區明志路一段478號2樓",
-	        "fax": "02-2296-1607"
-	      },
-	      "淡水服務處": {
-	        "phone": "02-2625-5158",
-	        "address": "新北市淡水區中正東路55號2樓(淡水捷運站對面)",
-	        "fax": "02-2625-5159"
-	      },
-	      "林口服務處": {
-	        "phone": "02-2601-8588",
-	        "address": "新北市林口區中正路100號",
-	        "fax": "02-2601-8589"
-	      }
-	    },
-	    "constituency_detail": "石門區 三芝區 淡水區 八里區 林口區 泰山區"
-	  }, {
-	    "name": "吳秉叡",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6858",
-	        "address": "10051臺北市中正區濟南路1段3-1號0902室",
-	        "fax": "02-2358-6859"
-	      },
-	      "福營服務處": {
-	        "phone": "02-2208-3852",
-	        "address": "新北市新莊區後港一路130巷48號1樓",
-	        "fax": "02-2208-3853"
-	      },
-	      "大新莊服務處": {
-	        "phone": "02-2276-8287",
-	        "address": "新北市新莊區中原路327號1樓",
-	        "fax": "02-2277-5657"
-	      },
-	      "新北總聯絡處": {
-	        "phone": "02-8522-5786",
-	        "address": "新北市新莊區化成路路814巷1號",
-	        "fax": "02-8522-5726"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "呂玉玲",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TAO", 5],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6836",
-	        "address": "10051臺北市中正區濟南路1段3-1號0905室",
-	        "fax": "02-2358-6840"
-	      },
-	      "平鎮服務處": {
-	        "phone": "03-401-5616",
-	        "address": "桃園縣平鎮市復興街68號2樓之2",
-	        "fax": "03-401-0616"
-	      },
-	      "龍潭服務處": {
-	        "phone": "03-409-6688",
-	        "address": "桃園縣龍潭鄉東龍路124號",
-	        "fax": "03-480-6549"
-	      }
-	    },
-	    "constituency_detail": "平鎮市 龍潭鄉"
-	  }, {
-	    "name": "呂學樟",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["HSZ", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6258",
-	        "address": "10051臺北市中正區濟南路1段3-1號0407室",
-	        "fax": "02-2358-6260"
-	      },
-	      "新竹服務處": {
-	        "phone": "03-535-8181",
-	        "address": "新竹市民族路272號",
-	        "fax": "03-542-9399"
-	      }
-	    },
-	    "constituency_detail": "全市"
-	  }, {
-	    "name": "李昆澤",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["KHH", 6],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6086",
-	        "address": "10051臺北市中正區濟南路1段3-1號2106室",
-	        "fax": "02-2358-6090"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-386-8292",
-	        "address": "高雄市三民區大昌二路63號",
-	        "fax": "07-386-3277"
-	      }
-	    },
-	    "constituency_detail": "三民區45里"
-	  }, {
-	    "name": "李俊俋",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["CYI", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6541",
-	        "address": "10051臺北市中正區濟南路1段3-1號1001室",
-	        "fax": "02-2358-6545"
-	      },
-	      "嘉義服務處": {
-	        "phone": "05-271-9595",
-	        "address": "600嘉義市共和路239號",
-	        "fax": "05-277-9775"
-	      }
-	    },
-	    "constituency_detail": "全市"
-	  }, {
-	    "name": "李桐豪",
-	    "party": "親民黨",
-	    "party_eng": "PFP",
-	    "caucus": "PFP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8306",
-	        "address": "10051臺北市中正區濟南路1段3-1號2116室",
-	        "fax": "02-2358-8310"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "李貴敏",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6246",
-	        "address": "10051臺北市中正區鎮江街2號5302室",
-	        "fax": "02-2358-6380"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "李慶華",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 12],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6521",
-	        "address": "10051臺北市中正區濟南路1段3-1號2111室",
-	        "fax": "02-2358-6525"
-	      },
-	      "汐止服務處": {
-	        "phone": "02-2694-1301",
-	        "address": "新北市汐止區中興路95號4樓之3",
-	        "fax": "02-2694-1302"
-	      },
-	      "瑞芳服務處": {
-	        "phone": "02-2497-7809",
-	        "address": "新北市瑞芳區瑞芳街45號2樓",
-	        "fax": "02-2497-1969"
-	      }
-	    },
-	    "constituency_detail": "金山區 萬里區 汐止區 平溪區 瑞芳區 雙溪區 貢寮區"
-	  }, {
-	    "name": "李應元",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8156",
-	        "address": "10051臺北市中正區濟南路1段3-1號0701室",
-	        "fax": "02-2358-8165"
-	      },
-	      "斗六服務處": {
-	        "phone": "05-532-6355",
-	        "address": "雲林縣斗六市武昌路35號",
-	        "fax": "05-536-1451"
-	      },
-	      "虎尾服務處": {
-	        "phone": "05-636-5296",
-	        "address": "雲林縣虎尾鎮光復路505號",
-	        "fax": "05-636-5396"
-	      },
-	      "新莊服務處": {
-	        "phone": "02-2279-7241",
-	        "address": "新北市新莊區中華路二段105號2樓",
-	        "fax": "02-2995-5221"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "李鴻鈞",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 4],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6236",
-	        "address": "10051臺北市中正區濟南路1段3-1號1108室",
-	        "fax": "02-2358-6240"
-	      },
-	      "新莊服務處": {
-	        "phone": "02-2992-9199",
-	        "address": "新北市新莊區公園路36號",
-	        "fax": "02-2992-9818"
-	      }
-	    },
-	    "constituency_detail": "新莊區75里"
-	  }, {
-	    "name": "邱文彥",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8106",
-	        "address": "10051臺北市中正區鎮江街2號5108室",
-	        "fax": "02-2358-8110"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "邱志偉",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["KHH", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6561",
-	        "address": "10051臺北市中正區青島東路1-3號7303室",
-	        "fax": "02-2358-6565"
-	      },
-	      "岡山服務處": {
-	        "phone": "07-623-0655",
-	        "address": "高雄市岡山區華園路99號",
-	        "fax": "07-623-0671"
-	      },
-	      "茄萣服務處": {
-	        "phone": "07-690-1234",
-	        "address": "高雄市茄萣區信義路三段138號",
-	        "fax": "07-690-2598"
-	      },
-	      "橋頭區邱志偉立委與陳政聞議員聯合服務處": {
-	        "phone": "07-612-3058",
-	        "address": "高雄市橋頭區成功路237號",
-	        "fax": "07-611-4926"
-	      },
-	      "路竹區邱志偉立委與陳明澤議員聯合服務處": {
-	        "phone": "07-607-1999",
-	        "address": "高雄市路竹區國昌路73號",
-	        "fax": "07-607-6869"
-	      },
-	      "路竹區邱志偉立委與張文瑞議員聯合服務處": {
-	        "phone": "07-696-0525",
-	        "address": "高雄市路竹區國昌路82號",
-	        "fax": "07-691-8588"
-	      }
-	    },
-	    "constituency_detail": "茄萣區 湖內區 路竹區 永安區 岡山區 彌陀區 梓官區 橋頭區"
-	  }, {
-	    "name": "邱議瑩",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["KHH", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6516",
-	        "address": "10051臺北市中正區濟南路1段3-1號0801室",
-	        "fax": "02-2358-6520"
-	      },
-	      "美濃服務處": {
-	        "phone": "07-681-8755",
-	        "address": "843高雄市美濃區泰中路866號",
-	        "fax": "07-681-8677"
-	      }
-	    },
-	    "constituency_detail": "那瑪夏區 桃源區 甲仙區 內門區 杉林區 六龜區 阿蓮區 田寮區 旗山區 美濃區 茂林區 燕巢區 大社區 大樹區"
-	  }, {
-	    "name": "賴振昌",
-	    "party": "台灣團結聯盟",
-	    "party_eng": "TSU",
-	    "caucus": "TSU",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8558",
-	        "address": "10051臺北市中正區濟南路一段3-1號1008室",
-	        "fax": "02-2358-8560"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "黃國書",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TXG", 6],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8358",
-	        "address": "10051臺北市中正區濟南路1段3-1號0302室",
-	        "fax": "02-2358-8050"
-	      },
-	      "台中服務處": {
-	        "phone": "04-2262-0088",
-	        "address": "臺中市南區復興路二段30-22號",
-	        "fax": "04-2265-8822"
-	      }
-	    },
-	    "constituency_detail": "西區 中區 東區 南區"
-	  }, {
-	    "name": "林岱樺",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["KHH", 4],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8021",
-	        "address": "10051臺北市中正區濟南路1段3-1號0706室",
-	        "fax": "02-2358-8030"
-	      },
-	      "大竂服務處": {
-	        "phone": "07-781-8117",
-	        "address": "高雄市大竂區力行路61號",
-	        "fax": "07-781-8167"
-	      },
-	      "鳳山服務處": {
-	        "phone": "07-748-1033",
-	        "address": "高雄市鳳山區五權路160號",
-	        "fax": "07-741-9584"
-	      }
-	    },
-	    "constituency_detail": "仁武區 鳥松區 大寮區 林園區"
-	  }, {
-	    "name": "莊瑞雄",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["NAN", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6171",
-	        "address": "10051臺北市中正區濟南路1段3-1號0805室",
-	        "fax": "02-2358-6270"
-	      },
-	      "南投服務處": {
-	        "phone": "049-222-7688",
-	        "address": "南投市復興路75號之1",
-	        "fax": "049-224-2379"
-	      }
-	    },
-	    "constituency_detail": "南投市 名間鄉 集集鎮 竹山鎮 鹿谷鄉 水里鄉 信義鄉"
-	  }, {
-	    "name": "林郁方",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPE", 5],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6276",
-	        "address": "10051臺北市中正區濟南路1段3-1號0601室",
-	        "fax": "02-2358-6280"
-	      }
-	    },
-	    "constituency_detail": "萬華區 中正區21里"
-	  }, {
-	    "name": "林國正",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["KHH", 9],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6923",
-	        "address": "10051臺北市中正區濟南路1段3-1號2119室",
-	        "fax": "02-2358-6925"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-721-1213",
-	        "address": "高雄市前鎮區永豐路19之6號",
-	        "fax": "07-721-3055"
-	      }
-	    },
-	    "constituency_detail": "前鎮區51里 小港區"
-	  }, {
-	    "name": "林淑芬",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TPQ", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8186",
-	        "address": "10051臺北市中正區青島東路1-3號7301室",
-	        "fax": "02-2358-8190"
-	      },
-	      "蘆洲服務處": {
-	        "phone": "02-8285-6412",
-	        "address": "新北市蘆洲區長興路25號",
-	        "fax": "02-2281-7980"
-	      },
-	      "五股服務處": {
-	        "phone": "02-2291-2995",
-	        "address": "臺北縣五股鄉民義路一段37號",
-	        "fax": "02-2291-2355"
-	      }
-	    },
-	    "constituency_detail": "五股區 蘆洲區 三重區16里"
-	  }, {
-	    "name": "林滄敏",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["CHA", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8281",
-	        "address": "10051臺北市中正區鎮江街2號5102室",
-	        "fax": "02-2358-8285"
-	      },
-	      "彰化服務處": {
-	        "phone": "04-728-2282",
-	        "address": "彰化市成功里旭光西路90號",
-	        "fax": "04-723-9961"
-	      }
-	    },
-	    "constituency_detail": "彰化市 花壇鄉 芬園鄉"
-	  }, {
-	    "name": "林德福",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 9],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6995",
-	        "address": "10051臺北市中正區青島東路1-3號7202室",
-	        "fax": "02-2358-6999"
-	      },
-	      "永和服務處": {
-	        "phone": "02-2232-9899",
-	        "address": "新北市永和區永和路二段403號",
-	        "fax": "02-3233-4625"
-	      }
-	    },
-	    "constituency_detail": "永和區 中和區17里"
-	  }, {
-	    "name": "林鴻池",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 6],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6871",
-	        "address": "10051臺北市中正區濟南路1段3-1號0506室",
-	        "fax": "02-2358-6875"
-	      },
-	      "板橋服務處": {
-	        "phone": "02-2253-6788",
-	        "address": "新北市板橋區文化路一段120號6樓之1",
-	        "fax": "02-2253-7688"
-	      }
-	    },
-	    "constituency_detail": "板橋區（縣民大道 湳仔溝以西）65里"
-	  }, {
-	    "name": "姚文智",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TPE", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6758",
-	        "address": "10051臺北市中正區濟南路1段3-1號1102室",
-	        "fax": "02-2358-6040"
-	      }
-	    },
-	    "constituency_detail": "大同區 士林區38里"
-	  }, {
-	    "name": "柯建銘",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6106",
-	        "address": "10051臺北市中正區青島東路3號3樓",
-	        "fax": "02-2358-6110"
-	      },
-	      "新竹服務處": {
-	        "phone": "03-526-9880",
-	        "address": "新竹市四維路15號3樓",
-	        "fax": "03-523-2902"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "段宜康",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6196",
-	        "address": "10051臺北市中正區濟南路1段3-1號0308室",
-	        "fax": "02-2358-6200"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "洪秀柱",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6099",
-	        "address": "10051臺北市中正區濟南路1段3-1號12樓",
-	        "fax": "02-2358-6100"
-	      },
-	      "立法委員洪秀柱服務處": {
-	        "phone": "02-8923-7667",
-	        "address": "新北市永和區永和路一段65巷2號",
-	        "fax": "02-8923-7668"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "紀國棟",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6936",
-	        "address": "10051臺北市中正區濟南路1段3-1號0303",
-	        "fax": "02-2358-6940"
-	      },
-	      "大肚服務處": {
-	        "phone": "04-2691-2967",
-	        "address": "臺中市大肚區自強里遊園路二段278號",
-	        "fax": "04-2691-3967"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "孫大千",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TAO", 6],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6881",
-	        "address": "10051臺北市中正區濟南路1段3-1號2118室",
-	        "fax": "02-2358-6885"
-	      },
-	      "桃園服務處": {
-	        "phone": "03-375-5558",
-	        "address": "桃園縣八德市廣福路299號",
-	        "fax": "03-375-2000"
-	      }
-	    },
-	    "constituency_detail": "八德市 大溪鎮 復興鄉 中壢市12里"
-	  }, {
-	    "name": "徐少萍",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6231",
-	        "address": "10051臺北市中正區濟南路1段3-1號0607室",
-	        "fax": "02-2358-6235"
-	      },
-	      "基隆服務處": {
-	        "phone": "02-2427-7799",
-	        "address": "基隆市義一路87號9樓之2",
-	        "fax": "02-2428-0097"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "徐欣瑩",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["HSQ", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6351",
-	        "address": "10051臺北市中正區濟南路1段3-1號0306室",
-	        "fax": "02-2358-6355"
-	      },
-	      "竹北服務處": {
-	        "phone": "03-657-1621",
-	        "address": "新竹縣竹北市光明六路235號",
-	        "fax": "03-657-2133"
-	      }
-	    },
-	    "constituency_detail": "全縣"
-	  }, {
-	    "name": "許淑華",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["MIA", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6975",
-	        "address": "10051臺北市中正區濟南路1段3-1號2107室",
-	        "fax": "02-2358-6979"
-	      },
-	      "頭份服務處": {
-	        "phone": "037-666-369",
-	        "address": "苗栗縣頭份鎮忠孝里信東路206號",
-	        "fax": "037-674-319"
-	      },
-	      "苗栗服務處": {
-	        "phone": "037-374-000",
-	        "address": "苗栗市自治路517號",
-	        "fax": "037-320-216"
-	      },
-	      "公館服務處": {
-	        "phone": "037-223-566",
-	        "address": "苗栗縣公館鄉仁愛路二段168-1號",
-	        "fax": "037-239-233"
-	      }
-	    },
-	    "constituency_detail": "頭份鎮 三灣鄉 南庄鄉 苗栗市 頭屋鄉 獅潭鄉 公館鄉 大湖鄉 泰安鄉 卓蘭鎮"
-	  }, {
-	    "name": "翁重鈞",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["CYQ", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6781",
-	        "address": "10051臺北市中正區濟南路1段3-1號0906室",
-	        "fax": "02-2358-6785"
-	      },
-	      "嘉義義竹服務處": {
-	        "phone": "05-341-2029",
-	        "address": "嘉義縣義竹鄉仁里村407-4號",
-	        "fax": "05-341-7251"
-	      }
-	    },
-	    "constituency_detail": "六腳鄉 東石鄉 朴子市 太保市 布袋鎮 義竹鄉 鹿草鄉 水上鄉"
-	  }, {
-	    "name": "陳其邁",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8566",
-	        "address": "10051臺北市中正區濟南路1段3-1號1105室",
-	        "fax": "02-2358-8570"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-382-5189",
-	        "address": "高雄市三民區九如一路399號",
-	        "fax": "07-382-5177"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "陳明文",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["CYQ", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8101",
-	        "address": "10051臺北市中正區青島東路1-3號7105室",
-	        "fax": "02-2358-8105"
-	      },
-	      "嘉義服務處": {
-	        "phone": "05-225-5589",
-	        "address": "600嘉義市力行街72號",
-	        "fax": "05-225-1641"
-	      }
-	    },
-	    "constituency_detail": "溪口鄉 大林鎮 梅山鄉 新港鄉 民雄鄉 竹崎鄉 中埔鄉 番路鄉 大埔鄉 阿里山鄉"
-	  }, {
-	    "name": "陳亭妃",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TNN", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6761",
-	        "address": "10051臺北市中正區濟南路1段3-1號1101室",
-	        "fax": "02-2358-6755"
-	      },
-	      "北區服務處": {
-	        "phone": "06-280-3906",
-	        "address": "704臺南市北區海安路三段963號",
-	        "fax": "06-358-6489"
-	      },
-	      "安南區服務處": {
-	        "phone": "06-256-8012",
-	        "address": "709臺南市安南區安中路二段8號",
-	        "fax": "06-256-0701"
-	      }
-	    },
-	    "constituency_detail": "安南區 北區 中西區"
-	  }, {
-	    "name": "陳唐山",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TNN", 5],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8211",
-	        "address": "10051臺北市中正區鎮江街2號5305室",
-	        "fax": "02-2358-8215"
-	      },
-	      "台南服務處": {
-	        "phone": "06-201-8217",
-	        "address": "臺南市永康區永忠路88號",
-	        "fax": "06-201-8219"
-	      }
-	    },
-	    "constituency_detail": "永康區 仁德區 歸仁區 關廟區 龍崎區"
-	  }, {
-	    "name": "陳根德",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TAO", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6221",
-	        "address": "10051臺北市中正區鎮江街2號5303室",
-	        "fax": "02-2358-6225"
-	      },
-	      "桃園市服務處": {
-	        "phone": "(03)338-6656",
-	        "address": "桃園縣桃園市大有路80號",
-	        "fax": "(03)338-6599"
-	      },
-	      "龜山服務處": {
-	        "phone": "03-329-9255",
-	        "address": "桃園縣龜山鄉三民路70號",
-	        "fax": "03-329-9769"
-	      },
-	      "蘆竹服務處": {
-	        "phone": "03-312-1988",
-	        "address": "桃園縣蘆竹鄉新南路一段128號",
-	        "fax": "03-312-1875"
-	      }
-	    },
-	    "constituency_detail": "蘆竹鄉 龜山鄉 桃園市10里"
-	  }, {
-	    "name": "陳淑慧",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6931",
-	        "address": "10051臺北市中正區濟南路1段3-1號1006室",
-	        "fax": "02-2358-6935"
-	      },
-	      "台南服務處": {
-	        "phone": "06-268-5889",
-	        "address": "臺南市東區崇明14街53號",
-	        "fax": "06-269-2889"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "陳雪生",
-	    "party": "無黨籍",
-	    "party_eng": "NP",
-	    "caucus": null,
-	    "constituency": ["LJF", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6631",
-	        "address": "10051臺北市中正區濟南路1段3-1號2117室",
-	        "fax": "02-2358-6635"
-	      },
-	      "馬祖服務處": {
-	        "phone": "0836-25018",
-	        "address": "連江縣南竿鄉介壽村237號"
-	      }
-	    },
-	    "constituency_detail": "全縣"
-	  }, {
-	    "name": "陳超明",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["MIA", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6611",
-	        "address": "10051臺北市中正區濟南路1段3-1號1003室",
-	        "fax": "02-2358-6615"
-	      },
-	      "竹南服務處": {
-	        "phone": "037-468-448",
-	        "address": "350苗栗縣竹南鎮港墘里10鄰塭內46-1號",
-	        "fax": "037-478-508"
-	      }
-	    },
-	    "constituency_detail": "竹南鎮 造橋鄉 後龍鎮 西湖鄉 通霄鎮 銅鑼鄉 苑裡鎮 三義鄉"
-	  }, {
-	    "name": "陳節如",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6046",
-	        "address": "10051臺北市中正區濟南路1段3-1號2115室",
-	        "fax": "02-2358-6050"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "陳碧涵",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8181",
-	        "address": "10051臺北市中正區濟南路1段3-1號0603室",
-	        "fax": "02-2358-8185"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "陳歐珀",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["ILA", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6220",
-	        "address": "10051臺北市中正區濟南路1段3-1號0408室",
-	        "fax": "02-2358-6170"
-	      },
-	      "宜蘭服務處": {
-	        "phone": "03-936-6299",
-	        "address": "宜蘭市民族路593號",
-	        "fax": "03-936-6189"
-	      },
-	      "羅東服務處": {
-	        "phone": "03-957-2099",
-	        "address": "羅東鎮興東南路152號",
-	        "fax": "03-957-2788"
-	      }
-	    },
-	    "constituency_detail": "全縣"
-	  }, {
-	    "name": "陳學聖",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TAO", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6699",
-	        "address": "10051臺北市中正區濟南路1段3-1號0908室",
-	        "fax": "02-2358-6700"
-	      },
-	      "中壢服務處": {
-	        "address": "桃園縣中壢市中央西路二段281號4樓"
-	      }
-	    },
-	    "constituency_detail": "中壢市69里"
-	  }, {
-	    "name": "陳鎮湘",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8286",
-	        "address": "10051臺北市中正區青島東路1-3號7302室",
-	        "fax": "02-2358-8290"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "馬文君",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["NAN", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6816",
-	        "address": "10051臺北市中正區青島東路1-3號7203室",
-	        "fax": "02-2358-6820"
-	      },
-	      "埔里服務處": {
-	        "phone": "049-242-3248",
-	        "address": "南投縣埔里鎮西寧路36號",
-	        "fax": "049-290-1626"
-	      },
-	      "草屯服務處": {
-	        "phone": "049-235-5807",
-	        "address": "南投縣草屯鎮博愛路411號",
-	        "fax": "049-235-5023"
-	      }
-	    },
-	    "constituency_detail": "草屯鎮 國姓鄉 埔里鎮 仁愛鄉 中寮鄉 魚池鄉"
-	  }, {
-	    "name": "高志鵬",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TPQ", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6241",
-	        "address": "10051臺北市中正區濟南路1段3-1號0503室",
-	        "fax": "02-2358-6245"
-	      },
-	      "三重服務處": {
-	        "phone": "02-8988-1368",
-	        "address": "新北市三重區忠孝路一段153號",
-	        "fax": "02-8988-3076"
-	      }
-	    },
-	    "constituency_detail": "三重區103里"
-	  }, {
-	    "name": "高金素梅",
-	    "party": "無黨團結聯盟",
-	    "party_eng": "NPU",
-	    "caucus": null,
-	    "constituency": ["aborigine", "highland"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6051",
-	        "address": "10051臺北市中正區青島東路10號3507室",
-	        "fax": "02-2358-6055"
-	      },
-	      "南區服務處": {
-	        "phone": "08-799-5962",
-	        "address": "屏東縣瑪家鄉北葉村9鄰風景巷1-3號",
-	        "fax": "08-799-5963"
-	      }
-	    },
-	    "constituency_detail": "山地原住民"
-	  }, {
-	    "name": "張嘉郡",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["YUN", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6970",
-	        "address": "10051臺北市中正區濟南路1段3-1號0206室",
-	        "fax": "02-2358-6974"
-	      },
-	      "虎尾服務處": {
-	        "phone": "05-632-0629",
-	        "address": "雲林縣虎尾鎮平和里青埔2-23號",
-	        "fax": "05-633-3318"
-	      },
-	      "北港服務處": {
-	        "phone": "05-782-2088",
-	        "address": "雲林縣北港鎮公園路406號",
-	        "fax": "05-782-2848"
-	      }
-	    },
-	    "constituency_detail": "麥寮鄉 台西鄉 東勢鄉 褒忠鄉 土庫鎮 虎尾鎮 四湖鄉 元長鄉 口湖鄉 水林鄉 北港鎮"
-	  }, {
-	    "name": "張慶忠",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 8],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6896",
-	        "address": "10051臺北市中正區濟南路1段3-1號1002室",
-	        "fax": "02-2358-6900"
-	      },
-	      "中和服務處": {
-	        "phone": "02-8221-5879",
-	        "address": "新北市中和區建康路107號1樓",
-	        "fax": "02-8221-3690"
-	      }
-	    },
-	    "constituency_detail": "中和區76里"
-	  }, {
-	    "name": "陳怡潔",
-	    "party": "親民黨",
-	    "party_eng": "PFP",
-	    "caucus": "PFP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6798",
-	        "address": "10051臺北市中正區濟南路1段3-1號0507室",
-	        "fax": "02-2358-6800"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "周倪安",
-	    "party": "台灣團結聯盟",
-	    "party_eng": "TSU",
-	    "caucus": "TSU",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6868",
-	        "address": "10051臺北市中正區青島東路1號3203室",
-	        "fax": "02-2358-6870"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "許添財",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TNN", 4],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6909",
-	        "address": "10051臺北市中正區濟南路1段3-1號0903室",
-	        "fax": "02-2358-6920"
-	      },
-	      "台南服務處": {
-	        "phone": "06-298-3701",
-	        "address": "臺南市安平區永華路二段822號",
-	        "fax": "06-298-3163"
-	      },
-	      "灣裡聯絡處": {
-	        "phone": "06-296-3568",
-	        "address": "台南市南區明興路1331號 (林良文理事長)"
-	      }
-	    },
-	    "constituency_detail": "安平區 南區 東區"
-	  }, {
-	    "name": "許智傑",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["KHH", 8],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8151",
-	        "address": "10051臺北市中正區濟南路1段3-1號0703室",
-	        "fax": "02-2358-6625"
-	      },
-	      "鳳山服務處": {
-	        "phone": "07-768-2666;07-768-1899",
-	        "address": "830高雄市鳳山區保泰路96號",
-	        "fax": "07-768-9900"
-	      },
-	      "": {
-	        "phone": "07-768-1899"
-	      }
-	    },
-	    "constituency_detail": "鳳山區"
-	  }, {
-	    "name": "曾巨威",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6381",
-	        "address": "10051臺北市中正區濟南路1段3-1號0705室",
-	        "fax": "02-2358-6390"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "葉宜津",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TNN", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6291",
-	        "address": "10051臺北市中正區濟南路1段3-1號0403室",
-	        "fax": "02-2358-6295"
-	      },
-	      "新營服務處": {
-	        "phone": "06-657-2808",
-	        "address": "臺南市新營區民生路130號",
-	        "fax": "06-657-2818"
-	      },
-	      "安平服務處": {
-	        "phone": "06-295-0826",
-	        "address": "臺南市安平區健康路三段206號",
-	        "fax": "06-295-0829"
-	      }
-	    },
-	    "constituency_detail": "後壁區 白河區 北門區 學甲區 鹽水區 新營區 柳營區 東山區 將軍區 下營區 六甲區 官田區"
-	  }, {
-	    "name": "費鴻泰",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPE", 7],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6990",
-	        "address": "10051臺北市中正區濟南路1段3-1號0502室",
-	        "fax": "02-2358-6994"
-	      },
-	      "服務處": {
-	        "phone": "02-2729-1966",
-	        "address": "11050臺北市信義區莊敬路311號5樓",
-	        "fax": "02-2720-9492"
-	      }
-	    },
-	    "constituency_detail": "信義區 松山區13里"
-	  }, {
-	    "name": "葉津鈴",
-	    "party": "台灣團結聯盟",
-	    "party_eng": "TSU",
-	    "caucus": "TSU",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6876",
-	        "address": "10051臺北市中正區濟南路一段3-1號405室",
-	        "fax": "02-2358-6880"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-333-2333",
-	        "address": "高雄市前鎮區滇池街193號",
-	        "fax": "07-338-8957"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "黃志雄",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 5],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6391",
-	        "address": "10051臺北市中正區濟南路1段3-1號0606室",
-	        "fax": "02-2358-6395"
-	      },
-	      "樹林服務處": {
-	        "phone": "02-2680-0775",
-	        "address": "23852新北市樹林區中山路三段137號",
-	        "fax": "02-2680-5365"
-	      },
-	      "鶯歌服務處": {
-	        "phone": "02-8678-0909",
-	        "address": "新北市鶯歌區光明街52號",
-	        "fax": "02-8678-0707"
-	      },
-	      "新莊服務處": {
-	        "phone": "02-2204-2269",
-	        "address": "臺北縣新莊市龍安路485號",
-	        "fax": "02-2204-0486"
-	      }
-	    },
-	    "constituency_detail": "樹林區 鶯歌區 新莊區9里"
-	  }, {
-	    "name": "黃昭順",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["KHH", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6786",
-	        "address": "10051臺北市中正區濟南路1段3-1號1107室",
-	        "fax": "02-2358-6790"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-341-3361",
-	        "address": "813高雄市左營區新庄仔路425號",
-	        "fax": "07-341-2672"
-	      }
-	    },
-	    "constituency_detail": "楠梓區 左營區"
-	  }, {
-	    "name": "黃偉哲",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TNN", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8311",
-	        "address": "10051臺北市中正區鎮江街2號5106室",
-	        "fax": "02-2358-8315"
-	      },
-	      "佳里服務處": {
-	        "phone": "06-723-0100",
-	        "address": "臺南市佳里區進學路130號",
-	        "fax": "06-723-0023"
-	      },
-	      "麻豆服務處": {
-	        "phone": "06-571-7753",
-	        "address": "臺南市麻豆區南勢里62-2號",
-	        "fax": "06-571-0225"
-	      }
-	    },
-	    "constituency_detail": "七股區 佳里區 麻豆區 善化區 大內區 玉井區 楠西區 西港區 安定區 新市區 山上區 新化區 左鎮區 南化區"
-	  }, {
-	    "name": "楊玉欣",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6666",
-	        "address": "10051臺北市中正區濟南路1段3-1號0608室",
-	        "fax": "02-2358-6670"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "楊應雄",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["JME", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8268",
-	        "address": "10051臺北市中正區青島東路1-3號7102室",
-	        "fax": "02-2358-8270"
-	      },
-	      "金門服務處": {
-	        "phone": "082-312-058",
-	        "address": "金門縣金城鎮光前路97號",
-	        "fax": "082-326-175"
-	      }
-	    },
-	    "constituency_detail": "全縣"
-	  }, {
-	    "name": "楊曜",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["PEN", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6736",
-	        "address": "10051臺北市中正區濟南路1段3-1號0205室",
-	        "fax": "02-2358-6740"
-	      },
-	      "澎湖服務處": {
-	        "phone": "06-921-8678",
-	        "address": "澎湖縣馬公市新店路473號",
-	        "fax": "06-921-1317"
-	      }
-	    },
-	    "constituency_detail": "全縣"
-	  }, {
-	    "name": "楊瓊瓔",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TXG", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6206",
-	        "address": "10051臺北市中正區濟南路1段3-1號0907室",
-	        "fax": "02-2358-6210"
-	      },
-	      "潭子服務處": {
-	        "phone": "04-2536-2878",
-	        "address": "臺中市潭子區潭興路二段397號",
-	        "fax": "04-2536-2516"
-	      },
-	      "大雅服務處": {
-	        "phone": "04-2568-5512",
-	        "address": "428臺中市大雅區學府路405號",
-	        "fax": "04-2568-2112"
-	      }
-	    },
-	    "constituency_detail": "后里區 神岡區 大雅區 潭子區"
-	  }, {
-	    "name": "楊麗環",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TAO", 4],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6066",
-	        "address": "10051臺北市中正區濟南路1段3-1號0208室",
-	        "fax": "02-2358-6070"
-	      },
-	      "桃園服務處": {
-	        "phone": "03-346-5509",
-	        "address": "桃園縣桃園市同安街171號",
-	        "fax": "03-357-7640"
-	      }
-	    },
-	    "constituency_detail": "桃園市66里"
-	  }, {
-	    "name": "詹凱臣",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["foreign"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6536",
-	        "address": "10051臺北市中正區濟南路1段3-1號0802室",
-	        "fax": "02-2358-6540"
-	      }
-	    },
-	    "constituency_detail": "僑居國外國民"
-	  }, {
-	    "name": "廖正井",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TAO", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6316",
-	        "address": "10051臺北市中正區濟南路1段3-1號0605室",
-	        "fax": "02-2358-6320"
-	      },
-	      "大園服務處": {
-	        "phone": "03-385-1818",
-	        "address": "桃園縣大園鄉田心村華興路157號",
-	        "fax": "03-386-9656"
-	      },
-	      "楊梅服務處": {
-	        "phone": "03-488-2728",
-	        "address": "桃園縣楊梅市大模街10號3樓之2",
-	        "fax": "03-488-2758"
-	      },
-	      "新屋服務處": {
-	        "phone": "03-477-3556",
-	        "address": "桃園縣新屋鄉中山路112號",
-	        "fax": "03-477-3536"
-	      }
-	    },
-	    "constituency_detail": "大園鄉 觀音鄉 新屋鄉 楊梅市"
-	  }, {
-	    "name": "廖國棟",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["aborigine", "lowland"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8176",
-	        "address": "10051臺北市中正區濟南路1段3-1號0807室",
-	        "fax": "02-2358-8180"
-	      },
-	      "台東服務處": {
-	        "phone": "089-228-798",
-	        "address": "臺東市四維路3段72號",
-	        "fax": "089-228-600"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "管碧玲",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["KHH", 5],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8146",
-	        "address": "10051臺北市中正區濟南路1段3-1號0901室",
-	        "fax": "02-2358-8150"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-313-7816",
-	        "address": "高雄市三民區博愛一路183號",
-	        "fax": "07-313-5797"
-	      },
-	      "內惟服務處": {
-	        "phone": "07-533-0227",
-	        "address": "高雄市鼓山區九如四路1097號",
-	        "fax": "07-521-5237"
-	      }
-	    },
-	    "constituency_detail": "鼓山區 鹽埕區 旗津區 三民區42里"
-	  }, {
-	    "name": "蔡正元",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPE", 4],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8276",
-	        "address": "10051臺北市中正區鎮江街2號5301室",
-	        "fax": "02-2358-8280"
-	      },
-	      "內湖服務處": {
-	        "phone": "02-2790-5746",
-	        "address": "114臺北市內湖區成功路三段82號2樓",
-	        "fax": "02-2795-6289"
-	      }
-	    },
-	    "constituency_detail": "內湖區 南港區"
-	  }, {
-	    "name": "蔡其昌",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TXG", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6151",
-	        "address": "10051臺北市中正區鎮江街2號5103室",
-	        "fax": "02-2358-6155"
-	      },
-	      "清水服務處": {
-	        "phone": "04-2623-8581",
-	        "address": "臺中市清水區中華路448號",
-	        "fax": "04-2623-8583"
-	      },
-	      "大甲服務處": {
-	        "phone": "04-2688-7555",
-	        "address": "臺中市大甲區文武路274號",
-	        "fax": "04-2688-9123"
-	      }
-	    },
-	    "constituency_detail": "大甲區 大安區 外埔區 清水區 梧棲區"
-	  }, {
-	    "name": "蔡煌瑯",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8256",
-	        "address": "10051臺北市中正區濟南路1段3-1號2101室",
-	        "fax": "02-2358-8260"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "蔡錦隆",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TXG", 4],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6121",
-	        "address": "10051臺北市中正區濟南路1段3-1號0803室",
-	        "fax": "02-2358-6125"
-	      },
-	      "台中服務處": {
-	        "phone": "04-2708-2899",
-	        "address": "臺中市西屯區黎明路三段58號",
-	        "fax": "04-2708-2896"
-	      }
-	    },
-	    "constituency_detail": "西屯區 南屯區"
-	  }, {
-	    "name": "蔣乃辛",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPE", 6],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6901",
-	        "address": "10051臺北市中正區濟南路1段3-1號2112室",
-	        "fax": "02-2358-6905"
-	      }
-	    },
-	    "constituency_detail": "大安區"
-	  }, {
-	    "name": "趙天麟",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["KHH", 7],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6576",
-	        "address": "10051臺北市中正區濟南路1段3-1號0505室",
-	        "fax": "02-2358-6580"
-	      },
-	      "高雄服務處": {
-	        "phone": "07-333-6868",
-	        "address": "80251高雄市苓雅區民權一路53號",
-	        "fax": "07-333-6860"
-	      }
-	    },
-	    "constituency_detail": "前金區 新興區 苓雅區 前鎮區8里"
-	  }, {
-	    "name": "鄭天財",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["aborigine", "lowland"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6831",
-	        "address": "10051臺北市中正區濟南路1段3-1號0307室",
-	        "fax": "02-2358-6835"
-	      },
-	      "花蓮服務處": {
-	        "phone": "03-851-2306",
-	        "address": "973花蓮縣吉安鄉南昌村南昌北路59號",
-	        "fax": "03-851-3306"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "鄭汝芬",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["CHA", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6191",
-	        "address": "10051臺北市中正區濟南路1段3-1號1007室",
-	        "fax": "02-2358-6195"
-	      },
-	      "溪州服務處": {
-	        "phone": "04-889-4123",
-	        "address": "彰化縣溪洲鄉中山路三段270巷5號",
-	        "fax": "04-889-8399"
-	      },
-	      "二林服務處": {
-	        "phone": "04-895-5011",
-	        "address": "彰化縣二林鎮後厝里太平路一段88巷86號",
-	        "fax": "04-895-5012"
-	      },
-	      "溪湖服務處": {
-	        "phone": "04-882-2211",
-	        "address": "彰化縣溪湖鎮東環路320號",
-	        "fax": "04-861-3552"
-	      }
-	    },
-	    "constituency_detail": "芳苑鄉 二林鎮 埔鹽鄉 溪湖鎮 埔心鄉 大城鄉 竹塘鄉 埤頭鄉 北斗鎮 溪州鄉"
-	  }, {
-	    "name": "鄭麗君",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8329",
-	        "address": "10051臺北市中正區鎮江街2號5107室",
-	        "fax": "02-2358-8330"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "劉建國",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["YUN", 2],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8088",
-	        "address": "10051臺北市中正區濟南路1段3-1號0602室",
-	        "fax": "02-2358-8089"
-	      },
-	      "斗六服務處": {
-	        "phone": "05-534-2586",
-	        "address": "640雲林縣斗六市公明路3號",
-	        "fax": "05-532-2270"
-	      },
-	      "西螺服務處": {
-	        "phone": "05-587-3586",
-	        "address": "640雲林縣西螺鎮建興路365號之1"
-	      },
-	      "斗南服務處": {
-	        "phone": "05-595-1270",
-	        "address": "640雲林縣斗南鎮東光二街20號"
-	      }
-	    },
-	    "constituency_detail": "崙背鄉 二崙鄉 西螺鎮 莿桐鄉 林內鄉 斗六市 大埤鄉 斗南鎮 古坑鄉"
-	  }, {
-	    "name": "劉櫂豪",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["TTT", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6286",
-	        "address": "10051臺北市中正區濟南路1段3-1號2108室",
-	        "fax": "02-2358-6290"
-	      },
-	      "臺東服務處": {
-	        "phone": "089-310-979",
-	        "address": "臺東市傳廣路18號",
-	        "fax": "089-310-879"
-	      },
-	      "東海岸服務處": {
-	        "phone": "089-851-018",
-	        "address": "臺東縣成功鎮民權路30號",
-	        "fax": "089-851-018"
-	      },
-	      "南迴服務處": {
-	        "phone": "089-791-305",
-	        "address": "台東縣大武鄉尚武村4鄰32號",
-	        "fax": "089-790-398"
-	      }
-	    },
-	    "constituency_detail": "全縣"
-	  }, {
-	    "name": "徐志榮",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["PIF", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6655",
-	        "address": "10051臺北市中正區濟南路1段3-1號0702室",
-	        "fax": "02-2358-6651"
-	      },
-	      "東港服務處": {
-	        "phone": "08-832-8000",
-	        "address": "屏東縣東港鎮光復路一段57號",
-	        "fax": "08-831-1110"
-	      },
-	      "車城服務處": {
-	        "phone": "08-882-2888",
-	        "address": "屏東縣車城鄉福安村(路)6-4號",
-	        "fax": "08-882-3456"
-	      },
-	      "屏東服務處": {
-	        "phone": "08-733-6000",
-	        "address": "屏東市忠孝路161號",
-	        "fax": "08-766-7576"
-	      },
-	      "恆春服務處": {
-	        "phone": "08-888-0888",
-	        "address": "屏東縣恆春鎮省北路85號",
-	        "fax": "08-889-9322"
-	      }
-	    },
-	    "constituency_detail": "新園鄉 崁頂鄉 南州鄉 新埤鄉 來義鄉 東港鎮 林邊鄉 佳冬鄉 枋寮鄉 春日鄉 枋山鄉 獅子鄉 牡丹鄉 車城鄉 滿州鄉 恆春鎮 琉球鄉"
-	  }, {
-	    "name": "潘維剛",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6031",
-	        "address": "10051臺北市中正區濟南路1段3-1號0201室",
-	        "fax": "02-2358-6035"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "盧秀燕",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TXG", 5],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8121",
-	        "address": "10051臺北市中正區青島東路1-3號7101室",
-	        "fax": "02-2358-8125"
-	      },
-	      "台中服務處": {
-	        "phone": "04-2319-9770",
-	        "address": "臺中市北區博館路92號4樓",
-	        "fax": "04-2319-9760"
-	      }
-	    },
-	    "constituency_detail": "北屯區 北區"
-	  }, {
-	    "name": "盧嘉辰",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 10],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6911",
-	        "address": "10051臺北市中正區濟南路1段3-1號0202室",
-	        "fax": "02-2358-6915"
-	      },
-	      "土城服務處": {
-	        "phone": "02-2268-9268",
-	        "address": "新北市土城區中央路3段85-1號",
-	        "fax": "02-2268-9269"
-	      },
-	      "三峽服務處": {
-	        "phone": "02-2672-8399",
-	        "address": "新北市三峽區中正路一段108巷7弄17號",
-	        "fax": "02-2672-8599"
-	      }
-	    },
-	    "constituency_detail": "土城區 三峽區"
-	  }, {
-	    "name": "蕭美琴",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6176",
-	        "address": "10051臺北市中正區青島東路10號3503室",
-	        "fax": "02-2358-6180"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "薛凌",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6056",
-	        "address": "10051臺北市中正區濟南路1段3-1號0207室",
-	        "fax": "02-2358-6060"
-	      },
-	      "重慶服務處": {
-	        "phone": "02-2811-4556",
-	        "address": "臺北市重慶北路4段186號",
-	        "fax": "02-2813-3582"
-	      },
-	      "後港服務處": {
-	        "phone": "02-2883-9006",
-	        "address": "臺北市士林區華齡街88之2號",
-	        "fax": "02-2883-0263"
-	      },
-	      "北投服務處": {
-	        "phone": "02-2891-5265",
-	        "address": "臺北市北投區大同街221號",
-	        "fax": "02-2891-3096"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "賴士葆",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPE", 8],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8166",
-	        "address": "10051臺北市中正區青島東路1-3號7201室",
-	        "fax": "02-2358-8170"
-	      },
-	      "文山服務處": {
-	        "phone": "02-2935-5358",
-	        "address": "臺北市文山區景興路254號",
-	        "fax": "02-2930-0945"
-	      }
-	    },
-	    "constituency_detail": "文山區 中正區10里"
-	  }, {
-	    "name": "謝國樑",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["KEE", 0],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-8066",
-	        "address": "10051臺北市中正區鎮江街2號5101室",
-	        "fax": "02-2358-8070"
-	      },
-	      "基隆服務處": {
-	        "phone": "02-2427-8899",
-	        "address": "基隆市中正區愛三路37號6樓",
-	        "fax": "02-2421-3639"
-	      }
-	    },
-	    "constituency_detail": "全市"
-	  }, {
-	    "name": "陳素月",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["CHA", 4],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6691",
-	        "address": "10051臺北市中正區濟南路1段3-1號2109室",
-	        "fax": "02-2358-6695"
-	      },
-	      "員林服務處": {
-	        "phone": "04-832-8552",
-	        "address": "彰化縣員林鎮惠來里惠明街219號",
-	        "fax": "04-835-3414"
-	      },
-	      "社頭服務處": {
-	        "phone": "04-871-1433",
-	        "address": "彰化縣社頭鄉社頭村員集路二段370號",
-	        "fax": "04-873-6266"
-	      },
-	      "田中服務處": {
-	        "phone": "04-875-2170",
-	        "address": "彰化縣田中鎮西路里斗中路一段68巷4號",
-	        "fax": "04-876-1432"
-	      }
-	    },
-	    "constituency_detail": "大村鄉 員林鎮 永靖鄉 社頭鄉 田尾鄉 田中鎮 二水鄉"
-	  }, {
-	    "name": "簡東明",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["aborigine", "highland"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6681",
-	        "address": "10051臺北市中正區濟南路1段3-1號1005室",
-	        "fax": "02-2358-6685"
-	      },
-	      "屏東服務處": {
-	        "phone": "08-732-2728",
-	        "address": "90071屏東市廣東路1324號",
-	        "fax": "08-732-6442"
-	      }
-	    },
-	    "constituency_detail": "山地原住民"
-	  }, {
-	    "name": "顏寬恒",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TXG", 2],
-	    "contact": {
-	      " ": {},
-	      "": {}
-	    },
-	    "constituency_detail": "沙鹿鎮 龍井鄉 大肚鄉 烏日鄉 霧峰 大里市2里"
-	  }, {
-	    "name": "羅明才",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPQ", 11],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6546",
-	        "address": "10051臺北市中正區濟南路1段3-1號1106室",
-	        "fax": "02-2358-6780"
-	      },
-	      "新店服務處": {
-	        "phone": "02-2915-7788",
-	        "address": "新北市新店區中正路54巷8號1樓",
-	        "fax": "02-2911-1448"
-	      }
-	    },
-	    "constituency_detail": "新店區 深坑區 石碇區 坪林區 烏來區"
-	  }, {
-	    "name": "羅淑蕾",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["TPE", 3],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6156",
-	        "address": "10051臺北市中正區濟南路1段3-1號0406室",
-	        "fax": "02-2358-6160"
-	      },
-	      "松山服務處": {
-	        "phone": "02-2719-5580",
-	        "address": "臺北市松山區光復北路240號",
-	        "fax": "02-2718-6878"
-	      },
-	      "中山服務處": {
-	        "phone": "02-2563-8251",
-	        "address": "臺北市民權東路二段26號6樓之7",
-	        "fax": "02-2561-1035"
-	      }
-	    },
-	    "constituency_detail": "中山區 松山區20里"
-	  }, {
-	    "name": "蘇清泉",
-	    "party": "中國國民黨",
-	    "party_eng": "KMT",
-	    "caucus": "KMT",
-	    "constituency": ["proportional"],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6571",
-	        "address": "10051臺北市中正區青島東路10號3505室",
-	        "fax": "02-2358-6575"
-	      },
-	      "東港服務處": {
-	        "phone": "08-833-4517",
-	        "address": "屏東縣東港鎮東隆里東隆街6-2號",
-	        "fax": "08-832-9977"
-	      }
-	    },
-	    "constituency_detail": ""
-	  }, {
-	    "name": "蘇震清",
-	    "party": "民主進步黨",
-	    "party_eng": "DPP",
-	    "caucus": "DPP",
-	    "constituency": ["PIF", 1],
-	    "contact": {
-	      "國會研究室": {
-	        "phone": "02-2358-6636",
-	        "address": "10051臺北市中正區濟南路1段3-1號0708室",
-	        "fax": "02-2358-6640"
-	      },
-	      "屏東服務處": {
-	        "phone": "08-766-6636",
-	        "address": "屏東縣屏東市自由路586號",
-	        "fax": "08-766-6262"
-	      }
-	    },
-	    "constituency_detail": "里港鄉 高樹鄉 三地門鄉"
-	  }] };
+	module.exports = require("react/lib/invariant");
 
 /***/ },
-/* 102 */
+/* 106 */
+/*!*************************************************!*\
+  !*** external "react/lib/ExecutionEnvironment" ***!
+  \*************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = require("react/lib/ExecutionEnvironment");
+
+/***/ },
+/* 107 */
+/*!************************************!*\
+  !*** external "react/lib/warning" ***!
+  \************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = require("react/lib/warning");
+
+/***/ },
+/* 108 */
 /*!*******************************!*\
   !*** ./~/classnames/index.js ***!
   \*******************************/
@@ -14435,1159 +14905,7 @@ module.exports =
 
 
 /***/ },
-/* 103 */
-/*!******************************************!*\
-  !*** external "react/lib/Object.assign" ***!
-  \******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = require("react/lib/Object.assign");
-
-/***/ },
-/* 104 */
-/*!**************************************!*\
-  !*** external "react/lib/invariant" ***!
-  \**************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = require("react/lib/invariant");
-
-/***/ },
-/* 105 */
-/*!*************************************************!*\
-  !*** external "react/lib/ExecutionEnvironment" ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = require("react/lib/ExecutionEnvironment");
-
-/***/ },
-/* 106 */
-/*!************************************!*\
-  !*** external "react/lib/warning" ***!
-  \************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = require("react/lib/warning");
-
-/***/ },
-/* 107 */
-/*!******************************************************!*\
-  !*** ./app/components/Legislator/images/default.jpg ***!
-  \******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "adff2800ecfceb1a8512e66dbfcba22d.jpg"
-
-/***/ },
-/* 108 */
-/*!************************************************************!*\
-  !*** ./app/containers/HomePage/images/HomePage-avatar.png ***!
-  \************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "552174c198e297b09a8da79dceb04377.png"
-
-/***/ },
 /* 109 */
-/*!************************************************************************!*\
-  !*** ./app/containers/IssueVotePage/images/IssueVotePage-pieChart.jpg ***!
-  \************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "af623a61fc37ed339bc25b009ecf51c1.jpg"
-
-/***/ },
-/* 110 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/丁守中.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "53d832dde2584a6b68b859595df491e1.png"
-
-/***/ },
-/* 111 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/何欣純.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d25f9aa20400dc1521818b436d449684.png"
-
-/***/ },
-/* 112 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/劉建國.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "60c1fb1461010c9d349fd59d7f8d089e.png"
-
-/***/ },
-/* 113 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/劉櫂豪.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ab91c1e460c2df6d6e724eea36f027d6.png"
-
-/***/ },
-/* 114 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/吳宜臻.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "35872dc6c469b4890d5244c6e9116c58.png"
-
-/***/ },
-/* 115 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/吳秉叡.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "cbe50421960b6c730774e8e486ad47f4.png"
-
-/***/ },
-/* 116 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/吳育仁.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "b050342cd87246dc4e69f3233b04658b.png"
-
-/***/ },
-/* 117 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/吳育昇.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "87db7c524b3d7971b1b4f3258cf8b7e1.png"
-
-/***/ },
-/* 118 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/呂學樟.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "5b1fae3481ae71f325c78f8e4e8a472d.png"
-
-/***/ },
-/* 119 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/呂玉玲.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d1d162bd9ce385864294b29443252e25.png"
-
-/***/ },
-/* 120 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/周倪安.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "669090029e21d33ff94ec8d1b6c785c4.png"
-
-/***/ },
-/* 121 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/姚文智.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6e8cc6691a75f8da8388be07d5556766.png"
-
-/***/ },
-/* 122 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/孔文吉.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "88a2c7a995f631b99cd64d995dfab78f.png"
-
-/***/ },
-/* 123 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/孫大千.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fa33f3abf5850468242d4eaf320e8974.png"
-
-/***/ },
-/* 124 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/尤美女.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ea06058ce6865cc390a5e698bdd51e5f.png"
-
-/***/ },
-/* 125 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/廖國棟.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d5a34927f07363524db91114a5193fed.png"
-
-/***/ },
-/* 126 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/廖正井.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "a5585a36aa92f37670796dae7d66e4d7.png"
-
-/***/ },
-/* 127 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/張嘉郡.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f443dfef7d959315b5de18c624cbd487.png"
-
-/***/ },
-/* 128 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/張慶忠.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "00ebc516fe36e29da4554dea515ea7e3.png"
-
-/***/ },
-/* 129 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/徐少萍.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0143df208291106b551ecd2fee8eaada.png"
-
-/***/ },
-/* 130 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/徐欣瑩.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "11adddc659edd65de5cb9cdb231d4f3f.png"
-
-/***/ },
-/* 131 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/徐耀昌.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "608560fc2f5747c339100d06af96c0e1.png"
-
-/***/ },
-/* 132 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/曾巨威.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4f428aadd27447b49b22d3913d8314db.png"
-
-/***/ },
-/* 133 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/李俊俋.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6ba110d2d09df1f2614d5f99915409aa.png"
-
-/***/ },
-/* 134 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/李慶華.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "29299b9cfe831de240f66d404ab9ca01.png"
-
-/***/ },
-/* 135 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/李應元.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "353da4ea294e23ddfca92b5409815659.png"
-
-/***/ },
-/* 136 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/李昆澤.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e72b1192465f398f7b78cf41a8e57600.png"
-
-/***/ },
-/* 137 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/李桐豪.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f7723a63d641062d912c5e917a077b0f.png"
-
-/***/ },
-/* 138 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/李貴敏.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fdc93992371587dd5296b161a7f1533e.png"
-
-/***/ },
-/* 139 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/李鴻鈞.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "a0bf6aefcb506d2c5f44f188b463055d.png"
-
-/***/ },
-/* 140 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林佳龍.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3802ce4b86543f8ba8a6e12576261a11.png"
-
-/***/ },
-/* 141 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林國正.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "7e939ae577d32377730975e6a6b13957.png"
-
-/***/ },
-/* 142 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林岱樺.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "2778f8da3bd9ff99f97fbbcd00ffcb4c.png"
-
-/***/ },
-/* 143 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林德福.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ee4c030d95297f4acac4f43a2cf30e7c.png"
-
-/***/ },
-/* 144 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林明溱.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "1026936de3d79cad10375db2fb224f57.png"
-
-/***/ },
-/* 145 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林淑芬.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6753fa256ebb8b9f79a92b864dc07c9c.png"
-
-/***/ },
-/* 146 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林滄敏.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "49a8ecc0ea3e270bd86fb9abcbbcc101.png"
-
-/***/ },
-/* 147 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林郁方.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0985fc424b3c867dc78ee4ad4441972f.png"
-
-/***/ },
-/* 148 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/林鴻池.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "646e19774a68cf1c682c802843498484.png"
-
-/***/ },
-/* 149 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/柯建銘.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3d6b6b5c383bcb149fce97f6ade761e9.png"
-
-/***/ },
-/* 150 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/楊應雄.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "33296efd6371b3d5fe3a46931aaae4e9.png"
-
-/***/ },
-/* 151 */
-/*!********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/楊曜.png ***!
-  \********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "eeb940a6bdd877a5847665f55e324a27.png"
-
-/***/ },
-/* 152 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/楊玉欣.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ed3137aad81a3d0e3f69d8e190e06a93.png"
-
-/***/ },
-/* 153 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/楊瓊瓔.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "bd7df856396a0fde2814d8f95af92787.png"
-
-/***/ },
-/* 154 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/楊麗環.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "1964e8931f52680153b12400f28ddd50.png"
-
-/***/ },
-/* 155 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/段宜康.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "64adcf1e1c9f73d8cc2327edb74770b9.png"
-
-/***/ },
-/* 156 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/江啟臣.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "c2b6e97bd67a34d4eec98b72c1e78c30.png"
-
-/***/ },
-/* 157 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/江惠貞.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3b2b1e895fa60ba3b8e357b03be70940.png"
-
-/***/ },
-/* 158 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/洪秀柱.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "814629edb623c2ae8abd709a5f4ba364.png"
-
-/***/ },
-/* 159 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/潘孟安.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "63d508865f66ad4f66cb3fcffde109cf.png"
-
-/***/ },
-/* 160 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/潘維剛.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "912b40303bc4ad99573993c35dd87968.png"
-
-/***/ },
-/* 161 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/王廷升.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "48becbb6c8363b5d06b5378da237c966.png"
-
-/***/ },
-/* 162 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/王惠美.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "7ea00e85fdae44eb179698d88fd17ab4.png"
-
-/***/ },
-/* 163 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/王育敏.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "9a725d40fa466c6a6feb35e1c095a2ad.png"
-
-/***/ },
-/* 164 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/王進士.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "7060df98746658a0007b52914293164e.png"
-
-/***/ },
-/* 165 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/王金平.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0b3e8d909b3ccc8387f3ca3cda91a2f5.png"
-
-/***/ },
-/* 166 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/田秋堇.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d47a2295bd4e9f0aa2f384c5cff92de1.png"
-
-/***/ },
-/* 167 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/盧嘉辰.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0a7f7d550fbba083a1a595e80a0c019d.png"
-
-/***/ },
-/* 168 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/盧秀燕.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "5959def6cfea6573f06f44e30221938c.png"
-
-/***/ },
-/* 169 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/管碧玲.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "85f2b66fb5e454a95d78d49a0861f9d5.png"
-
-/***/ },
-/* 170 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/簡東明.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4a9f1fe9c32dfe821b651ef682b6fd4f.png"
-
-/***/ },
-/* 171 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/紀國棟.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6c88b3aa5a15d6b6e90e33eb6a5753fe.png"
-
-/***/ },
-/* 172 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/羅明才.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "61338f718a5cacb3243484b34315c707.png"
-
-/***/ },
-/* 173 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/羅淑蕾.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6f56230d2d04544709318dec35af247b.png"
-
-/***/ },
-/* 174 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/翁重鈞.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "233a76bd5645035247b8d8b9e17020a0.png"
-
-/***/ },
-/* 175 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/葉宜津.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f718d850490d50321f819a6da4a452e2.png"
-
-/***/ },
-/* 176 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/葉津鈴.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d22085e69e7a57168c5aa7b47cd24db3.png"
-
-/***/ },
-/* 177 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蔡其昌.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "52f6f68756a56b57e23814966394eb6d.png"
-
-/***/ },
-/* 178 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蔡正元.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0d2fcd1e1b53a72a8c97e84f7fd96644.png"
-
-/***/ },
-/* 179 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蔡煌瑯.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "bfa408f21914edf437b3cfd6d837a879.png"
-
-/***/ },
-/* 180 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蔡錦隆.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "796bd36d1333cfb25e855d481656002b.png"
-
-/***/ },
-/* 181 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蔣乃辛.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "a8ef44704d92580eeb39cfd603a34d01.png"
-
-/***/ },
-/* 182 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蕭美琴.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e254151a98a3a800f3d0ac01b2bf38ed.png"
-
-/***/ },
-/* 183 */
-/*!********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/薛凌.png ***!
-  \********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "94c15053133f33e597fc4e10dc283513.png"
-
-/***/ },
-/* 184 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蘇清泉.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "717e67ab577a1775ce9ddf4a5ff060f6.png"
-
-/***/ },
-/* 185 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/蘇震清.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0ef5594a1bccf4b16df7fb8e68655f8b.png"
-
-/***/ },
-/* 186 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/許忠信.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6e95d823f9d673cd7f034209d74cb234.png"
-
-/***/ },
-/* 187 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/許智傑.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "c4407a23e06fd9463a6056c0a9c6577e.png"
-
-/***/ },
-/* 188 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/許添財.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "eeba0ccc9a3c7dc5d6b92f7478d99df7.png"
-
-/***/ },
-/* 189 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/詹凱臣.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3cca8512a8582c0ab4a9a7b9b6fe81a2.png"
-
-/***/ },
-/* 190 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/謝國樑.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6691f01e092eef857a10c4fce8a71f64.png"
-
-/***/ },
-/* 191 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/費鴻泰.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "95a37b322b646d8323457fcb1d3fd6ee.png"
-
-/***/ },
-/* 192 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/賴士葆.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
-
-/***/ },
-/* 193 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/賴振昌.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fdb564bc843c8844ad8e3476fa968c7f.png"
-
-/***/ },
-/* 194 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/趙天麟.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "659d62e81925fd88ae920db7f6beabd2.png"
-
-/***/ },
-/* 195 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/邱志偉.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4b13eeb894061935b4396375351206c4.png"
-
-/***/ },
-/* 196 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/邱文彥.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "92e0f78be7cb0e384580bffb8d837bd5.png"
-
-/***/ },
-/* 197 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/邱議瑩.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "076d254b4b94793b3d636ccbea6711d9.png"
-
-/***/ },
-/* 198 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/鄭天財.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "513f57ccc7a29e2beaf54cdc38c8ad0c.png"
-
-/***/ },
-/* 199 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/鄭汝芬.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "75979106f892bfbe57b1415bc8c15fe9.png"
-
-/***/ },
-/* 200 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/鄭麗君.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3176aa505cb1a78cda5909e7c85157ac.png"
-
-/***/ },
-/* 201 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳亭妃.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "71a1ee49d03deae203fbc6ae1e22eba0.png"
-
-/***/ },
-/* 202 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳其邁.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "128c0a7483e8daa47f693d9326a090de.png"
-
-/***/ },
-/* 203 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳唐山.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "31b1e07b4281906a6e2e05c0eb5765fd.png"
-
-/***/ },
-/* 204 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳學聖.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0d04270529df1e19bbf181b116a3c9e8.png"
-
-/***/ },
-/* 205 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳怡潔.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "9df443ce4f4d8a0abc4dea357fd71791.png"
-
-/***/ },
-/* 206 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳明文.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6f9f4cea49452f446458e5a1b86f437c.png"
-
-/***/ },
-/* 207 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳根德.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e43116ce1d367346429b1d0bff2ddd15.png"
-
-/***/ },
-/* 208 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳歐珀.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e0de59d3d88ef4fa390c7ad15d184736.png"
-
-/***/ },
-/* 209 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳淑慧.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "9acf2e60bfcc6c1823457b4fdff4a1ce.png"
-
-/***/ },
-/* 210 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳碧涵.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "60fc483100a0cba64a2e61f38828c89b.png"
-
-/***/ },
-/* 211 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳節如.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "78c247f8aaf8bb82a23b1aad1dc9941f.png"
-
-/***/ },
-/* 212 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳超明.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "acdae1531ca424f2314775a13b5b5953.png"
-
-/***/ },
-/* 213 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳鎮湘.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6613fa3490df21163983044cc7f100c4.png"
-
-/***/ },
-/* 214 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/陳雪生.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4a09a511d013e5322614064721cb2d14.png"
-
-/***/ },
-/* 215 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/顏寬恒.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "79d35d2a704c643b2e0295da1b7a86b0.png"
-
-/***/ },
-/* 216 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/馬文君.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0973f8c6da915adc2b376eff97b64265.png"
-
-/***/ },
-/* 217 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/高志鵬.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "77821e0d7d1cd603e5e1e9dc1fc3b679.png"
-
-/***/ },
-/* 218 */
-/*!**********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/高金素梅.png ***!
-  \**********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fb431093fb74b2eae7c44e1975e5284d.png"
-
-/***/ },
-/* 219 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/魏明谷.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ab79f6582f091847cf56fc4b1b65e81c.png"
-
-/***/ },
-/* 220 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/黃偉哲.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "b88fcc6e1bbe88f6f69983d3e5fc6ad0.png"
-
-/***/ },
-/* 221 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/黃志雄.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d92b46d47c09cd04474199e4c12245b6.png"
-
-/***/ },
-/* 222 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/黃文玲.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ecd9a0029b62a297a32a1d1a94f6254f.png"
-
-/***/ },
-/* 223 */
-/*!*********************************************************!*\
-  !*** ./app/components/Legislator/images/avatar/黃昭順.png ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6bbc4ccbda3220df5798bed8de6ef944.png"
-
-/***/ },
-/* 224 */
-/*!***************************************************!*\
-  !*** ./app/containers/IssueListPage/images/1.png ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "895f6a6cf32918bd967e77932667664e.png"
-
-/***/ },
-/* 225 */
-/*!***************************************************!*\
-  !*** ./app/containers/IssueListPage/images/2.png ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4b7fd436641af4e708368d7cb3ed3117.png"
-
-/***/ },
-/* 226 */
-/*!***************************************************!*\
-  !*** ./app/containers/IssueListPage/images/3.png ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e4c3e97597b5c4878040315608989925.png"
-
-/***/ },
-/* 227 */
-/*!***************************************************!*\
-  !*** ./app/containers/IssueListPage/images/4.png ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "552174c198e297b09a8da79dceb04377.png"
-
-/***/ },
-/* 228 */
-/*!***************************************************!*\
-  !*** ./app/containers/IssueListPage/images/5.png ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ec8eb2b91486717e9b984886733f83b0.png"
-
-/***/ },
-/* 229 */
-/*!***************************************************!*\
-  !*** ./app/containers/IssueListPage/images/6.png ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "895f6a6cf32918bd967e77932667664e.png"
-
-/***/ },
-/* 230 */
-/*!***************************************************!*\
-  !*** ./app/containers/IssueListPage/images/7.png ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4b7fd436641af4e708368d7cb3ed3117.png"
-
-/***/ },
-/* 231 */
 /*!*****************************************!*\
   !*** ./~/react-router/lib/PropTypes.js ***!
   \*****************************************/
@@ -15595,7 +14913,7 @@ module.exports =
 
 	'use strict';
 
-	var assign = __webpack_require__(/*! react/lib/Object.assign */ 103);
+	var assign = __webpack_require__(/*! react/lib/Object.assign */ 104);
 	var ReactPropTypes = __webpack_require__(/*! react */ 1).PropTypes;
 	var Route = __webpack_require__(/*! ./Route */ 67);
 
@@ -15626,7 +14944,7 @@ module.exports =
 	module.exports = PropTypes;
 
 /***/ },
-/* 232 */
+/* 110 */
 /*!*********************************************************!*\
   !*** ./~/react-router/lib/components/ContextWrapper.js ***!
   \*********************************************************/
@@ -15672,7 +14990,7 @@ module.exports =
 	module.exports = ContextWrapper;
 
 /***/ },
-/* 233 */
+/* 111 */
 /*!*******************************************************!*\
   !*** ./~/react-router/lib/actions/LocationActions.js ***!
   \*******************************************************/
@@ -15705,7 +15023,7 @@ module.exports =
 	module.exports = LocationActions;
 
 /***/ },
-/* 234 */
+/* 112 */
 /*!*****************************************!*\
   !*** ./~/react-router/lib/PathUtils.js ***!
   \*****************************************/
@@ -15713,9 +15031,9 @@ module.exports =
 
 	'use strict';
 
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var assign = __webpack_require__(/*! object-assign */ 381);
-	var qs = __webpack_require__(/*! qs */ 382);
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var assign = __webpack_require__(/*! object-assign */ 390);
+	var qs = __webpack_require__(/*! qs */ 391);
 
 	var paramCompileMatcher = /:([a-zA-Z_$][a-zA-Z0-9_$]*)|[*.()\[\]\\+|{}^$]/g;
 	var paramInjectMatcher = /:([a-zA-Z_$][a-zA-Z0-9_$?]*[?]?)|[*]/g;
@@ -15866,7 +15184,7 @@ module.exports =
 	module.exports = PathUtils;
 
 /***/ },
-/* 235 */
+/* 113 */
 /*!*********************************************!*\
   !*** ./~/react-router/lib/ScrollHistory.js ***!
   \*********************************************/
@@ -15874,9 +15192,9 @@ module.exports =
 
 	'use strict';
 
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 105).canUseDOM;
-	var getWindowScrollPosition = __webpack_require__(/*! ./getWindowScrollPosition */ 377);
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 106).canUseDOM;
+	var getWindowScrollPosition = __webpack_require__(/*! ./getWindowScrollPosition */ 386);
 
 	function shouldUpdateScroll(state, prevState) {
 	  if (!prevState) {
@@ -15949,7 +15267,7 @@ module.exports =
 	module.exports = ScrollHistory;
 
 /***/ },
-/* 236 */
+/* 114 */
 /*!***********************************************!*\
   !*** ./~/react-router/lib/isReactChildren.js ***!
   \***********************************************/
@@ -15970,7 +15288,7 @@ module.exports =
 	module.exports = isReactChildren;
 
 /***/ },
-/* 237 */
+/* 115 */
 /*!******************************************!*\
   !*** ./~/react-router/lib/Transition.js ***!
   \******************************************/
@@ -15980,8 +15298,8 @@ module.exports =
 
 	'use strict';
 
-	var Cancellation = __webpack_require__(/*! ./Cancellation */ 239);
-	var Redirect = __webpack_require__(/*! ./Redirect */ 238);
+	var Cancellation = __webpack_require__(/*! ./Cancellation */ 117);
+	var Redirect = __webpack_require__(/*! ./Redirect */ 116);
 
 	/**
 	 * Encapsulates a transition to a given path.
@@ -16053,7 +15371,7 @@ module.exports =
 	module.exports = Transition;
 
 /***/ },
-/* 238 */
+/* 116 */
 /*!****************************************!*\
   !*** ./~/react-router/lib/Redirect.js ***!
   \****************************************/
@@ -16073,7 +15391,7 @@ module.exports =
 	module.exports = Redirect;
 
 /***/ },
-/* 239 */
+/* 117 */
 /*!********************************************!*\
   !*** ./~/react-router/lib/Cancellation.js ***!
   \********************************************/
@@ -16090,7 +15408,7 @@ module.exports =
 	module.exports = Cancellation;
 
 /***/ },
-/* 240 */
+/* 118 */
 /*!*************************************!*\
   !*** ./~/react-router/lib/Match.js ***!
   \*************************************/
@@ -16103,7 +15421,7 @@ module.exports =
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	/* jshint -W084 */
-	var PathUtils = __webpack_require__(/*! ./PathUtils */ 234);
+	var PathUtils = __webpack_require__(/*! ./PathUtils */ 112);
 
 	function deepSearch(route, pathname, query) {
 	  // Check the subtree first to find the most deeply-nested match.
@@ -16173,7 +15491,7 @@ module.exports =
 	module.exports = Match;
 
 /***/ },
-/* 241 */
+/* 119 */
 /*!***********************************************!*\
   !*** ./~/react-router/lib/supportsHistory.js ***!
   \***********************************************/
@@ -16197,7 +15515,1123 @@ module.exports =
 	module.exports = supportsHistory;
 
 /***/ },
+/* 120 */
+/*!******************************************************!*\
+  !*** ./app/components/Legislator/images/default.jpg ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "adff2800ecfceb1a8512e66dbfcba22d.jpg"
+
+/***/ },
+/* 121 */
+/*!************************************************************!*\
+  !*** ./app/containers/HomePage/images/HomePage-avatar.png ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "552174c198e297b09a8da79dceb04377.png"
+
+/***/ },
+/* 122 */
+/*!************************************************************************!*\
+  !*** ./app/containers/IssueVotePage/images/IssueVotePage-pieChart.jpg ***!
+  \************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "af623a61fc37ed339bc25b009ecf51c1.jpg"
+
+/***/ },
+/* 123 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/丁守中.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "53d832dde2584a6b68b859595df491e1.png"
+
+/***/ },
+/* 124 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/何欣純.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d25f9aa20400dc1521818b436d449684.png"
+
+/***/ },
+/* 125 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/劉建國.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "60c1fb1461010c9d349fd59d7f8d089e.png"
+
+/***/ },
+/* 126 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/劉櫂豪.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ab91c1e460c2df6d6e724eea36f027d6.png"
+
+/***/ },
+/* 127 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/吳宜臻.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "35872dc6c469b4890d5244c6e9116c58.png"
+
+/***/ },
+/* 128 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/吳秉叡.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "cbe50421960b6c730774e8e486ad47f4.png"
+
+/***/ },
+/* 129 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/吳育仁.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b050342cd87246dc4e69f3233b04658b.png"
+
+/***/ },
+/* 130 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/吳育昇.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "87db7c524b3d7971b1b4f3258cf8b7e1.png"
+
+/***/ },
+/* 131 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/呂學樟.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "5b1fae3481ae71f325c78f8e4e8a472d.png"
+
+/***/ },
+/* 132 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/呂玉玲.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d1d162bd9ce385864294b29443252e25.png"
+
+/***/ },
+/* 133 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/周倪安.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "669090029e21d33ff94ec8d1b6c785c4.png"
+
+/***/ },
+/* 134 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/姚文智.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6e8cc6691a75f8da8388be07d5556766.png"
+
+/***/ },
+/* 135 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/孔文吉.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "88a2c7a995f631b99cd64d995dfab78f.png"
+
+/***/ },
+/* 136 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/孫大千.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fa33f3abf5850468242d4eaf320e8974.png"
+
+/***/ },
+/* 137 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/尤美女.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ea06058ce6865cc390a5e698bdd51e5f.png"
+
+/***/ },
+/* 138 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/廖國棟.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d5a34927f07363524db91114a5193fed.png"
+
+/***/ },
+/* 139 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/廖正井.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a5585a36aa92f37670796dae7d66e4d7.png"
+
+/***/ },
+/* 140 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/張嘉郡.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f443dfef7d959315b5de18c624cbd487.png"
+
+/***/ },
+/* 141 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/張慶忠.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "00ebc516fe36e29da4554dea515ea7e3.png"
+
+/***/ },
+/* 142 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/徐少萍.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0143df208291106b551ecd2fee8eaada.png"
+
+/***/ },
+/* 143 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/徐欣瑩.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "11adddc659edd65de5cb9cdb231d4f3f.png"
+
+/***/ },
+/* 144 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/徐耀昌.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "608560fc2f5747c339100d06af96c0e1.png"
+
+/***/ },
+/* 145 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/曾巨威.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4f428aadd27447b49b22d3913d8314db.png"
+
+/***/ },
+/* 146 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/李俊俋.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6ba110d2d09df1f2614d5f99915409aa.png"
+
+/***/ },
+/* 147 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/李慶華.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "29299b9cfe831de240f66d404ab9ca01.png"
+
+/***/ },
+/* 148 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/李應元.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "353da4ea294e23ddfca92b5409815659.png"
+
+/***/ },
+/* 149 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/李昆澤.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e72b1192465f398f7b78cf41a8e57600.png"
+
+/***/ },
+/* 150 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/李桐豪.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f7723a63d641062d912c5e917a077b0f.png"
+
+/***/ },
+/* 151 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/李貴敏.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fdc93992371587dd5296b161a7f1533e.png"
+
+/***/ },
+/* 152 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/李鴻鈞.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a0bf6aefcb506d2c5f44f188b463055d.png"
+
+/***/ },
+/* 153 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林佳龍.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3802ce4b86543f8ba8a6e12576261a11.png"
+
+/***/ },
+/* 154 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林國正.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7e939ae577d32377730975e6a6b13957.png"
+
+/***/ },
+/* 155 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林岱樺.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "2778f8da3bd9ff99f97fbbcd00ffcb4c.png"
+
+/***/ },
+/* 156 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林德福.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ee4c030d95297f4acac4f43a2cf30e7c.png"
+
+/***/ },
+/* 157 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林明溱.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "1026936de3d79cad10375db2fb224f57.png"
+
+/***/ },
+/* 158 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林淑芬.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6753fa256ebb8b9f79a92b864dc07c9c.png"
+
+/***/ },
+/* 159 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林滄敏.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "49a8ecc0ea3e270bd86fb9abcbbcc101.png"
+
+/***/ },
+/* 160 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林郁方.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0985fc424b3c867dc78ee4ad4441972f.png"
+
+/***/ },
+/* 161 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/林鴻池.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "646e19774a68cf1c682c802843498484.png"
+
+/***/ },
+/* 162 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/柯建銘.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3d6b6b5c383bcb149fce97f6ade761e9.png"
+
+/***/ },
+/* 163 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/楊應雄.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "33296efd6371b3d5fe3a46931aaae4e9.png"
+
+/***/ },
+/* 164 */
+/*!********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/楊曜.png ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "eeb940a6bdd877a5847665f55e324a27.png"
+
+/***/ },
+/* 165 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/楊玉欣.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ed3137aad81a3d0e3f69d8e190e06a93.png"
+
+/***/ },
+/* 166 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/楊瓊瓔.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bd7df856396a0fde2814d8f95af92787.png"
+
+/***/ },
+/* 167 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/楊麗環.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "1964e8931f52680153b12400f28ddd50.png"
+
+/***/ },
+/* 168 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/段宜康.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "64adcf1e1c9f73d8cc2327edb74770b9.png"
+
+/***/ },
+/* 169 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/江啟臣.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "c2b6e97bd67a34d4eec98b72c1e78c30.png"
+
+/***/ },
+/* 170 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/江惠貞.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3b2b1e895fa60ba3b8e357b03be70940.png"
+
+/***/ },
+/* 171 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/洪秀柱.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "814629edb623c2ae8abd709a5f4ba364.png"
+
+/***/ },
+/* 172 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/潘孟安.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "63d508865f66ad4f66cb3fcffde109cf.png"
+
+/***/ },
+/* 173 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/潘維剛.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "912b40303bc4ad99573993c35dd87968.png"
+
+/***/ },
+/* 174 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/王廷升.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "48becbb6c8363b5d06b5378da237c966.png"
+
+/***/ },
+/* 175 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/王惠美.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7ea00e85fdae44eb179698d88fd17ab4.png"
+
+/***/ },
+/* 176 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/王育敏.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "9a725d40fa466c6a6feb35e1c095a2ad.png"
+
+/***/ },
+/* 177 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/王進士.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7060df98746658a0007b52914293164e.png"
+
+/***/ },
+/* 178 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/王金平.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0b3e8d909b3ccc8387f3ca3cda91a2f5.png"
+
+/***/ },
+/* 179 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/田秋堇.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d47a2295bd4e9f0aa2f384c5cff92de1.png"
+
+/***/ },
+/* 180 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/盧嘉辰.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0a7f7d550fbba083a1a595e80a0c019d.png"
+
+/***/ },
+/* 181 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/盧秀燕.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "5959def6cfea6573f06f44e30221938c.png"
+
+/***/ },
+/* 182 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/管碧玲.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "85f2b66fb5e454a95d78d49a0861f9d5.png"
+
+/***/ },
+/* 183 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/簡東明.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4a9f1fe9c32dfe821b651ef682b6fd4f.png"
+
+/***/ },
+/* 184 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/紀國棟.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6c88b3aa5a15d6b6e90e33eb6a5753fe.png"
+
+/***/ },
+/* 185 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/羅明才.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "61338f718a5cacb3243484b34315c707.png"
+
+/***/ },
+/* 186 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/羅淑蕾.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6f56230d2d04544709318dec35af247b.png"
+
+/***/ },
+/* 187 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/翁重鈞.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "233a76bd5645035247b8d8b9e17020a0.png"
+
+/***/ },
+/* 188 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/葉宜津.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f718d850490d50321f819a6da4a452e2.png"
+
+/***/ },
+/* 189 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/葉津鈴.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d22085e69e7a57168c5aa7b47cd24db3.png"
+
+/***/ },
+/* 190 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蔡其昌.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "52f6f68756a56b57e23814966394eb6d.png"
+
+/***/ },
+/* 191 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蔡正元.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0d2fcd1e1b53a72a8c97e84f7fd96644.png"
+
+/***/ },
+/* 192 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蔡煌瑯.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bfa408f21914edf437b3cfd6d837a879.png"
+
+/***/ },
+/* 193 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蔡錦隆.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "796bd36d1333cfb25e855d481656002b.png"
+
+/***/ },
+/* 194 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蔣乃辛.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a8ef44704d92580eeb39cfd603a34d01.png"
+
+/***/ },
+/* 195 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蕭美琴.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e254151a98a3a800f3d0ac01b2bf38ed.png"
+
+/***/ },
+/* 196 */
+/*!********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/薛凌.png ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "94c15053133f33e597fc4e10dc283513.png"
+
+/***/ },
+/* 197 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蘇清泉.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "717e67ab577a1775ce9ddf4a5ff060f6.png"
+
+/***/ },
+/* 198 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/蘇震清.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0ef5594a1bccf4b16df7fb8e68655f8b.png"
+
+/***/ },
+/* 199 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/許忠信.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6e95d823f9d673cd7f034209d74cb234.png"
+
+/***/ },
+/* 200 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/許智傑.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "c4407a23e06fd9463a6056c0a9c6577e.png"
+
+/***/ },
+/* 201 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/許添財.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "eeba0ccc9a3c7dc5d6b92f7478d99df7.png"
+
+/***/ },
+/* 202 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/詹凱臣.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3cca8512a8582c0ab4a9a7b9b6fe81a2.png"
+
+/***/ },
+/* 203 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/謝國樑.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6691f01e092eef857a10c4fce8a71f64.png"
+
+/***/ },
+/* 204 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/費鴻泰.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "95a37b322b646d8323457fcb1d3fd6ee.png"
+
+/***/ },
+/* 205 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/賴士葆.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
+
+/***/ },
+/* 206 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/賴振昌.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fdb564bc843c8844ad8e3476fa968c7f.png"
+
+/***/ },
+/* 207 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/趙天麟.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "659d62e81925fd88ae920db7f6beabd2.png"
+
+/***/ },
+/* 208 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/邱志偉.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4b13eeb894061935b4396375351206c4.png"
+
+/***/ },
+/* 209 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/邱文彥.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "92e0f78be7cb0e384580bffb8d837bd5.png"
+
+/***/ },
+/* 210 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/邱議瑩.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "076d254b4b94793b3d636ccbea6711d9.png"
+
+/***/ },
+/* 211 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/鄭天財.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "513f57ccc7a29e2beaf54cdc38c8ad0c.png"
+
+/***/ },
+/* 212 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/鄭汝芬.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "75979106f892bfbe57b1415bc8c15fe9.png"
+
+/***/ },
+/* 213 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/鄭麗君.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3176aa505cb1a78cda5909e7c85157ac.png"
+
+/***/ },
+/* 214 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳亭妃.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "71a1ee49d03deae203fbc6ae1e22eba0.png"
+
+/***/ },
+/* 215 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳其邁.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "128c0a7483e8daa47f693d9326a090de.png"
+
+/***/ },
+/* 216 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳唐山.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "31b1e07b4281906a6e2e05c0eb5765fd.png"
+
+/***/ },
+/* 217 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳學聖.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0d04270529df1e19bbf181b116a3c9e8.png"
+
+/***/ },
+/* 218 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳怡潔.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "9df443ce4f4d8a0abc4dea357fd71791.png"
+
+/***/ },
+/* 219 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳明文.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6f9f4cea49452f446458e5a1b86f437c.png"
+
+/***/ },
+/* 220 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳根德.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e43116ce1d367346429b1d0bff2ddd15.png"
+
+/***/ },
+/* 221 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳歐珀.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e0de59d3d88ef4fa390c7ad15d184736.png"
+
+/***/ },
+/* 222 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳淑慧.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "9acf2e60bfcc6c1823457b4fdff4a1ce.png"
+
+/***/ },
+/* 223 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳碧涵.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "60fc483100a0cba64a2e61f38828c89b.png"
+
+/***/ },
+/* 224 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳節如.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "78c247f8aaf8bb82a23b1aad1dc9941f.png"
+
+/***/ },
+/* 225 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳超明.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "acdae1531ca424f2314775a13b5b5953.png"
+
+/***/ },
+/* 226 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳鎮湘.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6613fa3490df21163983044cc7f100c4.png"
+
+/***/ },
+/* 227 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/陳雪生.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4a09a511d013e5322614064721cb2d14.png"
+
+/***/ },
+/* 228 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/顏寬恒.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "79d35d2a704c643b2e0295da1b7a86b0.png"
+
+/***/ },
+/* 229 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/馬文君.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0973f8c6da915adc2b376eff97b64265.png"
+
+/***/ },
+/* 230 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/高志鵬.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "77821e0d7d1cd603e5e1e9dc1fc3b679.png"
+
+/***/ },
+/* 231 */
+/*!**********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/高金素梅.png ***!
+  \**********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fb431093fb74b2eae7c44e1975e5284d.png"
+
+/***/ },
+/* 232 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/魏明谷.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ab79f6582f091847cf56fc4b1b65e81c.png"
+
+/***/ },
+/* 233 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/黃偉哲.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b88fcc6e1bbe88f6f69983d3e5fc6ad0.png"
+
+/***/ },
+/* 234 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/黃志雄.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d92b46d47c09cd04474199e4c12245b6.png"
+
+/***/ },
+/* 235 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/黃文玲.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ecd9a0029b62a297a32a1d1a94f6254f.png"
+
+/***/ },
+/* 236 */
+/*!*********************************************************!*\
+  !*** ./app/components/Legislator/images/avatar/黃昭順.png ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6bbc4ccbda3220df5798bed8de6ef944.png"
+
+/***/ },
+/* 237 */
+/*!***************************************************!*\
+  !*** ./app/containers/IssueListPage/images/1.png ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "895f6a6cf32918bd967e77932667664e.png"
+
+/***/ },
+/* 238 */
+/*!***************************************************!*\
+  !*** ./app/containers/IssueListPage/images/2.png ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4b7fd436641af4e708368d7cb3ed3117.png"
+
+/***/ },
+/* 239 */
+/*!***************************************************!*\
+  !*** ./app/containers/IssueListPage/images/3.png ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e4c3e97597b5c4878040315608989925.png"
+
+/***/ },
+/* 240 */
+/*!***************************************************!*\
+  !*** ./app/containers/IssueListPage/images/4.png ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "552174c198e297b09a8da79dceb04377.png"
+
+/***/ },
+/* 241 */
+/*!***************************************************!*\
+  !*** ./app/containers/IssueListPage/images/5.png ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ec8eb2b91486717e9b984886733f83b0.png"
+
+/***/ },
 /* 242 */
+/*!***************************************************!*\
+  !*** ./app/containers/IssueListPage/images/6.png ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "895f6a6cf32918bd967e77932667664e.png"
+
+/***/ },
+/* 243 */
+/*!***************************************************!*\
+  !*** ./app/containers/IssueListPage/images/7.png ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4b7fd436641af4e708368d7cb3ed3117.png"
+
+/***/ },
+/* 244 */
 /*!**************************************!*\
   !*** ./app/components/Icon/Icon.css ***!
   \**************************************/
@@ -16206,7 +16640,121 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 243 */
+/* 245 */
+/*!********************************************!*\
+  !*** ./app/components/SideBar/SideBar.css ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 246 */
+/*!******************************************!*\
+  !*** ./app/components/AppBar/AppBar.css ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 247 */
+/*!****************************************************!*\
+  !*** ./app/components/CompareTabs/CompareTabs.css ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 248 */
+/*!**************************************************************!*\
+  !*** ./app/components/CompareMultiCard/CompareMultiCard.css ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 249 */
+/*!*************************************************************!*\
+  !*** ./app/components/CompareMultiCard/CompareMultiCard.js ***!
+  \*************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	module.exports = {
+		"candidateA": "賴士葆",
+		"candidateB": "苗博雅",
+		"candidateC": "阮昭雄",
+		"candidateD": "余宛如",
+		"issues": [{ "title": "公司獲利盈餘重新分配",
+			"candidateA": "for",
+			"candidateB": "against",
+			"candidateC": "for",
+			"candidateD": "against"
+		}, { "title": "增加罰則處罰企業未分配盈餘",
+			"candidateA": "against",
+			"candidateB": "none",
+			"candidateC": "for",
+			"candidateD": "unclear"
+		}, { "title": "每周40工時及加班上限",
+			"candidateA": "against",
+			"candidateB": "for",
+			"candidateC": "for",
+			"candidateD": "for"
+		}, { "title": "勞工債權清償順位優於銀行抵押權",
+			"candidateA": "for",
+			"candidateB": "none",
+			"candidateC": "for",
+			"candidateD": "unclear"
+		}, { "title": "家事移工應納入勞基法規範",
+			"candidateA": "unclear",
+			"candidateB": "against",
+			"candidateC": "for",
+			"candidateD": "none"
+		}]
+	};
+
+/***/ },
+/* 250 */
+/*!********************************************************!*\
+  !*** ./app/components/CompareMultiCard/images/賴士葆.png ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
+
+/***/ },
+/* 251 */
+/*!********************************************************!*\
+  !*** ./app/components/CompareMultiCard/images/苗博雅.png ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ee8cfab9bf21dde03752cb3053c3eb12.png"
+
+/***/ },
+/* 252 */
+/*!********************************************************!*\
+  !*** ./app/components/CompareMultiCard/images/阮昭雄.png ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f9018778a5b58bdbee4971d2f1f86b25.png"
+
+/***/ },
+/* 253 */
+/*!********************************************************!*\
+  !*** ./app/components/CompareMultiCard/images/余宛如.png ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b3f84ce153c46c9c1895595b5b190e70.png"
+
+/***/ },
+/* 254 */
 /*!****************************************************!*\
   !*** ./app/components/CompareCard/CompareCard.css ***!
   \****************************************************/
@@ -16215,7 +16763,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 244 */
+/* 255 */
 /*!***************************************************!*\
   !*** ./app/components/CompareCard/CompareCard.js ***!
   \***************************************************/
@@ -16245,7 +16793,7 @@ module.exports =
 	};
 
 /***/ },
-/* 245 */
+/* 256 */
 /*!***************************************************!*\
   !*** ./app/components/CompareCard/images/賴士葆.png ***!
   \***************************************************/
@@ -16254,7 +16802,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
 
 /***/ },
-/* 246 */
+/* 257 */
 /*!***************************************************!*\
   !*** ./app/components/CompareCard/images/苗博雅.png ***!
   \***************************************************/
@@ -16263,34 +16811,167 @@ module.exports =
 	module.exports = __webpack_require__.p + "ee8cfab9bf21dde03752cb3053c3eb12.png"
 
 /***/ },
-/* 247 */
-/*!********************************************!*\
-  !*** ./app/components/SideBar/SideBar.css ***!
-  \********************************************/
+/* 258 */
+/*!**************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/LegislatorAvatar.css ***!
+  \**************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {};
 
 /***/ },
-/* 248 */
-/*!******************************************!*\
-  !*** ./app/components/AppBar/AppBar.css ***!
-  \******************************************/
+/* 259 */
+/*!*********************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar ^\.\/.*\.png$ ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = {};
+	var map = {
+		"./丁守中.png": 267,
+		"./何欣純.png": 268,
+		"./劉建國.png": 269,
+		"./劉櫂豪.png": 270,
+		"./吳宜臻.png": 271,
+		"./吳秉叡.png": 272,
+		"./吳育仁.png": 273,
+		"./吳育昇.png": 274,
+		"./呂學樟.png": 275,
+		"./呂玉玲.png": 276,
+		"./周倪安.png": 277,
+		"./姚文智.png": 278,
+		"./孔文吉.png": 279,
+		"./孫大千.png": 280,
+		"./尤美女.png": 281,
+		"./廖國棟.png": 282,
+		"./廖正井.png": 283,
+		"./張嘉郡.png": 284,
+		"./張慶忠.png": 285,
+		"./徐少萍.png": 286,
+		"./徐志榮.png": 287,
+		"./徐欣瑩.png": 288,
+		"./徐耀昌.png": 289,
+		"./曾巨威.png": 290,
+		"./李俊俋.png": 291,
+		"./李慶華.png": 292,
+		"./李應元.png": 293,
+		"./李昆澤.png": 294,
+		"./李桐豪.png": 295,
+		"./李貴敏.png": 296,
+		"./李鴻鈞.png": 297,
+		"./林佳龍.png": 298,
+		"./林國正.png": 299,
+		"./林岱樺.png": 300,
+		"./林德福.png": 301,
+		"./林明溱.png": 302,
+		"./林淑芬.png": 303,
+		"./林滄敏.png": 304,
+		"./林郁方.png": 305,
+		"./林鴻池.png": 306,
+		"./柯建銘.png": 307,
+		"./楊應雄.png": 308,
+		"./楊曜.png": 309,
+		"./楊玉欣.png": 310,
+		"./楊瓊瓔.png": 311,
+		"./楊麗環.png": 312,
+		"./段宜康.png": 313,
+		"./江啟臣.png": 314,
+		"./江惠貞.png": 315,
+		"./洪秀柱.png": 316,
+		"./潘孟安.png": 317,
+		"./潘維剛.png": 318,
+		"./王廷升.png": 319,
+		"./王惠美.png": 320,
+		"./王育敏.png": 321,
+		"./王進士.png": 322,
+		"./王金平.png": 323,
+		"./田秋堇.png": 324,
+		"./盧嘉辰.png": 325,
+		"./盧秀燕.png": 326,
+		"./管碧玲.png": 327,
+		"./簡東明.png": 328,
+		"./紀國棟.png": 329,
+		"./羅明才.png": 330,
+		"./羅淑蕾.png": 331,
+		"./翁重鈞.png": 332,
+		"./莊瑞雄.png": 333,
+		"./葉宜津.png": 334,
+		"./葉津鈴.png": 335,
+		"./蔡其昌.png": 336,
+		"./蔡正元.png": 337,
+		"./蔡煌瑯.png": 338,
+		"./蔡錦隆.png": 339,
+		"./蔣乃辛.png": 340,
+		"./蕭美琴.png": 341,
+		"./薛凌.png": 342,
+		"./蘇清泉.png": 343,
+		"./蘇震清.png": 344,
+		"./許忠信.png": 345,
+		"./許智傑.png": 346,
+		"./許淑華.png": 347,
+		"./許添財.png": 348,
+		"./詹凱臣.png": 349,
+		"./謝國樑.png": 350,
+		"./費鴻泰.png": 351,
+		"./賴士葆.png": 352,
+		"./賴振昌.png": 353,
+		"./趙天麟.png": 354,
+		"./邱志偉.png": 355,
+		"./邱文彥.png": 356,
+		"./邱議瑩.png": 357,
+		"./鄭天財.png": 358,
+		"./鄭汝芬.png": 359,
+		"./鄭麗君.png": 360,
+		"./陳亭妃.png": 361,
+		"./陳其邁.png": 362,
+		"./陳唐山.png": 363,
+		"./陳學聖.png": 364,
+		"./陳怡潔.png": 365,
+		"./陳明文.png": 366,
+		"./陳根德.png": 367,
+		"./陳歐珀.png": 368,
+		"./陳淑慧.png": 369,
+		"./陳碧涵.png": 370,
+		"./陳節如.png": 371,
+		"./陳素月.png": 372,
+		"./陳超明.png": 373,
+		"./陳鎮湘.png": 374,
+		"./陳雪生.png": 375,
+		"./顏寬恒.png": 376,
+		"./馬文君.png": 377,
+		"./高志鵬.png": 378,
+		"./高金素梅.png": 379,
+		"./魏明谷.png": 380,
+		"./黃偉哲.png": 381,
+		"./黃國書.png": 382,
+		"./黃志雄.png": 383,
+		"./黃文玲.png": 384,
+		"./黃昭順.png": 385
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 259;
+
 
 /***/ },
-/* 249 */
-/*!**************************************!*\
-  !*** ./app/components/Tabs/Tabs.css ***!
-  \**************************************/
+/* 260 */
+/*!************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/default.jpg ***!
+  \************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = {};
+	module.exports = __webpack_require__.p + "adff2800ecfceb1a8512e66dbfcba22d.jpg"
 
 /***/ },
-/* 250 */
+/* 261 */
 /*!****************************************!*\
   !*** ./app/components/Input/Input.css ***!
   \****************************************/
@@ -16299,7 +16980,16 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 251 */
+/* 262 */
+/*!**************************************!*\
+  !*** ./app/components/Tabs/Tabs.css ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 263 */
 /*!******************************************!*\
   !*** ./app/components/Record/Record.jsx ***!
   \******************************************/
@@ -16327,9 +17017,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _classnames = __webpack_require__(/*! classnames */ 102);
+	var _classnames = __webpack_require__(/*! classnames */ 108);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -16337,19 +17027,19 @@ module.exports =
 
 	var _LegislatorLegislatorJsx2 = _interopRequireDefault(_LegislatorLegislatorJsx);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 97);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 72);
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	var _UserAvatarUserAvatarJsx = __webpack_require__(/*! ../UserAvatar/UserAvatar.jsx */ 378);
+	var _UserAvatarUserAvatarJsx = __webpack_require__(/*! ../UserAvatar/UserAvatar.jsx */ 387);
 
 	var _UserAvatarUserAvatarJsx2 = _interopRequireDefault(_UserAvatarUserAvatarJsx);
 
-	__webpack_require__(/*! ./Record.css */ 379);
+	__webpack_require__(/*! ./Record.css */ 388);
 
 	var Record = (function (_React$Component) {
 	    function Record(props) {
@@ -16510,7 +17200,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 252 */
+/* 264 */
 /*!**************************************************!*\
   !*** ./app/components/RecordList/RecordList.css ***!
   \**************************************************/
@@ -16519,7 +17209,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 253 */
+/* 265 */
 /*!******************************************************************!*\
   !*** ./app/components/OverviewWallAvatar/OverviewWallAvatar.jsx ***!
   \******************************************************************/
@@ -16543,13 +17233,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 97);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
-	__webpack_require__(/*! ./OverviewWallAvatar.css */ 380);
+	__webpack_require__(/*! ./OverviewWallAvatar.css */ 389);
 
 	var OverviewWallAvatar = (function (_React$Component) {
 	    function OverviewWallAvatar() {
@@ -16603,7 +17293,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 254 */
+/* 266 */
 /*!******************************************************!*\
   !*** ./app/components/OpinionGroup/OpinionGroup.css ***!
   \******************************************************/
@@ -16612,167 +17302,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 255 */
-/*!**************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/LegislatorAvatar.css ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 256 */
-/*!*********************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar ^\.\/.*\.png$ ***!
-  \*********************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./丁守中.png": 258,
-		"./何欣純.png": 259,
-		"./劉建國.png": 260,
-		"./劉櫂豪.png": 261,
-		"./吳宜臻.png": 262,
-		"./吳秉叡.png": 263,
-		"./吳育仁.png": 264,
-		"./吳育昇.png": 265,
-		"./呂學樟.png": 266,
-		"./呂玉玲.png": 267,
-		"./周倪安.png": 268,
-		"./姚文智.png": 269,
-		"./孔文吉.png": 270,
-		"./孫大千.png": 271,
-		"./尤美女.png": 272,
-		"./廖國棟.png": 273,
-		"./廖正井.png": 274,
-		"./張嘉郡.png": 275,
-		"./張慶忠.png": 276,
-		"./徐少萍.png": 277,
-		"./徐志榮.png": 278,
-		"./徐欣瑩.png": 279,
-		"./徐耀昌.png": 280,
-		"./曾巨威.png": 281,
-		"./李俊俋.png": 282,
-		"./李慶華.png": 283,
-		"./李應元.png": 284,
-		"./李昆澤.png": 285,
-		"./李桐豪.png": 286,
-		"./李貴敏.png": 287,
-		"./李鴻鈞.png": 288,
-		"./林佳龍.png": 289,
-		"./林國正.png": 290,
-		"./林岱樺.png": 291,
-		"./林德福.png": 292,
-		"./林明溱.png": 293,
-		"./林淑芬.png": 294,
-		"./林滄敏.png": 295,
-		"./林郁方.png": 296,
-		"./林鴻池.png": 297,
-		"./柯建銘.png": 298,
-		"./楊應雄.png": 299,
-		"./楊曜.png": 300,
-		"./楊玉欣.png": 301,
-		"./楊瓊瓔.png": 302,
-		"./楊麗環.png": 303,
-		"./段宜康.png": 304,
-		"./江啟臣.png": 305,
-		"./江惠貞.png": 306,
-		"./洪秀柱.png": 307,
-		"./潘孟安.png": 308,
-		"./潘維剛.png": 309,
-		"./王廷升.png": 310,
-		"./王惠美.png": 311,
-		"./王育敏.png": 312,
-		"./王進士.png": 313,
-		"./王金平.png": 314,
-		"./田秋堇.png": 315,
-		"./盧嘉辰.png": 316,
-		"./盧秀燕.png": 317,
-		"./管碧玲.png": 318,
-		"./簡東明.png": 319,
-		"./紀國棟.png": 320,
-		"./羅明才.png": 321,
-		"./羅淑蕾.png": 322,
-		"./翁重鈞.png": 323,
-		"./莊瑞雄.png": 324,
-		"./葉宜津.png": 325,
-		"./葉津鈴.png": 326,
-		"./蔡其昌.png": 327,
-		"./蔡正元.png": 328,
-		"./蔡煌瑯.png": 329,
-		"./蔡錦隆.png": 330,
-		"./蔣乃辛.png": 331,
-		"./蕭美琴.png": 332,
-		"./薛凌.png": 333,
-		"./蘇清泉.png": 334,
-		"./蘇震清.png": 335,
-		"./許忠信.png": 336,
-		"./許智傑.png": 337,
-		"./許淑華.png": 338,
-		"./許添財.png": 339,
-		"./詹凱臣.png": 340,
-		"./謝國樑.png": 341,
-		"./費鴻泰.png": 342,
-		"./賴士葆.png": 343,
-		"./賴振昌.png": 344,
-		"./趙天麟.png": 345,
-		"./邱志偉.png": 346,
-		"./邱文彥.png": 347,
-		"./邱議瑩.png": 348,
-		"./鄭天財.png": 349,
-		"./鄭汝芬.png": 350,
-		"./鄭麗君.png": 351,
-		"./陳亭妃.png": 352,
-		"./陳其邁.png": 353,
-		"./陳唐山.png": 354,
-		"./陳學聖.png": 355,
-		"./陳怡潔.png": 356,
-		"./陳明文.png": 357,
-		"./陳根德.png": 358,
-		"./陳歐珀.png": 359,
-		"./陳淑慧.png": 360,
-		"./陳碧涵.png": 361,
-		"./陳節如.png": 362,
-		"./陳素月.png": 363,
-		"./陳超明.png": 364,
-		"./陳鎮湘.png": 365,
-		"./陳雪生.png": 366,
-		"./顏寬恒.png": 367,
-		"./馬文君.png": 368,
-		"./高志鵬.png": 369,
-		"./高金素梅.png": 370,
-		"./魏明谷.png": 371,
-		"./黃偉哲.png": 372,
-		"./黃國書.png": 373,
-		"./黃志雄.png": 374,
-		"./黃文玲.png": 375,
-		"./黃昭順.png": 376
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 256;
-
-
-/***/ },
-/* 257 */
-/*!************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/default.jpg ***!
-  \************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "adff2800ecfceb1a8512e66dbfcba22d.jpg"
-
-/***/ },
-/* 258 */
+/* 267 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/丁守中.png ***!
   \***************************************************************/
@@ -16781,7 +17311,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "53d832dde2584a6b68b859595df491e1.png"
 
 /***/ },
-/* 259 */
+/* 268 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/何欣純.png ***!
   \***************************************************************/
@@ -16790,7 +17320,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "d25f9aa20400dc1521818b436d449684.png"
 
 /***/ },
-/* 260 */
+/* 269 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/劉建國.png ***!
   \***************************************************************/
@@ -16799,7 +17329,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "60c1fb1461010c9d349fd59d7f8d089e.png"
 
 /***/ },
-/* 261 */
+/* 270 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/劉櫂豪.png ***!
   \***************************************************************/
@@ -16808,7 +17338,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ab91c1e460c2df6d6e724eea36f027d6.png"
 
 /***/ },
-/* 262 */
+/* 271 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/吳宜臻.png ***!
   \***************************************************************/
@@ -16817,7 +17347,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "35872dc6c469b4890d5244c6e9116c58.png"
 
 /***/ },
-/* 263 */
+/* 272 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/吳秉叡.png ***!
   \***************************************************************/
@@ -16826,7 +17356,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "cbe50421960b6c730774e8e486ad47f4.png"
 
 /***/ },
-/* 264 */
+/* 273 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/吳育仁.png ***!
   \***************************************************************/
@@ -16835,7 +17365,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "b050342cd87246dc4e69f3233b04658b.png"
 
 /***/ },
-/* 265 */
+/* 274 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/吳育昇.png ***!
   \***************************************************************/
@@ -16844,7 +17374,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "87db7c524b3d7971b1b4f3258cf8b7e1.png"
 
 /***/ },
-/* 266 */
+/* 275 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/呂學樟.png ***!
   \***************************************************************/
@@ -16853,7 +17383,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "5b1fae3481ae71f325c78f8e4e8a472d.png"
 
 /***/ },
-/* 267 */
+/* 276 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/呂玉玲.png ***!
   \***************************************************************/
@@ -16862,7 +17392,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "d1d162bd9ce385864294b29443252e25.png"
 
 /***/ },
-/* 268 */
+/* 277 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/周倪安.png ***!
   \***************************************************************/
@@ -16871,7 +17401,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "669090029e21d33ff94ec8d1b6c785c4.png"
 
 /***/ },
-/* 269 */
+/* 278 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/姚文智.png ***!
   \***************************************************************/
@@ -16880,7 +17410,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6e8cc6691a75f8da8388be07d5556766.png"
 
 /***/ },
-/* 270 */
+/* 279 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/孔文吉.png ***!
   \***************************************************************/
@@ -16889,7 +17419,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "88a2c7a995f631b99cd64d995dfab78f.png"
 
 /***/ },
-/* 271 */
+/* 280 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/孫大千.png ***!
   \***************************************************************/
@@ -16898,7 +17428,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "fa33f3abf5850468242d4eaf320e8974.png"
 
 /***/ },
-/* 272 */
+/* 281 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/尤美女.png ***!
   \***************************************************************/
@@ -16907,7 +17437,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "5039b452548c6bb49a25369e707a3ffa.png"
 
 /***/ },
-/* 273 */
+/* 282 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/廖國棟.png ***!
   \***************************************************************/
@@ -16916,7 +17446,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "d5a34927f07363524db91114a5193fed.png"
 
 /***/ },
-/* 274 */
+/* 283 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/廖正井.png ***!
   \***************************************************************/
@@ -16925,7 +17455,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "a5585a36aa92f37670796dae7d66e4d7.png"
 
 /***/ },
-/* 275 */
+/* 284 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/張嘉郡.png ***!
   \***************************************************************/
@@ -16934,7 +17464,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "f443dfef7d959315b5de18c624cbd487.png"
 
 /***/ },
-/* 276 */
+/* 285 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/張慶忠.png ***!
   \***************************************************************/
@@ -16943,7 +17473,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "00ebc516fe36e29da4554dea515ea7e3.png"
 
 /***/ },
-/* 277 */
+/* 286 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/徐少萍.png ***!
   \***************************************************************/
@@ -16952,7 +17482,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0143df208291106b551ecd2fee8eaada.png"
 
 /***/ },
-/* 278 */
+/* 287 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/徐志榮.png ***!
   \***************************************************************/
@@ -16961,7 +17491,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "c670357ffcf6e12ba6d94663503881d9.png"
 
 /***/ },
-/* 279 */
+/* 288 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/徐欣瑩.png ***!
   \***************************************************************/
@@ -16970,7 +17500,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "11adddc659edd65de5cb9cdb231d4f3f.png"
 
 /***/ },
-/* 280 */
+/* 289 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/徐耀昌.png ***!
   \***************************************************************/
@@ -16979,7 +17509,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "608560fc2f5747c339100d06af96c0e1.png"
 
 /***/ },
-/* 281 */
+/* 290 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/曾巨威.png ***!
   \***************************************************************/
@@ -16988,7 +17518,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "4f428aadd27447b49b22d3913d8314db.png"
 
 /***/ },
-/* 282 */
+/* 291 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/李俊俋.png ***!
   \***************************************************************/
@@ -16997,7 +17527,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6ba110d2d09df1f2614d5f99915409aa.png"
 
 /***/ },
-/* 283 */
+/* 292 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/李慶華.png ***!
   \***************************************************************/
@@ -17006,7 +17536,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "29299b9cfe831de240f66d404ab9ca01.png"
 
 /***/ },
-/* 284 */
+/* 293 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/李應元.png ***!
   \***************************************************************/
@@ -17015,7 +17545,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "353da4ea294e23ddfca92b5409815659.png"
 
 /***/ },
-/* 285 */
+/* 294 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/李昆澤.png ***!
   \***************************************************************/
@@ -17024,7 +17554,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "e72b1192465f398f7b78cf41a8e57600.png"
 
 /***/ },
-/* 286 */
+/* 295 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/李桐豪.png ***!
   \***************************************************************/
@@ -17033,7 +17563,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "f7723a63d641062d912c5e917a077b0f.png"
 
 /***/ },
-/* 287 */
+/* 296 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/李貴敏.png ***!
   \***************************************************************/
@@ -17042,7 +17572,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "fdc93992371587dd5296b161a7f1533e.png"
 
 /***/ },
-/* 288 */
+/* 297 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/李鴻鈞.png ***!
   \***************************************************************/
@@ -17051,7 +17581,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "a0bf6aefcb506d2c5f44f188b463055d.png"
 
 /***/ },
-/* 289 */
+/* 298 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林佳龍.png ***!
   \***************************************************************/
@@ -17060,7 +17590,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "3802ce4b86543f8ba8a6e12576261a11.png"
 
 /***/ },
-/* 290 */
+/* 299 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林國正.png ***!
   \***************************************************************/
@@ -17069,7 +17599,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "7e939ae577d32377730975e6a6b13957.png"
 
 /***/ },
-/* 291 */
+/* 300 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林岱樺.png ***!
   \***************************************************************/
@@ -17078,7 +17608,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "2778f8da3bd9ff99f97fbbcd00ffcb4c.png"
 
 /***/ },
-/* 292 */
+/* 301 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林德福.png ***!
   \***************************************************************/
@@ -17087,7 +17617,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ee4c030d95297f4acac4f43a2cf30e7c.png"
 
 /***/ },
-/* 293 */
+/* 302 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林明溱.png ***!
   \***************************************************************/
@@ -17096,7 +17626,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "1026936de3d79cad10375db2fb224f57.png"
 
 /***/ },
-/* 294 */
+/* 303 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林淑芬.png ***!
   \***************************************************************/
@@ -17105,7 +17635,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6753fa256ebb8b9f79a92b864dc07c9c.png"
 
 /***/ },
-/* 295 */
+/* 304 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林滄敏.png ***!
   \***************************************************************/
@@ -17114,7 +17644,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "49a8ecc0ea3e270bd86fb9abcbbcc101.png"
 
 /***/ },
-/* 296 */
+/* 305 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林郁方.png ***!
   \***************************************************************/
@@ -17123,7 +17653,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0985fc424b3c867dc78ee4ad4441972f.png"
 
 /***/ },
-/* 297 */
+/* 306 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/林鴻池.png ***!
   \***************************************************************/
@@ -17132,7 +17662,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "646e19774a68cf1c682c802843498484.png"
 
 /***/ },
-/* 298 */
+/* 307 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/柯建銘.png ***!
   \***************************************************************/
@@ -17141,7 +17671,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "3d6b6b5c383bcb149fce97f6ade761e9.png"
 
 /***/ },
-/* 299 */
+/* 308 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/楊應雄.png ***!
   \***************************************************************/
@@ -17150,7 +17680,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "33296efd6371b3d5fe3a46931aaae4e9.png"
 
 /***/ },
-/* 300 */
+/* 309 */
 /*!**************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/楊曜.png ***!
   \**************************************************************/
@@ -17159,7 +17689,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "eeb940a6bdd877a5847665f55e324a27.png"
 
 /***/ },
-/* 301 */
+/* 310 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/楊玉欣.png ***!
   \***************************************************************/
@@ -17168,7 +17698,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ed3137aad81a3d0e3f69d8e190e06a93.png"
 
 /***/ },
-/* 302 */
+/* 311 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/楊瓊瓔.png ***!
   \***************************************************************/
@@ -17177,7 +17707,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "bd7df856396a0fde2814d8f95af92787.png"
 
 /***/ },
-/* 303 */
+/* 312 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/楊麗環.png ***!
   \***************************************************************/
@@ -17186,7 +17716,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "1964e8931f52680153b12400f28ddd50.png"
 
 /***/ },
-/* 304 */
+/* 313 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/段宜康.png ***!
   \***************************************************************/
@@ -17195,7 +17725,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "64adcf1e1c9f73d8cc2327edb74770b9.png"
 
 /***/ },
-/* 305 */
+/* 314 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/江啟臣.png ***!
   \***************************************************************/
@@ -17204,7 +17734,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "c2b6e97bd67a34d4eec98b72c1e78c30.png"
 
 /***/ },
-/* 306 */
+/* 315 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/江惠貞.png ***!
   \***************************************************************/
@@ -17213,7 +17743,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "3b2b1e895fa60ba3b8e357b03be70940.png"
 
 /***/ },
-/* 307 */
+/* 316 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/洪秀柱.png ***!
   \***************************************************************/
@@ -17222,7 +17752,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "814629edb623c2ae8abd709a5f4ba364.png"
 
 /***/ },
-/* 308 */
+/* 317 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/潘孟安.png ***!
   \***************************************************************/
@@ -17231,7 +17761,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "63d508865f66ad4f66cb3fcffde109cf.png"
 
 /***/ },
-/* 309 */
+/* 318 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/潘維剛.png ***!
   \***************************************************************/
@@ -17240,7 +17770,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "912b40303bc4ad99573993c35dd87968.png"
 
 /***/ },
-/* 310 */
+/* 319 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/王廷升.png ***!
   \***************************************************************/
@@ -17249,7 +17779,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "48becbb6c8363b5d06b5378da237c966.png"
 
 /***/ },
-/* 311 */
+/* 320 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/王惠美.png ***!
   \***************************************************************/
@@ -17258,7 +17788,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "7ea00e85fdae44eb179698d88fd17ab4.png"
 
 /***/ },
-/* 312 */
+/* 321 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/王育敏.png ***!
   \***************************************************************/
@@ -17267,7 +17797,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "9a725d40fa466c6a6feb35e1c095a2ad.png"
 
 /***/ },
-/* 313 */
+/* 322 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/王進士.png ***!
   \***************************************************************/
@@ -17276,7 +17806,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "7060df98746658a0007b52914293164e.png"
 
 /***/ },
-/* 314 */
+/* 323 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/王金平.png ***!
   \***************************************************************/
@@ -17285,7 +17815,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0b3e8d909b3ccc8387f3ca3cda91a2f5.png"
 
 /***/ },
-/* 315 */
+/* 324 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/田秋堇.png ***!
   \***************************************************************/
@@ -17294,7 +17824,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "d47a2295bd4e9f0aa2f384c5cff92de1.png"
 
 /***/ },
-/* 316 */
+/* 325 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/盧嘉辰.png ***!
   \***************************************************************/
@@ -17303,7 +17833,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0a7f7d550fbba083a1a595e80a0c019d.png"
 
 /***/ },
-/* 317 */
+/* 326 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/盧秀燕.png ***!
   \***************************************************************/
@@ -17312,7 +17842,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "5959def6cfea6573f06f44e30221938c.png"
 
 /***/ },
-/* 318 */
+/* 327 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/管碧玲.png ***!
   \***************************************************************/
@@ -17321,7 +17851,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "85f2b66fb5e454a95d78d49a0861f9d5.png"
 
 /***/ },
-/* 319 */
+/* 328 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/簡東明.png ***!
   \***************************************************************/
@@ -17330,7 +17860,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "4a9f1fe9c32dfe821b651ef682b6fd4f.png"
 
 /***/ },
-/* 320 */
+/* 329 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/紀國棟.png ***!
   \***************************************************************/
@@ -17339,7 +17869,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6c88b3aa5a15d6b6e90e33eb6a5753fe.png"
 
 /***/ },
-/* 321 */
+/* 330 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/羅明才.png ***!
   \***************************************************************/
@@ -17348,7 +17878,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "61338f718a5cacb3243484b34315c707.png"
 
 /***/ },
-/* 322 */
+/* 331 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/羅淑蕾.png ***!
   \***************************************************************/
@@ -17357,7 +17887,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6f56230d2d04544709318dec35af247b.png"
 
 /***/ },
-/* 323 */
+/* 332 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/翁重鈞.png ***!
   \***************************************************************/
@@ -17366,7 +17896,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "233a76bd5645035247b8d8b9e17020a0.png"
 
 /***/ },
-/* 324 */
+/* 333 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/莊瑞雄.png ***!
   \***************************************************************/
@@ -17375,7 +17905,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "c1cb8757504c2374d880209cb1e4bbaf.png"
 
 /***/ },
-/* 325 */
+/* 334 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/葉宜津.png ***!
   \***************************************************************/
@@ -17384,7 +17914,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "f718d850490d50321f819a6da4a452e2.png"
 
 /***/ },
-/* 326 */
+/* 335 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/葉津鈴.png ***!
   \***************************************************************/
@@ -17393,7 +17923,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "d22085e69e7a57168c5aa7b47cd24db3.png"
 
 /***/ },
-/* 327 */
+/* 336 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蔡其昌.png ***!
   \***************************************************************/
@@ -17402,7 +17932,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "52f6f68756a56b57e23814966394eb6d.png"
 
 /***/ },
-/* 328 */
+/* 337 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蔡正元.png ***!
   \***************************************************************/
@@ -17411,7 +17941,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0d2fcd1e1b53a72a8c97e84f7fd96644.png"
 
 /***/ },
-/* 329 */
+/* 338 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蔡煌瑯.png ***!
   \***************************************************************/
@@ -17420,7 +17950,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "bfa408f21914edf437b3cfd6d837a879.png"
 
 /***/ },
-/* 330 */
+/* 339 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蔡錦隆.png ***!
   \***************************************************************/
@@ -17429,7 +17959,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "796bd36d1333cfb25e855d481656002b.png"
 
 /***/ },
-/* 331 */
+/* 340 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蔣乃辛.png ***!
   \***************************************************************/
@@ -17438,7 +17968,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "a8ef44704d92580eeb39cfd603a34d01.png"
 
 /***/ },
-/* 332 */
+/* 341 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蕭美琴.png ***!
   \***************************************************************/
@@ -17447,7 +17977,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "e254151a98a3a800f3d0ac01b2bf38ed.png"
 
 /***/ },
-/* 333 */
+/* 342 */
 /*!**************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/薛凌.png ***!
   \**************************************************************/
@@ -17456,7 +17986,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "94c15053133f33e597fc4e10dc283513.png"
 
 /***/ },
-/* 334 */
+/* 343 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蘇清泉.png ***!
   \***************************************************************/
@@ -17465,7 +17995,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "717e67ab577a1775ce9ddf4a5ff060f6.png"
 
 /***/ },
-/* 335 */
+/* 344 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/蘇震清.png ***!
   \***************************************************************/
@@ -17474,7 +18004,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0ef5594a1bccf4b16df7fb8e68655f8b.png"
 
 /***/ },
-/* 336 */
+/* 345 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/許忠信.png ***!
   \***************************************************************/
@@ -17483,7 +18013,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6e95d823f9d673cd7f034209d74cb234.png"
 
 /***/ },
-/* 337 */
+/* 346 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/許智傑.png ***!
   \***************************************************************/
@@ -17492,7 +18022,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "c4407a23e06fd9463a6056c0a9c6577e.png"
 
 /***/ },
-/* 338 */
+/* 347 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/許淑華.png ***!
   \***************************************************************/
@@ -17501,7 +18031,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "7b015d9c85723f95d2726f8ac9bb2829.png"
 
 /***/ },
-/* 339 */
+/* 348 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/許添財.png ***!
   \***************************************************************/
@@ -17510,7 +18040,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "eeba0ccc9a3c7dc5d6b92f7478d99df7.png"
 
 /***/ },
-/* 340 */
+/* 349 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/詹凱臣.png ***!
   \***************************************************************/
@@ -17519,7 +18049,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "3cca8512a8582c0ab4a9a7b9b6fe81a2.png"
 
 /***/ },
-/* 341 */
+/* 350 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/謝國樑.png ***!
   \***************************************************************/
@@ -17528,7 +18058,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6691f01e092eef857a10c4fce8a71f64.png"
 
 /***/ },
-/* 342 */
+/* 351 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/費鴻泰.png ***!
   \***************************************************************/
@@ -17537,7 +18067,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "95a37b322b646d8323457fcb1d3fd6ee.png"
 
 /***/ },
-/* 343 */
+/* 352 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/賴士葆.png ***!
   \***************************************************************/
@@ -17546,7 +18076,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
 
 /***/ },
-/* 344 */
+/* 353 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/賴振昌.png ***!
   \***************************************************************/
@@ -17555,7 +18085,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "fdb564bc843c8844ad8e3476fa968c7f.png"
 
 /***/ },
-/* 345 */
+/* 354 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/趙天麟.png ***!
   \***************************************************************/
@@ -17564,7 +18094,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "659d62e81925fd88ae920db7f6beabd2.png"
 
 /***/ },
-/* 346 */
+/* 355 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/邱志偉.png ***!
   \***************************************************************/
@@ -17573,7 +18103,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "4b13eeb894061935b4396375351206c4.png"
 
 /***/ },
-/* 347 */
+/* 356 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/邱文彥.png ***!
   \***************************************************************/
@@ -17582,7 +18112,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "92e0f78be7cb0e384580bffb8d837bd5.png"
 
 /***/ },
-/* 348 */
+/* 357 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/邱議瑩.png ***!
   \***************************************************************/
@@ -17591,7 +18121,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "076d254b4b94793b3d636ccbea6711d9.png"
 
 /***/ },
-/* 349 */
+/* 358 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/鄭天財.png ***!
   \***************************************************************/
@@ -17600,7 +18130,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "513f57ccc7a29e2beaf54cdc38c8ad0c.png"
 
 /***/ },
-/* 350 */
+/* 359 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/鄭汝芬.png ***!
   \***************************************************************/
@@ -17609,7 +18139,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "75979106f892bfbe57b1415bc8c15fe9.png"
 
 /***/ },
-/* 351 */
+/* 360 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/鄭麗君.png ***!
   \***************************************************************/
@@ -17618,7 +18148,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "3176aa505cb1a78cda5909e7c85157ac.png"
 
 /***/ },
-/* 352 */
+/* 361 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳亭妃.png ***!
   \***************************************************************/
@@ -17627,7 +18157,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "71a1ee49d03deae203fbc6ae1e22eba0.png"
 
 /***/ },
-/* 353 */
+/* 362 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳其邁.png ***!
   \***************************************************************/
@@ -17636,7 +18166,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "128c0a7483e8daa47f693d9326a090de.png"
 
 /***/ },
-/* 354 */
+/* 363 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳唐山.png ***!
   \***************************************************************/
@@ -17645,7 +18175,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "31b1e07b4281906a6e2e05c0eb5765fd.png"
 
 /***/ },
-/* 355 */
+/* 364 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳學聖.png ***!
   \***************************************************************/
@@ -17654,7 +18184,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0d04270529df1e19bbf181b116a3c9e8.png"
 
 /***/ },
-/* 356 */
+/* 365 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳怡潔.png ***!
   \***************************************************************/
@@ -17663,7 +18193,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "9df443ce4f4d8a0abc4dea357fd71791.png"
 
 /***/ },
-/* 357 */
+/* 366 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳明文.png ***!
   \***************************************************************/
@@ -17672,7 +18202,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6f9f4cea49452f446458e5a1b86f437c.png"
 
 /***/ },
-/* 358 */
+/* 367 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳根德.png ***!
   \***************************************************************/
@@ -17681,7 +18211,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "e43116ce1d367346429b1d0bff2ddd15.png"
 
 /***/ },
-/* 359 */
+/* 368 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳歐珀.png ***!
   \***************************************************************/
@@ -17690,7 +18220,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "e0de59d3d88ef4fa390c7ad15d184736.png"
 
 /***/ },
-/* 360 */
+/* 369 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳淑慧.png ***!
   \***************************************************************/
@@ -17699,7 +18229,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "9acf2e60bfcc6c1823457b4fdff4a1ce.png"
 
 /***/ },
-/* 361 */
+/* 370 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳碧涵.png ***!
   \***************************************************************/
@@ -17708,7 +18238,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "60fc483100a0cba64a2e61f38828c89b.png"
 
 /***/ },
-/* 362 */
+/* 371 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳節如.png ***!
   \***************************************************************/
@@ -17717,7 +18247,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "78c247f8aaf8bb82a23b1aad1dc9941f.png"
 
 /***/ },
-/* 363 */
+/* 372 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳素月.png ***!
   \***************************************************************/
@@ -17726,7 +18256,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "74829f3ecf63987027c6ff874734a628.png"
 
 /***/ },
-/* 364 */
+/* 373 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳超明.png ***!
   \***************************************************************/
@@ -17735,7 +18265,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "acdae1531ca424f2314775a13b5b5953.png"
 
 /***/ },
-/* 365 */
+/* 374 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳鎮湘.png ***!
   \***************************************************************/
@@ -17744,7 +18274,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6613fa3490df21163983044cc7f100c4.png"
 
 /***/ },
-/* 366 */
+/* 375 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/陳雪生.png ***!
   \***************************************************************/
@@ -17753,7 +18283,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "4a09a511d013e5322614064721cb2d14.png"
 
 /***/ },
-/* 367 */
+/* 376 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/顏寬恒.png ***!
   \***************************************************************/
@@ -17762,7 +18292,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "79d35d2a704c643b2e0295da1b7a86b0.png"
 
 /***/ },
-/* 368 */
+/* 377 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/馬文君.png ***!
   \***************************************************************/
@@ -17771,7 +18301,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "0973f8c6da915adc2b376eff97b64265.png"
 
 /***/ },
-/* 369 */
+/* 378 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/高志鵬.png ***!
   \***************************************************************/
@@ -17780,7 +18310,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "77821e0d7d1cd603e5e1e9dc1fc3b679.png"
 
 /***/ },
-/* 370 */
+/* 379 */
 /*!****************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/高金素梅.png ***!
   \****************************************************************/
@@ -17789,7 +18319,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "fb431093fb74b2eae7c44e1975e5284d.png"
 
 /***/ },
-/* 371 */
+/* 380 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/魏明谷.png ***!
   \***************************************************************/
@@ -17798,7 +18328,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ab79f6582f091847cf56fc4b1b65e81c.png"
 
 /***/ },
-/* 372 */
+/* 381 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/黃偉哲.png ***!
   \***************************************************************/
@@ -17807,7 +18337,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "b88fcc6e1bbe88f6f69983d3e5fc6ad0.png"
 
 /***/ },
-/* 373 */
+/* 382 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/黃國書.png ***!
   \***************************************************************/
@@ -17816,7 +18346,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ae2563a45bc3ef4be1df9b9d9a4c800b.png"
 
 /***/ },
-/* 374 */
+/* 383 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/黃志雄.png ***!
   \***************************************************************/
@@ -17825,7 +18355,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "d92b46d47c09cd04474199e4c12245b6.png"
 
 /***/ },
-/* 375 */
+/* 384 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/黃文玲.png ***!
   \***************************************************************/
@@ -17834,7 +18364,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ecd9a0029b62a297a32a1d1a94f6254f.png"
 
 /***/ },
-/* 376 */
+/* 385 */
 /*!***************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar/黃昭順.png ***!
   \***************************************************************/
@@ -17843,7 +18373,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "6bbc4ccbda3220df5798bed8de6ef944.png"
 
 /***/ },
-/* 377 */
+/* 386 */
 /*!*******************************************************!*\
   !*** ./~/react-router/lib/getWindowScrollPosition.js ***!
   \*******************************************************/
@@ -17851,8 +18381,8 @@ module.exports =
 
 	'use strict';
 
-	var invariant = __webpack_require__(/*! react/lib/invariant */ 104);
-	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 105).canUseDOM;
+	var invariant = __webpack_require__(/*! react/lib/invariant */ 105);
+	var canUseDOM = __webpack_require__(/*! react/lib/ExecutionEnvironment */ 106).canUseDOM;
 
 	/**
 	 * Returns the current scroll position of the window as { x, y }.
@@ -17869,7 +18399,7 @@ module.exports =
 	module.exports = getWindowScrollPosition;
 
 /***/ },
-/* 378 */
+/* 387 */
 /*!**************************************************!*\
   !*** ./app/components/UserAvatar/UserAvatar.jsx ***!
   \**************************************************/
@@ -17893,9 +18423,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+	var _reactRouter = __webpack_require__(/*! react-router */ 27);
 
-	__webpack_require__(/*! ./UserAvatar.css */ 383);
+	__webpack_require__(/*! ./UserAvatar.css */ 392);
 
 	var UserAvatar = (function (_React$Component) {
 	  function UserAvatar() {
@@ -17912,7 +18442,7 @@ module.exports =
 	    key: "render",
 	    value: function render() {
 
-	      var imgURL = __webpack_require__(/*! ./images/user.jpg */ 384);
+	      var imgURL = __webpack_require__(/*! ./images/user.jpg */ 393);
 	      return _react2["default"].createElement(
 	        "div",
 	        { className: "UserAvatar" },
@@ -17929,7 +18459,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 379 */
+/* 388 */
 /*!******************************************!*\
   !*** ./app/components/Record/Record.css ***!
   \******************************************/
@@ -17938,7 +18468,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 380 */
+/* 389 */
 /*!******************************************************************!*\
   !*** ./app/components/OverviewWallAvatar/OverviewWallAvatar.css ***!
   \******************************************************************/
@@ -17947,7 +18477,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 381 */
+/* 390 */
 /*!*************************************************!*\
   !*** ./~/react-router/~/object-assign/index.js ***!
   \*************************************************/
@@ -17982,17 +18512,17 @@ module.exports =
 
 
 /***/ },
-/* 382 */
+/* 391 */
 /*!**************************************!*\
   !*** ./~/react-router/~/qs/index.js ***!
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./lib/ */ 385);
+	module.exports = __webpack_require__(/*! ./lib/ */ 394);
 
 
 /***/ },
-/* 383 */
+/* 392 */
 /*!**************************************************!*\
   !*** ./app/components/UserAvatar/UserAvatar.css ***!
   \**************************************************/
@@ -18001,7 +18531,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 384 */
+/* 393 */
 /*!***************************************************!*\
   !*** ./app/components/UserAvatar/images/user.jpg ***!
   \***************************************************/
@@ -18010,7 +18540,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "3be5b4bc7b1bfd42ebc3129db4669421.jpg"
 
 /***/ },
-/* 385 */
+/* 394 */
 /*!******************************************!*\
   !*** ./~/react-router/~/qs/lib/index.js ***!
   \******************************************/
@@ -18018,8 +18548,8 @@ module.exports =
 
 	// Load modules
 
-	var Stringify = __webpack_require__(/*! ./stringify */ 386);
-	var Parse = __webpack_require__(/*! ./parse */ 387);
+	var Stringify = __webpack_require__(/*! ./stringify */ 395);
+	var Parse = __webpack_require__(/*! ./parse */ 396);
 
 
 	// Declare internals
@@ -18034,7 +18564,7 @@ module.exports =
 
 
 /***/ },
-/* 386 */
+/* 395 */
 /*!**********************************************!*\
   !*** ./~/react-router/~/qs/lib/stringify.js ***!
   \**********************************************/
@@ -18042,7 +18572,7 @@ module.exports =
 
 	// Load modules
 
-	var Utils = __webpack_require__(/*! ./utils */ 388);
+	var Utils = __webpack_require__(/*! ./utils */ 397);
 
 
 	// Declare internals
@@ -18140,7 +18670,7 @@ module.exports =
 
 
 /***/ },
-/* 387 */
+/* 396 */
 /*!******************************************!*\
   !*** ./~/react-router/~/qs/lib/parse.js ***!
   \******************************************/
@@ -18148,7 +18678,7 @@ module.exports =
 
 	// Load modules
 
-	var Utils = __webpack_require__(/*! ./utils */ 388);
+	var Utils = __webpack_require__(/*! ./utils */ 397);
 
 
 	// Declare internals
@@ -18310,7 +18840,7 @@ module.exports =
 
 
 /***/ },
-/* 388 */
+/* 397 */
 /*!******************************************!*\
   !*** ./~/react-router/~/qs/lib/utils.js ***!
   \******************************************/
