@@ -31,12 +31,18 @@ export default class CandidatePicker extends React.Component {
           </div>
         )
     });
+
+    var optionsClasses = classNames({
+      "CandidatePicker-options": true,
+      "is-show" : candidateA === "" || candidateB === ""
+    })
   
     return (
       <div className="CandidatePicker">
-          <div>{options}</div>
           <div className="CandidatePicker-btn"
                onClick={clearCandidateHandler}>換人比</div>
+          <div className={optionsClasses}>{options}</div>
+          
       </div>
           
     );

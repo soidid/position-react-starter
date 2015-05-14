@@ -98,12 +98,13 @@ export default class CandidatesPage extends React.Component {
 		            	</div>
 		            </div>
 		        </div>
-		        <div className="CandidatesPage-otherCandidates">
+		        <div className="CandidatesPage-candidatePicker">
 		        	<CandidatePicker candidateA={candidateA} candidateB={candidateB}
 		        					 setCandidateHandler={this._onSetCandidates.bind(this)}
 		        					 clearCandidateHandler={this._onClearCandidates.bind(this)}/>
 		        	
 		        </div>
+		        
 		   	</div>);
 		
 

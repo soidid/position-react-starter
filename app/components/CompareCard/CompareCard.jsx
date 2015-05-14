@@ -88,8 +88,24 @@ export default class CompareCard extends React.Component {
             </div>
           </div>
           <div className="CompareCard-issues">
-          {issueItems}
+            {issueItems}
           </div>
+          <div className="CompareCard-flexGrids">
+            <div className="CompareCard-GridTwo">
+                <div className="ComareCard-btn">
+                  <div>{candidateA}</div>
+                  <div>完整檔案</div>
+                </div>
+            </div>
+            
+            <div className="CompareCard-GridTwo">
+                <div className="ComareCard-btn">
+                  <div>{candidateB}</div>
+                  <div>完整檔案</div>
+                </div>
+            </div>
+          </div>
+
       </div>
           
     );

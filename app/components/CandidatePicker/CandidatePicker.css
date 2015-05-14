@@ -1,3 +1,21 @@
+.CandidatePicker {
+	position: relative;
+}
+.CandidatePicker-options {
+	overflow-y: hidden;
+	max-height:0px; /* approximate max height */
+
+	transition-property: max-height;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.CandidatePicker-options.is-show {
+	max-height: 400px;
+	margin-top: 10px;
+	transition-property: max-height;
+	transition-duration: 100ms;
+	transition-timing-function: ease-in;
+}
 .CandidatePicker-option {
 	display: inline-block;
 	font-size: 14px;
@@ -18,14 +36,16 @@
 	margin-top: 4px;
 }
 .CandidatePicker-btn {
+	
     background: #b8d8d8;
     color: white;
     border-radius: 80px;
     text-align: center;
     display: inline-block;
     padding: 12px 30px;
+
     font-weight: 800;
-    margin: 20px auto;
+    
     cursor: pointer;
     box-shadow: 2px 4px 0px 0px rgba(200,200,200,0.22);
 }
