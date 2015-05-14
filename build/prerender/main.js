@@ -133,7 +133,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	/* eslint-disable no-multi-spaces */
 	// Only import from `route-handlers/*`
@@ -296,7 +296,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _reactRouter2 = _interopRequireDefault(_reactRouter);
 
@@ -445,9 +445,9 @@ module.exports =
 
 	var _containersApplicationApplicationJsx2 = _interopRequireDefault(_containersApplicationApplicationJsx);
 
-	__webpack_require__(/*! ./normalize.css */ 47);
+	__webpack_require__(/*! ./normalize.css */ 42);
 
-	__webpack_require__(/*! ./css/font-awesome.css */ 48);
+	__webpack_require__(/*! ./css/font-awesome.css */ 43);
 
 	exports["default"] = _itemsStore.createContainer(_containersApplicationApplicationJsx2["default"]);
 	module.exports = exports["default"];
@@ -469,7 +469,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersTodoListPageTodoListPageJsx = __webpack_require__(/*! containers/TodoListPage/TodoListPage.jsx */ 32);
+	var _containersTodoListPageTodoListPageJsx = __webpack_require__(/*! containers/TodoListPage/TodoListPage.jsx */ 33);
 
 	var _containersTodoListPageTodoListPageJsx2 = _interopRequireDefault(_containersTodoListPageTodoListPageJsx);
 
@@ -517,7 +517,7 @@ module.exports =
 
 	var _itemsStore = __webpack_require__(/*! items-store */ 24);
 
-	var _containersNotFoundPageNotFoundPageJsx = __webpack_require__(/*! containers/NotFoundPage/NotFoundPage.jsx */ 33);
+	var _containersNotFoundPageNotFoundPageJsx = __webpack_require__(/*! containers/NotFoundPage/NotFoundPage.jsx */ 32);
 
 	var _containersNotFoundPageNotFoundPageJsx2 = _interopRequireDefault(_containersNotFoundPageNotFoundPageJsx);
 
@@ -721,7 +721,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _LegislatorLegislatorJsx = __webpack_require__(/*! ../Legislator/Legislator.jsx */ 29);
 
@@ -731,7 +731,7 @@ module.exports =
 
 	var _FactsCardFactsCardJsx2 = _interopRequireDefault(_FactsCardFactsCardJsx);
 
-	__webpack_require__(/*! ./Profile.css */ 49);
+	__webpack_require__(/*! ./Profile.css */ 44);
 
 	var Profile = (function (_React$Component) {
 	    function Profile(props) {
@@ -996,11 +996,11 @@ module.exports =
 		MIT License http://www.opensource.org/licenses/mit-license.php
 		Author Tobias Koppers @sokra
 	*/
-	exports.ItemsStore = __webpack_require__(/*! ./ItemsStore */ 42);
-	exports.ItemsStoreLease = __webpack_require__(/*! ./ItemsStoreLease */ 43);
-	exports.ItemsStoreFetcher = __webpack_require__(/*! ./ItemsStoreFetcher */ 44);
-	exports.Actions = __webpack_require__(/*! ./Actions */ 45);
-	exports.createContainer = __webpack_require__(/*! ./createContainer */ 46);
+	exports.ItemsStore = __webpack_require__(/*! ./ItemsStore */ 45);
+	exports.ItemsStoreLease = __webpack_require__(/*! ./ItemsStoreLease */ 46);
+	exports.ItemsStoreFetcher = __webpack_require__(/*! ./ItemsStoreFetcher */ 47);
+	exports.Actions = __webpack_require__(/*! ./Actions */ 48);
+	exports.createContainer = __webpack_require__(/*! ./createContainer */ 49);
 
 
 /***/ },
@@ -1014,7 +1014,7 @@ module.exports =
 	var desc = {
 		loadComponent: function(callback) {}
 	};
-	var mixinReactProxy = __webpack_require__(/*! ./~/react-proxy-loader/mixinReactProxy.js */ 28);
+	var mixinReactProxy = __webpack_require__(/*! ./~/react-proxy-loader/mixinReactProxy.js */ 27);
 	mixinReactProxy(React, desc);
 	module.exports = React.createClass(desc);
 	module.exports.Mixin = desc;
@@ -1030,6 +1030,40 @@ module.exports =
 
 /***/ },
 /* 27 */
+/*!*************************************************!*\
+  !*** ./~/react-proxy-loader/mixinReactProxy.js ***!
+  \*************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function(React, desc) {
+		desc.displayName = "ReactProxy";
+		desc.render = function() {
+			var Component = this.state.component;
+			if(Component) {
+				return React.createElement(Component, this.props, this.props.children);
+			} else if(this.renderUnavailable) {
+				return this.renderUnavailable();
+			} else {
+				return null;
+			}
+		};
+		desc.getInitialState = function() {
+			return { component: this.loadComponent() };
+		};
+		desc.componentDidMount = function() {
+			if(!this.state.component) {
+				this.loadComponent(function(component) {
+					if(this.isMounted()) {
+						this.setState({ component: component });
+					}
+				}.bind(this));
+			}
+		};
+	};
+
+
+/***/ },
+/* 28 */
 /*!*************************************!*\
   !*** ./~/react-router/lib/index.js ***!
   \*************************************/
@@ -1068,40 +1102,6 @@ module.exports =
 	exports.run = __webpack_require__(/*! ./runRouter */ 70);
 
 /***/ },
-/* 28 */
-/*!*************************************************!*\
-  !*** ./~/react-proxy-loader/mixinReactProxy.js ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function(React, desc) {
-		desc.displayName = "ReactProxy";
-		desc.render = function() {
-			var Component = this.state.component;
-			if(Component) {
-				return React.createElement(Component, this.props, this.props.children);
-			} else if(this.renderUnavailable) {
-				return this.renderUnavailable();
-			} else {
-				return null;
-			}
-		};
-		desc.getInitialState = function() {
-			return { component: this.loadComponent() };
-		};
-		desc.componentDidMount = function() {
-			if(!this.state.component) {
-				this.loadComponent(function(component) {
-					if(this.isMounted()) {
-						this.setState({ component: component });
-					}
-				}.bind(this));
-			}
-		};
-	};
-
-
-/***/ },
 /* 29 */
 /*!**************************************************!*\
   !*** ./app/components/Legislator/Legislator.jsx ***!
@@ -1126,7 +1126,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	__webpack_require__(/*! ./Legislator.css */ 71);
 
@@ -1203,7 +1203,7 @@ module.exports =
 
 	var _reactAddons2 = _interopRequireDefault(_reactAddons);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	__webpack_require__(/*! ./FactsCard.css */ 73);
 
@@ -1344,13 +1344,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	var _componentsAppBarAppBarJsx = __webpack_require__(/*! components/AppBar/AppBar.jsx */ 77);
+	var _componentsAppBarAppBarJsx = __webpack_require__(/*! components/AppBar/AppBar.jsx */ 75);
 
 	var _componentsAppBarAppBarJsx2 = _interopRequireDefault(_componentsAppBarAppBarJsx);
 
-	var _componentsSideBarSideBarJsx = __webpack_require__(/*! components/SideBar/SideBar.jsx */ 78);
+	var _componentsSideBarSideBarJsx = __webpack_require__(/*! components/SideBar/SideBar.jsx */ 76);
 
 	var _componentsSideBarSideBarJsx2 = _interopRequireDefault(_componentsSideBarSideBarJsx);
 
@@ -1358,7 +1358,7 @@ module.exports =
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _ApplicationCss = __webpack_require__(/*! ./Application.css */ 79);
+	var _ApplicationCss = __webpack_require__(/*! ./Application.css */ 77);
 
 	var _ApplicationCss2 = _interopRequireDefault(_ApplicationCss);
 
@@ -1437,6 +1437,73 @@ module.exports =
 /***/ },
 /* 32 */
 /*!******************************************************!*\
+  !*** ./app/containers/NotFoundPage/NotFoundPage.jsx ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var NotFoundPage = (function (_React$Component) {
+		function NotFoundPage() {
+			_classCallCheck(this, NotFoundPage);
+
+			if (_React$Component != null) {
+				_React$Component.apply(this, arguments);
+			}
+		}
+
+		_inherits(NotFoundPage, _React$Component);
+
+		_createClass(NotFoundPage, [{
+			key: "render",
+			value: function render() {
+				return _react2["default"].createElement(
+					"div",
+					null,
+					_react2["default"].createElement(
+						"h2",
+						null,
+						"Not found"
+					),
+					_react2["default"].createElement(
+						"p",
+						null,
+						"The page you requested was not found."
+					)
+				);
+			}
+		}], [{
+			key: "getProps",
+			value: function getProps() {
+				return {};
+			}
+		}]);
+
+		return NotFoundPage;
+	})(_react2["default"].Component);
+
+	exports["default"] = NotFoundPage;
+	module.exports = exports["default"];
+
+/***/ },
+/* 33 */
+/*!******************************************************!*\
   !*** ./app/containers/TodoListPage/TodoListPage.jsx ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
@@ -1506,73 +1573,6 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 33 */
-/*!******************************************************!*\
-  !*** ./app/containers/NotFoundPage/NotFoundPage.jsx ***!
-  \******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(/*! react */ 1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var NotFoundPage = (function (_React$Component) {
-		function NotFoundPage() {
-			_classCallCheck(this, NotFoundPage);
-
-			if (_React$Component != null) {
-				_React$Component.apply(this, arguments);
-			}
-		}
-
-		_inherits(NotFoundPage, _React$Component);
-
-		_createClass(NotFoundPage, [{
-			key: "render",
-			value: function render() {
-				return _react2["default"].createElement(
-					"div",
-					null,
-					_react2["default"].createElement(
-						"h2",
-						null,
-						"Not found"
-					),
-					_react2["default"].createElement(
-						"p",
-						null,
-						"The page you requested was not found."
-					)
-				);
-			}
-		}], [{
-			key: "getProps",
-			value: function getProps() {
-				return {};
-			}
-		}]);
-
-		return NotFoundPage;
-	})(_react2["default"].Component);
-
-	exports["default"] = NotFoundPage;
-	module.exports = exports["default"];
-
-/***/ },
 /* 34 */
 /*!**********************************************!*\
   !*** ./app/containers/HomePage/HomePage.jsx ***!
@@ -1597,9 +1597,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	__webpack_require__(/*! ./HomePage.css */ 80);
+	__webpack_require__(/*! ./HomePage.css */ 78);
 
 	var HomePage = (function (_React$Component) {
 		function HomePage() {
@@ -1686,7 +1686,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _componentsProfileProfileJsx = __webpack_require__(/*! components/Profile/Profile.jsx */ 21);
 
@@ -1696,15 +1696,15 @@ module.exports =
 
 	var _componentsLegislatorLegislatorJsx2 = _interopRequireDefault(_componentsLegislatorLegislatorJsx);
 
-	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 81);
+	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 84);
 
 	var _componentsTabsTabsJsx2 = _interopRequireDefault(_componentsTabsTabsJsx);
 
-	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 82);
+	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 85);
 
 	var _componentsRecordListRecordListJsx2 = _interopRequireDefault(_componentsRecordListRecordListJsx);
 
-	__webpack_require__(/*! ./PersonPage.css */ 83);
+	__webpack_require__(/*! ./PersonPage.css */ 86);
 
 	var PersonPage = (function (_React$Component) {
 		function PersonPage() {
@@ -1789,13 +1789,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _componentsLegislatorLegislatorJsx = __webpack_require__(/*! components/Legislator/Legislator.jsx */ 29);
 
 	var _componentsLegislatorLegislatorJsx2 = _interopRequireDefault(_componentsLegislatorLegislatorJsx);
 
-	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 82);
+	var _componentsRecordListRecordListJsx = __webpack_require__(/*! components/RecordList/RecordList.jsx */ 85);
 
 	var _componentsRecordListRecordListJsx2 = _interopRequireDefault(_componentsRecordListRecordListJsx);
 
@@ -1803,11 +1803,11 @@ module.exports =
 
 	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
 
-	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 81);
+	var _componentsTabsTabsJsx = __webpack_require__(/*! components/Tabs/Tabs.jsx */ 84);
 
 	var _componentsTabsTabsJsx2 = _interopRequireDefault(_componentsTabsTabsJsx);
 
-	__webpack_require__(/*! ./PersonIssuePage.css */ 84);
+	__webpack_require__(/*! ./PersonIssuePage.css */ 87);
 
 	var PersonIssuePage = (function (_React$Component) {
 		function PersonIssuePage() {
@@ -1885,9 +1885,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 88);
 
 	var _componentsLegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_componentsLegislatorAvatarLegislatorAvatarJsx);
 
@@ -1895,13 +1895,13 @@ module.exports =
 
 	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
 
-	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 86);
+	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 89);
 
 	var _componentsInputInputJsx2 = _interopRequireDefault(_componentsInputInputJsx);
 
-	__webpack_require__(/*! ./PersonListPage.css */ 87);
+	__webpack_require__(/*! ./PersonListPage.css */ 90);
 
-	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 88);
+	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 91);
 
 	var _lyInfoJs2 = _interopRequireDefault(_lyInfoJs);
 
@@ -2166,25 +2166,25 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	var _componentsCompareCardCompareCardJsx = __webpack_require__(/*! components/CompareCard/CompareCard.jsx */ 89);
+	var _componentsCompareCardCompareCardJsx = __webpack_require__(/*! components/CompareCard/CompareCard.jsx */ 79);
 
 	var _componentsCompareCardCompareCardJsx2 = _interopRequireDefault(_componentsCompareCardCompareCardJsx);
 
-	var _componentsCompareTabsCompareTabsJsx = __webpack_require__(/*! components/CompareTabs/CompareTabs.jsx */ 90);
+	var _componentsCompareTabsCompareTabsJsx = __webpack_require__(/*! components/CompareTabs/CompareTabs.jsx */ 80);
 
 	var _componentsCompareTabsCompareTabsJsx2 = _interopRequireDefault(_componentsCompareTabsCompareTabsJsx);
 
-	var _componentsCompareMultiCardCompareMultiCardJsx = __webpack_require__(/*! components/CompareMultiCard/CompareMultiCard.jsx */ 91);
+	var _componentsCompareMultiCardCompareMultiCardJsx = __webpack_require__(/*! components/CompareMultiCard/CompareMultiCard.jsx */ 81);
 
 	var _componentsCompareMultiCardCompareMultiCardJsx2 = _interopRequireDefault(_componentsCompareMultiCardCompareMultiCardJsx);
 
-	var _componentsCandidatePickerCandidatePickerJsx = __webpack_require__(/*! components/CandidatePicker/CandidatePicker.jsx */ 92);
+	var _componentsCandidatePickerCandidatePickerJsx = __webpack_require__(/*! components/CandidatePicker/CandidatePicker.jsx */ 82);
 
 	var _componentsCandidatePickerCandidatePickerJsx2 = _interopRequireDefault(_componentsCandidatePickerCandidatePickerJsx);
 
-	__webpack_require__(/*! ./CandidatesPage.css */ 93);
+	__webpack_require__(/*! ./CandidatesPage.css */ 83);
 
 	var CandidatesPage = (function (_React$Component) {
 		function CandidatesPage(props) {
@@ -2322,7 +2322,7 @@ module.exports =
 					),
 					_react2["default"].createElement(
 						"div",
-						{ className: "CandidatesPage-otherCandidates" },
+						{ className: "CandidatesPage-candidatePicker" },
 						_react2["default"].createElement(_componentsCandidatePickerCandidatePickerJsx2["default"], { candidateA: candidateA, candidateB: candidateB,
 							setCandidateHandler: this._onSetCandidates.bind(this),
 							clearCandidateHandler: this._onClearCandidates.bind(this) })
@@ -2407,13 +2407,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 86);
+	var _componentsInputInputJsx = __webpack_require__(/*! components/Input/Input.jsx */ 89);
 
 	var _componentsInputInputJsx2 = _interopRequireDefault(_componentsInputInputJsx);
 
-	__webpack_require__(/*! ./IssueListPage.css */ 94);
+	__webpack_require__(/*! ./IssueListPage.css */ 92);
 
 	var IssueListPage = (function (_React$Component) {
 	  function IssueListPage(props) {
@@ -2483,7 +2483,7 @@ module.exports =
 	      }];
 	      var issueListItem = issueList.map(function (i, k) {
 
-	        var imgURL = __webpack_require__(/*! ./images */ 95)("./" + (k + 1) + ".png");
+	        var imgURL = __webpack_require__(/*! ./images */ 93)("./" + (k + 1) + ".png");
 	        return _react2["default"].createElement(
 	          _reactRouter.Link,
 	          { to: "issue",
@@ -2569,9 +2569,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _componentsLegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! components/LegislatorAvatar/LegislatorAvatar.jsx */ 88);
 
 	var _componentsLegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_componentsLegislatorAvatarLegislatorAvatarJsx);
 
@@ -2579,9 +2579,9 @@ module.exports =
 
 	var _componentsIconIconJsx2 = _interopRequireDefault(_componentsIconIconJsx);
 
-	__webpack_require__(/*! ./IssuePage.css */ 96);
+	__webpack_require__(/*! ./IssuePage.css */ 94);
 
-	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 97);
+	var _lyInfoJs = __webpack_require__(/*! ./ly-info.js */ 95);
 
 	var _lyInfoJs2 = _interopRequireDefault(_lyInfoJs);
 
@@ -2936,31 +2936,31 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	var _lyPositionJs = __webpack_require__(/*! ./ly-position.js */ 98);
+	var _lyPositionJs = __webpack_require__(/*! ./ly-position.js */ 96);
 
 	var _lyPositionJs2 = _interopRequireDefault(_lyPositionJs);
 
-	var _componentsOpinionGroupOpinionGroupJsx = __webpack_require__(/*! components/OpinionGroup/OpinionGroup.jsx */ 99);
+	var _componentsOpinionGroupOpinionGroupJsx = __webpack_require__(/*! components/OpinionGroup/OpinionGroup.jsx */ 97);
 
 	var _componentsOpinionGroupOpinionGroupJsx2 = _interopRequireDefault(_componentsOpinionGroupOpinionGroupJsx);
 
-	__webpack_require__(/*! ./IssueVotePage.css */ 100);
+	__webpack_require__(/*! ./IssueVotePage.css */ 98);
 
-	var _dataForJs = __webpack_require__(/*! ./data/for.js */ 101);
+	var _dataForJs = __webpack_require__(/*! ./data/for.js */ 99);
 
 	var _dataForJs2 = _interopRequireDefault(_dataForJs);
 
-	var _dataAgainstJs = __webpack_require__(/*! ./data/against.js */ 102);
+	var _dataAgainstJs = __webpack_require__(/*! ./data/against.js */ 100);
 
 	var _dataAgainstJs2 = _interopRequireDefault(_dataAgainstJs);
 
-	var _dataUnclearJs = __webpack_require__(/*! ./data/unclear.js */ 103);
+	var _dataUnclearJs = __webpack_require__(/*! ./data/unclear.js */ 101);
 
 	var _dataUnclearJs2 = _interopRequireDefault(_dataUnclearJs);
 
-	var _dataNoneJs = __webpack_require__(/*! ./data/none.js */ 104);
+	var _dataNoneJs = __webpack_require__(/*! ./data/none.js */ 102);
 
 	var _dataNoneJs2 = _interopRequireDefault(_dataNoneJs);
 
@@ -3035,6 +3035,33 @@ module.exports =
 
 /***/ },
 /* 42 */
+/*!******************************************!*\
+  !*** ./app/route-handlers/normalize.css ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 43 */
+/*!*************************************************!*\
+  !*** ./app/route-handlers/css/font-awesome.css ***!
+  \*************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 44 */
+/*!********************************************!*\
+  !*** ./app/components/Profile/Profile.css ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 45 */
 /*!*************************************!*\
   !*** ./~/items-store/ItemsStore.js ***!
   \*************************************/
@@ -3769,7 +3796,7 @@ module.exports =
 
 
 /***/ },
-/* 43 */
+/* 46 */
 /*!******************************************!*\
   !*** ./~/items-store/ItemsStoreLease.js ***!
   \******************************************/
@@ -3827,7 +3854,7 @@ module.exports =
 
 
 /***/ },
-/* 44 */
+/* 47 */
 /*!********************************************!*\
   !*** ./~/items-store/ItemsStoreFetcher.js ***!
   \********************************************/
@@ -3869,7 +3896,7 @@ module.exports =
 
 
 /***/ },
-/* 45 */
+/* 48 */
 /*!**********************************!*\
   !*** ./~/items-store/Actions.js ***!
   \**********************************/
@@ -3879,7 +3906,7 @@ module.exports =
 		MIT License http://www.opensource.org/licenses/mit-license.php
 		Author Tobias Koppers @sokra
 	*/
-	var EventEmitter = __webpack_require__(/*! events */ 75).EventEmitter;
+	var EventEmitter = __webpack_require__(/*! events */ 103).EventEmitter;
 
 	var Actions = module.exports = exports;
 
@@ -3907,7 +3934,7 @@ module.exports =
 
 
 /***/ },
-/* 46 */
+/* 49 */
 /*!******************************************!*\
   !*** ./~/items-store/createContainer.js ***!
   \******************************************/
@@ -3918,9 +3945,9 @@ module.exports =
 		Author Tobias Koppers @sokra
 	*/
 	var React = __webpack_require__(/*! react */ 1);
-	var ItemsStoreLease = __webpack_require__(/*! ./ItemsStoreLease */ 43);
-	var ItemsStoreFetcher = __webpack_require__(/*! ./ItemsStoreFetcher */ 44);
-	var ReactUpdates = __webpack_require__(/*! react/lib/ReactUpdates */ 76);
+	var ItemsStoreLease = __webpack_require__(/*! ./ItemsStoreLease */ 46);
+	var ItemsStoreFetcher = __webpack_require__(/*! ./ItemsStoreFetcher */ 47);
+	var ReactUpdates = __webpack_require__(/*! react/lib/ReactUpdates */ 104);
 
 	function makeStores(stores, addDependency) {
 		if(!addDependency) {
@@ -4013,33 +4040,6 @@ module.exports =
 		})
 	};
 
-
-/***/ },
-/* 47 */
-/*!******************************************!*\
-  !*** ./app/route-handlers/normalize.css ***!
-  \******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 48 */
-/*!*************************************************!*\
-  !*** ./app/route-handlers/css/font-awesome.css ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 49 */
-/*!********************************************!*\
-  !*** ./app/components/Profile/Profile.css ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
 
 /***/ },
 /* 50 */
@@ -6296,7 +6296,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	__webpack_require__(/*! ./Icon.css */ 245);
 
@@ -6333,24 +6333,6 @@ module.exports =
 
 /***/ },
 /* 75 */
-/*!*************************!*\
-  !*** external "events" ***!
-  \*************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = require("events");
-
-/***/ },
-/* 76 */
-/*!*****************************************!*\
-  !*** external "react/lib/ReactUpdates" ***!
-  \*****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = require("react/lib/ReactUpdates");
-
-/***/ },
-/* 77 */
 /*!******************************************!*\
   !*** ./app/components/AppBar/AppBar.jsx ***!
   \******************************************/
@@ -6374,13 +6356,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	__webpack_require__(/*! ./AppBar.css */ 246);
+	__webpack_require__(/*! ./AppBar.css */ 253);
 
 	var AppBar = (function (_React$Component) {
 	  function AppBar() {
@@ -6426,7 +6408,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 78 */
+/* 76 */
 /*!********************************************!*\
   !*** ./app/components/SideBar/SideBar.jsx ***!
   \********************************************/
@@ -6454,7 +6436,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _classnames = __webpack_require__(/*! classnames */ 109);
 
@@ -6464,7 +6446,7 @@ module.exports =
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	__webpack_require__(/*! ./SideBar.css */ 247);
+	__webpack_require__(/*! ./SideBar.css */ 246);
 
 	var SideBarItem = (function (_React$Component) {
 	  function SideBarItem(props) {
@@ -6649,7 +6631,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 79 */
+/* 77 */
 /*!****************************************************!*\
   !*** ./app/containers/Application/Application.css ***!
   \****************************************************/
@@ -6658,7 +6640,7 @@ module.exports =
 	module.exports = {"this":"n9zwqtlXTbL-3jcnZr4mC","loading":"_2TYQhh_5PR7uD_ji2Exm_0","loadingElement":"_36X98_Aq2Kto37P-_WaFIy"};
 
 /***/ },
-/* 80 */
+/* 78 */
 /*!**********************************************!*\
   !*** ./app/containers/HomePage/HomePage.css ***!
   \**********************************************/
@@ -6667,7 +6649,712 @@ module.exports =
 	module.exports = {};
 
 /***/ },
+/* 79 */
+/*!****************************************************!*\
+  !*** ./app/components/CompareCard/CompareCard.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _reactAddons = __webpack_require__(/*! react/addons */ 50);
+
+	var _reactAddons2 = _interopRequireDefault(_reactAddons);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+
+	__webpack_require__(/*! ./CompareCard.css */ 247);
+
+	var _CompareCard = __webpack_require__(/*! ./CompareCard */ 248);
+
+	var _CompareCard2 = _interopRequireDefault(_CompareCard);
+
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
+
+	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
+
+	var _classnames = __webpack_require__(/*! classnames */ 109);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function opinionToIcon(opinion) {
+	    //circle-o
+	    //times
+	    //frown-o, 不知所云,  unclear
+	    //question, 未表態, none
+
+	    switch (opinion) {
+	        case "for":
+	            return "circle-o";
+	        case "against":
+	            return "times";
+	        case "unclear":
+	            return "frown-o";
+	        case "none":
+	            return "question";
+	    }
+	    return "";
+	}
+	function opinionToText(opinion) {
+
+	    switch (opinion) {
+	        case "for":
+	            return "贊成";
+	        case "against":
+	            return "反對";
+	        case "unclear":
+	            return "不知所云";
+	        case "none":
+	            return "未表態";
+	    }
+	    return "";
+	}
+
+	var CompareCard = (function (_React$Component) {
+	    function CompareCard() {
+	        _classCallCheck(this, CompareCard);
+
+	        if (_React$Component != null) {
+	            _React$Component.apply(this, arguments);
+	        }
+	    }
+
+	    _inherits(CompareCard, _React$Component);
+
+	    _createClass(CompareCard, [{
+	        key: "render",
+	        value: function render() {
+	            var _props = this.props;
+	            var issueTitle = _props.issueTitle;
+	            var candidateA = _props.candidateA;
+	            var candidateB = _props.candidateB;
+
+	            if (!candidateA) candidateA = "請選擇";
+	            if (!candidateB) candidateB = "請選擇";
+	            var candidateAimg = "";
+	            var candidateBimg = "";
+	            try {
+	                candidateAimg = __webpack_require__(/*! ./images */ 249)("./" + candidateA + ".png");
+	                candidateBimg = __webpack_require__(/*! ./images */ 249)("./" + candidateB + ".png");
+	            } catch (e) {
+	                if (!candidateAimg) candidateAimg = __webpack_require__(/*! ./images/default.svg */ 250);
+	                if (!candidateBimg) candidateBimg = __webpack_require__(/*! ./images/default.svg */ 250);
+	            }
+
+	            var issueItems = _CompareCard2["default"].issues.map(function (item, key) {
+	                var classes = _classnames2["default"]({
+	                    "CompareCard-flexGrids": true,
+	                    "is-even": key % 2 === 0,
+	                    "is-odd": key % 2 !== 0
+	                });
+	                return _reactAddons2["default"].createElement(
+	                    "div",
+	                    { className: classes,
+	                        key: key },
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-GridOne" },
+	                        _reactAddons2["default"].createElement(
+	                            "div",
+	                            { className: "CompareCard-Icon" },
+	                            _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item[candidateA]) })
+	                        ),
+	                        _reactAddons2["default"].createElement(
+	                            "div",
+	                            { className: "CompareCard-Opinion" },
+	                            opinionToText(item[candidateA])
+	                        )
+	                    ),
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-GridTwo CompareCard-issue" },
+	                        item.title
+	                    ),
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-GridOne" },
+	                        _reactAddons2["default"].createElement(
+	                            "div",
+	                            { className: "CompareCard-Icon" },
+	                            _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item[candidateB]) })
+	                        ),
+	                        _reactAddons2["default"].createElement(
+	                            "div",
+	                            { className: "CompareCard-Opinion" },
+	                            opinionToText(item[candidateB])
+	                        )
+	                    )
+	                );
+	            });
+
+	            return _reactAddons2["default"].createElement(
+	                "div",
+	                { className: "CompareCard" },
+	                _reactAddons2["default"].createElement(
+	                    "div",
+	                    { className: "CompareCard-title" },
+	                    issueTitle
+	                ),
+	                _reactAddons2["default"].createElement(
+	                    "div",
+	                    { className: "CompareCard-flexGrids" },
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-GridTwo" },
+	                        _reactAddons2["default"].createElement("img", { className: "CompareCard-img",
+	                            src: candidateAimg }),
+	                        candidateA
+	                    ),
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-pk" },
+	                        "PK"
+	                    ),
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-GridTwo" },
+	                        _reactAddons2["default"].createElement("img", { className: "CompareCard-img",
+	                            src: candidateBimg }),
+	                        candidateB
+	                    )
+	                ),
+	                _reactAddons2["default"].createElement(
+	                    "div",
+	                    { className: "CompareCard-issues" },
+	                    issueItems
+	                ),
+	                _reactAddons2["default"].createElement(
+	                    "div",
+	                    { className: "CompareCard-flexGrids" },
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-GridTwo" },
+	                        _reactAddons2["default"].createElement(
+	                            "div",
+	                            { className: "ComareCard-btn" },
+	                            _reactAddons2["default"].createElement(
+	                                "div",
+	                                null,
+	                                candidateA
+	                            ),
+	                            _reactAddons2["default"].createElement(
+	                                "div",
+	                                null,
+	                                "完整檔案"
+	                            )
+	                        )
+	                    ),
+	                    _reactAddons2["default"].createElement(
+	                        "div",
+	                        { className: "CompareCard-GridTwo" },
+	                        _reactAddons2["default"].createElement(
+	                            "div",
+	                            { className: "ComareCard-btn" },
+	                            _reactAddons2["default"].createElement(
+	                                "div",
+	                                null,
+	                                candidateB
+	                            ),
+	                            _reactAddons2["default"].createElement(
+	                                "div",
+	                                null,
+	                                "完整檔案"
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return CompareCard;
+	})(_reactAddons2["default"].Component);
+
+	exports["default"] = CompareCard;
+	module.exports = exports["default"];
+
+/***/ },
+/* 80 */
+/*!****************************************************!*\
+  !*** ./app/components/CompareTabs/CompareTabs.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+
+	__webpack_require__(/*! ./CompareTabs.css */ 254);
+
+	var _classnames = __webpack_require__(/*! classnames */ 109);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
+
+	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
+
+	var CompareTabs = (function (_React$Component) {
+		function CompareTabs() {
+			_classCallCheck(this, CompareTabs);
+
+			if (_React$Component != null) {
+				_React$Component.apply(this, arguments);
+			}
+		}
+
+		_inherits(CompareTabs, _React$Component);
+
+		_createClass(CompareTabs, [{
+			key: "render",
+			value: function render() {
+				var _this = this;
+
+				var _props = this.props;
+				var activeTab = _props.activeTab;
+				var activeSubtab = _props.activeSubtab;
+				var setActiveTabHandler = _props.setActiveTabHandler;
+				var setActiveSubtabHandler = _props.setActiveSubtabHandler;
+
+				var menu = ["個人簡歷", "推薦函", "議題立場", "野生政見"];
+				var submenu = ["勞工", "婚姻平權", "中國因素", "核能"];
+				var items = menu.map(function (value, index) {
+					var tabClasses = _classnames2["default"]({
+						"CompareTabs-item": true,
+						"is-active": value === activeTab
+					});
+					return _react2["default"].createElement(
+						"div",
+						{ className: tabClasses,
+							onClick: setActiveTabHandler.bind(_this, value),
+							key: index },
+						value
+					);
+				});
+				var subitems = submenu.map(function (value, index) {
+					var tabClasses = _classnames2["default"]({
+						"CompareTabs-subitem": true,
+						"is-active": value === activeSubtab
+					});
+					return _react2["default"].createElement(
+						"div",
+						{ className: tabClasses,
+							onClick: setActiveSubtabHandler.bind(_this, value),
+							key: index },
+						value
+					);
+				});
+				var subitemClassess = _classnames2["default"]({
+					"CompareTabs-subitems": true,
+					"is-show": activeTab === "議題立場"
+				});
+				return _react2["default"].createElement(
+					"div",
+					{ className: "CompareTabs" },
+					_react2["default"].createElement(
+						"div",
+						{ className: "CompareTabs-items" },
+						_react2["default"].createElement(
+							"div",
+							{ className: "CompareTabs-maxWidth" },
+							items
+						)
+					),
+					_react2["default"].createElement(
+						"div",
+						{ className: subitemClassess },
+						_react2["default"].createElement(
+							"div",
+							{ className: "CompareTabs-maxWidth" },
+							subitems
+						)
+					)
+				);
+			}
+		}]);
+
+		return CompareTabs;
+	})(_react2["default"].Component);
+
+	exports["default"] = CompareTabs;
+	module.exports = exports["default"];
+
+/***/ },
 /* 81 */
+/*!**************************************************************!*\
+  !*** ./app/components/CompareMultiCard/CompareMultiCard.jsx ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _reactAddons = __webpack_require__(/*! react/addons */ 50);
+
+	var _reactAddons2 = _interopRequireDefault(_reactAddons);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+
+	__webpack_require__(/*! ./CompareMultiCard.css */ 261);
+
+	var _CompareMultiCard = __webpack_require__(/*! ./CompareMultiCard */ 262);
+
+	var _CompareMultiCard2 = _interopRequireDefault(_CompareMultiCard);
+
+	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
+
+	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
+
+	var _classnames = __webpack_require__(/*! classnames */ 109);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	function opinionToIcon(opinion) {
+	  //circle-o
+	  //times
+	  //frown-o, 不知所云,  unclear
+	  //question, 未表態, none
+
+	  switch (opinion) {
+	    case "for":
+	      return "circle-o";
+	    case "against":
+	      return "times";
+	    case "unclear":
+	      return "frown-o";
+	    case "none":
+	      return "question";
+	  }
+	  return "";
+	}
+	function opinionToText(opinion) {
+
+	  switch (opinion) {
+	    case "for":
+	      return "贊成";
+	    case "against":
+	      return "反對";
+	    case "unclear":
+	      return "不知所云";
+	    case "none":
+	      return "未表態";
+	  }
+	  return "";
+	}
+
+	var CompareMultiCard = (function (_React$Component) {
+	  function CompareMultiCard() {
+	    _classCallCheck(this, CompareMultiCard);
+
+	    if (_React$Component != null) {
+	      _React$Component.apply(this, arguments);
+	    }
+	  }
+
+	  _inherits(CompareMultiCard, _React$Component);
+
+	  _createClass(CompareMultiCard, [{
+	    key: "render",
+	    value: function render() {
+	      var issueTitle = this.props.issueTitle;
+
+	      var candidateAimg = __webpack_require__(/*! ./images/賴士葆.png */ 263);
+	      var candidateBimg = __webpack_require__(/*! ./images/苗博雅.png */ 264);
+	      var candidateCimg = __webpack_require__(/*! ./images/阮昭雄.png */ 265);
+	      var candidateDimg = __webpack_require__(/*! ./images/余宛如.png */ 266);
+
+	      var issueItems = _CompareMultiCard2["default"].issues.map(function (item, key) {
+	        var classes = _classnames2["default"]({
+	          "CompareMultiCard-flexGrids": true,
+	          "is-even": key % 2 === 0,
+	          "is-odd": key % 2 !== 0
+	        });
+	        return _reactAddons2["default"].createElement(
+	          "div",
+	          { className: classes,
+	            key: key },
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridTwo CompareMultiCard-issue" },
+	            item.title
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateA) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateA)
+	            )
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateB) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateB)
+	            )
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateC) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateC)
+	            )
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Icon" },
+	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateD) })
+	            ),
+	            _reactAddons2["default"].createElement(
+	              "div",
+	              { className: "CompareMultiCard-Opinion" },
+	              opinionToText(item.candidateD)
+	            )
+	          )
+	        );
+	      });
+
+	      return _reactAddons2["default"].createElement(
+	        "div",
+	        { className: "CompareMultiCard" },
+	        _reactAddons2["default"].createElement(
+	          "div",
+	          { className: "CompareMultiCard-flexGrids" },
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridTwo CompareMultiCard-title" },
+	            issueTitle
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateAimg }),
+	            _CompareMultiCard2["default"].candidateA
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateBimg }),
+	            _CompareMultiCard2["default"].candidateB
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateCimg }),
+	            _CompareMultiCard2["default"].candidateC
+	          ),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CompareMultiCard-GridOne" },
+	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
+	              src: candidateDimg }),
+	            _CompareMultiCard2["default"].candidateD
+	          )
+	        ),
+	        _reactAddons2["default"].createElement(
+	          "div",
+	          { className: "CompareMultiCard-issues" },
+	          issueItems
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CompareMultiCard;
+	})(_reactAddons2["default"].Component);
+
+	exports["default"] = CompareMultiCard;
+	module.exports = exports["default"];
+
+/***/ },
+/* 82 */
+/*!************************************************************!*\
+  !*** ./app/components/CandidatePicker/CandidatePicker.jsx ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var _reactAddons = __webpack_require__(/*! react/addons */ 50);
+
+	var _reactAddons2 = _interopRequireDefault(_reactAddons);
+
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
+
+	__webpack_require__(/*! ./CandidatePicker.css */ 251);
+
+	var _classnames = __webpack_require__(/*! classnames */ 109);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var CandidatePicker = (function (_React$Component) {
+	  function CandidatePicker() {
+	    _classCallCheck(this, CandidatePicker);
+
+	    if (_React$Component != null) {
+	      _React$Component.apply(this, arguments);
+	    }
+	  }
+
+	  _inherits(CandidatePicker, _React$Component);
+
+	  _createClass(CandidatePicker, [{
+	    key: "render",
+	    value: function render() {
+	      var _this = this;
+
+	      var candidates = ["賴士葆", "苗博雅", "阮昭雄", "余宛如"];
+	      var _props = this.props;
+	      var candidateA = _props.candidateA;
+	      var candidateB = _props.candidateB;
+	      var clearCandidateHandler = _props.clearCandidateHandler;
+	      var setCandidateHandler = _props.setCandidateHandler;
+
+	      var options = candidates.map(function (item, key) {
+	        var img = "";
+	        try {
+	          img = __webpack_require__(/*! ./images */ 252)("./" + item + ".png");
+	        } catch (e) {}
+	        var imgClasses = _classnames2["default"]({
+	          "CandidatePicker-img": true,
+	          "is-active": item === candidateA || item === candidateB
+
+	        });
+	        var setFunction = candidateA || candidateB === "" ? setCandidateHandler : "";
+	        return _reactAddons2["default"].createElement(
+	          "div",
+	          { className: "CandidatePicker-option",
+	            key: key,
+	            onClick: setFunction.bind(_this, item) },
+	          _reactAddons2["default"].createElement("img", { className: imgClasses,
+	            src: img }),
+	          _reactAddons2["default"].createElement(
+	            "div",
+	            { className: "CandidatePicker-name" },
+	            item
+	          )
+	        );
+	      });
+
+	      var optionsClasses = _classnames2["default"]({
+	        "CandidatePicker-options": true,
+	        "is-show": candidateA === "" || candidateB === ""
+	      });
+
+	      return _reactAddons2["default"].createElement(
+	        "div",
+	        { className: "CandidatePicker" },
+	        _reactAddons2["default"].createElement(
+	          "div",
+	          { className: "CandidatePicker-btn",
+	            onClick: clearCandidateHandler },
+	          "換人比"
+	        ),
+	        _reactAddons2["default"].createElement(
+	          "div",
+	          { className: optionsClasses },
+	          options
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CandidatePicker;
+	})(_reactAddons2["default"].Component);
+
+	exports["default"] = CandidatePicker;
+	module.exports = exports["default"];
+
+	//
+
+/***/ },
+/* 83 */
+/*!**********************************************************!*\
+  !*** ./app/containers/CandidatesPage/CandidatesPage.css ***!
+  \**********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 84 */
 /*!**************************************!*\
   !*** ./app/components/Tabs/Tabs.jsx ***!
   \**************************************/
@@ -6695,9 +7382,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	__webpack_require__(/*! ./Tabs.css */ 248);
+	__webpack_require__(/*! ./Tabs.css */ 255);
 
 	var _classnames = __webpack_require__(/*! classnames */ 109);
 
@@ -6842,7 +7529,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 82 */
+/* 85 */
 /*!**************************************************!*\
   !*** ./app/components/RecordList/RecordList.jsx ***!
   \**************************************************/
@@ -6870,13 +7557,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _LegislatorLegislatorJsx = __webpack_require__(/*! ../Legislator/Legislator.jsx */ 29);
 
 	var _LegislatorLegislatorJsx2 = _interopRequireDefault(_LegislatorLegislatorJsx);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 88);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
@@ -6884,11 +7571,11 @@ module.exports =
 
 	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
 
-	var _RecordRecordJsx = __webpack_require__(/*! ../Record/Record.jsx */ 249);
+	var _RecordRecordJsx = __webpack_require__(/*! ../Record/Record.jsx */ 256);
 
 	var _RecordRecordJsx2 = _interopRequireDefault(_RecordRecordJsx);
 
-	__webpack_require__(/*! ./RecordList.css */ 250);
+	__webpack_require__(/*! ./RecordList.css */ 257);
 
 	var RecordList = (function (_React$Component) {
 	    function RecordList(props) {
@@ -7556,7 +8243,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 83 */
+/* 86 */
 /*!**************************************************!*\
   !*** ./app/containers/PersonPage/PersonPage.css ***!
   \**************************************************/
@@ -7565,7 +8252,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 84 */
+/* 87 */
 /*!************************************************************!*\
   !*** ./app/containers/PersonIssuePage/PersonIssuePage.css ***!
   \************************************************************/
@@ -7574,7 +8261,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 85 */
+/* 88 */
 /*!**************************************************************!*\
   !*** ./app/components/LegislatorAvatar/LegislatorAvatar.jsx ***!
   \**************************************************************/
@@ -7598,9 +8285,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	__webpack_require__(/*! ./LegislatorAvatar.css */ 251);
+	__webpack_require__(/*! ./LegislatorAvatar.css */ 258);
 
 	var LegislatorAvatar = (function (_React$Component) {
 	  function LegislatorAvatar() {
@@ -7625,9 +8312,9 @@ module.exports =
 	      var imgURL;
 
 	      try {
-	        imgURL = __webpack_require__(/*! ./images/avatar */ 252)("./" + data + ".png");
+	        imgURL = __webpack_require__(/*! ./images/avatar */ 259)("./" + data + ".png");
 	      } catch (e) {
-	        imgURL = __webpack_require__(/*! ./images/default.jpg */ 253);
+	        imgURL = __webpack_require__(/*! ./images/default.jpg */ 260);
 	      }
 
 	      var name = name ? _react2["default"].createElement(
@@ -7674,7 +8361,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 86 */
+/* 89 */
 /*!****************************************!*\
   !*** ./app/components/Input/Input.jsx ***!
   \****************************************/
@@ -7698,9 +8385,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	__webpack_require__(/*! ./Input.css */ 254);
+	__webpack_require__(/*! ./Input.css */ 267);
 
 	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
 
@@ -7774,7 +8461,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 87 */
+/* 90 */
 /*!**********************************************************!*\
   !*** ./app/containers/PersonListPage/PersonListPage.css ***!
   \**********************************************************/
@@ -7783,7 +8470,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 88 */
+/* 91 */
 /*!**************************************************!*\
   !*** ./app/containers/PersonListPage/ly-info.js ***!
   \**************************************************/
@@ -10053,667 +10740,7 @@ module.exports =
 	  }] };
 
 /***/ },
-/* 89 */
-/*!****************************************************!*\
-  !*** ./app/components/CompareCard/CompareCard.jsx ***!
-  \****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _reactAddons = __webpack_require__(/*! react/addons */ 50);
-
-	var _reactAddons2 = _interopRequireDefault(_reactAddons);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
-
-	__webpack_require__(/*! ./CompareCard.css */ 255);
-
-	var _CompareCard = __webpack_require__(/*! ./CompareCard */ 256);
-
-	var _CompareCard2 = _interopRequireDefault(_CompareCard);
-
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
-
-	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
-
-	var _classnames = __webpack_require__(/*! classnames */ 109);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function opinionToIcon(opinion) {
-	    //circle-o
-	    //times
-	    //frown-o, 不知所云,  unclear
-	    //question, 未表態, none
-
-	    switch (opinion) {
-	        case "for":
-	            return "circle-o";
-	        case "against":
-	            return "times";
-	        case "unclear":
-	            return "frown-o";
-	        case "none":
-	            return "question";
-	    }
-	    return "";
-	}
-	function opinionToText(opinion) {
-
-	    switch (opinion) {
-	        case "for":
-	            return "贊成";
-	        case "against":
-	            return "反對";
-	        case "unclear":
-	            return "不知所云";
-	        case "none":
-	            return "未表態";
-	    }
-	    return "";
-	}
-
-	var CompareCard = (function (_React$Component) {
-	    function CompareCard() {
-	        _classCallCheck(this, CompareCard);
-
-	        if (_React$Component != null) {
-	            _React$Component.apply(this, arguments);
-	        }
-	    }
-
-	    _inherits(CompareCard, _React$Component);
-
-	    _createClass(CompareCard, [{
-	        key: "render",
-	        value: function render() {
-	            var _props = this.props;
-	            var issueTitle = _props.issueTitle;
-	            var candidateA = _props.candidateA;
-	            var candidateB = _props.candidateB;
-
-	            if (!candidateA) candidateA = "請選擇";
-	            if (!candidateB) candidateB = "請選擇";
-	            var candidateAimg = "";
-	            var candidateBimg = "";
-	            try {
-	                candidateAimg = __webpack_require__(/*! ./images */ 257)("./" + candidateA + ".png");
-	                candidateBimg = __webpack_require__(/*! ./images */ 257)("./" + candidateB + ".png");
-	            } catch (e) {
-	                if (!candidateAimg) candidateAimg = __webpack_require__(/*! ./images/default.svg */ 258);
-	                if (!candidateBimg) candidateBimg = __webpack_require__(/*! ./images/default.svg */ 258);
-	            }
-
-	            var issueItems = _CompareCard2["default"].issues.map(function (item, key) {
-	                var classes = _classnames2["default"]({
-	                    "CompareCard-flexGrids": true,
-	                    "is-even": key % 2 === 0,
-	                    "is-odd": key % 2 !== 0
-	                });
-	                return _reactAddons2["default"].createElement(
-	                    "div",
-	                    { className: classes,
-	                        key: key },
-	                    _reactAddons2["default"].createElement(
-	                        "div",
-	                        { className: "CompareCard-GridOne" },
-	                        _reactAddons2["default"].createElement(
-	                            "div",
-	                            { className: "CompareCard-Icon" },
-	                            _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item[candidateA]) })
-	                        ),
-	                        _reactAddons2["default"].createElement(
-	                            "div",
-	                            { className: "CompareCard-Opinion" },
-	                            opinionToText(item[candidateA])
-	                        )
-	                    ),
-	                    _reactAddons2["default"].createElement(
-	                        "div",
-	                        { className: "CompareCard-GridTwo CompareCard-issue" },
-	                        item.title
-	                    ),
-	                    _reactAddons2["default"].createElement(
-	                        "div",
-	                        { className: "CompareCard-GridOne" },
-	                        _reactAddons2["default"].createElement(
-	                            "div",
-	                            { className: "CompareCard-Icon" },
-	                            _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item[candidateB]) })
-	                        ),
-	                        _reactAddons2["default"].createElement(
-	                            "div",
-	                            { className: "CompareCard-Opinion" },
-	                            opinionToText(item[candidateB])
-	                        )
-	                    )
-	                );
-	            });
-
-	            return _reactAddons2["default"].createElement(
-	                "div",
-	                { className: "CompareCard" },
-	                _reactAddons2["default"].createElement(
-	                    "div",
-	                    { className: "CompareCard-title" },
-	                    issueTitle
-	                ),
-	                _reactAddons2["default"].createElement(
-	                    "div",
-	                    { className: "CompareCard-flexGrids" },
-	                    _reactAddons2["default"].createElement(
-	                        "div",
-	                        { className: "CompareCard-GridTwo" },
-	                        _reactAddons2["default"].createElement("img", { className: "CompareCard-img",
-	                            src: candidateAimg }),
-	                        candidateA
-	                    ),
-	                    _reactAddons2["default"].createElement(
-	                        "div",
-	                        { className: "CompareCard-pk" },
-	                        "PK"
-	                    ),
-	                    _reactAddons2["default"].createElement(
-	                        "div",
-	                        { className: "CompareCard-GridTwo" },
-	                        _reactAddons2["default"].createElement("img", { className: "CompareCard-img",
-	                            src: candidateBimg }),
-	                        candidateB
-	                    )
-	                ),
-	                _reactAddons2["default"].createElement(
-	                    "div",
-	                    { className: "CompareCard-issues" },
-	                    issueItems
-	                )
-	            );
-	        }
-	    }]);
-
-	    return CompareCard;
-	})(_reactAddons2["default"].Component);
-
-	exports["default"] = CompareCard;
-	module.exports = exports["default"];
-
-/***/ },
-/* 90 */
-/*!****************************************************!*\
-  !*** ./app/components/CompareTabs/CompareTabs.jsx ***!
-  \****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(/*! react */ 1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
-
-	__webpack_require__(/*! ./CompareTabs.css */ 259);
-
-	var _classnames = __webpack_require__(/*! classnames */ 109);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
-
-	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
-
-	var CompareTabs = (function (_React$Component) {
-		function CompareTabs() {
-			_classCallCheck(this, CompareTabs);
-
-			if (_React$Component != null) {
-				_React$Component.apply(this, arguments);
-			}
-		}
-
-		_inherits(CompareTabs, _React$Component);
-
-		_createClass(CompareTabs, [{
-			key: "render",
-			value: function render() {
-				var _this = this;
-
-				var _props = this.props;
-				var activeTab = _props.activeTab;
-				var activeSubtab = _props.activeSubtab;
-				var setActiveTabHandler = _props.setActiveTabHandler;
-				var setActiveSubtabHandler = _props.setActiveSubtabHandler;
-
-				var menu = ["個人簡歷", "推薦函", "議題立場", "野生政見"];
-				var submenu = ["勞工", "婚姻平權", "中國因素", "核能"];
-				var items = menu.map(function (value, index) {
-					var tabClasses = _classnames2["default"]({
-						"CompareTabs-item": true,
-						"is-active": value === activeTab
-					});
-					return _react2["default"].createElement(
-						"div",
-						{ className: tabClasses,
-							onClick: setActiveTabHandler.bind(_this, value),
-							key: index },
-						value
-					);
-				});
-				var subitems = submenu.map(function (value, index) {
-					var tabClasses = _classnames2["default"]({
-						"CompareTabs-subitem": true,
-						"is-active": value === activeSubtab
-					});
-					return _react2["default"].createElement(
-						"div",
-						{ className: tabClasses,
-							onClick: setActiveSubtabHandler.bind(_this, value),
-							key: index },
-						value
-					);
-				});
-				var subitemClassess = _classnames2["default"]({
-					"CompareTabs-subitems": true,
-					"is-show": activeTab === "議題立場"
-				});
-				return _react2["default"].createElement(
-					"div",
-					{ className: "CompareTabs" },
-					_react2["default"].createElement(
-						"div",
-						{ className: "CompareTabs-items" },
-						_react2["default"].createElement(
-							"div",
-							{ className: "CompareTabs-maxWidth" },
-							items
-						)
-					),
-					_react2["default"].createElement(
-						"div",
-						{ className: subitemClassess },
-						_react2["default"].createElement(
-							"div",
-							{ className: "CompareTabs-maxWidth" },
-							subitems
-						)
-					)
-				);
-			}
-		}]);
-
-		return CompareTabs;
-	})(_react2["default"].Component);
-
-	exports["default"] = CompareTabs;
-	module.exports = exports["default"];
-
-/***/ },
-/* 91 */
-/*!**************************************************************!*\
-  !*** ./app/components/CompareMultiCard/CompareMultiCard.jsx ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _reactAddons = __webpack_require__(/*! react/addons */ 50);
-
-	var _reactAddons2 = _interopRequireDefault(_reactAddons);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
-
-	__webpack_require__(/*! ./CompareMultiCard.css */ 260);
-
-	var _CompareMultiCard = __webpack_require__(/*! ./CompareMultiCard */ 261);
-
-	var _CompareMultiCard2 = _interopRequireDefault(_CompareMultiCard);
-
-	var _IconIconJsx = __webpack_require__(/*! ../Icon/Icon.jsx */ 74);
-
-	var _IconIconJsx2 = _interopRequireDefault(_IconIconJsx);
-
-	var _classnames = __webpack_require__(/*! classnames */ 109);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function opinionToIcon(opinion) {
-	  //circle-o
-	  //times
-	  //frown-o, 不知所云,  unclear
-	  //question, 未表態, none
-
-	  switch (opinion) {
-	    case "for":
-	      return "circle-o";
-	    case "against":
-	      return "times";
-	    case "unclear":
-	      return "frown-o";
-	    case "none":
-	      return "question";
-	  }
-	  return "";
-	}
-	function opinionToText(opinion) {
-
-	  switch (opinion) {
-	    case "for":
-	      return "贊成";
-	    case "against":
-	      return "反對";
-	    case "unclear":
-	      return "不知所云";
-	    case "none":
-	      return "未表態";
-	  }
-	  return "";
-	}
-
-	var CompareMultiCard = (function (_React$Component) {
-	  function CompareMultiCard() {
-	    _classCallCheck(this, CompareMultiCard);
-
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
-	  }
-
-	  _inherits(CompareMultiCard, _React$Component);
-
-	  _createClass(CompareMultiCard, [{
-	    key: "render",
-	    value: function render() {
-	      var issueTitle = this.props.issueTitle;
-
-	      var candidateAimg = __webpack_require__(/*! ./images/賴士葆.png */ 262);
-	      var candidateBimg = __webpack_require__(/*! ./images/苗博雅.png */ 263);
-	      var candidateCimg = __webpack_require__(/*! ./images/阮昭雄.png */ 264);
-	      var candidateDimg = __webpack_require__(/*! ./images/余宛如.png */ 265);
-
-	      var issueItems = _CompareMultiCard2["default"].issues.map(function (item, key) {
-	        var classes = _classnames2["default"]({
-	          "CompareMultiCard-flexGrids": true,
-	          "is-even": key % 2 === 0,
-	          "is-odd": key % 2 !== 0
-	        });
-	        return _reactAddons2["default"].createElement(
-	          "div",
-	          { className: classes,
-	            key: key },
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridTwo CompareMultiCard-issue" },
-	            item.title
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Icon" },
-	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateA) })
-	            ),
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Opinion" },
-	              opinionToText(item.candidateA)
-	            )
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Icon" },
-	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateB) })
-	            ),
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Opinion" },
-	              opinionToText(item.candidateB)
-	            )
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Icon" },
-	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateC) })
-	            ),
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Opinion" },
-	              opinionToText(item.candidateC)
-	            )
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Icon" },
-	              _reactAddons2["default"].createElement(_IconIconJsx2["default"], { icon: opinionToIcon(item.candidateD) })
-	            ),
-	            _reactAddons2["default"].createElement(
-	              "div",
-	              { className: "CompareMultiCard-Opinion" },
-	              opinionToText(item.candidateD)
-	            )
-	          )
-	        );
-	      });
-
-	      return _reactAddons2["default"].createElement(
-	        "div",
-	        { className: "CompareMultiCard" },
-	        _reactAddons2["default"].createElement(
-	          "div",
-	          { className: "CompareMultiCard-flexGrids" },
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridTwo CompareMultiCard-title" },
-	            issueTitle
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
-	              src: candidateAimg }),
-	            _CompareMultiCard2["default"].candidateA
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
-	              src: candidateBimg }),
-	            _CompareMultiCard2["default"].candidateB
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
-	              src: candidateCimg }),
-	            _CompareMultiCard2["default"].candidateC
-	          ),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CompareMultiCard-GridOne" },
-	            _reactAddons2["default"].createElement("img", { className: "CompareMultiCard-img",
-	              src: candidateDimg }),
-	            _CompareMultiCard2["default"].candidateD
-	          )
-	        ),
-	        _reactAddons2["default"].createElement(
-	          "div",
-	          { className: "CompareMultiCard-issues" },
-	          issueItems
-	        )
-	      );
-	    }
-	  }]);
-
-	  return CompareMultiCard;
-	})(_reactAddons2["default"].Component);
-
-	exports["default"] = CompareMultiCard;
-	module.exports = exports["default"];
-
-/***/ },
 /* 92 */
-/*!************************************************************!*\
-  !*** ./app/components/CandidatePicker/CandidatePicker.jsx ***!
-  \************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-
-	var _reactAddons = __webpack_require__(/*! react/addons */ 50);
-
-	var _reactAddons2 = _interopRequireDefault(_reactAddons);
-
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
-
-	__webpack_require__(/*! ./CandidatePicker.css */ 266);
-
-	var _classnames = __webpack_require__(/*! classnames */ 109);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var CandidatePicker = (function (_React$Component) {
-	  function CandidatePicker() {
-	    _classCallCheck(this, CandidatePicker);
-
-	    if (_React$Component != null) {
-	      _React$Component.apply(this, arguments);
-	    }
-	  }
-
-	  _inherits(CandidatePicker, _React$Component);
-
-	  _createClass(CandidatePicker, [{
-	    key: "render",
-	    value: function render() {
-	      var _this = this;
-
-	      var candidates = ["賴士葆", "苗博雅", "阮昭雄", "余宛如"];
-	      var _props = this.props;
-	      var candidateA = _props.candidateA;
-	      var candidateB = _props.candidateB;
-	      var clearCandidateHandler = _props.clearCandidateHandler;
-	      var setCandidateHandler = _props.setCandidateHandler;
-
-	      var options = candidates.map(function (item, key) {
-	        var img = "";
-	        try {
-	          img = __webpack_require__(/*! ./images */ 267)("./" + item + ".png");
-	        } catch (e) {}
-	        var imgClasses = _classnames2["default"]({
-	          "CandidatePicker-img": true,
-	          "is-active": item === candidateA || item === candidateB
-
-	        });
-	        var setFunction = candidateA || candidateB === "" ? setCandidateHandler : "";
-	        return _reactAddons2["default"].createElement(
-	          "div",
-	          { className: "CandidatePicker-option",
-	            key: key,
-	            onClick: setFunction.bind(_this, item) },
-	          _reactAddons2["default"].createElement("img", { className: imgClasses,
-	            src: img }),
-	          _reactAddons2["default"].createElement(
-	            "div",
-	            { className: "CandidatePicker-name" },
-	            item
-	          )
-	        );
-	      });
-
-	      return _reactAddons2["default"].createElement(
-	        "div",
-	        { className: "CandidatePicker" },
-	        _reactAddons2["default"].createElement(
-	          "div",
-	          null,
-	          options
-	        ),
-	        _reactAddons2["default"].createElement(
-	          "div",
-	          { className: "CandidatePicker-btn",
-	            onClick: clearCandidateHandler },
-	          "換人比"
-	        )
-	      );
-	    }
-	  }]);
-
-	  return CandidatePicker;
-	})(_reactAddons2["default"].Component);
-
-	exports["default"] = CandidatePicker;
-	module.exports = exports["default"];
-
-	//
-
-/***/ },
-/* 93 */
-/*!**********************************************************!*\
-  !*** ./app/containers/CandidatesPage/CandidatesPage.css ***!
-  \**********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 94 */
 /*!********************************************************!*\
   !*** ./app/containers/IssueListPage/IssueListPage.css ***!
   \********************************************************/
@@ -10722,7 +10749,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 95 */
+/* 93 */
 /*!***********************************************************!*\
   !*** ./app/containers/IssueListPage/images ^\.\/.*\.png$ ***!
   \***********************************************************/
@@ -10748,11 +10775,11 @@ module.exports =
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 95;
+	webpackContext.id = 93;
 
 
 /***/ },
-/* 96 */
+/* 94 */
 /*!************************************************!*\
   !*** ./app/containers/IssuePage/IssuePage.css ***!
   \************************************************/
@@ -10761,7 +10788,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 97 */
+/* 95 */
 /*!*********************************************!*\
   !*** ./app/containers/IssuePage/ly-info.js ***!
   \*********************************************/
@@ -10926,7 +10953,7 @@ module.exports =
 	  }] };
 
 /***/ },
-/* 98 */
+/* 96 */
 /*!*****************************************************!*\
   !*** ./app/containers/IssueVotePage/ly-position.js ***!
   \*****************************************************/
@@ -13775,7 +13802,7 @@ module.exports =
 	    }] };
 
 /***/ },
-/* 99 */
+/* 97 */
 /*!******************************************************!*\
   !*** ./app/components/OpinionGroup/OpinionGroup.jsx ***!
   \******************************************************/
@@ -13803,7 +13830,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _OverviewWallAvatarOverviewWallAvatarJsx = __webpack_require__(/*! ../OverviewWallAvatar/OverviewWallAvatar.jsx */ 268);
 
@@ -13932,7 +13959,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 100 */
+/* 98 */
 /*!********************************************************!*\
   !*** ./app/containers/IssueVotePage/IssueVotePage.css ***!
   \********************************************************/
@@ -13941,7 +13968,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 101 */
+/* 99 */
 /*!**************************************************!*\
   !*** ./app/containers/IssueVotePage/data/for.js ***!
   \**************************************************/
@@ -14503,7 +14530,7 @@ module.exports =
 	    }] };
 
 /***/ },
-/* 102 */
+/* 100 */
 /*!******************************************************!*\
   !*** ./app/containers/IssueVotePage/data/against.js ***!
   \******************************************************/
@@ -14784,7 +14811,7 @@ module.exports =
 	};
 
 /***/ },
-/* 103 */
+/* 101 */
 /*!******************************************************!*\
   !*** ./app/containers/IssueVotePage/data/unclear.js ***!
   \******************************************************/
@@ -14824,7 +14851,7 @@ module.exports =
 	};
 
 /***/ },
-/* 104 */
+/* 102 */
 /*!***************************************************!*\
   !*** ./app/containers/IssueVotePage/data/none.js ***!
   \***************************************************/
@@ -14966,6 +14993,24 @@ module.exports =
 	        "position": "未表態"
 	    }]
 	};
+
+/***/ },
+/* 103 */
+/*!*************************!*\
+  !*** external "events" ***!
+  \*************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = require("events");
+
+/***/ },
+/* 104 */
+/*!*****************************************!*\
+  !*** external "react/lib/ReactUpdates" ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = require("react/lib/ReactUpdates");
 
 /***/ },
 /* 105 */
@@ -16796,15 +16841,6 @@ module.exports =
 
 /***/ },
 /* 246 */
-/*!******************************************!*\
-  !*** ./app/components/AppBar/AppBar.css ***!
-  \******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 247 */
 /*!********************************************!*\
   !*** ./app/components/SideBar/SideBar.css ***!
   \********************************************/
@@ -16813,7 +16849,146 @@ module.exports =
 	module.exports = {};
 
 /***/ },
+/* 247 */
+/*!****************************************************!*\
+  !*** ./app/components/CompareCard/CompareCard.css ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
 /* 248 */
+/*!***************************************************!*\
+  !*** ./app/components/CompareCard/CompareCard.js ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	module.exports = {
+		"candidateA": "賴士葆",
+		"candidateB": "苗博雅",
+		"issues": [{ "title": "公司獲利盈餘重新分配",
+			"賴士葆": "for",
+			"苗博雅": "against",
+			"阮昭雄": "unclear",
+			"余宛如": "for"
+		}, { "title": "增加罰則處罰企業未分配盈餘",
+			"賴士葆": "against",
+			"苗博雅": "none",
+			"阮昭雄": "unclear",
+			"余宛如": "for"
+		}, { "title": "每周40工時及加班上限",
+			"賴士葆": "against",
+			"苗博雅": "for",
+			"阮昭雄": "for",
+			"余宛如": "against"
+		}, { "title": "勞工債權清償順位優於銀行抵押權",
+			"賴士葆": "for",
+			"苗博雅": "none",
+			"阮昭雄": "none",
+			"余宛如": "against"
+		}, { "title": "家事移工應納入勞基法規範",
+			"賴士葆": "unclear",
+			"苗博雅": "against",
+			"阮昭雄": "for",
+			"余宛如": "for"
+		}]
+	};
+
+/***/ },
+/* 249 */
+/*!*********************************************************!*\
+  !*** ./app/components/CompareCard/images ^\.\/.*\.png$ ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./余宛如.png": 270,
+		"./苗博雅.png": 271,
+		"./賴士葆.png": 272,
+		"./阮昭雄.png": 273
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 249;
+
+
+/***/ },
+/* 250 */
+/*!*******************************************************!*\
+  !*** ./app/components/CompareCard/images/default.svg ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMTAwcHgiIHdpZHRoPSIxMDBweCI+CjxwYXRoIGZpbGw9IiNDQ0MiIGQ9Ik04OC44LDUwYzAtMjEuNi0xNy42LTM5LjItMzkuMi0zOS4yUzEwLjQsMjguNCwxMC40LDUwYzAsMTEuOSw1LjQsMjIuNiwxMy44LDI5LjhjMC4xLDAuMSwwLjIsMC4yLDAuNCwwLjMgIGM2LjgsNS43LDE1LjUsOS4xLDI1LjEsOS4xYzkuNCwwLDE4LjEtMy40LDI0LjktOC45YzAuNC0wLjEsMC43LTAuNCwwLjktMC43QzgzLjYsNzIuMyw4OC44LDYxLjgsODguOCw1MHogTTE0LDUwICBjMC0xOS42LDE2LTM1LjYsMzUuNi0zNS42czM1LjYsMTYsMzUuNiwzNS42YzAsOS42LTMuOCwxOC4zLTEwLDI0LjdjLTEtNC43LTQtMTIuNy0xMy4yLTE3LjljMi4xLTIuNiwzLjMtNiwzLjMtOS42ICBjMC04LjYtNy0xNS42LTE1LjYtMTUuNmMtOC42LDAtMTUuNiw3LTE1LjYsMTUuNmMwLDMuNiwxLjMsNi45LDMuMyw5LjZjLTkuMyw1LjItMTIuMywxMy4yLTEzLjIsMTcuOUMxNy45LDY4LjQsMTQsNTkuNiwxNCw1MHogICBNMzcuNiw0Ny4zYzAtNi42LDUuNC0xMiwxMi0xMmM2LjYsMCwxMiw1LjQsMTIsMTJjMCw2LjYtNS40LDEyLTEyLDEyQzQzLDU5LjMsMzcuNiw1My45LDM3LjYsNDcuM3ogTTI3LjQsNzcuOCAgYzAuMi0yLjksMS44LTEyLjcsMTIuNi0xOC4yYzIuNywyLjEsNiwzLjMsOS42LDMuM2MzLjYsMCw3LTEuMyw5LjctMy40QzcwLDY1LDcxLjcsNzQuNiw3Miw3Ny43Yy02LjEsNC45LTEzLjksNy45LTIyLjMsNy45ICBDNDEuMiw4NS42LDMzLjUsODIuNywyNy40LDc3Ljh6Ii8+Cjwvc3ZnPg=="
+
+/***/ },
+/* 251 */
+/*!************************************************************!*\
+  !*** ./app/components/CandidatePicker/CandidatePicker.css ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 252 */
+/*!*************************************************************!*\
+  !*** ./app/components/CandidatePicker/images ^\.\/.*\.png$ ***!
+  \*************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./余宛如.png": 274,
+		"./苗博雅.png": 275,
+		"./賴士葆.png": 276,
+		"./阮昭雄.png": 277
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 252;
+
+
+/***/ },
+/* 253 */
+/*!******************************************!*\
+  !*** ./app/components/AppBar/AppBar.css ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 254 */
+/*!****************************************************!*\
+  !*** ./app/components/CompareTabs/CompareTabs.css ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {};
+
+/***/ },
+/* 255 */
 /*!**************************************!*\
   !*** ./app/components/Tabs/Tabs.css ***!
   \**************************************/
@@ -16822,7 +16997,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 249 */
+/* 256 */
 /*!******************************************!*\
   !*** ./app/components/Record/Record.jsx ***!
   \******************************************/
@@ -16850,7 +17025,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	var _classnames = __webpack_require__(/*! classnames */ 109);
 
@@ -16860,7 +17035,7 @@ module.exports =
 
 	var _LegislatorLegislatorJsx2 = _interopRequireDefault(_LegislatorLegislatorJsx);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 88);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
@@ -17033,7 +17208,7 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 250 */
+/* 257 */
 /*!**************************************************!*\
   !*** ./app/components/RecordList/RecordList.css ***!
   \**************************************************/
@@ -17042,7 +17217,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 251 */
+/* 258 */
 /*!**************************************************************!*\
   !*** ./app/components/LegislatorAvatar/LegislatorAvatar.css ***!
   \**************************************************************/
@@ -17051,132 +17226,132 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 252 */
+/* 259 */
 /*!*********************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/avatar ^\.\/.*\.png$ ***!
   \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./丁守中.png": 270,
-		"./何欣純.png": 271,
-		"./劉建國.png": 272,
-		"./劉櫂豪.png": 273,
-		"./吳宜臻.png": 274,
-		"./吳秉叡.png": 275,
-		"./吳育仁.png": 276,
-		"./吳育昇.png": 277,
-		"./呂學樟.png": 278,
-		"./呂玉玲.png": 279,
-		"./周倪安.png": 280,
-		"./姚文智.png": 281,
-		"./孔文吉.png": 282,
-		"./孫大千.png": 283,
-		"./尤美女.png": 284,
-		"./廖國棟.png": 285,
-		"./廖正井.png": 286,
-		"./張嘉郡.png": 287,
-		"./張慶忠.png": 288,
-		"./徐少萍.png": 289,
-		"./徐志榮.png": 290,
-		"./徐欣瑩.png": 291,
-		"./徐耀昌.png": 292,
-		"./曾巨威.png": 293,
-		"./李俊俋.png": 294,
-		"./李慶華.png": 295,
-		"./李應元.png": 296,
-		"./李昆澤.png": 297,
-		"./李桐豪.png": 298,
-		"./李貴敏.png": 299,
-		"./李鴻鈞.png": 300,
-		"./林佳龍.png": 301,
-		"./林國正.png": 302,
-		"./林岱樺.png": 303,
-		"./林德福.png": 304,
-		"./林明溱.png": 305,
-		"./林淑芬.png": 306,
-		"./林滄敏.png": 307,
-		"./林郁方.png": 308,
-		"./林鴻池.png": 309,
-		"./柯建銘.png": 310,
-		"./楊應雄.png": 311,
-		"./楊曜.png": 312,
-		"./楊玉欣.png": 313,
-		"./楊瓊瓔.png": 314,
-		"./楊麗環.png": 315,
-		"./段宜康.png": 316,
-		"./江啟臣.png": 317,
-		"./江惠貞.png": 318,
-		"./洪秀柱.png": 319,
-		"./潘孟安.png": 320,
-		"./潘維剛.png": 321,
-		"./王廷升.png": 322,
-		"./王惠美.png": 323,
-		"./王育敏.png": 324,
-		"./王進士.png": 325,
-		"./王金平.png": 326,
-		"./田秋堇.png": 327,
-		"./盧嘉辰.png": 328,
-		"./盧秀燕.png": 329,
-		"./管碧玲.png": 330,
-		"./簡東明.png": 331,
-		"./紀國棟.png": 332,
-		"./羅明才.png": 333,
-		"./羅淑蕾.png": 334,
-		"./翁重鈞.png": 335,
-		"./莊瑞雄.png": 336,
-		"./葉宜津.png": 337,
-		"./葉津鈴.png": 338,
-		"./蔡其昌.png": 339,
-		"./蔡正元.png": 340,
-		"./蔡煌瑯.png": 341,
-		"./蔡錦隆.png": 342,
-		"./蔣乃辛.png": 343,
-		"./蕭美琴.png": 344,
-		"./薛凌.png": 345,
-		"./蘇清泉.png": 346,
-		"./蘇震清.png": 347,
-		"./許忠信.png": 348,
-		"./許智傑.png": 349,
-		"./許淑華.png": 350,
-		"./許添財.png": 351,
-		"./詹凱臣.png": 352,
-		"./謝國樑.png": 353,
-		"./費鴻泰.png": 354,
-		"./賴士葆.png": 355,
-		"./賴振昌.png": 356,
-		"./趙天麟.png": 357,
-		"./邱志偉.png": 358,
-		"./邱文彥.png": 359,
-		"./邱議瑩.png": 360,
-		"./鄭天財.png": 361,
-		"./鄭汝芬.png": 362,
-		"./鄭麗君.png": 363,
-		"./陳亭妃.png": 364,
-		"./陳其邁.png": 365,
-		"./陳唐山.png": 366,
-		"./陳學聖.png": 367,
-		"./陳怡潔.png": 368,
-		"./陳明文.png": 369,
-		"./陳根德.png": 370,
-		"./陳歐珀.png": 371,
-		"./陳淑慧.png": 372,
-		"./陳碧涵.png": 373,
-		"./陳節如.png": 374,
-		"./陳素月.png": 375,
-		"./陳超明.png": 376,
-		"./陳鎮湘.png": 377,
-		"./陳雪生.png": 378,
-		"./顏寬恒.png": 379,
-		"./馬文君.png": 380,
-		"./高志鵬.png": 381,
-		"./高金素梅.png": 382,
-		"./魏明谷.png": 383,
-		"./黃偉哲.png": 384,
-		"./黃國書.png": 385,
-		"./黃志雄.png": 386,
-		"./黃文玲.png": 387,
-		"./黃昭順.png": 388
+		"./丁守中.png": 278,
+		"./何欣純.png": 279,
+		"./劉建國.png": 280,
+		"./劉櫂豪.png": 281,
+		"./吳宜臻.png": 282,
+		"./吳秉叡.png": 283,
+		"./吳育仁.png": 284,
+		"./吳育昇.png": 285,
+		"./呂學樟.png": 286,
+		"./呂玉玲.png": 287,
+		"./周倪安.png": 288,
+		"./姚文智.png": 289,
+		"./孔文吉.png": 290,
+		"./孫大千.png": 291,
+		"./尤美女.png": 292,
+		"./廖國棟.png": 293,
+		"./廖正井.png": 294,
+		"./張嘉郡.png": 295,
+		"./張慶忠.png": 296,
+		"./徐少萍.png": 297,
+		"./徐志榮.png": 298,
+		"./徐欣瑩.png": 299,
+		"./徐耀昌.png": 300,
+		"./曾巨威.png": 301,
+		"./李俊俋.png": 302,
+		"./李慶華.png": 303,
+		"./李應元.png": 304,
+		"./李昆澤.png": 305,
+		"./李桐豪.png": 306,
+		"./李貴敏.png": 307,
+		"./李鴻鈞.png": 308,
+		"./林佳龍.png": 309,
+		"./林國正.png": 310,
+		"./林岱樺.png": 311,
+		"./林德福.png": 312,
+		"./林明溱.png": 313,
+		"./林淑芬.png": 314,
+		"./林滄敏.png": 315,
+		"./林郁方.png": 316,
+		"./林鴻池.png": 317,
+		"./柯建銘.png": 318,
+		"./楊應雄.png": 319,
+		"./楊曜.png": 320,
+		"./楊玉欣.png": 321,
+		"./楊瓊瓔.png": 322,
+		"./楊麗環.png": 323,
+		"./段宜康.png": 324,
+		"./江啟臣.png": 325,
+		"./江惠貞.png": 326,
+		"./洪秀柱.png": 327,
+		"./潘孟安.png": 328,
+		"./潘維剛.png": 329,
+		"./王廷升.png": 330,
+		"./王惠美.png": 331,
+		"./王育敏.png": 332,
+		"./王進士.png": 333,
+		"./王金平.png": 334,
+		"./田秋堇.png": 335,
+		"./盧嘉辰.png": 336,
+		"./盧秀燕.png": 337,
+		"./管碧玲.png": 338,
+		"./簡東明.png": 339,
+		"./紀國棟.png": 340,
+		"./羅明才.png": 341,
+		"./羅淑蕾.png": 342,
+		"./翁重鈞.png": 343,
+		"./莊瑞雄.png": 344,
+		"./葉宜津.png": 345,
+		"./葉津鈴.png": 346,
+		"./蔡其昌.png": 347,
+		"./蔡正元.png": 348,
+		"./蔡煌瑯.png": 349,
+		"./蔡錦隆.png": 350,
+		"./蔣乃辛.png": 351,
+		"./蕭美琴.png": 352,
+		"./薛凌.png": 353,
+		"./蘇清泉.png": 354,
+		"./蘇震清.png": 355,
+		"./許忠信.png": 356,
+		"./許智傑.png": 357,
+		"./許淑華.png": 358,
+		"./許添財.png": 359,
+		"./詹凱臣.png": 360,
+		"./謝國樑.png": 361,
+		"./費鴻泰.png": 362,
+		"./賴士葆.png": 363,
+		"./賴振昌.png": 364,
+		"./趙天麟.png": 365,
+		"./邱志偉.png": 366,
+		"./邱文彥.png": 367,
+		"./邱議瑩.png": 368,
+		"./鄭天財.png": 369,
+		"./鄭汝芬.png": 370,
+		"./鄭麗君.png": 371,
+		"./陳亭妃.png": 372,
+		"./陳其邁.png": 373,
+		"./陳唐山.png": 374,
+		"./陳學聖.png": 375,
+		"./陳怡潔.png": 376,
+		"./陳明文.png": 377,
+		"./陳根德.png": 378,
+		"./陳歐珀.png": 379,
+		"./陳淑慧.png": 380,
+		"./陳碧涵.png": 381,
+		"./陳節如.png": 382,
+		"./陳素月.png": 383,
+		"./陳超明.png": 384,
+		"./陳鎮湘.png": 385,
+		"./陳雪生.png": 386,
+		"./顏寬恒.png": 387,
+		"./馬文君.png": 388,
+		"./高志鵬.png": 389,
+		"./高金素梅.png": 390,
+		"./魏明谷.png": 391,
+		"./黃偉哲.png": 392,
+		"./黃國書.png": 393,
+		"./黃志雄.png": 394,
+		"./黃文玲.png": 395,
+		"./黃昭順.png": 396
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17189,11 +17364,11 @@ module.exports =
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 252;
+	webpackContext.id = 259;
 
 
 /***/ },
-/* 253 */
+/* 260 */
 /*!************************************************************!*\
   !*** ./app/components/LegislatorAvatar/images/default.jpg ***!
   \************************************************************/
@@ -17202,110 +17377,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "adff2800ecfceb1a8512e66dbfcba22d.jpg"
 
 /***/ },
-/* 254 */
-/*!****************************************!*\
-  !*** ./app/components/Input/Input.css ***!
-  \****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 255 */
-/*!****************************************************!*\
-  !*** ./app/components/CompareCard/CompareCard.css ***!
-  \****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 256 */
-/*!***************************************************!*\
-  !*** ./app/components/CompareCard/CompareCard.js ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	module.exports = {
-		"candidateA": "賴士葆",
-		"candidateB": "苗博雅",
-		"issues": [{ "title": "公司獲利盈餘重新分配",
-			"賴士葆": "for",
-			"苗博雅": "against",
-			"阮昭雄": "unclear",
-			"余宛如": "for"
-		}, { "title": "增加罰則處罰企業未分配盈餘",
-			"賴士葆": "against",
-			"苗博雅": "none",
-			"阮昭雄": "unclear",
-			"余宛如": "for"
-		}, { "title": "每周40工時及加班上限",
-			"賴士葆": "against",
-			"苗博雅": "for",
-			"阮昭雄": "for",
-			"余宛如": "against"
-		}, { "title": "勞工債權清償順位優於銀行抵押權",
-			"賴士葆": "for",
-			"苗博雅": "none",
-			"阮昭雄": "none",
-			"余宛如": "against"
-		}, { "title": "家事移工應納入勞基法規範",
-			"賴士葆": "unclear",
-			"苗博雅": "against",
-			"阮昭雄": "for",
-			"余宛如": "for"
-		}]
-	};
-
-/***/ },
-/* 257 */
-/*!*********************************************************!*\
-  !*** ./app/components/CompareCard/images ^\.\/.*\.png$ ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./余宛如.png": 389,
-		"./苗博雅.png": 390,
-		"./賴士葆.png": 391,
-		"./阮昭雄.png": 392
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 257;
-
-
-/***/ },
-/* 258 */
-/*!*******************************************************!*\
-  !*** ./app/components/CompareCard/images/default.svg ***!
-  \*******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiIGhlaWdodD0iMTAwcHgiIHdpZHRoPSIxMDBweCI+CjxwYXRoIGZpbGw9IiNDQ0MiIGQ9Ik04OC44LDUwYzAtMjEuNi0xNy42LTM5LjItMzkuMi0zOS4yUzEwLjQsMjguNCwxMC40LDUwYzAsMTEuOSw1LjQsMjIuNiwxMy44LDI5LjhjMC4xLDAuMSwwLjIsMC4yLDAuNCwwLjMgIGM2LjgsNS43LDE1LjUsOS4xLDI1LjEsOS4xYzkuNCwwLDE4LjEtMy40LDI0LjktOC45YzAuNC0wLjEsMC43LTAuNCwwLjktMC43QzgzLjYsNzIuMyw4OC44LDYxLjgsODguOCw1MHogTTE0LDUwICBjMC0xOS42LDE2LTM1LjYsMzUuNi0zNS42czM1LjYsMTYsMzUuNiwzNS42YzAsOS42LTMuOCwxOC4zLTEwLDI0LjdjLTEtNC43LTQtMTIuNy0xMy4yLTE3LjljMi4xLTIuNiwzLjMtNiwzLjMtOS42ICBjMC04LjYtNy0xNS42LTE1LjYtMTUuNmMtOC42LDAtMTUuNiw3LTE1LjYsMTUuNmMwLDMuNiwxLjMsNi45LDMuMyw5LjZjLTkuMyw1LjItMTIuMywxMy4yLTEzLjIsMTcuOUMxNy45LDY4LjQsMTQsNTkuNiwxNCw1MHogICBNMzcuNiw0Ny4zYzAtNi42LDUuNC0xMiwxMi0xMmM2LjYsMCwxMiw1LjQsMTIsMTJjMCw2LjYtNS40LDEyLTEyLDEyQzQzLDU5LjMsMzcuNiw1My45LDM3LjYsNDcuM3ogTTI3LjQsNzcuOCAgYzAuMi0yLjksMS44LTEyLjcsMTIuNi0xOC4yYzIuNywyLjEsNiwzLjMsOS42LDMuM2MzLjYsMCw3LTEuMyw5LjctMy40QzcwLDY1LDcxLjcsNzQuNiw3Miw3Ny43Yy02LjEsNC45LTEzLjksNy45LTIyLjMsNy45ICBDNDEuMiw4NS42LDMzLjUsODIuNywyNy40LDc3Ljh6Ii8+Cjwvc3ZnPg=="
-
-/***/ },
-/* 259 */
-/*!****************************************************!*\
-  !*** ./app/components/CompareTabs/CompareTabs.css ***!
-  \****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = {};
-
-/***/ },
-/* 260 */
+/* 261 */
 /*!**************************************************************!*\
   !*** ./app/components/CompareMultiCard/CompareMultiCard.css ***!
   \**************************************************************/
@@ -17314,7 +17386,7 @@ module.exports =
 	module.exports = {};
 
 /***/ },
-/* 261 */
+/* 262 */
 /*!*************************************************************!*\
   !*** ./app/components/CompareMultiCard/CompareMultiCard.js ***!
   \*************************************************************/
@@ -17356,7 +17428,7 @@ module.exports =
 	};
 
 /***/ },
-/* 262 */
+/* 263 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/賴士葆.png ***!
   \********************************************************/
@@ -17365,7 +17437,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
 
 /***/ },
-/* 263 */
+/* 264 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/苗博雅.png ***!
   \********************************************************/
@@ -17374,7 +17446,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ee8cfab9bf21dde03752cb3053c3eb12.png"
 
 /***/ },
-/* 264 */
+/* 265 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/阮昭雄.png ***!
   \********************************************************/
@@ -17383,7 +17455,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "f9018778a5b58bdbee4971d2f1f86b25.png"
 
 /***/ },
-/* 265 */
+/* 266 */
 /*!********************************************************!*\
   !*** ./app/components/CompareMultiCard/images/余宛如.png ***!
   \********************************************************/
@@ -17392,40 +17464,13 @@ module.exports =
 	module.exports = __webpack_require__.p + "b3f84ce153c46c9c1895595b5b190e70.png"
 
 /***/ },
-/* 266 */
-/*!************************************************************!*\
-  !*** ./app/components/CandidatePicker/CandidatePicker.css ***!
-  \************************************************************/
+/* 267 */
+/*!****************************************!*\
+  !*** ./app/components/Input/Input.css ***!
+  \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {};
-
-/***/ },
-/* 267 */
-/*!*************************************************************!*\
-  !*** ./app/components/CandidatePicker/images ^\.\/.*\.png$ ***!
-  \*************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./余宛如.png": 393,
-		"./苗博雅.png": 394,
-		"./賴士葆.png": 395,
-		"./阮昭雄.png": 396
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 267;
-
 
 /***/ },
 /* 268 */
@@ -17452,9 +17497,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
-	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 85);
+	var _LegislatorAvatarLegislatorAvatarJsx = __webpack_require__(/*! ../LegislatorAvatar/LegislatorAvatar.jsx */ 88);
 
 	var _LegislatorAvatarLegislatorAvatarJsx2 = _interopRequireDefault(_LegislatorAvatarLegislatorAvatarJsx);
 
@@ -17522,1077 +17567,6 @@ module.exports =
 
 /***/ },
 /* 270 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/丁守中.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "53d832dde2584a6b68b859595df491e1.png"
-
-/***/ },
-/* 271 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/何欣純.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d25f9aa20400dc1521818b436d449684.png"
-
-/***/ },
-/* 272 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/劉建國.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "60c1fb1461010c9d349fd59d7f8d089e.png"
-
-/***/ },
-/* 273 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/劉櫂豪.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ab91c1e460c2df6d6e724eea36f027d6.png"
-
-/***/ },
-/* 274 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/吳宜臻.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "35872dc6c469b4890d5244c6e9116c58.png"
-
-/***/ },
-/* 275 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/吳秉叡.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "cbe50421960b6c730774e8e486ad47f4.png"
-
-/***/ },
-/* 276 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/吳育仁.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "b050342cd87246dc4e69f3233b04658b.png"
-
-/***/ },
-/* 277 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/吳育昇.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "87db7c524b3d7971b1b4f3258cf8b7e1.png"
-
-/***/ },
-/* 278 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/呂學樟.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "5b1fae3481ae71f325c78f8e4e8a472d.png"
-
-/***/ },
-/* 279 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/呂玉玲.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d1d162bd9ce385864294b29443252e25.png"
-
-/***/ },
-/* 280 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/周倪安.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "669090029e21d33ff94ec8d1b6c785c4.png"
-
-/***/ },
-/* 281 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/姚文智.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6e8cc6691a75f8da8388be07d5556766.png"
-
-/***/ },
-/* 282 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/孔文吉.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "88a2c7a995f631b99cd64d995dfab78f.png"
-
-/***/ },
-/* 283 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/孫大千.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fa33f3abf5850468242d4eaf320e8974.png"
-
-/***/ },
-/* 284 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/尤美女.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "5039b452548c6bb49a25369e707a3ffa.png"
-
-/***/ },
-/* 285 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/廖國棟.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d5a34927f07363524db91114a5193fed.png"
-
-/***/ },
-/* 286 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/廖正井.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "a5585a36aa92f37670796dae7d66e4d7.png"
-
-/***/ },
-/* 287 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/張嘉郡.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f443dfef7d959315b5de18c624cbd487.png"
-
-/***/ },
-/* 288 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/張慶忠.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "00ebc516fe36e29da4554dea515ea7e3.png"
-
-/***/ },
-/* 289 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/徐少萍.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0143df208291106b551ecd2fee8eaada.png"
-
-/***/ },
-/* 290 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/徐志榮.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "c670357ffcf6e12ba6d94663503881d9.png"
-
-/***/ },
-/* 291 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/徐欣瑩.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "11adddc659edd65de5cb9cdb231d4f3f.png"
-
-/***/ },
-/* 292 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/徐耀昌.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "608560fc2f5747c339100d06af96c0e1.png"
-
-/***/ },
-/* 293 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/曾巨威.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4f428aadd27447b49b22d3913d8314db.png"
-
-/***/ },
-/* 294 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/李俊俋.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6ba110d2d09df1f2614d5f99915409aa.png"
-
-/***/ },
-/* 295 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/李慶華.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "29299b9cfe831de240f66d404ab9ca01.png"
-
-/***/ },
-/* 296 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/李應元.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "353da4ea294e23ddfca92b5409815659.png"
-
-/***/ },
-/* 297 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/李昆澤.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e72b1192465f398f7b78cf41a8e57600.png"
-
-/***/ },
-/* 298 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/李桐豪.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f7723a63d641062d912c5e917a077b0f.png"
-
-/***/ },
-/* 299 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/李貴敏.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fdc93992371587dd5296b161a7f1533e.png"
-
-/***/ },
-/* 300 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/李鴻鈞.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "a0bf6aefcb506d2c5f44f188b463055d.png"
-
-/***/ },
-/* 301 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林佳龍.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3802ce4b86543f8ba8a6e12576261a11.png"
-
-/***/ },
-/* 302 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林國正.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "7e939ae577d32377730975e6a6b13957.png"
-
-/***/ },
-/* 303 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林岱樺.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "2778f8da3bd9ff99f97fbbcd00ffcb4c.png"
-
-/***/ },
-/* 304 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林德福.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ee4c030d95297f4acac4f43a2cf30e7c.png"
-
-/***/ },
-/* 305 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林明溱.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "1026936de3d79cad10375db2fb224f57.png"
-
-/***/ },
-/* 306 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林淑芬.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6753fa256ebb8b9f79a92b864dc07c9c.png"
-
-/***/ },
-/* 307 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林滄敏.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "49a8ecc0ea3e270bd86fb9abcbbcc101.png"
-
-/***/ },
-/* 308 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林郁方.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0985fc424b3c867dc78ee4ad4441972f.png"
-
-/***/ },
-/* 309 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/林鴻池.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "646e19774a68cf1c682c802843498484.png"
-
-/***/ },
-/* 310 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/柯建銘.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3d6b6b5c383bcb149fce97f6ade761e9.png"
-
-/***/ },
-/* 311 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/楊應雄.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "33296efd6371b3d5fe3a46931aaae4e9.png"
-
-/***/ },
-/* 312 */
-/*!**************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/楊曜.png ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "eeb940a6bdd877a5847665f55e324a27.png"
-
-/***/ },
-/* 313 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/楊玉欣.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ed3137aad81a3d0e3f69d8e190e06a93.png"
-
-/***/ },
-/* 314 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/楊瓊瓔.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "bd7df856396a0fde2814d8f95af92787.png"
-
-/***/ },
-/* 315 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/楊麗環.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "1964e8931f52680153b12400f28ddd50.png"
-
-/***/ },
-/* 316 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/段宜康.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "64adcf1e1c9f73d8cc2327edb74770b9.png"
-
-/***/ },
-/* 317 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/江啟臣.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "c2b6e97bd67a34d4eec98b72c1e78c30.png"
-
-/***/ },
-/* 318 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/江惠貞.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3b2b1e895fa60ba3b8e357b03be70940.png"
-
-/***/ },
-/* 319 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/洪秀柱.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "814629edb623c2ae8abd709a5f4ba364.png"
-
-/***/ },
-/* 320 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/潘孟安.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "63d508865f66ad4f66cb3fcffde109cf.png"
-
-/***/ },
-/* 321 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/潘維剛.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "912b40303bc4ad99573993c35dd87968.png"
-
-/***/ },
-/* 322 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/王廷升.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "48becbb6c8363b5d06b5378da237c966.png"
-
-/***/ },
-/* 323 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/王惠美.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "7ea00e85fdae44eb179698d88fd17ab4.png"
-
-/***/ },
-/* 324 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/王育敏.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "9a725d40fa466c6a6feb35e1c095a2ad.png"
-
-/***/ },
-/* 325 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/王進士.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "7060df98746658a0007b52914293164e.png"
-
-/***/ },
-/* 326 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/王金平.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0b3e8d909b3ccc8387f3ca3cda91a2f5.png"
-
-/***/ },
-/* 327 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/田秋堇.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d47a2295bd4e9f0aa2f384c5cff92de1.png"
-
-/***/ },
-/* 328 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/盧嘉辰.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0a7f7d550fbba083a1a595e80a0c019d.png"
-
-/***/ },
-/* 329 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/盧秀燕.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "5959def6cfea6573f06f44e30221938c.png"
-
-/***/ },
-/* 330 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/管碧玲.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "85f2b66fb5e454a95d78d49a0861f9d5.png"
-
-/***/ },
-/* 331 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/簡東明.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4a9f1fe9c32dfe821b651ef682b6fd4f.png"
-
-/***/ },
-/* 332 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/紀國棟.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6c88b3aa5a15d6b6e90e33eb6a5753fe.png"
-
-/***/ },
-/* 333 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/羅明才.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "61338f718a5cacb3243484b34315c707.png"
-
-/***/ },
-/* 334 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/羅淑蕾.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6f56230d2d04544709318dec35af247b.png"
-
-/***/ },
-/* 335 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/翁重鈞.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "233a76bd5645035247b8d8b9e17020a0.png"
-
-/***/ },
-/* 336 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/莊瑞雄.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "c1cb8757504c2374d880209cb1e4bbaf.png"
-
-/***/ },
-/* 337 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/葉宜津.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f718d850490d50321f819a6da4a452e2.png"
-
-/***/ },
-/* 338 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/葉津鈴.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d22085e69e7a57168c5aa7b47cd24db3.png"
-
-/***/ },
-/* 339 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蔡其昌.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "52f6f68756a56b57e23814966394eb6d.png"
-
-/***/ },
-/* 340 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蔡正元.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0d2fcd1e1b53a72a8c97e84f7fd96644.png"
-
-/***/ },
-/* 341 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蔡煌瑯.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "bfa408f21914edf437b3cfd6d837a879.png"
-
-/***/ },
-/* 342 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蔡錦隆.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "796bd36d1333cfb25e855d481656002b.png"
-
-/***/ },
-/* 343 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蔣乃辛.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "a8ef44704d92580eeb39cfd603a34d01.png"
-
-/***/ },
-/* 344 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蕭美琴.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e254151a98a3a800f3d0ac01b2bf38ed.png"
-
-/***/ },
-/* 345 */
-/*!**************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/薛凌.png ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "94c15053133f33e597fc4e10dc283513.png"
-
-/***/ },
-/* 346 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蘇清泉.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "717e67ab577a1775ce9ddf4a5ff060f6.png"
-
-/***/ },
-/* 347 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/蘇震清.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0ef5594a1bccf4b16df7fb8e68655f8b.png"
-
-/***/ },
-/* 348 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/許忠信.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6e95d823f9d673cd7f034209d74cb234.png"
-
-/***/ },
-/* 349 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/許智傑.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "c4407a23e06fd9463a6056c0a9c6577e.png"
-
-/***/ },
-/* 350 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/許淑華.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "7b015d9c85723f95d2726f8ac9bb2829.png"
-
-/***/ },
-/* 351 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/許添財.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "eeba0ccc9a3c7dc5d6b92f7478d99df7.png"
-
-/***/ },
-/* 352 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/詹凱臣.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3cca8512a8582c0ab4a9a7b9b6fe81a2.png"
-
-/***/ },
-/* 353 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/謝國樑.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6691f01e092eef857a10c4fce8a71f64.png"
-
-/***/ },
-/* 354 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/費鴻泰.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "95a37b322b646d8323457fcb1d3fd6ee.png"
-
-/***/ },
-/* 355 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/賴士葆.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
-
-/***/ },
-/* 356 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/賴振昌.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fdb564bc843c8844ad8e3476fa968c7f.png"
-
-/***/ },
-/* 357 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/趙天麟.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "659d62e81925fd88ae920db7f6beabd2.png"
-
-/***/ },
-/* 358 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/邱志偉.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4b13eeb894061935b4396375351206c4.png"
-
-/***/ },
-/* 359 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/邱文彥.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "92e0f78be7cb0e384580bffb8d837bd5.png"
-
-/***/ },
-/* 360 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/邱議瑩.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "076d254b4b94793b3d636ccbea6711d9.png"
-
-/***/ },
-/* 361 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/鄭天財.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "513f57ccc7a29e2beaf54cdc38c8ad0c.png"
-
-/***/ },
-/* 362 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/鄭汝芬.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "75979106f892bfbe57b1415bc8c15fe9.png"
-
-/***/ },
-/* 363 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/鄭麗君.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "3176aa505cb1a78cda5909e7c85157ac.png"
-
-/***/ },
-/* 364 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳亭妃.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "71a1ee49d03deae203fbc6ae1e22eba0.png"
-
-/***/ },
-/* 365 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳其邁.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "128c0a7483e8daa47f693d9326a090de.png"
-
-/***/ },
-/* 366 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳唐山.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "31b1e07b4281906a6e2e05c0eb5765fd.png"
-
-/***/ },
-/* 367 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳學聖.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0d04270529df1e19bbf181b116a3c9e8.png"
-
-/***/ },
-/* 368 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳怡潔.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "9df443ce4f4d8a0abc4dea357fd71791.png"
-
-/***/ },
-/* 369 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳明文.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6f9f4cea49452f446458e5a1b86f437c.png"
-
-/***/ },
-/* 370 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳根德.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e43116ce1d367346429b1d0bff2ddd15.png"
-
-/***/ },
-/* 371 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳歐珀.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e0de59d3d88ef4fa390c7ad15d184736.png"
-
-/***/ },
-/* 372 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳淑慧.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "9acf2e60bfcc6c1823457b4fdff4a1ce.png"
-
-/***/ },
-/* 373 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳碧涵.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "60fc483100a0cba64a2e61f38828c89b.png"
-
-/***/ },
-/* 374 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳節如.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "78c247f8aaf8bb82a23b1aad1dc9941f.png"
-
-/***/ },
-/* 375 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳素月.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "74829f3ecf63987027c6ff874734a628.png"
-
-/***/ },
-/* 376 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳超明.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "acdae1531ca424f2314775a13b5b5953.png"
-
-/***/ },
-/* 377 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳鎮湘.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6613fa3490df21163983044cc7f100c4.png"
-
-/***/ },
-/* 378 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/陳雪生.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "4a09a511d013e5322614064721cb2d14.png"
-
-/***/ },
-/* 379 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/顏寬恒.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "79d35d2a704c643b2e0295da1b7a86b0.png"
-
-/***/ },
-/* 380 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/馬文君.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0973f8c6da915adc2b376eff97b64265.png"
-
-/***/ },
-/* 381 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/高志鵬.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "77821e0d7d1cd603e5e1e9dc1fc3b679.png"
-
-/***/ },
-/* 382 */
-/*!****************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/高金素梅.png ***!
-  \****************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "fb431093fb74b2eae7c44e1975e5284d.png"
-
-/***/ },
-/* 383 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/魏明谷.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ab79f6582f091847cf56fc4b1b65e81c.png"
-
-/***/ },
-/* 384 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/黃偉哲.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "b88fcc6e1bbe88f6f69983d3e5fc6ad0.png"
-
-/***/ },
-/* 385 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/黃國書.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ae2563a45bc3ef4be1df9b9d9a4c800b.png"
-
-/***/ },
-/* 386 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/黃志雄.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d92b46d47c09cd04474199e4c12245b6.png"
-
-/***/ },
-/* 387 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/黃文玲.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ecd9a0029b62a297a32a1d1a94f6254f.png"
-
-/***/ },
-/* 388 */
-/*!***************************************************************!*\
-  !*** ./app/components/LegislatorAvatar/images/avatar/黃昭順.png ***!
-  \***************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6bbc4ccbda3220df5798bed8de6ef944.png"
-
-/***/ },
-/* 389 */
 /*!***************************************************!*\
   !*** ./app/components/CompareCard/images/余宛如.png ***!
   \***************************************************/
@@ -18601,7 +17575,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "b3f84ce153c46c9c1895595b5b190e70.png"
 
 /***/ },
-/* 390 */
+/* 271 */
 /*!***************************************************!*\
   !*** ./app/components/CompareCard/images/苗博雅.png ***!
   \***************************************************/
@@ -18610,7 +17584,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ee8cfab9bf21dde03752cb3053c3eb12.png"
 
 /***/ },
-/* 391 */
+/* 272 */
 /*!***************************************************!*\
   !*** ./app/components/CompareCard/images/賴士葆.png ***!
   \***************************************************/
@@ -18619,7 +17593,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
 
 /***/ },
-/* 392 */
+/* 273 */
 /*!***************************************************!*\
   !*** ./app/components/CompareCard/images/阮昭雄.png ***!
   \***************************************************/
@@ -18628,7 +17602,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "f9018778a5b58bdbee4971d2f1f86b25.png"
 
 /***/ },
-/* 393 */
+/* 274 */
 /*!*******************************************************!*\
   !*** ./app/components/CandidatePicker/images/余宛如.png ***!
   \*******************************************************/
@@ -18637,7 +17611,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "b3f84ce153c46c9c1895595b5b190e70.png"
 
 /***/ },
-/* 394 */
+/* 275 */
 /*!*******************************************************!*\
   !*** ./app/components/CandidatePicker/images/苗博雅.png ***!
   \*******************************************************/
@@ -18646,7 +17620,7 @@ module.exports =
 	module.exports = __webpack_require__.p + "ee8cfab9bf21dde03752cb3053c3eb12.png"
 
 /***/ },
-/* 395 */
+/* 276 */
 /*!*******************************************************!*\
   !*** ./app/components/CandidatePicker/images/賴士葆.png ***!
   \*******************************************************/
@@ -18655,13 +17629,1084 @@ module.exports =
 	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
 
 /***/ },
-/* 396 */
+/* 277 */
 /*!*******************************************************!*\
   !*** ./app/components/CandidatePicker/images/阮昭雄.png ***!
   \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "f9018778a5b58bdbee4971d2f1f86b25.png"
+
+/***/ },
+/* 278 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/丁守中.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "53d832dde2584a6b68b859595df491e1.png"
+
+/***/ },
+/* 279 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/何欣純.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d25f9aa20400dc1521818b436d449684.png"
+
+/***/ },
+/* 280 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/劉建國.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "60c1fb1461010c9d349fd59d7f8d089e.png"
+
+/***/ },
+/* 281 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/劉櫂豪.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ab91c1e460c2df6d6e724eea36f027d6.png"
+
+/***/ },
+/* 282 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/吳宜臻.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "35872dc6c469b4890d5244c6e9116c58.png"
+
+/***/ },
+/* 283 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/吳秉叡.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "cbe50421960b6c730774e8e486ad47f4.png"
+
+/***/ },
+/* 284 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/吳育仁.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b050342cd87246dc4e69f3233b04658b.png"
+
+/***/ },
+/* 285 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/吳育昇.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "87db7c524b3d7971b1b4f3258cf8b7e1.png"
+
+/***/ },
+/* 286 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/呂學樟.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "5b1fae3481ae71f325c78f8e4e8a472d.png"
+
+/***/ },
+/* 287 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/呂玉玲.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d1d162bd9ce385864294b29443252e25.png"
+
+/***/ },
+/* 288 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/周倪安.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "669090029e21d33ff94ec8d1b6c785c4.png"
+
+/***/ },
+/* 289 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/姚文智.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6e8cc6691a75f8da8388be07d5556766.png"
+
+/***/ },
+/* 290 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/孔文吉.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "88a2c7a995f631b99cd64d995dfab78f.png"
+
+/***/ },
+/* 291 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/孫大千.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fa33f3abf5850468242d4eaf320e8974.png"
+
+/***/ },
+/* 292 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/尤美女.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "5039b452548c6bb49a25369e707a3ffa.png"
+
+/***/ },
+/* 293 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/廖國棟.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d5a34927f07363524db91114a5193fed.png"
+
+/***/ },
+/* 294 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/廖正井.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a5585a36aa92f37670796dae7d66e4d7.png"
+
+/***/ },
+/* 295 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/張嘉郡.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f443dfef7d959315b5de18c624cbd487.png"
+
+/***/ },
+/* 296 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/張慶忠.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "00ebc516fe36e29da4554dea515ea7e3.png"
+
+/***/ },
+/* 297 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/徐少萍.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0143df208291106b551ecd2fee8eaada.png"
+
+/***/ },
+/* 298 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/徐志榮.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "c670357ffcf6e12ba6d94663503881d9.png"
+
+/***/ },
+/* 299 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/徐欣瑩.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "11adddc659edd65de5cb9cdb231d4f3f.png"
+
+/***/ },
+/* 300 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/徐耀昌.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "608560fc2f5747c339100d06af96c0e1.png"
+
+/***/ },
+/* 301 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/曾巨威.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4f428aadd27447b49b22d3913d8314db.png"
+
+/***/ },
+/* 302 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/李俊俋.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6ba110d2d09df1f2614d5f99915409aa.png"
+
+/***/ },
+/* 303 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/李慶華.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "29299b9cfe831de240f66d404ab9ca01.png"
+
+/***/ },
+/* 304 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/李應元.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "353da4ea294e23ddfca92b5409815659.png"
+
+/***/ },
+/* 305 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/李昆澤.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e72b1192465f398f7b78cf41a8e57600.png"
+
+/***/ },
+/* 306 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/李桐豪.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f7723a63d641062d912c5e917a077b0f.png"
+
+/***/ },
+/* 307 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/李貴敏.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fdc93992371587dd5296b161a7f1533e.png"
+
+/***/ },
+/* 308 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/李鴻鈞.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a0bf6aefcb506d2c5f44f188b463055d.png"
+
+/***/ },
+/* 309 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林佳龍.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3802ce4b86543f8ba8a6e12576261a11.png"
+
+/***/ },
+/* 310 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林國正.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7e939ae577d32377730975e6a6b13957.png"
+
+/***/ },
+/* 311 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林岱樺.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "2778f8da3bd9ff99f97fbbcd00ffcb4c.png"
+
+/***/ },
+/* 312 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林德福.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ee4c030d95297f4acac4f43a2cf30e7c.png"
+
+/***/ },
+/* 313 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林明溱.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "1026936de3d79cad10375db2fb224f57.png"
+
+/***/ },
+/* 314 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林淑芬.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6753fa256ebb8b9f79a92b864dc07c9c.png"
+
+/***/ },
+/* 315 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林滄敏.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "49a8ecc0ea3e270bd86fb9abcbbcc101.png"
+
+/***/ },
+/* 316 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林郁方.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0985fc424b3c867dc78ee4ad4441972f.png"
+
+/***/ },
+/* 317 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/林鴻池.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "646e19774a68cf1c682c802843498484.png"
+
+/***/ },
+/* 318 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/柯建銘.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3d6b6b5c383bcb149fce97f6ade761e9.png"
+
+/***/ },
+/* 319 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/楊應雄.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "33296efd6371b3d5fe3a46931aaae4e9.png"
+
+/***/ },
+/* 320 */
+/*!**************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/楊曜.png ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "eeb940a6bdd877a5847665f55e324a27.png"
+
+/***/ },
+/* 321 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/楊玉欣.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ed3137aad81a3d0e3f69d8e190e06a93.png"
+
+/***/ },
+/* 322 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/楊瓊瓔.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bd7df856396a0fde2814d8f95af92787.png"
+
+/***/ },
+/* 323 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/楊麗環.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "1964e8931f52680153b12400f28ddd50.png"
+
+/***/ },
+/* 324 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/段宜康.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "64adcf1e1c9f73d8cc2327edb74770b9.png"
+
+/***/ },
+/* 325 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/江啟臣.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "c2b6e97bd67a34d4eec98b72c1e78c30.png"
+
+/***/ },
+/* 326 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/江惠貞.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3b2b1e895fa60ba3b8e357b03be70940.png"
+
+/***/ },
+/* 327 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/洪秀柱.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "814629edb623c2ae8abd709a5f4ba364.png"
+
+/***/ },
+/* 328 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/潘孟安.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "63d508865f66ad4f66cb3fcffde109cf.png"
+
+/***/ },
+/* 329 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/潘維剛.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "912b40303bc4ad99573993c35dd87968.png"
+
+/***/ },
+/* 330 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/王廷升.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "48becbb6c8363b5d06b5378da237c966.png"
+
+/***/ },
+/* 331 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/王惠美.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7ea00e85fdae44eb179698d88fd17ab4.png"
+
+/***/ },
+/* 332 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/王育敏.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "9a725d40fa466c6a6feb35e1c095a2ad.png"
+
+/***/ },
+/* 333 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/王進士.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7060df98746658a0007b52914293164e.png"
+
+/***/ },
+/* 334 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/王金平.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0b3e8d909b3ccc8387f3ca3cda91a2f5.png"
+
+/***/ },
+/* 335 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/田秋堇.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d47a2295bd4e9f0aa2f384c5cff92de1.png"
+
+/***/ },
+/* 336 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/盧嘉辰.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0a7f7d550fbba083a1a595e80a0c019d.png"
+
+/***/ },
+/* 337 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/盧秀燕.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "5959def6cfea6573f06f44e30221938c.png"
+
+/***/ },
+/* 338 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/管碧玲.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "85f2b66fb5e454a95d78d49a0861f9d5.png"
+
+/***/ },
+/* 339 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/簡東明.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4a9f1fe9c32dfe821b651ef682b6fd4f.png"
+
+/***/ },
+/* 340 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/紀國棟.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6c88b3aa5a15d6b6e90e33eb6a5753fe.png"
+
+/***/ },
+/* 341 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/羅明才.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "61338f718a5cacb3243484b34315c707.png"
+
+/***/ },
+/* 342 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/羅淑蕾.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6f56230d2d04544709318dec35af247b.png"
+
+/***/ },
+/* 343 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/翁重鈞.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "233a76bd5645035247b8d8b9e17020a0.png"
+
+/***/ },
+/* 344 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/莊瑞雄.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "c1cb8757504c2374d880209cb1e4bbaf.png"
+
+/***/ },
+/* 345 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/葉宜津.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f718d850490d50321f819a6da4a452e2.png"
+
+/***/ },
+/* 346 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/葉津鈴.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d22085e69e7a57168c5aa7b47cd24db3.png"
+
+/***/ },
+/* 347 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蔡其昌.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "52f6f68756a56b57e23814966394eb6d.png"
+
+/***/ },
+/* 348 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蔡正元.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0d2fcd1e1b53a72a8c97e84f7fd96644.png"
+
+/***/ },
+/* 349 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蔡煌瑯.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bfa408f21914edf437b3cfd6d837a879.png"
+
+/***/ },
+/* 350 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蔡錦隆.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "796bd36d1333cfb25e855d481656002b.png"
+
+/***/ },
+/* 351 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蔣乃辛.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a8ef44704d92580eeb39cfd603a34d01.png"
+
+/***/ },
+/* 352 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蕭美琴.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e254151a98a3a800f3d0ac01b2bf38ed.png"
+
+/***/ },
+/* 353 */
+/*!**************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/薛凌.png ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "94c15053133f33e597fc4e10dc283513.png"
+
+/***/ },
+/* 354 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蘇清泉.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "717e67ab577a1775ce9ddf4a5ff060f6.png"
+
+/***/ },
+/* 355 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/蘇震清.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0ef5594a1bccf4b16df7fb8e68655f8b.png"
+
+/***/ },
+/* 356 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/許忠信.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6e95d823f9d673cd7f034209d74cb234.png"
+
+/***/ },
+/* 357 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/許智傑.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "c4407a23e06fd9463a6056c0a9c6577e.png"
+
+/***/ },
+/* 358 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/許淑華.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7b015d9c85723f95d2726f8ac9bb2829.png"
+
+/***/ },
+/* 359 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/許添財.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "eeba0ccc9a3c7dc5d6b92f7478d99df7.png"
+
+/***/ },
+/* 360 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/詹凱臣.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3cca8512a8582c0ab4a9a7b9b6fe81a2.png"
+
+/***/ },
+/* 361 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/謝國樑.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6691f01e092eef857a10c4fce8a71f64.png"
+
+/***/ },
+/* 362 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/費鴻泰.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "95a37b322b646d8323457fcb1d3fd6ee.png"
+
+/***/ },
+/* 363 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/賴士葆.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ad47f7c2986b340f47198e2d7e6616e8.png"
+
+/***/ },
+/* 364 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/賴振昌.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fdb564bc843c8844ad8e3476fa968c7f.png"
+
+/***/ },
+/* 365 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/趙天麟.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "659d62e81925fd88ae920db7f6beabd2.png"
+
+/***/ },
+/* 366 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/邱志偉.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4b13eeb894061935b4396375351206c4.png"
+
+/***/ },
+/* 367 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/邱文彥.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "92e0f78be7cb0e384580bffb8d837bd5.png"
+
+/***/ },
+/* 368 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/邱議瑩.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "076d254b4b94793b3d636ccbea6711d9.png"
+
+/***/ },
+/* 369 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/鄭天財.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "513f57ccc7a29e2beaf54cdc38c8ad0c.png"
+
+/***/ },
+/* 370 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/鄭汝芬.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "75979106f892bfbe57b1415bc8c15fe9.png"
+
+/***/ },
+/* 371 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/鄭麗君.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "3176aa505cb1a78cda5909e7c85157ac.png"
+
+/***/ },
+/* 372 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳亭妃.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "71a1ee49d03deae203fbc6ae1e22eba0.png"
+
+/***/ },
+/* 373 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳其邁.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "128c0a7483e8daa47f693d9326a090de.png"
+
+/***/ },
+/* 374 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳唐山.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "31b1e07b4281906a6e2e05c0eb5765fd.png"
+
+/***/ },
+/* 375 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳學聖.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0d04270529df1e19bbf181b116a3c9e8.png"
+
+/***/ },
+/* 376 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳怡潔.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "9df443ce4f4d8a0abc4dea357fd71791.png"
+
+/***/ },
+/* 377 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳明文.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6f9f4cea49452f446458e5a1b86f437c.png"
+
+/***/ },
+/* 378 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳根德.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e43116ce1d367346429b1d0bff2ddd15.png"
+
+/***/ },
+/* 379 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳歐珀.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e0de59d3d88ef4fa390c7ad15d184736.png"
+
+/***/ },
+/* 380 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳淑慧.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "9acf2e60bfcc6c1823457b4fdff4a1ce.png"
+
+/***/ },
+/* 381 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳碧涵.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "60fc483100a0cba64a2e61f38828c89b.png"
+
+/***/ },
+/* 382 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳節如.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "78c247f8aaf8bb82a23b1aad1dc9941f.png"
+
+/***/ },
+/* 383 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳素月.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "74829f3ecf63987027c6ff874734a628.png"
+
+/***/ },
+/* 384 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳超明.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "acdae1531ca424f2314775a13b5b5953.png"
+
+/***/ },
+/* 385 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳鎮湘.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6613fa3490df21163983044cc7f100c4.png"
+
+/***/ },
+/* 386 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/陳雪生.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "4a09a511d013e5322614064721cb2d14.png"
+
+/***/ },
+/* 387 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/顏寬恒.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "79d35d2a704c643b2e0295da1b7a86b0.png"
+
+/***/ },
+/* 388 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/馬文君.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0973f8c6da915adc2b376eff97b64265.png"
+
+/***/ },
+/* 389 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/高志鵬.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "77821e0d7d1cd603e5e1e9dc1fc3b679.png"
+
+/***/ },
+/* 390 */
+/*!****************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/高金素梅.png ***!
+  \****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fb431093fb74b2eae7c44e1975e5284d.png"
+
+/***/ },
+/* 391 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/魏明谷.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ab79f6582f091847cf56fc4b1b65e81c.png"
+
+/***/ },
+/* 392 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/黃偉哲.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b88fcc6e1bbe88f6f69983d3e5fc6ad0.png"
+
+/***/ },
+/* 393 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/黃國書.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ae2563a45bc3ef4be1df9b9d9a4c800b.png"
+
+/***/ },
+/* 394 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/黃志雄.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "d92b46d47c09cd04474199e4c12245b6.png"
+
+/***/ },
+/* 395 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/黃文玲.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "ecd9a0029b62a297a32a1d1a94f6254f.png"
+
+/***/ },
+/* 396 */
+/*!***************************************************************!*\
+  !*** ./app/components/LegislatorAvatar/images/avatar/黃昭順.png ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "6bbc4ccbda3220df5798bed8de6ef944.png"
 
 /***/ },
 /* 397 */
@@ -18714,7 +18759,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(/*! react-router */ 27);
+	var _reactRouter = __webpack_require__(/*! react-router */ 28);
 
 	__webpack_require__(/*! ./UserAvatar.css */ 403);
 
