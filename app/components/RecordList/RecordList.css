@@ -3,6 +3,7 @@
 	/*border-top: 1px solid rgb(220,220,220);*/
 	margin: 0 auto;
 	padding: 0 10px;
+
 }
 @media screen and (min-width: 600px){
 	.RecordList {
@@ -18,11 +19,37 @@
 	background: rgb(250,250,250);
 	line-height: 1.4;
 	text-align: left;
+	cursor: pointer;
+	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.08);
+	position: relative;
 }
 @media screen and (min-width: 600px){
 	.RecordList-title  {
 		text-align: center;
 	}
+}
+.RecordList-toggle {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+.RecordList-title:hover {
+	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.18);
+}
+.RecordList-content {
+	overflow-y: hidden;
+	max-height: 0px; /* approximate max height */
+	);
+	transition-property: max-height;
+	transition-duration: .3s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.RecordList-content.is-show {
+	max-height: 5000px;
+
+	transition-property: max-height;
+	transition-duration: 100ms;
+	transition-timing-function: ease-in;
 }
 .RecordList-opinion.is-for {
 	color: #3EA869;	

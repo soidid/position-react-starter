@@ -37,50 +37,49 @@ export default class Tabs extends React.Component {
         window.removeEventListener('scroll', this._onScroll.bind(this,null), false);
     }
 	render() {
-		var {currentTab} = this.props;
-		var {showSubitems} = this.state;
-		
+		// "立場總覽" ??
+
+		var {activeTab, activeSubtab, setActiveTabHandler, setActiveSubtabHandler} = this.props;
+		var menu = ["個人簡歷","推薦函","議題立場","野生政見"];
+		var submenu = ["勞工","婚姻平權","中國因素","核能"];
+		var items = menu.map((value, index)=>{
+				var tabClasses = classNames({
+		        	"Tabs-item" : true,
+		        	"is-active" : value === activeTab
+		        });
+				return(
+					<div className={tabClasses}
+						 onClick={setActiveTabHandler.bind(this,value)}
+						 key={index}>{value}</div>
+				)
+			});
+		var subitems = submenu.map((value, index)=>{
+				var tabClasses = classNames({
+		        	"Tabs-subitem" : true,
+		        	"is-active" : value === activeSubtab
+		        });
+				return(
+					<div className={tabClasses}
+						 onClick={setActiveSubtabHandler.bind(this,value)}
+						 key={index}>{value}</div>
+				)
+			});
+		var subitemClassess = classNames({
+			"Tabs-subitems" : true,
+			"is-show" : activeTab === '議題立場'
+		});
 		var tabClasses = classNames({
 			"Tabs" : true,
 			"is-scrolling" : this.state.scrolling
 		})
-
-        var totalClass = "Tabs-item";
-        var issueClass = "Tabs-item";
-        if(currentTab==="立場總覽"){
-        	totalClass += " is-active";
-        }else{
-        	issueClass += " is-active";
-        }
-
-        var subitemClasses = classNames({
-        	"Tabs-subTabs" : true,
-        	"is-show" : showSubitems && currentTab==="婚姻平權"
-        })
-
 		return (
 			<div className={tabClasses}>
 			    <div className="Tabs-items">
-			    	<div className="Tabs-maxWidth">
-				    <Link className={totalClass}
-				    	  to="person">立場總覽</Link>
-				    <div className="Tabs-item">食品安全</div>
-				    
-				    <Link className={issueClass}
-				    	  to="personIssue"
-				    	  params={{issue: "same-sex-marriage"}}
-				    	  onClick={this._toggleSubitems.bind(this)}>婚姻平權
-				    	  <div className={subitemClasses}>
-				          	<div className="Tabs-subItem">婚姻平權子議題1</div>
-				          	<div className="Tabs-subItem">婚姻平權子議題2</div>
-				          	<div className="Tabs-subItem">婚姻平權子議題3</div>
-				          </div>
-				    </Link>
-				    
-				
-					<div className="Tabs-scrollRight"><Icon icon="chevron-right"/></div>
-					</div>
-					</div>
+			    	<div className="Tabs-maxWidth">{items}</div>
+				</div>
+				<div className={subitemClassess}>
+					<div className="Tabs-maxWidth">{subitems}</div>
+				</div>
 			</div>
 		)
 	}
