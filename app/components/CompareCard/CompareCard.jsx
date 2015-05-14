@@ -33,13 +33,20 @@ export default class CompareCard extends React.Component {
   
   render () {
     var {issueTitle, candidateA, candidateB} = this.props;
+    if(!candidateA)
+        candidateA = "請選擇";
+    if(!candidateB)
+        candidateB = "請選擇";
     var candidateAimg = "";
     var candidateBimg = "";
     try{
-        candidateAimg = require("./images/"+candidateA+".png");
-        candidateBimg = require("./images/"+candidateB+".png");
+        candidateAimg = require(`./images/${candidateA}.png`);
+        candidateBimg = require(`./images/${candidateB}.png`);
     }catch(e){
-            
+        if(!candidateAimg)
+            candidateAimg = require("./images/default.svg"); 
+        if(!candidateBimg)
+            candidateBimg = require("./images/default.svg");      
     }
     
     var issueItems = data.issues.map((item,key)=>{

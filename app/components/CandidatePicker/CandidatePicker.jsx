@@ -11,9 +11,9 @@ export default class CandidatePicker extends React.Component {
     var options = candidates.map((item,key)=>{
         var img = "";
         try{
-          img = require("./images/"+item+".png");
+          img = require(`./images/${item}.png`);
         }catch(e){
-
+          //
         }
         var imgClasses = classNames({
           "CandidatePicker-img" : true,
