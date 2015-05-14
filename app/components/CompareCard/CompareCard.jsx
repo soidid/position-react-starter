@@ -32,9 +32,15 @@ function opinionToText(opinion){
 export default class CompareCard extends React.Component {
   
   render () {
-    var {issueTitle} = this.props;
-    var candidateAimg = require("./images/賴士葆.png");
-    var candidateBimg = require("./images/苗博雅.png");
+    var {issueTitle, candidateA, candidateB} = this.props;
+    var candidateAimg = "";
+    var candidateBimg = "";
+    try{
+        candidateAimg = require("./images/"+candidateA+".png");
+        candidateBimg = require("./images/"+candidateB+".png");
+    }catch(e){
+            
+    }
     
     var issueItems = data.issues.map((item,key)=>{
         var classes = classNames({
@@ -46,13 +52,13 @@ export default class CompareCard extends React.Component {
            <div className={classes}
                 key={key}>
               <div className="CompareCard-GridOne">
-                <div className="CompareCard-Icon"><Icon icon={opinionToIcon(item.candidateA)} /></div>
-                <div className="CompareCard-Opinion">{opinionToText(item.candidateA)}</div>
+                <div className="CompareCard-Icon"><Icon icon={opinionToIcon(item[candidateA])} /></div>
+                <div className="CompareCard-Opinion">{opinionToText(item[candidateA])}</div>
               </div>
               <div className="CompareCard-GridTwo CompareCard-issue">{item.title}</div>
               <div className="CompareCard-GridOne">
-                <div className="CompareCard-Icon"><Icon icon={opinionToIcon(item.candidateB)} /></div>
-                <div className="CompareCard-Opinion">{opinionToText(item.candidateB)}</div>
+                <div className="CompareCard-Icon"><Icon icon={opinionToIcon(item[candidateB])} /></div>
+                <div className="CompareCard-Opinion">{opinionToText(item[candidateB])}</div>
               </div>
           </div>
         )
@@ -65,13 +71,13 @@ export default class CompareCard extends React.Component {
             <div className="CompareCard-GridTwo">
                 <img className="CompareCard-img"
                      src={candidateAimg}/>
-                {data.candidateA}
+                {candidateA}
             </div>
             <div className="CompareCard-pk">PK</div>
             <div className="CompareCard-GridTwo">
                 <img className="CompareCard-img"
                      src={candidateBimg}/>
-                {data.candidateB}
+                {candidateB}
             </div>
           </div>
           <div className="CompareCard-issues">

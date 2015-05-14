@@ -3,6 +3,7 @@ import { RouteHandler } from "react-router";
 import CompareCard from "components/CompareCard/CompareCard.jsx";
 import CompareTabs from "components/CompareTabs/CompareTabs.jsx";
 import CompareMultiCard from "components/CompareMultiCard/CompareMultiCard.jsx";
+import CandidatePicker from "components/CandidatePicker/CandidatePicker.jsx";
 import "./CandidatesPage.css";
 
 export default class CandidatesPage extends React.Component {
@@ -16,8 +17,35 @@ export default class CandidatesPage extends React.Component {
 	constructor(props){ super(props)
 		this.state = {
 			activeTab: "議題立場",
-			activeSubtab: "勞工"
+			activeSubtab: "勞工",
+			candidateA: "賴士葆",
+			candidateB: "苗博雅"
 		}
+	}
+
+	_onClearCandidates(){
+		this.setState({
+			candidateA: "",
+			candidateB: ""
+		})
+	}
+
+	_onSetCandidates(value){
+		var {candidateA} = this.state;
+		
+		if(candidateA === ""){
+			this.setState({
+				candidateA: value
+			})
+
+		}else{
+			if(candidateA !== value){
+				this.setState({
+					candidateB: value
+				})
+			}
+		}
+		
 	}
 	
 	_setActiveTab(value, event){
@@ -48,7 +76,7 @@ export default class CandidatesPage extends React.Component {
         window.removeEventListener('resize', this._onResize.bind(this,null), false);
     }
 	render() {
-		var {width, activeTab, activeSubtab} = this.state;
+		var {width, activeTab, activeSubtab, candidateA, candidateB} = this.state;
 		
 
 		//*********
@@ -62,16 +90,19 @@ export default class CandidatesPage extends React.Component {
 			        <div className="CandidatesPage-outerWrapper">
 		            	<div className="CandidatesPage-innerWrapper">
 		            		<div className="CandidatesPage-list">
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="勞工"/></div>
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="婚姻平權"/></div>
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="核能"/></div>
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="中國因素"/></div>
+		            			<div className="CandidatesPage-item"><CompareCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>
+		            			<div className="CandidatesPage-item"><CompareCard issueTitle="婚姻平權" candidateA={candidateA} candidateB={candidateB}/></div>
+		            			<div className="CandidatesPage-item"><CompareCard issueTitle="核能" candidateA={candidateA} candidateB={candidateB}/></div>
+		            			<div className="CandidatesPage-item"><CompareCard issueTitle="中國因素" candidateA={candidateA} candidateB={candidateB}/></div>
 		            		</div>
 		            	</div>
 		            </div>
 		        </div>
 		        <div className="CandidatesPage-otherCandidates">
-		        	<div className="CandidatesPage-btn">換人比</div>
+		        	<CandidatePicker candidateA={candidateA} candidateB={candidateB}
+		        					 setCandidateHandler={this._onSetCandidates.bind(this)}
+		        					 clearCandidateHandler={this._onClearCandidates.bind(this)}/>
+		        	
 		        </div>
 		   	</div>);
 		
