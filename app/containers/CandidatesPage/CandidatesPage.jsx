@@ -2,6 +2,7 @@ import React from "react";
 import { RouteHandler } from "react-router";
 import CompareCard from "components/CompareCard/CompareCard.jsx";
 import CompareProfileCard from "components/CompareProfileCard/CompareProfileCard.jsx";
+import RecommendCard from "components/RecommendCard/RecommendCard.jsx";
 import CompareTabs from "components/CompareTabs/CompareTabs.jsx";
 import CompareMultiCard from "components/CompareMultiCard/CompareMultiCard.jsx";
 import CandidatePicker from "components/CandidatePicker/CandidatePicker.jsx";
@@ -17,7 +18,7 @@ export default class CandidatesPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "議題立場",
+			activeTab: "推薦函",
 			activeSubtab: "勞工",
 			candidateA: "賴士葆",
 			candidateB: "苗博雅"
@@ -87,17 +88,27 @@ export default class CandidatesPage extends React.Component {
 		var mobileIssue = (
 		    <div className="CandidatesPage-outerWrapper">
 		        <div className="CandidatesPage-innerWrapper">
-		        	<div className="CandidatesPage-list">
-		        		<div className="CandidatesPage-item"><CompareCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>
-		        		<div className="CandidatesPage-item"><CompareCard issueTitle="婚姻平權" candidateA={candidateA} candidateB={candidateB}/></div>
-		        		<div className="CandidatesPage-item"><CompareCard issueTitle="核能" candidateA={candidateA} candidateB={candidateB}/></div>
-		        		<div className="CandidatesPage-item"><CompareCard issueTitle="中國因素" candidateA={candidateA} candidateB={candidateB}/></div>
+		        	<div className="CandidatesPage-issueList ">
+		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>
+		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="婚姻平權" candidateA={candidateA} candidateB={candidateB}/></div>
+		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="核能" candidateA={candidateA} candidateB={candidateB}/></div>
+		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="中國因素" candidateA={candidateA} candidateB={candidateB}/></div>
 		        	</div>
 		        </div>
 		    </div>);
-
+		var mobileRecommends = (
+			<div className="CandidatesPage-outerWrapper">
+		        <div className="CandidatesPage-innerWrapper">
+		        	<div className="CandidatesPage-recommendList ">
+						<div className="CandidatesPage-recommendItem"><RecommendCard candidate={candidateA}/></div>
+			    		<div className="CandidatesPage-recommendItem"><RecommendCard candidate={candidateB}/></div>
+					</div>
+		        </div>
+		    </div>
+		);
 		var mobileContent = "";
 		if(activeTab === '野生履歷') mobileContent = <div className="CandidatesPage-cardWrap"><CompareProfileCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>;
+		if(activeTab === '推薦函')   mobileContent = mobileRecommends;
 		if(activeTab === '議題立場') mobileContent = mobileIssue;
         
 
