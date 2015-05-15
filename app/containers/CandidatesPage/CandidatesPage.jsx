@@ -1,6 +1,7 @@
 import React from "react";
 import { RouteHandler } from "react-router";
 import CompareCard from "components/CompareCard/CompareCard.jsx";
+import CompareProfileCard from "components/CompareProfileCard/CompareProfileCard.jsx";
 import CompareTabs from "components/CompareTabs/CompareTabs.jsx";
 import CompareMultiCard from "components/CompareMultiCard/CompareMultiCard.jsx";
 import CandidatePicker from "components/CandidatePicker/CandidatePicker.jsx";
@@ -83,6 +84,23 @@ export default class CandidatesPage extends React.Component {
 		// to be refined
 		//
 		//
+		var mobileIssue = (
+		    <div className="CandidatesPage-outerWrapper">
+		        <div className="CandidatesPage-innerWrapper">
+		        	<div className="CandidatesPage-list">
+		        		<div className="CandidatesPage-item"><CompareCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>
+		        		<div className="CandidatesPage-item"><CompareCard issueTitle="婚姻平權" candidateA={candidateA} candidateB={candidateB}/></div>
+		        		<div className="CandidatesPage-item"><CompareCard issueTitle="核能" candidateA={candidateA} candidateB={candidateB}/></div>
+		        		<div className="CandidatesPage-item"><CompareCard issueTitle="中國因素" candidateA={candidateA} candidateB={candidateB}/></div>
+		        	</div>
+		        </div>
+		    </div>);
+
+		var mobileContent = "";
+		if(activeTab === '野生履歷') mobileContent = <div className="CandidatesPage-cardWrap"><CompareProfileCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>;
+		if(activeTab === '議題立場') mobileContent = mobileIssue;
+        
+
 		var mobile = (
 			<div className="CandidatesPage">
 			    <div className="CandidatesPage-compare">	
@@ -94,16 +112,7 @@ export default class CandidatesPage extends React.Component {
 		   	        			 setActiveSubtabHandler={this._setActiveSubtab.bind(this)}
 		   	        			 showSub={false}/>
 		   	        </div>
-			        <div className="CandidatesPage-outerWrapper">
-		            	<div className="CandidatesPage-innerWrapper">
-		            		<div className="CandidatesPage-list">
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="婚姻平權" candidateA={candidateA} candidateB={candidateB}/></div>
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="核能" candidateA={candidateA} candidateB={candidateB}/></div>
-		            			<div className="CandidatesPage-item"><CompareCard issueTitle="中國因素" candidateA={candidateA} candidateB={candidateB}/></div>
-		            		</div>
-		            	</div>
-		            </div>
+			        {mobileContent}
 		        </div>
 		        <div className="CandidatesPage-candidatePicker">
 		        	<CandidatePicker candidateA={candidateA} candidateB={candidateB}
