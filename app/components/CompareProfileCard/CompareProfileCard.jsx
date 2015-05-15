@@ -8,7 +8,7 @@ import classNames from 'classnames';
 export default class CompareProfileCard extends React.Component {
   
   render () {
-    var {issueTitle, candidateA, candidateB} = this.props;
+    var {candidateA, candidateB} = this.props;
     if(!candidateA)
         candidateA = "請選擇";
     if(!candidateB)
@@ -47,6 +47,11 @@ export default class CompareProfileCard extends React.Component {
                 return <li>{i}</li>
             })
             subItemB = <ul>{subItemB}</ul>;
+        }
+
+        if(item.title === '年齡'){
+          subItemA = 2015 - subItemA;
+          subItemB = 2015 - subItemB;
         }
         
         return (

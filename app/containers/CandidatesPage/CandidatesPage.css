@@ -66,6 +66,11 @@
   width: 640px; /* item width * item count */
   -webkit-padding-start: 5px;
 }
+.CandidatesPage-profileList {
+  overflow-y: hidden;
+  width: 960px; /* item width * item count */
+  -webkit-padding-start: 5px;
+}
 .CandidatesPage-issueItem {
   box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.12);
   float: left;
