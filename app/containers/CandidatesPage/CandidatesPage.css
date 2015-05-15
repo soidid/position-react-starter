@@ -82,6 +82,7 @@
   box-shadow: 0px -2px 4px 0 rgba(0,0,0,0.12);
   text-align: center;
   padding: 10px 0;
+  z-index: 10;
 }
 .CandidatesPage-candidateList {
   background: #87bdbd;

@@ -55,17 +55,26 @@ export default class CompareCard extends React.Component {
           "is-even": key%2===0,
           "is-odd": key%2!==0
         });
+        
         return (
            <div className={classes}
                 key={key}>
               <div className="CompareCard-GridOne">
-                <div className="CompareCard-Icon"><Icon icon={opinionToIcon(item[candidateA])} /></div>
-                <div className="CompareCard-Opinion">{opinionToText(item[candidateA])}</div>
+                <div className={`CompareCard-opinion is-${item[candidateA]}`}>
+                  
+                  <div className="CompareCard-text">{opinionToText(item[candidateA])}</div>
+                  <div className="CompareCard-icon"><Icon icon={opinionToIcon(item[candidateA])} /></div>
+                  
+                </div>
               </div>
               <div className="CompareCard-GridTwo CompareCard-issue">{item.title}</div>
               <div className="CompareCard-GridOne">
-                <div className="CompareCard-Icon"><Icon icon={opinionToIcon(item[candidateB])} /></div>
-                <div className="CompareCard-Opinion">{opinionToText(item[candidateB])}</div>
+                <div className={`CompareCard-opinion is-${item[candidateB]}`}>
+                  
+                  <div className="CompareCard-text">{opinionToText(item[candidateB])}</div>
+                  <div className="CompareCard-icon"><Icon icon={opinionToIcon(item[candidateB])} /></div>
+                  
+                </div>
               </div>
           </div>
         )
@@ -90,21 +99,7 @@ export default class CompareCard extends React.Component {
           <div className="CompareCard-issues">
             {issueItems}
           </div>
-          <div className="CompareCard-flexGrids">
-            <div className="CompareCard-GridTwo">
-                <div className="ComareCard-btn">
-                  <div>{candidateA}</div>
-                  <div>完整檔案</div>
-                </div>
-            </div>
-            
-            <div className="CompareCard-GridTwo">
-                <div className="ComareCard-btn">
-                  <div>{candidateB}</div>
-                  <div>完整檔案</div>
-                </div>
-            </div>
-          </div>
+          
 
       </div>
           

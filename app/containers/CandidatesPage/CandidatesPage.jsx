@@ -87,6 +87,13 @@ export default class CandidatesPage extends React.Component {
 			<div className="CandidatesPage">
 			    <div className="CandidatesPage-compare">	
 		        	<div className="CandidatesPage-title">2016 臺北市 - 中正區，文山區 立委候選人</div>
+		        	<div className="CandidatesPage-menu">
+		        	<CompareTabs activeTab={activeTab}
+		   	        			 activeSubtab={activeSubtab}
+		   	        			 setActiveTabHandler={this._setActiveTab.bind(this)}
+		   	        			 setActiveSubtabHandler={this._setActiveSubtab.bind(this)}
+		   	        			 showSub={false}/>
+		   	        </div>
 			        <div className="CandidatesPage-outerWrapper">
 		            	<div className="CandidatesPage-innerWrapper">
 		            		<div className="CandidatesPage-list">
@@ -120,7 +127,8 @@ export default class CandidatesPage extends React.Component {
 		   	        	<CompareTabs activeTab={activeTab}
 		   	        				 activeSubtab={activeSubtab}
 		   	        				 setActiveTabHandler={this._setActiveTab.bind(this)}
-		   	        				 setActiveSubtabHandler={this._setActiveSubtab.bind(this)}/>
+		   	        				 setActiveSubtabHandler={this._setActiveSubtab.bind(this)}
+		   	        				 showSub={true}/>
 		   	        </div>
 		   	        <CompareMultiCard issueTitle={title}/>
 		   	    </div>
