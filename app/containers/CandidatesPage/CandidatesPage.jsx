@@ -3,6 +3,7 @@ import { RouteHandler } from "react-router";
 import CompareCard from "components/CompareCard/CompareCard.jsx";
 import CompareProfileCard from "components/CompareProfileCard/CompareProfileCard.jsx";
 import RecommendCard from "components/RecommendCard/RecommendCard.jsx";
+import RecommendWeb from "components/RecommendWeb/RecommendWeb.jsx";
 import InterviewCard from "components/InterviewCard/InterviewCard.jsx";
 import CompareTabs from "components/CompareTabs/CompareTabs.jsx";
 import CompareMultiCard from "components/CompareMultiCard/CompareMultiCard.jsx";
@@ -19,7 +20,7 @@ export default class CandidatesPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "野生履歷",
+			activeTab: "推薦函",
 			activeSubtab: "勞工",
 			candidateA: "賴士葆",
 			candidateB: "苗博雅"
@@ -163,7 +164,7 @@ export default class CandidatesPage extends React.Component {
 		if(activeTab === '野生履歷') 
 			webContent = <CompareMultiCard issueTitle={title} issues={false}/>;
 		if(activeTab === '推薦函')  
-		    webContent = ""; 
+		    webContent = <RecommendWeb />; 
 		
 		var web = (
 			<div className="CandidatesPage">
