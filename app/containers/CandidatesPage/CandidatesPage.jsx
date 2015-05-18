@@ -153,9 +153,18 @@ export default class CandidatesPage extends React.Component {
 		
 
 		//////////
+		var webContent = "";
 		var title = activeTab;
-		if(activeTab === "議題立場")
+		if(activeTab === "議題立場"){
 			title = activeSubtab;
+			webContent = <CompareMultiCard issueTitle={title} issues={true}/>;
+		}
+
+		if(activeTab === '野生履歷') 
+			webContent = <CompareMultiCard issueTitle={title} issues={false}/>;
+		if(activeTab === '推薦函')  
+		    webContent = ""; 
+		
 		var web = (
 			<div className="CandidatesPage">
 				<div className="CandidatesPage-compare">
@@ -167,7 +176,7 @@ export default class CandidatesPage extends React.Component {
 		   	        				 setActiveSubtabHandler={this._setActiveSubtab.bind(this)}
 		   	        				 showSub={true}/>
 		   	        </div>
-		   	        <CompareMultiCard issueTitle={title}/>
+		   	        {webContent}
 		   	    </div>
 		   	</div>);
 		

@@ -32,12 +32,13 @@ function opinionToText(opinion){
 export default class CompareMultiCard extends React.Component {
   
   render () {
-    var {issueTitle} = this.props;
+    var {issueTitle, issues} = this.props;
     var candidateAimg = require("./images/賴士葆.png");
     var candidateBimg = require("./images/苗博雅.png");
     var candidateCimg = require("./images/阮昭雄.png");
     var candidateDimg = require("./images/余宛如.png");
     
+   
     var issueItems = data.issues.map((item,key)=>{
         var classes = classNames({
           "CompareMultiCard-flexGrids": true,
@@ -72,8 +73,75 @@ export default class CompareMultiCard extends React.Component {
 
           </div>
         )
+    });
+    var basicItems = data.basics.map((item,key)=>{
+        var classes = classNames({
+          "CompareMultiCard-flexGrids": true,
+          "is-even": key%2===0,
+          "is-odd": key%2!==0
+        });
+
+        var subItemA = item.candidateA;
+        if(typeof(item.candidateA)==="object"){
+            subItemA = item.candidateA.map((i,k)=>{
+                return <li>{i}</li>
+            })
+            subItemA = <ul>{subItemA}</ul>;
+        }
+        var subItemB = item.candidateB;
+        if(typeof(item.candidateB)==="object"){
+            subItemB = item.candidateB.map((i,k)=>{
+                return <li>{i}</li>
+            })
+            subItemB = <ul>{subItemB}</ul>;
+        }
+         var subItemC = item.candidateC;
+        if(typeof(item.candidateC)==="object"){
+            subItemC = item.candidateC.map((i,k)=>{
+                return <li>{i}</li>
+            })
+            subItemC = <ul>{subItemC}</ul>;
+        }
+         var subItemD = item.candidateD;
+        if(typeof(item.candidateD)==="object"){
+            subItemD = item.candidateD.map((i,k)=>{
+                return <li>{i}</li>
+            })
+            subItemD = <ul>{subItemD}</ul>;
+        }
+        if(item.title === '年齡'){
+          subItemA = 2015 - subItemA;
+          subItemB = 2015 - subItemB;
+          subItemC = 2015 - subItemC;
+          subItemD = 2015 - subItemD;
+        }
+        return (
+           <div className={classes}
+                key={key}>
+              <div className="CompareMultiCard-GridTwo CompareMultiCard-issue">{item.title}</div>
+              
+              <div className="CompareMultiCard-GridOne">
+                {subItemA}
+              </div>
+              
+              <div className="CompareMultiCard-GridOne">
+               {subItemB}
+              </div>
+
+              <div className="CompareMultiCard-GridOne">
+                {subItemC}
+              </div>
+              
+              <div className="CompareMultiCard-GridOne">
+                {subItemD}
+              </div>
+
+
+          </div>
+        )
     })
 
+    var content = (issues) ? issueItems : basicItems;
     return (
       <div className="CompareMultiCard">
           
@@ -104,7 +172,7 @@ export default class CompareMultiCard extends React.Component {
             </div>
           </div>
           <div className="CompareMultiCard-issues">
-          {issueItems}
+              {content}
           </div>
       </div>
           
