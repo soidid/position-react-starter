@@ -4,7 +4,32 @@ import "./CompareTabs.css";
 import classNames from "classnames";
 import Icon from "../Icon/Icon.jsx";
 export default class CompareTabs extends React.Component {
-	
+	constructor(props){ super(props)
+		this.state = {
+			scrolling : false
+		}
+	}
+	_onScroll(){
+		//console.log("scrolling: ");
+		//console.log(pageYOffset)
+		// if(pageYOffset >= 150 && !this.state.scrolling){
+		// 	this.setState({
+		// 		scrolling: true
+		// 	})
+		// }
+		// if(pageYOffset < 150 && this.state.scrolling){
+		// 	this.setState({
+		// 		scrolling: false
+		// 	})
+		// }
+		
+	}
+	componentDidMount () {
+        window.addEventListener('scroll', this._onScroll.bind(this,null), false);
+    }
+    componentWillUnmount () {
+        window.removeEventListener('scroll', this._onScroll.bind(this,null), false);
+    }
 	render() {
 		
 		var {activeTab, activeSubtab, setActiveTabHandler, setActiveSubtabHandler, showSub} = this.props;
@@ -36,8 +61,12 @@ export default class CompareTabs extends React.Component {
 			"CompareTabs-subitems" : true,
 			"is-show" : activeTab === '議題立場' && showSub === true
 		});
+		var compareTabsClasses = classNames({
+			"CompareTabs" : true,
+			"is-scrolling" : this.state.scrolling
+		})
 		return (
-			<div className="CompareTabs">
+			<div className={compareTabsClasses}>
 			    <div className="CompareTabs-items">
 			    	<div className="CompareTabs-maxWidth">{items}</div>
 				</div>
