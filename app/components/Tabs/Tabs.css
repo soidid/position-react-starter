@@ -41,7 +41,7 @@
 	}
 }
 .Tabs-item.is-active {
-	background: #7A9E9F;
+	background: #9ac2c3;//#7A9E9F;
 	color: white;
 }
 .Tabs-item.is-active:after {
@@ -49,14 +49,14 @@
 	position: absolute;
 	bottom: -9px;
 	left: calc(50% - 10px );
-	border-top: 10px solid #7A9E9F;
+	border-top: 10px solid #9ac2c3;//#7A9E9F;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	z-index: 10;
 }
 .Tabs-item:hover {
 	//background: rgb(240,240,240);
-	background: #7A9E9F;
+	background: #9ac2c3;//#7A9E9F;
 	color: white;
 }
 

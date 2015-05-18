@@ -148,27 +148,35 @@ export default class CompareMultiCard extends React.Component {
           <div className="CompareMultiCard-flexGrids">
             <div className="CompareMultiCard-GridTwo CompareMultiCard-title">{issueTitle}</div>
             <div className="CompareMultiCard-GridOne">
+                <Link className="CompareMultiCard-link" to="person">
                 <img className="CompareMultiCard-img"
                      src={candidateAimg}/>
                 {data.candidateA}
+                </Link>
             </div>
             
             <div className="CompareMultiCard-GridOne">
+                <Link className="CompareMultiCard-link" to="person">
                 <img className="CompareMultiCard-img"
                      src={candidateBimg}/>
                 {data.candidateB}
+                </Link>
             </div>
 
             <div className="CompareMultiCard-GridOne">
+                <Link className="CompareMultiCard-link" to="person">
                 <img className="CompareMultiCard-img"
                      src={candidateCimg}/>
                 {data.candidateC}
+                </Link>
             </div>
 
             <div className="CompareMultiCard-GridOne">
+                <Link className="CompareMultiCard-link" to="person">
                 <img className="CompareMultiCard-img"
                      src={candidateDimg}/>
                 {data.candidateD}
+                </Link>
             </div>
           </div>
           <div className="CompareMultiCard-issues">

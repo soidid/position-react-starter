@@ -20,7 +20,7 @@ export default class CandidatesPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "議題立場",
+			activeTab: "國會徵信社",
 			activeSubtab: "勞工",
 			candidateA: "賴士葆",
 			candidateB: "苗博雅"
@@ -127,7 +127,7 @@ export default class CandidatesPage extends React.Component {
 		var mobileContent = "";
 		if(activeTab === '野生履歷') mobileContent = mobileProfiles;
 		if(activeTab === '推薦函')   mobileContent = mobileRecommends;
-		if(activeTab === '議題立場') mobileContent = mobileIssue;
+		if(activeTab === '國會徵信社') mobileContent = mobileIssue;
         
 
 		var mobile = (
@@ -156,7 +156,7 @@ export default class CandidatesPage extends React.Component {
 		//////////
 		var webContent = "";
 		var title = activeTab;
-		if(activeTab === "議題立場"){
+		if(activeTab === "國會徵信社"){
 			title = activeSubtab;
 			webContent = <CompareMultiCard issueTitle={title} issues={true}/>;
 		}

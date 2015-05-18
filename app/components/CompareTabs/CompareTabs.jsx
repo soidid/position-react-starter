@@ -33,7 +33,7 @@ export default class CompareTabs extends React.Component {
 	render() {
 		
 		var {activeTab, activeSubtab, setActiveTabHandler, setActiveSubtabHandler, showSub} = this.props;
-		var menu = ["野生履歷","推薦函","議題立場"];
+		var menu = ["野生履歷","推薦函","國會徵信社"];
 		var submenu = ["勞工","婚姻平權","中國因素","核能"];
 		var items = menu.map((value, index)=>{
 				var tabClasses = classNames({
@@ -59,7 +59,7 @@ export default class CompareTabs extends React.Component {
 			});
 		var subitemClassess = classNames({
 			"CompareTabs-subitems" : true,
-			"is-show" : activeTab === '議題立場' && showSub === true
+			"is-show" : activeTab === '國會徵信社' && showSub === true
 		});
 		var compareTabsClasses = classNames({
 			"CompareTabs" : true,

@@ -40,7 +40,7 @@ export default class Tabs extends React.Component {
 		// "立場總覽" ??
 
 		var {activeTab, activeSubtab, setActiveTabHandler, setActiveSubtabHandler} = this.props;
-		var menu = ["野生履歷","推薦函","議題立場"];
+		var menu = ["野生履歷","推薦函","國會徵信社"];
 		var submenu = ["勞工","婚姻平權","中國因素","核能"];
 		var items = menu.map((value, index)=>{
 				var tabClasses = classNames({
@@ -66,7 +66,7 @@ export default class Tabs extends React.Component {
 			});
 		var subitemClassess = classNames({
 			"Tabs-subitems" : true,
-			"is-show" : activeTab === '議題立場'
+			"is-show" : activeTab === '國會徵信社'
 		});
 		var tabClasses = classNames({
 			"Tabs" : true,

@@ -82,3 +82,10 @@
 .CompareMultiCard-GridOne ul {
 	text-align: left;
 }
+.CompareMultiCard-link, .CompareMultiCard-link:visited {
+	color: #7a9e9f;
+	text-decoration: none;
+}
+.CompareMultiCard-link:hover {
+	text-decoration: underline;
+}

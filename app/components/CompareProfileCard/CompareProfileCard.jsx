@@ -77,15 +77,19 @@ export default class CompareProfileCard extends React.Component {
           <div className="CompareProfileCard-title">野生履歷</div>
           <div className="CompareProfileCard-flexGrids">
             <div className="CompareProfileCard-GridTwo">
+                <Link className="CompareMultiCard-link" to="person">
                 <img className="CompareProfileCard-img"
                      src={candidateAimg}/>
                 {candidateA}
+                </Link>
             </div>
             <div className="CompareProfileCard-pk">PK</div>
             <div className="CompareProfileCard-GridTwo">
+                <Link className="CompareMultiCard-link" to="person">
                 <img className="CompareProfileCard-img"
                      src={candidateBimg}/>
                 {candidateB}
+                </Link>
             </div>
           </div>
           <div className="CompareProfileCard-issues">

@@ -18,7 +18,7 @@ export default class PersonPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "議題立場",
+			activeTab: "野生履歷",
 			activeSubtab: "勞工"
 		}
 	}
@@ -38,15 +38,22 @@ export default class PersonPage extends React.Component {
 		var { activeTab, activeSubtab } = this.state;
 		
 		var content = "";
-		if(activeTab === "議題立場")
+		if(activeTab === "國會徵信社")
 			content = <div><RecordList opinion={"贊成"} subject={"公司獲利盈餘重新分配"}/>
 						   <RecordList opinion={"反對"} subject={"增加罰則處罰企業未分配盈餘"}/>
 						   <RecordList opinion={"不明確"} subject={"勞工債權清償順位優於銀行抵押權"}/>
 						   <RecordList opinion={"不知所云"} subject={"每周40工時及加班上限"}/></div> ;
+		
+		if(activeTab === "野生履歷"){
+			content = (
+				<div><Profile /></div>
+			)
+		}
+
 		return (
 		<div className="PersonPage">
 			<div className="PersonPage-person">
-				<Legislator data="尤美女" />
+				<Legislator data="賴士葆" />
 			</div>
 			<Tabs activeTab={activeTab}
 		   	        	 activeSubtab={activeSubtab}
@@ -54,7 +61,9 @@ export default class PersonPage extends React.Component {
 		   	        	 setActiveSubtabHandler={this._setActiveSubtab.bind(this)}/>
 			<div className="PersonPage-content">
 				{content}
+				
 			</div>
+
 			
 		</div>);
 	}
