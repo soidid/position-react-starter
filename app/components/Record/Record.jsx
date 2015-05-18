@@ -61,11 +61,11 @@ export default class Record extends React.Component {
     var readMoreSpan = (!showFull && data.quote.length > 140) ?
     <span className="Reocrd-readFull"> ...閱讀全部</span>:"";
 
-    var editByItem = (showFull) ? 
+    var editByItem = 
     <div className="Reocrd-editBy">
       <UserAvatar />
       由 Eddie Hung 編輯
-    </div>:"";
+    </div>;
 
     return (
         <div className="Record">
