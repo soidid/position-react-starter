@@ -108,25 +108,16 @@ export default class CandidatesPage extends React.Component {
 		    </div>
 		);
 
-		var dataA = { "title" : "最想推行的 3 個法案是？",
-	      "賴士葆" : "【加薪四法】包括了雇主裁員、基本薪資等等，【所得稅法】讓資本利得課稅落實，【會計法】刪除不必要的行政程序。",
-	      "苗博雅" : "【勞基法】裡面有關勞工工時的部分，【民法】中讓同性婚姻合法化的部分，以及【刑法】中廢除死刑。",
-	      "阮昭雄" : "【加薪四法】包括了雇主裁員、基本薪資等等，【所得稅法】讓資本利得課稅落實，【會計法】刪除不必要的行政程序。",
-	      "余宛如" : "【勞基法】裡面有關勞工工時的部分，【民法】中讓同性婚姻合法化的部分，以及【刑法】中廢除死刑。"
-	    };
-	    var dataB = { "title" : "最關注的 3 個在地議題是？",
- 	      "賴士葆" : "中正區健身中心設備優化、中正國小合併案、以及快速道路拓寬。",
- 	      "苗博雅" : "文山區社區營造計畫、文山區青年創業補助、以及性別友善公共環境廣設。",
- 	      "阮昭雄" : "中正區健身中心設備優化、中正國小合併案、以及快速道路拓寬。",
- 	      "余宛如" : "文山區社區營造計畫、文山區青年創業補助、以及性別友善公共環境廣設。"
- 	    };
+		
 		var mobileProfiles = (
 			<div className="CandidatesPage-outerWrapper">
 		        <div className="CandidatesPage-innerWrapper">
 		        	<div className="CandidatesPage-profileList">
 			    		<div className="CandidatesPage-recommendItem"><CompareProfileCard candidateA={candidateA} candidateB={candidateB}/></div>
-			    		<div className="CandidatesPage-recommendItem"><InterviewCard data={dataA} candidateA={candidateA} candidateB={candidateB}/></div>
-			    		<div className="CandidatesPage-recommendItem"><InterviewCard data={dataB} candidateA={candidateA} candidateB={candidateB}/></div>
+			    		<div className="CandidatesPage-recommendItem">
+			    			<InterviewCard candidate={candidateA} />
+			    		</div>
+			    		<div className="CandidatesPage-recommendItem"><InterviewCard candidate={candidateB} /></div>
 					</div>
 		        </div>
 		    </div>
