@@ -1,13 +1,17 @@
 .Tabs {
 	width: 100%;
 	position: relative;
-	background: #F5F5F5;
-	
+	padding-bottom: 10px;
 }
 .Tabs.is-scrolling {
 	position: fixed;
 	top: 0;
 	z-index: 100;
+	padding-bottom: 0;
+}
+.Tabs-background {
+	width: 100%;
+	background: #F5F5F5;
 }
 .Tabs-items {
 	padding: 0 40px;
