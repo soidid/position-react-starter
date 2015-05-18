@@ -34,7 +34,7 @@ export default class Record extends React.Component {
 
   render() {
    
-    var {data} = this.props;
+    var {data, subject} = this.props;
     var {showTooltip, showFull} = this.state;
     
     var opinionClasses = classNames({
@@ -72,15 +72,31 @@ export default class Record extends React.Component {
             <div className="Record-title">
                 <LegislatorAvatar data={data.name} name={true}/>
                 <div className={opinionClasses}>{data.opinion}</div>
+                <div className="Record-subject">{subject}</div>
             </div>
-            <div className="Record-quote"
-                 onClick={bindToggleShowFull}>
-                 {quoteContent}
-                 {readMoreSpan}
+            
+            <div className="Record-flexGrids">
+                <div className="Record-flexLeft">行動</div>
+                <div className="Record-flexMain">{data.type}</div>
             </div>
-            <div className="Record-info">
-                －{data.type}，{data.date}
+
+            <div className="Record-flexGrids">
+              <div className="Record-flexLeft">內容</div>
+              <div className="Record-flexMain">
+                  <div className="Record-quote"
+                       onClick={bindToggleShowFull}>
+                     {quoteContent}
+                     {readMoreSpan}
+                  </div>
+              </div>
             </div>
+
+            <div className="Record-flexGrids">
+                <div className="Record-flexLeft">日期</div>
+                <div className="Record-flexMain">{data.date}</div>
+            </div>
+
+           
             {editByItem}
             <div className="Record-action">
                 <div className="Record-actionItem">

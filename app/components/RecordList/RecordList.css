@@ -1,9 +1,11 @@
 .RecordList {
 	text-align: center;
 	/*border-top: 1px solid rgb(220,220,220);*/
-	margin: 0 auto;
-	padding: 0 10px;
-
+	margin: 4px auto;
+	cursor: pointer;
+	background: white;
+	
+	
 }
 @media screen and (min-width: 600px){
 	.RecordList {
@@ -14,13 +16,12 @@
 .RecordList-title {
 	font-size: 20px;
 	font-weight: 800;
-	margin: 20px 0;
+	
 	padding: 20px;
-	background: rgb(250,250,250);
+	//background: rgb(250,250,250);
 	line-height: 1.4;
 	text-align: left;
-	cursor: pointer;
-	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.08);
+	
 	position: relative;
 }
 @media screen and (min-width: 600px){
@@ -33,23 +34,9 @@
 	right: 10px;
 	top: 20px;
 }
-.RecordList-title:hover {
-	box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.18);
-}
-.RecordList-content {
-	overflow-y: hidden;
-	max-height: 0px; /* approximate max height */
-	);
-	transition-property: max-height;
-	transition-duration: .3s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-.RecordList-content.is-show {
-	max-height: 5000px;
 
-	transition-property: max-height;
-	transition-duration: 100ms;
-	transition-timing-function: ease-in;
+.RecordList-content {
+	
 }
 .RecordList-opinion.is-for {
 	color: #3EA869;	
@@ -58,6 +45,9 @@
 	color: #C62F20;	
 }
 .RecordList-opinion.is-unclear {
+	color : #fdc14d
+}
+.RecordList-opinion.is-none {
 	color : gray;
 }
 

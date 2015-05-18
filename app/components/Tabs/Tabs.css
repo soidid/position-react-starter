@@ -77,11 +77,13 @@
 	transition-duration: 100ms;
 	transition-timing-function: ease-in;
 }
-.Tabs-subitem {
+.Tabs-subitem, .Tabs-subitem:visited {
 	padding: 15px 7px 8px 7px;
  	display: inline-block;
  	border-bottom: 4px solid #F2F6F6;
  	cursor: pointer;
+ 	color: rgb(53,55,54);
+ 	text-decoration: none;
 }
 .Tabs-subitem:hover {
 	background: rgb(240,240,240);

@@ -1,7 +1,7 @@
 .Record {
 	display: inline-block;
 	border: 1px solid rgb(220,220,220);
-	width: 100%;
+	width: calc(100% - 10px);
 	vertical-align: top;
 	margin: 4px;
 	cursor: pointer;
@@ -25,6 +25,13 @@
 	padding-top: 16px;
 	margin-left: 3px;
 }
+.Record-subject {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 16px;
+	margin-left: 3px;
+
+}
 .Record-opinion.is-for {
 	color: #3EA869;
 }
@@ -35,20 +42,37 @@
 	background: gray;
 }
 
+.Record-flexGrids {
+    display: flex;
+    padding: 6px;
+    line-height: 1.6;
+    margin: 0 10px;
+}
+.Record-flexLeft {
+	flex: 0 0 60px;
+	color: gray;
+	text-align: center;
+
+}
+.Record-flexMain {
+    flex: 1;
+}
 .Record-quote {
-	font-family: Georgia;
-    margin: 4px 5px;
-    padding: 4px 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+	
 }
-.Record-quote:before {
-	color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+.Record-quoteTag {
+	
+    display: inline-block;
+    
+    margin-right: 20px;
+
+    padding: 3px 6px;
+    
+    border-left: 7px solid gold;
+    position: relative;
+
 }
+
 .Reocrd-readFull {
 	font-size: 16px;
 	color: #6FB4B1;

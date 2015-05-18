@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteHandler } from "react-router";
+import { RouteHandler, Link } from "react-router";
 
 import Profile from "components/Profile/Profile.jsx";
 import Legislator from 'components/Legislator/Legislator.jsx';
@@ -18,7 +18,7 @@ export default class PersonPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "野生履歷",
+			activeTab: "國會徵信社",
 			activeSubtab: "勞工"
 		}
 	}
@@ -39,15 +39,18 @@ export default class PersonPage extends React.Component {
 		
 		var content = "";
 		if(activeTab === "國會徵信社")
-			content = <div><RecordList opinion={"贊成"} subject={"公司獲利盈餘重新分配"}/>
-						   <RecordList opinion={"反對"} subject={"增加罰則處罰企業未分配盈餘"}/>
-						   <RecordList opinion={"不明確"} subject={"勞工債權清償順位優於銀行抵押權"}/>
-						   <RecordList opinion={"不知所云"} subject={"每周40工時及加班上限"}/></div> ;
+			content = <div>
+                <Link to="personIssue" params={{issue: "issue"}}>贊成.公司獲利盈餘重新分配</Link>
+			</div> ;
 		
 		if(activeTab === "野生履歷"){
 			content = (
 				<div><Profile /></div>
 			)
+		}
+
+		if( issue ){
+			content = <RecordList opinion="贊成" subject="公司獲利盈餘重新分配" />;
 		}
 
 		return (

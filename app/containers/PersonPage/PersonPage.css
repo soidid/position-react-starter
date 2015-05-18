@@ -1,8 +1,14 @@
 .PersonPage {
 	text-align: center;
 	width: 100%;
-	//background: #b8d8d8;
+	
 	min-height: 100vh;
+	background-color: #fff; 
+	/*background-image: 
+	linear-gradient(90deg, transparent 149px, #abced4 149px, #abced4 151px, transparent 151px),
+	linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 1.2em;
+    position: relative;*/
 	
 }
 

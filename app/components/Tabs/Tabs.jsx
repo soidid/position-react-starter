@@ -13,16 +13,16 @@ export default class Tabs extends React.Component {
 	_onScroll(){
 		//console.log("scrolling: ");
 		//console.log(pageYOffset)
-		if(pageYOffset >= 230 && !this.state.scrolling){
-			this.setState({
-				scrolling: true
-			})
-		}
-		if(pageYOffset < 230 && this.state.scrolling){
-			this.setState({
-				scrolling: false
-			})
-		}
+		// if(pageYOffset >= 230 && !this.state.scrolling){
+		// 	this.setState({
+		// 		scrolling: true
+		// 	})
+		// }
+		// if(pageYOffset < 230 && this.state.scrolling){
+		// 	this.setState({
+		// 		scrolling: false
+		// 	})
+		// }
 		
 	}
 	_toggleSubitems(){
@@ -59,9 +59,10 @@ export default class Tabs extends React.Component {
 		        	"is-active" : value === activeSubtab
 		        });
 				return(
-					<div className={tabClasses}
-						 onClick={setActiveSubtabHandler.bind(this,value)}
-						 key={index}>{value}</div>
+					<Link className={tabClasses}
+						  onClick={setActiveSubtabHandler.bind(this,value)}
+						  key={index}
+						  to="person">{value}</Link>
 				)
 			});
 		var subitemClassess = classNames({
