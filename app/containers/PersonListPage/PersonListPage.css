@@ -12,7 +12,9 @@
 }
 .PersonListPage-legislatorItem, .PersonListPage-legislatorItem:visited {
    	vertical-align: top;
+    width: calc(100% - 10px);
     margin: 5px;
+
    	color: rgb(53,55,54);
     text-decoration: none;
     border: 1px solid rgb(230,230,230);
@@ -26,6 +28,7 @@
    .PersonListPage-legislatorItem {
    	   display: inline-block;
    	   width: 45%;
+       
    	   
    }
 }
@@ -33,7 +36,7 @@
    .PersonListPage-legislatorItem {
    	   display: inline-block;
    	   width: 32%;
-   	   
+    
    }
 }
 
