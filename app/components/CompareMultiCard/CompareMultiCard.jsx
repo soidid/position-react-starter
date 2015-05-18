@@ -50,22 +50,22 @@ export default class CompareMultiCard extends React.Component {
                 key={key}>
               <div className="CompareMultiCard-GridTwo CompareMultiCard-issue">{item.title}</div>
               
-              <div className="CompareMultiCard-GridOne">
+              <div className={`CompareMultiCard-GridOne CompareMultiCard-OpinionItem is-${item.candidateA}`}>
                 <div className="CompareMultiCard-Icon"><Icon icon={opinionToIcon(item.candidateA)} /></div>
                 <div className="CompareMultiCard-Opinion">{opinionToText(item.candidateA)}</div>
               </div>
               
-              <div className="CompareMultiCard-GridOne">
+              <div className={`CompareMultiCard-GridOne CompareMultiCard-OpinionItem is-${item.candidateB}`}>
                 <div className="CompareMultiCard-Icon"><Icon icon={opinionToIcon(item.candidateB)} /></div>
                 <div className="CompareMultiCard-Opinion">{opinionToText(item.candidateB)}</div>
               </div>
 
-              <div className="CompareMultiCard-GridOne">
+              <div className={`CompareMultiCard-GridOne CompareMultiCard-OpinionItem is-${item.candidateC}`}>
                 <div className="CompareMultiCard-Icon"><Icon icon={opinionToIcon(item.candidateC)} /></div>
                 <div className="CompareMultiCard-Opinion">{opinionToText(item.candidateC)}</div>
               </div>
               
-              <div className="CompareMultiCard-GridOne">
+              <div className={`CompareMultiCard-GridOne CompareMultiCard-OpinionItem is-${item.candidateD}`}>
                 <div className="CompareMultiCard-Icon"><Icon icon={opinionToIcon(item.candidateD)} /></div>
                 <div className="CompareMultiCard-Opinion">{opinionToText(item.candidateD)}</div>
               </div>

@@ -54,6 +54,24 @@
 .CompareMultiCard-issue {
 	text-align: left;
 }
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-issue {
+	color: rgb(53,55,54);
+}
+.CompareMultiCard-OpinionItem {
+	cursor: pointer;
+}
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-for {
+	color: #7ac74b; 
+}
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-against {
+	color: #D2453E; 
+}
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-unclear {
+	color: #fdc14d;
+}
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-none {
+	color: gray;
+}
 .CompareMultiCard-Icon {
 	font-size: 24px;
 }
