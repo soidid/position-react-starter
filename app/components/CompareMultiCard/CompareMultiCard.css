@@ -57,19 +57,25 @@
 .CompareMultiCard-flexGrids:hover .CompareMultiCard-issue {
 	color: rgb(53,55,54);
 }
-.CompareMultiCard-OpinionItem {
+.CompareMultiCard-OpinionItem, .CompareMultiCard-OpinionItem:visited {
 	cursor: pointer;
+	color: #7a9e9f;
+	text-decoration: none;
 }
-.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-for {
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-for,
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-for:visited {
 	color: #7ac74b; 
 }
-.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-against {
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-against,
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-against:visited {
 	color: #D2453E; 
 }
-.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-unclear {
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-unclear,
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-unclear:visited {
 	color: #fdc14d;
 }
-.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-none {
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-none,
+.CompareMultiCard-flexGrids:hover .CompareMultiCard-OpinionItem.is-none:visited {
 	color: gray;
 }
 .CompareMultiCard-Icon {
@@ -88,4 +94,34 @@
 }
 .CompareMultiCard-link:hover {
 	text-decoration: underline;
+}
+.CompareMultiCard-OpinionItem:hover .CompareMultiCard-more {
+    display: block;
+}
+.CompareMultiCard-more {
+	text-align: left;
+	display: none;
+	color: rgb(80,80,80);
+	position: relative;
+}
+.CompareMultiCard-btn {
+	color: white;
+    font-size: 14px;
+    display: inline-block;
+    background: rgba(0,0,0,0.7);
+    padding: 4px 10px;
+    margin: 0 auto;
+    position: absolute;
+    top: -80px;
+    left: 30px;
+    border-radius: 5px;
+}
+.CompareMultiCard-btn:after {
+	position: absolute;
+	bottom: -10px;
+	left: 42px;
+	content: '';
+	border-top: 10px solid rgba(0,0,0,0.7);
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
 }

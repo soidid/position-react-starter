@@ -22,7 +22,7 @@ export default class CandidatesPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "野生履歷",
+			activeTab: "國會徵信社",
 			activeSubtab: "勞工",
 			candidateA: "賴士葆",
 			candidateB: "苗博雅"
