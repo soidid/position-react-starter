@@ -78,6 +78,17 @@
 	color: white;
     background: #3F9F9b;
 }
+.RecordList-btn {
+	padding: 10px 20px;
+	border: 1px solid rgb(153,155,154);
+	display: inline-block;
+	margin: 20px auto;
+	cursor: pointer;
+}
+.RecordList-btn:hover {
+	color: #6fb4b1;
+	border-color: #8bc3c0;
+}
 
 
 
