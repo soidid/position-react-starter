@@ -39,6 +39,8 @@ module.exports = (
 		<Route name="issue" path="/issue" handler={IssuePage} />
 		<Route name="issueVote" path="/issue/:issue" handler={IssueVotePage} />
 
+		<Route name="user" path="/user" handler={PersonPage} />
+
 		<DefaultRoute handler={HomePage} />
 		<NotFoundRoute handler={NotFoundPage} />
 	</Route>

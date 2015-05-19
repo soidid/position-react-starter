@@ -50,7 +50,7 @@ export default class Record extends React.Component {
     var tooltip = (showTooltip) ? 
         <div className="Record-tooltip">
             <div className="Record-tooltipItem">複製連結</div>
-            <div className="Record-tooltipItem">看立法院原始紀錄</div>
+            <div className="Record-tooltipItem">看原始資料</div>
             <div className="Record-tooltipItem">檢舉</div>
         </div> : ""; 
     
@@ -63,12 +63,13 @@ export default class Record extends React.Component {
 
     var editByItem = 
     <div className="Reocrd-editBy">
-      <UserAvatar />
-      由 Eddie Hung 編輯
+      
+      －由 <Link className="Reocrd-link" to="user">Eddie Hung</Link> 編輯
     </div>;
 
     return (
         <div className="Record">
+            <div className="Record-tag">國會徵信社調查結果</div>
             <div className="Record-title">
                 <LegislatorAvatar data={data.name} name={true}/>
                 <div className={opinionClasses}>{data.opinion}</div>

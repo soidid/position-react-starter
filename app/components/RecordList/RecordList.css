@@ -4,16 +4,34 @@
 	margin: 4px auto;
 	cursor: pointer;
 	background: white;
-	
-	
+	padding-bottom: 80px;
 }
 @media screen and (min-width: 600px){
 	.RecordList {
 		max-width: 600px;
 	}
 }
-
+.RecordList-back {
+	
+}
 .RecordList-title {
+	text-align: left;
+    padding: 2px 6px;
+    margin: 20px 0;
+    font-size: 18px;
+    color: rgb(100,100,100);
+    border-left: 6px solid rgb(153,155,154);
+}
+.RecordList-description {
+	margin-bottom: 30px;
+	line-height: 1.6;
+	text-align: left;
+	padding: 10px;
+	border: 1px dotted rgb(200,200,200);
+	margin: 5px;
+	
+}
+.RecordList-summary {
 	font-size: 20px;
 	font-weight: 800;
 	
@@ -25,18 +43,12 @@
 	position: relative;
 }
 @media screen and (min-width: 600px){
-	.RecordList-title  {
+	.RecordList-summary  {
 		text-align: center;
 	}
 }
-.RecordList-toggle {
-	position: absolute;
-	right: 10px;
-	top: 20px;
-}
-
-.RecordList-content {
-	
+.RecordList-opinion {
+	margin: 0 5px;
 }
 .RecordList-opinion.is-for {
 	color: #3EA869;	
@@ -51,87 +63,15 @@
 	color : gray;
 }
 
-.RecordList-description {
-	margin-bottom: 30px;
-	line-height: 1.6;
-	text-align: left;
-	padding: 10px;
-	border: 1px dotted rgb(200,200,200);
-	border-radius: 6px;
+.RecordList-tabs {
+	margin: 30px 0 20px 0;
 }
-
-.RecordList-year {
-	text-align: left;
-	border-left: 1px solid rgb(153,155,154);
-    padding-top: 20px;
-}
-.RecordList-yearHeader {
-	position: relative;
-
-}
-.RecordList-yearUnit {
-	position: absolute;
-	top: 8px;
-	left: -4px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: #880013;
-
-}
-.RecordList-back,.RecordList-back:visited {
-	position: absolute;
-	left: 0;
-	top: 0;
-	cursor: pointer;
-	color: rgb(53,55,54);
-	text-decoration: none;
-}
-.RecordList-yearTitle {
-	text-align: left;
-	font-weight: 800;
-	padding-left: 10px;
-}
-
-/* O 次表決結果 */
-.RecordList-yearSum {
-	padding: 10px;
-	width: 100%;
-	background: rgb(220,220,220);
-	cursor: pointer;
-}
-.RecordList-yearSum:hover {
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-}
-
-
-.RecordList-yearToggle {
-	text-align: right;
-	margin-top: 10px;
-	font-size: 14px;
-	text-decoration: underline;
-}
-@media screen and (min-width: 600px){
-	.RecordList-yearToggle {
-		float: right;
-		padding: 0 20px;
-		margin: 0;
-		font-size: 16px;
-		text-decoration: none;
-    }
-
-}
-
-.RecordList-yearEntries {
-	padding-top: 4px;
-}
-
 .RecordList-tab {
 	display: inline-block;
 	color: #3F9F9b;
     background: white;
     border: 1px solid #3F9F9b;
-	padding: 4px 6px;
+	padding: 6px 8px;
 	cursor: pointer;
 }
 .RecordList-tab.is-active {
