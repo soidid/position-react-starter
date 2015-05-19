@@ -8,6 +8,8 @@ import InterviewCard from "components/InterviewCard/InterviewCard.jsx";
 import CompareTabs from "components/CompareTabs/CompareTabs.jsx";
 import CompareMultiCard from "components/CompareMultiCard/CompareMultiCard.jsx";
 import CandidatePicker from "components/CandidatePicker/CandidatePicker.jsx";
+import TV from "components/TV/TV.jsx";
+
 import "./CandidatesPage.css";
 
 export default class CandidatesPage extends React.Component {
@@ -20,7 +22,7 @@ export default class CandidatesPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "國會徵信社",
+			activeTab: "野生履歷",
 			activeSubtab: "勞工",
 			candidateA: "賴士葆",
 			candidateB: "苗博雅"
@@ -162,7 +164,10 @@ export default class CandidatesPage extends React.Component {
 		}
 
 		if(activeTab === '野生履歷') 
-			webContent = <CompareMultiCard issueTitle={title} issues={false}/>;
+			webContent = <div>
+							<TV />
+							<CompareMultiCard issueTitle={title} issues={false}/>
+						 </div>;
 		if(activeTab === '推薦函')  
 		    webContent = <RecommendWeb />; 
 		

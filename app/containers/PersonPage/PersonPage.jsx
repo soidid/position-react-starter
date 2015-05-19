@@ -7,6 +7,7 @@ import Tabs from "components/Tabs/Tabs.jsx";
 import RecordList from "components/RecordList/RecordList.jsx";
 import Icon from "components/Icon/Icon.jsx";
 
+
 import "./PersonPage.css";
 
 function opinionToEng(value){
