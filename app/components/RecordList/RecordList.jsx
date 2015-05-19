@@ -88,7 +88,7 @@ export default class RecordList extends React.Component {
           <div className="RecordList-title">
             調查結果
             <div className="RecordList-more">
-              <div className="RecordList-hint"><Icon icon={"question"}/></div>
+              <div className="RecordList-hint"><Icon icon={"info-circle"}/></div>
               <a className="RecordList-tooltip" href="#how">我們如何調查的？</a>
             </div>
           </div>

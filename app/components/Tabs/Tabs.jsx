@@ -48,9 +48,10 @@ export default class Tabs extends React.Component {
 		        	"is-active" : value === activeTab
 		        });
 				return(
-					<div className={tabClasses}
-						 onClick={setActiveTabHandler.bind(this,value)}
-						 key={index}>{value}</div>
+					<Link className={tabClasses}
+						  onClick={setActiveTabHandler.bind(this,value)}
+						  key={index}
+						  to="person">{value}</Link>
 				)
 			});
 		var subitems = submenu.map((value, index)=>{

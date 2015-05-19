@@ -6,7 +6,7 @@ import Legislator from 'components/Legislator/Legislator.jsx';
 import Tabs from "components/Tabs/Tabs.jsx";
 import RecordList from "components/RecordList/RecordList.jsx";
 import Icon from "components/Icon/Icon.jsx";
-
+import RecommendPost from "components/RecommendPost/RecommendPost.jsx";
 
 import "./PersonPage.css";
 
@@ -85,6 +85,10 @@ export default class PersonPage extends React.Component {
 					<Profile />
          	    </div>
 			)
+		}
+
+		if(activeTab === "推薦函"){
+			content = <RecommendPost />
 		}
 
 		if( issue ){

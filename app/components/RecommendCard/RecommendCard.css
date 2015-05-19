@@ -1,73 +1,96 @@
-.RecommendWeb {
-	line-height: 1.4;
-	font-size: 14px;
-	padding-bottom: 10px;
-	color: rgb(140,150,150);
-  max-width: 800px;
-  margin: 0 auto;
-
+.RecommendCard {
+  line-height: 1.4;
+  font-size: 14px;
+  padding-bottom: 10px;
+  color: rgb(140,150,150);
 }
-.RecommendWeb-item {
-  background: white;
-  box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
-  border-radius: 8px;
-  padding: 15px;
-  margin: 15px;
+.RecommendCard-title {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 7px 14px 7px 14px;
+  
+  border-bottom: 5px solid rgb(220,220,220);
+  display: inline-block;
+  margin: 10px auto;
 }
-.RecommendWeb-title {
-	font-size: 20px;
-	font-weight: 700;
-	padding: 7px 14px 7px 14px;
-	
-	border-bottom: 5px solid rgb(220,220,220);
-	display: inline-block;
-	margin: 10px auto;
-}
-
-.RecommendWeb-candidate {
-  position: relative;
-  margin-top: 5px;
- 
-}
-.RecommendWeb-img {
-  width: 80px;
-  height: 80px;
+.RecommendCard-img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  display: block;
+  margin: 0 auto;
   box-shadow: 0px 0px 0px 2px rgb(220,220,220);
 }
-.RecommendWeb-dialogue {
-  text-align: left;
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 22px;
-  margin-left: 10px;
+.RecommendCard-flexGrids {
+  display: -ms-flexbox;
+    display: -webkit-flex;
+  display: flex;
+  padding: 4px;
+  position: relative;
+  -webkit-align-items: center;
+  align-items: center;
+  min-height: 60px;
 }
-.RecommendWeb-post {
+.RecommendCard-GridOne {
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+  flex: 1;
+}
+.RecommendCard-GridTwo {
+  -webkit-box-flex: 2;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 2;         /* OLD - Firefox 19- */
+  -webkit-flex: 2;          /* Chrome */
+  -ms-flex: 2;              /* IE 10 */
+  flex: 2;
+}
+.RecommendCard-dialogue {
+  text-align: left;
+}
+.RecommendCard-post {
   text-align: left;
   border: 1px dashed rgb(220,220,220);
-  border-radius: 6px;
   margin: 15px;
   padding: 10px;
   padding-top: 40px;
   line-height: 1.6;
-  
+  //box-shadow: 2px 2px 0 0 rgba(0,0,0,0.12);
   position: relative;
 }
-.RecommendWeb-author {
+.RecommendCard-author {
   position: absolute;
   top: 10px;
   left: 10px;
 }
-.RecommendWeb-date {
+.RecommendCard-date {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.RecommendWeb-star {
+.RecommendCard-star {
   margin-top: 10px;
 }
-
-.RecommendWeb-btn {
+/*
+.RecommendCard-post:before {
+  position: absolute;
+  bottom: -13px;
+  left: 30px;
+  content: '';
+  border-top: 13px solid rgb(220,220,220);
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+.RecommendCard-post:after {
+  position: absolute;
+  bottom: -9px;
+  left: 30px;
+  content: '';
+  border-top: 13px solid white;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}*/
+.RecommendCard-btn {
   padding: 6px 10px;
   background: #6fb4b1;
   color: white;
@@ -76,6 +99,3 @@
   cursor: pointer;
   margin-bottom: 10px;
 }
-
-
-

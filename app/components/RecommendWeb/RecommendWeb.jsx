@@ -43,14 +43,14 @@ export default class RecommendWeb extends React.Component {
       }
       return (
         <div className="RecommendWeb-item">
-            <div className="RecommendWeb-candidate">
+            <Link to="person" className="RecommendWeb-candidate">
                 <img className="RecommendWeb-img"
                      src={candidateImg}/>
                 <div className="RecommendWeb-dialogue">
                     你好，我是{candidate}<br/>
                     網友是這麼推薦我的：
                 </div>
-            </div>
+            </Link>
             {posts}
             <div className="RecommendWeb-btn">看更多推薦函</div>
         </div>
