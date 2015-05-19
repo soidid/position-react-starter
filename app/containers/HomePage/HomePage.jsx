@@ -13,10 +13,10 @@ export default class HomePage extends React.Component {
 			    <div className="HomePage-content">
 					<img src={avatarURL}
 						 className="HomePage-avtar"/>
-					<div>嘿！讓我們一起試著努力看看。</div>
-					<h1>立委選舉共筆</h1>
+					<div>拜託，拜託，投我一票！</div>
+					<h1>立委求職中</h1>
 
-					<Link to="personList" className="HomePage-btn">找立委</Link>
+					<Link to="candidates" className="HomePage-btn">我的選區</Link>
 					<Link to="issueList" className="HomePage-btn">找議題</Link>
 
 

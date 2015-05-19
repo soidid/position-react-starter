@@ -21,6 +21,10 @@ export default class AppBar extends React.Component {
                onClick={toggleSideBar}>
                <Icon icon={"bars"}/>
           </div>
+          <Link to="home" 
+                className="AppBar-item">
+               <Icon icon={"home"}/>
+          </Link>
       </div>);
   }
 }
