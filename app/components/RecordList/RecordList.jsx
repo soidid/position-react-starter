@@ -85,7 +85,13 @@ export default class RecordList extends React.Component {
         <div className="RecordList">
          
           
-          <div className="RecordList-title">調查結果</div>
+          <div className="RecordList-title">
+            調查結果
+            <div className="RecordList-more">
+              <div className="RecordList-hint"><Icon icon={"question"}/></div>
+              <a className="RecordList-tooltip" href="#how">我們如何調查的？</a>
+            </div>
+          </div>
           <div className="RecordList-summary">
               賴士葆<span className={`RecordList-opinion is-${opinionToEng(opinion)}`}>{opinion}</span>{subject}
           </div> 
@@ -99,7 +105,7 @@ export default class RecordList extends React.Component {
 
           <div className="RecordList-btn">載入更多</div>
 
-          <div className="RecordList-title">我們如何調查</div>
+          <div className="RecordList-title" id="how">我們如何調查</div>
           <div className="RecordList-description">我們集結了網友與各公民團體一起協作，判斷立委參選人對個議題的立場，分為四大類：贊成、反對、不明確、不知所云。若對於判斷有疑惑，歡迎來當公民偵探一起協作與檢驗候選人立場！</div>
               
           

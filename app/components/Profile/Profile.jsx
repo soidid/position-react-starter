@@ -35,7 +35,7 @@ export default class Profile extends React.Component {
     return (
       <div className="Profile">
           <div className="embed-container">
-            <iframe width="100%" src="https://www.youtube.com/embed/P3Vm-fEZMJ0" frameBorder="0" allowfullscreen></iframe>
+            <iframe width="100%" src="https://www.youtube.com/embed/P3Vm-fEZMJ0" frameBorder="0" allowFullScreen></iframe>
           </div>
           
           <div className="Profile-basic">

@@ -15,11 +15,12 @@ export default class Legislator extends React.Component {
   
     return (
       <div className="Legislator">
-         <Link to="person">
-          <img className="Legislator-avatar"
-               src={imgURL} />
-          <div className="Legislator-name">{data}</div>
-         </Link>
+         <div>
+            <img className="Legislator-avatar"
+                 src={imgURL} />
+            <div className="Legislator-name">{data}</div>
+           
+         </div>
       </div>
           
     );

@@ -183,6 +183,7 @@ export default class CandidatesPage extends React.Component {
 		   	        				 showSub={true}/>
 		   	        </div>
 		   	        {webContent}
+		   	        
 		   	    </div>
 		   	</div>);
 		

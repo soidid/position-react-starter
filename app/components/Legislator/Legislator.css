@@ -15,12 +15,17 @@
 	vertical-align: top;
 	padding-top: 40px;
 	margin-left: 10px;
-}
-.Legislator a, .Legislator a:visited {
-	text-decoration: none;
 	color: white;
-	
 }
-.Legislator a:hover {
-	color: rgb(10,10,10);
+
+.Legislator-link, .Legislator-link:visited {
+    
+    text-decoration: none;
+    padding-bottom: 3px;
+    color: white;
+    border-bottom: 2px dotted #71b4b1;
 }
+.Legislator-link:hover {
+    border-bottom: 2px solid #71b4b1;
+}
+
