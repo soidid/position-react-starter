@@ -83,8 +83,10 @@ export default class RecordList extends React.Component {
     
     return (
         <div className="RecordList">
-         
-          
+          <div className="RecordList-title">
+            候選人大聲公
+          </div>
+         <div className="RecordList-description">賴士葆：關於「公司獲利盈餘重新分配」，我說的其實是......</div>
           <div className="RecordList-title">
             調查結果
             <div className="RecordList-more">

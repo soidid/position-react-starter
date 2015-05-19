@@ -117,10 +117,10 @@
     padding: 10px;
     font-size: 14px;
     top: -28px;
-    left: -37px;
-    background: rgb(220,220,220);
+    left: -35px;
+    background: rgba(0,0,0,0.8);
     text-decoration: none;
-    color:rgb(53,55,54);
+    color: white
 }
 .RecordList-more:hover .RecordList-tooltip:after {
 	content: '';
@@ -128,7 +128,7 @@
     left: calc( 50% - 5px );
     bottom: -10px;
     bottom: top:0px;
-    border-top: 10px solid rgb(220,220,220);
+    border-top: 10px solid rgba(0,0,0,0.8);
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
 
