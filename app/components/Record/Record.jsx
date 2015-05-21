@@ -123,16 +123,16 @@ export default class Record extends React.Component {
                 <div className="Record-btns">
                     <div className="Record-btn">
                         <Icon icon={"smile-o"}/>支持
-                        <div className="Record-percentage">24%</div>                    
+                        <div className="Record-percentage">24人</div>                    
                     </div>
                     <div className="Record-btn ">
                        
                        <Icon icon={"question"}/>不明
-                       <div className="Record-percentage">14%</div>  
+                       <div className="Record-percentage">14人</div>  
                     </div>
                     <div className="Record-btn is-mostVote">
                        <Icon icon={"frown-o"}/>反對
-                       <div className="Record-percentage">62%</div>  
+                       <div className="Record-percentage">1,362人</div>  
                     </div>
                 </div>
             </div>
@@ -146,15 +146,7 @@ export default class Record extends React.Component {
     
   }
 }
- // <div className="Record-summary">多數人認為這代表賴士葆支持勞工權益
 
- //                <div className="Record-figure">
- //                    <div className="Record-forFigure"></div>
- //                    <div className="Record-noneFigure"></div>
- //                    <div className="Record-againstFigure"></div>
- //                </div>
-
- //            </div>
 
 
 

@@ -134,6 +134,39 @@
 
 }
 
+.RecordList-figure {
+	min-width: 100px;
+	width: 100%;
+		
+	font-size: 14px;
+	font-weight: 400;
+	margin-top:10px;
+}
+.RecordList-forFigure {
+	background: #d1e5f0;
+	width:61%;
+	height: 24px;
+	display: inline-block;
+	text-align: center;
+	padding-top: 4px;
+}
+.RecordList-againstFigure {
+	background: #fddbc7;
+	width:24%;
+	height: 24px;
+	display: inline-block;
+	text-align: center;
+	padding-top: 4px;
+}
+.RecordList-noneFigure {
+	background: rgb(250,250,250);
+	width:15%;
+	height: 24px;
+	display: inline-block;
+	text-align: center;
+	padding-top: 4px;
+}
+
 
 
 

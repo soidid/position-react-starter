@@ -147,32 +147,6 @@
   left: 20px;
   background: white;
 }
-.Record-figure {
-	min-width: 100px;
-	width: 100%;
-	height: 10px;	
-}
-.Record-forFigure {
-	background: #d1e5f0;
-	width:61%;
-	height: 18px;
-	display: inline-block;
-	text-align: center;
-}
-.Record-againstFigure {
-	background: #fddbc7;
-	width:24%;
-	height: 18px;
-	display: inline-block;
-	text-align: center;
-}
-.Record-noneFigure {
-	background: rgb(250,250,250);
-	width:15%;
-	height: 18px;
-	display: inline-block;
-	text-align: center;
-}
 .Record-percentage {
 	font-size: 20px;
 	padding: 10px;

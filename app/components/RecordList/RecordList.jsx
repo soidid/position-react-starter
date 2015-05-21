@@ -86,7 +86,7 @@ export default class RecordList extends React.Component {
           <div className="RecordList-title">
             候選人大聲公
           </div>
-         <div className="RecordList-description">賴士葆：關於「公司獲利盈餘重新分配」，我說的其實是......</div>
+         <div className="RecordList-description">賴士葆：關於「勞工權益」，我說的其實是......</div>
           <div className="RecordList-title">
             調查結果
             <div className="RecordList-more">
@@ -95,12 +95,15 @@ export default class RecordList extends React.Component {
             </div>
           </div>
           <div className="RecordList-summary">
-              賴士葆<span className={`RecordList-opinion is-${opinionToEng(opinion)}`}>{opinion}</span>{subject}
+              賴士葆對「勞工權益」的表態
+              <div className="RecordList-figure">
+                  <div className="RecordList-forFigure">支持</div>
+                  <div className="RecordList-againstFigure">反對</div>
+                  <div className="RecordList-noneFigure">不明</div>
+              </div>
           </div> 
           <div className="RecordList-content">
-              <div className="RecordList-description">
-                  在過去四年中，賴士葆有 10 筆相關的立場表達事件：9 筆贊成；1 筆反對；0 筆立場不明確。
-              </div>
+             
               <div className="RecordList-tabs">{tabsItem}</div>
               {content}
           </div>
