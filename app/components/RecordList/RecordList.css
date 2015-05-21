@@ -32,12 +32,19 @@
 	margin: 5px;
 	
 }
+.RecordList-candidatePre {
+	font-weight: 700;
+	font-size: 18px;
+}
+.RecordList-candidateState {
+	margin-top: 10px;
+	line-height: 1.6;
+}
 .RecordList-summary {
 	font-size: 20px;
 	font-weight: 800;
 	
-	padding: 20px;
-	//background: rgb(250,250,250);
+	
 	line-height: 1.4;
 	text-align: left;
 	
@@ -48,21 +55,6 @@
 		text-align: center;
 	}
 }
-.RecordList-opinion {
-	margin: 0 5px;
-}
-.RecordList-opinion.is-for {
-	color: #3EA869;	
-}
-.RecordList-opinion.is-against {
-	color: #C62F20;	
-}
-.RecordList-opinion.is-unclear {
-	color : #fdc14d
-}
-.RecordList-opinion.is-none {
-	color : gray;
-}
 
 .RecordList-tabs {
 	margin: 30px 0 20px 0;
@@ -72,8 +64,12 @@
 	color: #3F9F9b;
     background: white;
     border: 1px solid #3F9F9b;
+    border-right: none;
 	padding: 6px 8px;
 	cursor: pointer;
+}
+.RecordList-tab.is-last {
+	border-right: 1px solid #3F9F9b;
 }
 .RecordList-tab.is-active {
 	color: white;
@@ -93,13 +89,13 @@
 .RecordList-more {
     position: absolute;
     top: -20px;
-    left: 55px;
+    left: 88px;
     height: 30px;
     width: 50px;
     vertical-align: bottom;
     text-align: center;
     font-size: 15px;
-   // background: rgba(0,0,0,0.12);
+   
 }
 
 .RecordList-hint {
@@ -131,43 +127,25 @@
     border-top: 10px solid rgba(0,0,0,0.8);
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-
 }
-
-.RecordList-figure {
-	min-width: 100px;
+.RecordList-voteItems {
 	width: 100%;
-		
 	font-size: 14px;
 	font-weight: 400;
 	margin-top:10px;
 }
-.RecordList-forFigure {
-	background: #d1e5f0;
-	width:61%;
-	height: 24px;
-	display: inline-block;
-	text-align: center;
-	padding-top: 4px;
+.RecordList-voteItem {
+	padding: 4px;
 }
-.RecordList-againstFigure {
-	background: #fddbc7;
-	width:24%;
-	height: 24px;
-	display: inline-block;
-	text-align: center;
-	padding-top: 4px;
+.RecordList-voteItem:hover {
+	color: #3f9f9b;
 }
-.RecordList-noneFigure {
-	background: rgb(250,250,250);
-	width:15%;
-	height: 24px;
-	display: inline-block;
-	text-align: center;
-	padding-top: 4px;
+.RecordList-vote {
+	margin-left: 4px;
+  	padding: 3px 8px;
+  	border-radius: 10px;
+  	background: rgb(230,230,230);
 }
-
-
 
 
 

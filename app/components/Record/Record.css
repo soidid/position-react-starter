@@ -14,10 +14,16 @@
 }
 .Record-topRight {
 	position: absolute;
-	right: 10px;
+	right: 8px;
 	top: 10px;
-	padding: 10px;
+	padding: 10px 12px;
 	cursor: pointer;
+	font-size: 14px;
+	border-radius: 50%;
+	color: rgb(100,100,100);
+}
+.Record-topRight:hover {
+	background: #f3f3f3;
 }
 .Record-title {
     padding: 14px 8px;
@@ -46,7 +52,7 @@
 .Record-tooltip {
 	position: absolute;
 	top: 36px;
-	right: -4px;
+	right: -1px;
 	z-index: 10;
 	width: 140px;
 	border-radius: 2px;
@@ -88,7 +94,7 @@
 }
 .Record-quote {
 	line-height: 1.6;
-  	border-left: 10px solid #d3d3d3;
+  	border-left: 10px solid #52A8A5;
   	padding: 0px 20px;
 }
 .Reocrd-date {
@@ -99,121 +105,77 @@
   	vertical-align: top;
 }
 
-
-.Record-btns {
-	display: flex;
-}
-.Record-btn {
-	
-	color: rgb(140,140,140);
-    padding-top: 20px;
-    text-align: center;
-    
-    cursor: pointer;
-    display: inline-block;
-    
-    flex: 1;
-
-    border: 1px solid transparent;
-    position: relative;
-}
-.Record-btn.is-mostVote {
-	color: #53BAB5;
-}
-.Record-btn:hover {
-	background: #fafafa;
-	
-}
 .Record-highlight {
 	color: #6FB4B1;
 	font-weight: 700;
 	padding: 2px;
 }
-.Record-actions {
-	
-	padding-top: 18px;
-	border-top: 1px dashed rgb(180,180,180);
-	position: relative;
-	margin-top: 30px;
-}
-.Record-actionTitle {
-
-  margin-left: 0;
-  display: inline-block;
-  padding: 10px;
- 
-  position: absolute;
-    top: -20px;
-  left: 20px;
-  background: white;
-}
-.Record-percentage {
-	font-size: 20px;
-	padding: 10px;
-}
-
-
-
-/*
-
-
-
-
-
-
-.Record-opinion {
-	//color: white;
-	font-weight: 800;
-	display: inline-block;
-	vertical-align: top;
-	padding-top: 16px;
-	margin-left: 3px;
-}
-
-.Record-opinion.is-for {
-	color: #3EA869;
-}
-.Record-opinion.is-against {
-	color: #C62F20;
-}
-.Record-opinion.is-unclear {
-	color: gray;
-}
-
-.Record-flexGrids {
-    display: flex;
-    padding: 6px;
-    line-height: 1.6;
-}
-.Record-flexLeft {
-	flex: 0 0 60px;
-	color: gray;
-	text-align: center;
-}
-.Record-flexMain {
-    flex: 1;
-}
-
-
-
-
-
-.Record-summary {
-	padding: 20px;
-    background: #f3f3f3;
-    color: rgb(80,82,82);
-
-}
-
-
-.Record-tag {
+.Record-review {
 	padding: 10px;
     color: rgb(100,100,100);
     background: #f3f3f3;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
+    display: none;
+}
+.Record-tag {
+	padding: 10px;
+    color: rgb(83,95,94);
+    border-top: 1px solid rgb(234,236,233);
+    background: #f3f3f3;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
+    position: relative;
+}
+.Record-tagIcon {
+	position: absolute;
+	right: 11px;
+	top: 2px;
+	cursor: pointer;
+	
+	padding: 8px;
+	border-radius: 50%;
+}
+.Record-tagIcon:hover {
+	
+}
+.Record-otherTags {
+	overflow-y: hidden;
+	max-height: 0px;
+}
+.Record-otherTags.is-show {
+	max-height: 400px;
+	
+	transition-property: max-height;
+	transition-duration: 100ms;
+	transition-timing-function: ease-in;
+	color: red;	
+}
+.Record-colorText {
+	color: #3f9f9b;
+}
+.Record-userImg {
+	width: 32px;
+  	height: 32px;
+  	margin-top: 2px;
+  	border-radius: 4px;
+}
+.Record-userInput {
+	width: calc(100% - 40px);
+    height: 36px;
+    vertical-align: top;
+    margin-left: 4px;
+    border-radius: 4px;
+    border: 1px solid rgb(234,236,232);
+    padding-left: 8px;
+}
+.Record-userInput:focus {
+	//outline-radius: 4px;
+	//outline: 1px solid rgb(82,168,165);
+	outline: none;
 }
 
 
-*/
 
 
 
