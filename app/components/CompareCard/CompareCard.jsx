@@ -51,30 +51,26 @@ export default class CompareCard extends React.Component {
     
     var issueItems = data.issues.map((item,key)=>{
         var classes = classNames({
-          "CompareCard-flexGrids": true,
-          "is-even": key%2===0,
-          "is-odd": key%2!==0
+          "CompareCard-flexGrids": true
         });
         
         return (
            <div className={classes}
                 key={key}>
               <div className="CompareCard-GridOne">
-                <div className={`CompareCard-opinion is-${item[candidateA]}`}>
-                  
+                <Link to="personIssue" params={{issue:"issue"}} className={`CompareCard-opinion is-${item[candidateA]}`}> 
                   <div className="CompareCard-text">{opinionToText(item[candidateA])}</div>
                   <div className="CompareCard-icon"><Icon icon={opinionToIcon(item[candidateA])} /></div>
-                  
-                </div>
+                </Link>
               </div>
               <div className="CompareCard-GridTwo CompareCard-issue">{item.title}</div>
               <div className="CompareCard-GridOne">
-                <div className={`CompareCard-opinion is-${item[candidateB]}`}>
+                <Link to="personIssue" params={{issue:"issue"}} className={`CompareCard-opinion is-${item[candidateB]}`}>
                   
                   <div className="CompareCard-text">{opinionToText(item[candidateB])}</div>
                   <div className="CompareCard-icon"><Icon icon={opinionToIcon(item[candidateB])} /></div>
                   
-                </div>
+                </Link>
               </div>
           </div>
         )
@@ -82,7 +78,7 @@ export default class CompareCard extends React.Component {
 
     return (
       <div className="CompareCard">
-          <div className="CompareCard-title">{issueTitle}</div>
+          <div className="CompareCard-title">立場表態</div>
           <div className="CompareCard-flexGrids">
             <div className="CompareCard-GridTwo">
                 <Link className="CompareMultiCard-link" to="person">

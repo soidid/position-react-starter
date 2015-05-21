@@ -3,7 +3,7 @@
 	border: 1px solid rgb(220,220,220);
 	width: calc(100% - 10px);
 	vertical-align: top;
-	margin: 4px;
+	margin: 6px 4px;
 	cursor: pointer;
 	text-align: left;
 	background: white;
@@ -11,6 +11,9 @@
 	text-decoration: none;
 	color: rgb(53,55,54);
 	position: relative;
+}
+.Record:hover {
+	
 }
 .Record-topRight {
 	position: absolute;

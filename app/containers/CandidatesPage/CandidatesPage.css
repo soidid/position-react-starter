@@ -121,3 +121,10 @@
 .CandidatesPage-candidateList {
   background: #87bdbd;
 }
+.CandidatesPage-oneWrapper {
+  margin: 0 auto;
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.12);
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+}

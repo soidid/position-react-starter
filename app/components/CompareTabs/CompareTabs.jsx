@@ -70,10 +70,12 @@ export default class CompareTabs extends React.Component {
 			    <div className="CompareTabs-items">
 			    	<div className="CompareTabs-maxWidth">{items}</div>
 				</div>
-				<div className={subitemClassess}>
-					<div className="CompareTabs-maxWidth">{subitems}</div>
-				</div>
+				
 			</div>
 		)
 	}
 }
+
+// <div className={subitemClassess}>
+// 	<div className="CompareTabs-maxWidth">{subitems}</div>
+// </div>

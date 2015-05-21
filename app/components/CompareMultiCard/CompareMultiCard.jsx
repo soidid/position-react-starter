@@ -166,7 +166,7 @@ export default class CompareMultiCard extends React.Component {
       <div className="CompareMultiCard">
           
           <div className="CompareMultiCard-flexGrids">
-            <div className="CompareMultiCard-GridTwo CompareMultiCard-title">{issueTitle}</div>
+            <div className="CompareMultiCard-GridTwo CompareMultiCard-title"></div>
             <div className="CompareMultiCard-GridOne">
                 <Link className="CompareMultiCard-link" to="person">
                 <img className="CompareMultiCard-img"

@@ -87,17 +87,13 @@ export default class CandidatesPage extends React.Component {
 
 		//*********
 		// to be refined
-		//
+		// <div className="CandidatesPage-innerWrapper">
+		//   <div className="CandidatesPage-issueList ">
 		//
 		var mobileIssue = (
 		    <div className="CandidatesPage-outerWrapper">
-		        <div className="CandidatesPage-innerWrapper">
-		        	<div className="CandidatesPage-issueList ">
-		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="勞工" candidateA={candidateA} candidateB={candidateB}/></div>
-		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="婚姻平權" candidateA={candidateA} candidateB={candidateB}/></div>
-		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="核能" candidateA={candidateA} candidateB={candidateB}/></div>
-		        		<div className="CandidatesPage-issueItem"><CompareCard issueTitle="中國因素" candidateA={candidateA} candidateB={candidateB}/></div>
-		        	</div>
+		        <div className="CandidatesPage-oneWrapper">
+		            <CompareCard candidateA={candidateA} candidateB={candidateB}/>
 		        </div>
 		    </div>);
 		var mobileRecommends = (
