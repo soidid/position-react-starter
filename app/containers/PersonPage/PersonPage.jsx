@@ -36,7 +36,7 @@ export default class PersonPage extends React.Component {
 	}
 	constructor(props){ super(props)
 		this.state = {
-			activeTab: "國會徵信社",
+			activeTab: "推薦函",
 			activeSubtab: "勞工"
 		}
 	}

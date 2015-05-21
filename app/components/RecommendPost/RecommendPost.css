@@ -3,16 +3,21 @@
   font-size: 14px;
   padding-bottom: 10px;
   color: rgb(140,150,150);
-  max-width: 800px;
+  max-width: 640px;
   margin: 0 auto;
 
 }
 .RecommendPost-item {
   background: white;
-  
   border-radius: 8px;
-  padding: 15px;
-  margin: 15px;
+  
+}
+@media screen and (min-width: 600px){
+  .RecommendPost-item {
+    padding: 15px;
+    margin: 15px;
+  }
+
 }
 .RecommendPost-title {
   font-size: 20px;
@@ -24,47 +29,66 @@
   margin: 10px auto;
 }
 
-.RecommendPost-candidate {
-  position: relative;
-  margin-top: 5px;
- 
-}
-.RecommendPost-img {
-  width: 80px;
-  height: 80px;
+.RecommendPost-topRight {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
   border-radius: 50%;
-  box-shadow: 0px 0px 0px 2px rgb(220,220,220);
+  color: rgb(100,100,100);
 }
-.RecommendPost-dialogue {
-  text-align: left;
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 22px;
-  margin-left: 10px;
+.RecommendPost-topRight:hover {
+  background: #f3f3f3;
 }
-.RecommendPost-post {
-  text-align: left;
-  border: 1px dashed rgb(220,220,220);
-  border-radius: 6px;
-  margin: 15px;
-  padding: 10px;
-  padding-top: 40px;
-  line-height: 1.6;
-  
-  position: relative;
+
+.RecommendPost-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+ 
+  position: absolute;
+  top: 13px;
+  left: 10px;
 }
 .RecommendPost-author {
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 50px;
 }
 .RecommendPost-date {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  left: 50px;
+  font-size: 12px;
+  color: rgb(100,100,100);
 }
+
+.RecommendPost-post {
+  text-align: left;
+  border: 1px solid rgb(120,120,120);
+  margin: 15px;
+  padding: 10px;
+  padding-top: 50px;
+  line-height: 1.6;
+  color: rgb(53,55,54);
+  
+  position: relative;
+}
+.RecommendPost-content {
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 2;
+}
+
 .RecommendPost-star {
   margin-top: 10px;
+  cursor: pointer;
+  color: rgb(180,180,180);
+}
+.RecommendPost-star:hover {
+  color: gold;
 }
 
 .RecommendPost-btn {

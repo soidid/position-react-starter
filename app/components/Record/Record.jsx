@@ -33,7 +33,7 @@ export default class Record extends React.Component {
   }
 
    _onPlusOne(event){
-    event.stopPropogation();
+    event.stopPropagation();
      
       
   }
