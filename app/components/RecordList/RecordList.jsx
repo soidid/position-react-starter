@@ -59,7 +59,7 @@ export default class RecordList extends React.Component {
     var content = data.map((item,key)=>{
         return (
             <div key={key}>
-              <Record data={item} subject={subject}/>
+              <Record data={item} subject={subject} index={key}/>
             </div>
         )
     })

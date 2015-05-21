@@ -127,6 +127,9 @@
     font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
     position: relative;
 }
+.Record-tag:hover {
+	background: rgb(230,230,230);
+}
 .Record-tagIcon {
 	position: absolute;
 	right: 11px;
@@ -174,7 +177,61 @@
 	//outline: 1px solid rgb(82,168,165);
 	outline: none;
 }
+.Record-button {
+    margin-left: 4px;
+    display: none;
+}
+.Record-button.is-show {
+	display: inline-block;
+	background: rgb(82,168,165);
+    padding: 2px 8px;
+    color: white;
+   
+}
+.Record-buttonAbs {
+	position: absolute;
+	right: 60px;
+}
+.Record-button:hover {
+	box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.08);
+}
+.Record-promptTag {
+	padding: 0 0 10px 5px;
+}
 
+.Record-autoTag {
+	padding: 10px 7px;
+    color: rgb(83,95,94);
+    border-top: 1px solid rgb(234,236,233);
+    background: #f3f3f3;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
+    position: relative;
+
+}
+.Record-newTag {
+	display: inline-block;
+	
+	margin-left: 5px;
+}
+.Record-newTag:hover {
+	text-decoration: underline;
+}
+.Record-longBtn {
+	background: rgb(205, 214, 214);
+	display: inline-block;
+    padding: 2px 8px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.Record-longBtn:hover {
+	background: #3f9f9b;
+	color: white;
+	box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.08);
+}
+.Record-promptWrap {
+	padding: 0 3px;
+}
 
 
 

@@ -60,23 +60,7 @@ export default class PersonPage extends React.Component {
 		if(activeTab === "國會徵信社")
 			content = (
 		    <div className="RecordList">
-
-		        	
-                <Link className="PersonPage-issue" to="personIssue" params={{issue: "issue"}}>
-                	<Icon icon={"search"}/>賴士葆
-                	<span className={`RecordList-opinion is-${opinionToEng("贊成")}`}>贊成</span>
-                	公司獲利盈餘重新分配
-                </Link>
-                <Link className="PersonPage-issue"to="personIssue" params={{issue: "issue"}}>
-                	<Icon icon={"search"}/>賴士葆
-                	<span className={`RecordList-opinion is-${opinionToEng("反對")}`}>反對</span>
-                	每周40工時及加班上限
-                </Link>
-                <Link className="PersonPage-issue" to="personIssue" params={{issue: "issue"}}>
-                	<Icon icon={"search"}/>賴士葆
-                	<span className={`RecordList-opinion is-${opinionToEng("不明確")}`}>不明確</span>
-                	勞工債權清償順位優於銀行抵押權
-                </Link>
+               <RecordList />
 			</div>) ;
 		
 		if(activeTab === "野生履歷"){

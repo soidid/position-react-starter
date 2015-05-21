@@ -32,11 +32,17 @@ export default class Record extends React.Component {
       
   }
 
+   _onPlusOne(event){
+    event.stopPropogation();
+     
+      
+  }
+
   render() {
    
-    var {data, subject} = this.props;
+    var {data, subject, index} = this.props;
     var {showTooltip, showFull} = this.state;
-    
+    console.log(index);
     var opinionClasses = classNames({
       "Record-opinion": true,
       "is-for": data.opinion === '支持',
@@ -71,7 +77,65 @@ export default class Record extends React.Component {
       "Record-otherTags" : true,
       "is-show" : showFull
     });
+    var buttonClasses = classNames({
+      "Record-button" : true,
+      "is-show" : showFull,
+      "Record-buttonAbs" : true
+    });
     var userImg = require("./user.jpg");
+    var iconText = (showFull) ? "angle-up":"angle-down";
+
+    var actionItem = (
+        <div>
+            <div className="Record-tag" 
+                 onClick={this._onToggleShowFull.bind(this)}>
+                 Kuochun Hung 和其他 767 人 標注為 <span className="Record-colorText">#支持勞工權益</span>
+                 <div className={buttonClasses} onClick={this._onPlusOne.bind(this)} > +1 </div>
+                 <div className="Record-tagIcon"><Icon icon={iconText}/></div>
+
+            </div>
+            <div className={otherTagsClasses}>
+                <div className="Record-tag">
+                     謝繐吟 和其他 532 人 標注為 <span className="Record-colorText">#不知所云</span>
+                     <div className={buttonClasses} onClick={this._onPlusOne.bind(this)} > +1 </div>
+                </div>
+                <div className="Record-tag">
+                     Ly Cheng 和其他 12 人 標注為 <span className="Record-colorText">#選前必看</span>
+                     <div className={buttonClasses}
+                          onClick={this._onPlusOne.bind(this)} > +1 </div>
+                </div>
+                <div className="Record-tag">
+                    <img className="Record-userImg" src={userImg}/>
+                    <input className="Record-userInput" 
+                           placeholder="自訂新的標籤"/>
+                </div>
+            </div>
+        </div>
+    );
+
+    if((index+1)%3===0){
+
+      var newInput = (showFull) ? (
+        <div className="Record-autoTag">
+            <img className="Record-userImg" src={userImg}/>
+            <input className="Record-userInput" 
+                   placeholder="自訂新的標籤"/>
+        </div>
+      ) : "";
+      actionItem = (
+        <div className="Record-autoTag">
+            <div className="Record-promptWrap">
+              <div className="Record-promptTag">為賴士葆標注勞工表態立場</div>
+              <div className="Record-longBtn">支持勞工權益</div>
+              <div className="Record-longBtn">反對勞工權益</div>
+              <div className="Record-longBtn">胡言亂語，不知所云</div>
+              <div className="Record-newTag" onClick={this._onToggleShowFull.bind(this)}>自訂新標籤</div>
+            </div>
+            {newInput}
+        </div>
+
+      )
+    }
 
     return (
         <div className="Record">
@@ -93,32 +157,8 @@ export default class Record extends React.Component {
             <div className="Reocrd-date">
                 - {data.date}
             </div>
+            {actionItem}
 
-
-            <div className="Record-tag" 
-                 onClick={this._onToggleShowFull.bind(this)}>
-                 Kuochun Hung 和其他 767 人 標注為 <span className="Record-colorText">#支持勞工權益</span>
-                 <div className="Record-tagIcon"><Icon icon={"angle-down"}/></div>
-
-            </div>
-            <div className={otherTagsClasses}>
-                <div className="Record-tag">
-                     謝繐吟 和其他 532 人 標注為 <span className="Record-colorText">#不知所云</span>
-                </div>
-                <div className="Record-tag">
-                     Ly Cheng 和其他 12 人 標注為 <span className="Record-colorText">#選前必看</span>
-                </div>
-                <div className="Record-tag">
-                    <img className="Record-userImg" src={userImg}/>
-                    <input className="Record-userInput" 
-                           placeholder="加入新的標籤"/>
-                </div>
-            </div>
-           
-           
-
-           
-            
         </div>
     );
 
