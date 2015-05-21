@@ -126,6 +126,7 @@
     font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "微軟正黑體", sans-serif;
     position: relative;
+    padding-right: 50px;
 }
 .Record-tag:hover {
 	background: rgb(230,230,230);
@@ -190,7 +191,14 @@
 }
 .Record-buttonAbs {
 	position: absolute;
-	right: 60px;
+	top: 8px;
+	right: 20px;
+}
+@media screen and (min-width: 500px){
+	.Record-buttonAbs {
+		position: absolute;
+		right: 55px;
+    }
 }
 .Record-button:hover {
 	box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.08);
@@ -221,7 +229,7 @@
 	background: rgb(205, 214, 214);
 	display: inline-block;
     padding: 2px 8px;
-    margin-left: 4px;
+    margin: 2px;
     cursor: pointer;
 }
 .Record-longBtn:hover {
